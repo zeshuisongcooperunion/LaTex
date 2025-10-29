@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  28 OCT 2025 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  29 OCT 2025 13:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/zsong/OneDrive/Desktop/LaTex/Physics_Exam_2/main.tex
-(c:/Users/zsong/OneDrive/Desktop/LaTex/Physics_Exam_2/main.tex
+**c:/Users/zsong/OneDrive/Desktop/LaTex/Physics/Physics_Exam_2/main.tex
+(c:/Users/zsong/OneDrive/Desktop/LaTex/Physics/Physics_Exam_2/main.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -476,14 +476,14 @@ L3 programming layer <2024-01-04>
  ) 
 Here is how much of TeX's memory you used:
  3378 strings out of 474486
- 50715 string characters out of 5743755
+ 50771 string characters out of 5743755
  1937542 words of memory out of 5000000
  25635 multiletter control sequences out of 15000+600000
  566426 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,65p,514b,389s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,12n,65p,522b,389s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on main.pdf (20 pages, 4407582 bytes).
+Output written on main.pdf (20 pages, 4407598 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -1,6 +1,6 @@
-PWD c:\Users\zsong\OneDrive\Desktop\LaTex\Physics_Exam_2
+PWD c:\Users\zsong\OneDrive\Desktop\LaTex\Physics\Physics_Exam_2
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\zsong\OneDrive\Desktop\LaTex\Physics_Exam_2\main.tex
+INPUT c:\Users\zsong\OneDrive\Desktop\LaTex\Physics\Physics_Exam_2\main.tex
 OUTPUT main.log
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls

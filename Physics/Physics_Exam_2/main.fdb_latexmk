@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1761684038.13242 "c:/Users/zsong/OneDrive/Desktop/LaTex/Physics_Exam_2/main.tex" "main.pdf" "main" 1761684039.8578 0
+["pdflatex"] 1761757481.20267 "c:/Users/zsong/OneDrive/Desktop/LaTex/Physics/Physics_Exam_2/main.tex" "main.pdf" "main" 1761757482.25074 0
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1761417027 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1758289669 14064 f1b79be56b30e5d452b3bce564671b21 ""
   "C:/Users/zsong/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758289211 24225046 93fab31cee048cd2ef0f58bac36106e4 ""
@@ -70,7 +70,7 @@
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/tex/latex/tools/bm.sty" 1700599895 13231 2c742011581e2bf297e33520567d9464 ""
   "Dipole moment.png" 1761155791 42032 a2043f57e8c6b81eb3ce94c89e2fc074 ""
   "Dipole torque.png" 1761156447 62976 17d6d0ad2c4167a2e1ab2781014b510a ""
-  "c:/Users/zsong/OneDrive/Desktop/LaTex/Physics_Exam_2/main.tex" 1761684035 30251 1fb787de63fc32be40a50bd69f859152 ""
+  "c:/Users/zsong/OneDrive/Desktop/LaTex/Physics/Physics_Exam_2/main.tex" 1761757480 30260 3aec3eb0a6c4cc4a0d4b128f813b26c3 ""
   "conductingsphere.JPG" 1761428015 442225 38a14429be384deca5803e99e4380fb9 ""
   "disk.png" 1760377836 37522 22aeb10df48a00cab327f035b6b94d86 ""
   "distribution.JPG" 1761429916 559306 1399a393a8d44abb4c60f403114bbc12 ""
@@ -80,8 +80,8 @@
   "energy2.png" 1761422177 29233 d64f52e30338cb35663be7cff9411db5 ""
   "equipotential.png" 1761426778 263263 0ed238c44cfe9bbbee4a5d2a1cb21fb2 ""
   "line.jpg" 1760376406 360506 0f337d9dcc1e0884db9b3578e8e0ec8c ""
-  "main.aux" 1761684039 33 bdbf764baf0c139c53f5362d5edc4a6b "pdflatex"
-  "main.tex" 1761684035 30251 1fb787de63fc32be40a50bd69f859152 ""
+  "main.aux" 1761757482 33 bdbf764baf0c139c53f5362d5edc4a6b "pdflatex"
+  "main.tex" 1761757480 30260 3aec3eb0a6c4cc4a0d4b128f813b26c3 ""
   "method of images.JPG" 1761440526 574594 658910fb4c5ca66edc56d6774d5fb4aa ""
   "point.JPG" 1761424621 351382 f8cb8724fea1d7b32a450e697385ce9b ""
   "relaxxx.JPG" 1761442948 643130 ae44fad14cb65919cd2050090c498c36 ""
