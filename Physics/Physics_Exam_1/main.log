@@ -1,0 +1,429 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  4 OCT 2025 10:36
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**c:/Users/zsong/OneDrive/Desktop/LaTex/Physics_Exam_1/main.tex
+(c:/Users/zsong/OneDrive/Desktop/LaTex/Physics_Exam_1/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen141
+)) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen142
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count195
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count196
+\leftroot@=\count197
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count198
+\DOTSCASE@=\count199
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box51
+\strutbox@=\box52
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen143
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count266
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count267
+\dotsspace@=\muskip16
+\c@parentequation=\count268
+\dspbrk@lvl=\count269
+\tag@help=\toks18
+\row@=\count270
+\column@=\count271
+\maxfields@=\count272
+\andhelp@=\toks19
+\eqnshift@=\dimen144
+\alignsep@=\dimen145
+\tagshift@=\dimen146
+\tagwidth@=\dimen147
+\totwidth@=\dimen148
+\lineht@=\dimen149
+\@envbody=\toks20
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks22
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count273
+\Gm@cntv=\count274
+\c@Gm@tempcnt=\count275
+\Gm@bindingoffset=\dimen150
+\Gm@wd@mp=\dimen151
+\Gm@odd@mp=\dimen152
+\Gm@even@mp=\dimen153
+\Gm@layoutwidth=\dimen154
+\Gm@layoutheight=\dimen155
+\Gm@layouthoffset=\dimen156
+\Gm@layoutvoffset=\dimen157
+\Gm@dimlist=\toks23
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\bm.sty
+Package: bm 2023/07/08 v1.2f Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+Package bm Info: No bold for \OMX/cmex/m/n, using \pmb.
+Package bm Info: No bold for \U/msa/m/n, using \pmb.
+Package bm Info: No bold for \U/msb/m/n, using \pmb.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 149.
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen160
+\ar@mcellbox=\box53
+\extrarowheight=\dimen161
+\NC@list=\toks24
+\extratabsurround=\skip53
+\backup@length=\skip54
+\ar@cellbox=\box54
+)
+\TX@col@width=\dimen162
+\TX@old@table=\dimen163
+\TX@old@col=\dimen164
+\TX@target=\dimen165
+\TX@delta=\dimen166
+\TX@cols=\count276
+\TX@ftn=\toks25
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen167
+\lightrulewidth=\dimen168
+\cmidrulewidth=\dimen169
+\belowrulesep=\dimen170
+\belowbottomsep=\dimen171
+\aboverulesep=\dimen172
+\abovetopsep=\dimen173
+\cmidrulesep=\dimen174
+\cmidrulekern=\dimen175
+\defaultaddspace=\dimen176
+\@cmidla=\count277
+\@cmidlb=\count278
+\@aboverulesep=\dimen177
+\@belowrulesep=\dimen178
+\@thisruleclass=\count279
+\@lastruleclass=\count280
+\@thisrulewidth=\dimen179
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count281
+\float@exts=\toks26
+\float@box=\box55
+\@float@everytoks=\toks27
+\@floatcapt=\box56
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count282
+\l__pdf_internal_box=\box57
+) (main.aux)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=44.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count283
+\scratchdimen=\dimen180
+\scratchbox=\box58
+\nofMPsegments=\count284
+\nofMParguments=\count285
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count286
+\MPscratchDim=\dimen181
+\MPnumerator=\count287
+\makeMPintoPDFobject=\count288
+\everyMPtoPDFconversion=\toks29
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [1
+
+{C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<String.jpg, id=13, 2405.98875pt x 1759.57375pt>
+File: String.jpg Graphic file (type jpg)
+<use String.jpg>
+Package pdftex.def Info: String.jpg  used on input line 56.
+(pdftex.def)             Requested size: 281.85587pt x 206.11899pt.
+ [2 <./String.jpg>]
+<Sound.JPG, id=18, 4035.075pt x 1406.25375pt>
+File: Sound.JPG Graphic file (type jpg)
+<use Sound.JPG>
+Package pdftex.def Info: Sound.JPG  used on input line 100.
+(pdftex.def)             Requested size: 469.75502pt x 163.7006pt.
+ [3 <./Sound.JPG>]
+<Sound 2.JPG, id=22, 1689.31125pt x 801.99625pt>
+File: Sound 2.JPG Graphic file (type jpg)
+<use Sound 2.JPG>
+Package pdftex.def Info: Sound 2.JPG  used on input line 159.
+(pdftex.def)             Requested size: 234.8775pt x 111.50774pt.
+ [4 <./Sound 2.JPG>] [5] [6]
+<Reflection 1.JPG, id=32, 1751.54375pt x 432.61626pt>
+File: Reflection 1.JPG Graphic file (type jpg)
+<use Reflection 1.JPG>
+Package pdftex.def Info: Reflection 1.JPG  used on input line 252.
+(pdftex.def)             Requested size: 375.80544pt x 92.81924pt.
+<Reflection 2.JPG, id=33, 2667.9675pt x 662.475pt>
+File: Reflection 2.JPG Graphic file (type jpg)
+<use Reflection 2.JPG>
+Package pdftex.def Info: Reflection 2.JPG  used on input line 253.
+(pdftex.def)             Requested size: 375.80544pt x 93.31194pt.
+ [7 <./Reflection 1.JPG> <./Reflection 2.JPG>] [8]
+<String Harmonics.jpg, id=41, 3196.94376pt x 617.30624pt>
+File: String Harmonics.jpg Graphic file (type jpg)
+<use String Harmonics.jpg>
+Package pdftex.def Info: String Harmonics.jpg  used on input line 305.
+(pdftex.def)             Requested size: 469.75502pt x 90.69865pt.
+ [9 <./String Harmonics.jpg>]
+<Pipe open.jpg, id=45, 1978.39125pt x 1872.9975pt>
+File: Pipe open.jpg Graphic file (type jpg)
+<use Pipe open.jpg>
+Package pdftex.def Info: Pipe open.jpg  used on input line 314.
+(pdftex.def)             Requested size: 187.89914pt x 177.87946pt.
+<Pipe closed.jpg, id=46, 1886.04625pt x 1713.40125pt>
+File: Pipe closed.jpg Graphic file (type jpg)
+<use Pipe closed.jpg>
+Package pdftex.def Info: Pipe closed.jpg  used on input line 321.
+(pdftex.def)             Requested size: 187.89914pt x 170.69655pt.
+ [10 <./Pipe open.jpg> <./Pipe closed.jpg>]
+<beat4.png, id=50, 455.7025pt x 252.945pt>
+File: beat4.png Graphic file (type png)
+<use beat4.png>
+Package pdftex.def Info: beat4.png  used on input line 332.
+(pdftex.def)             Requested size: 187.89914pt x 104.29865pt.
+ [11 <./beat4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 353--355
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 364--366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--375
+
+ []
+
+[12]
+<Double slit 1.png, id=58, 690.1785pt x 289.08pt>
+File: Double slit 1.png Graphic file (type png)
+<use Double slit 1.png>
+Package pdftex.def Info: Double slit 1.png  used on input line 393.
+(pdftex.def)             Requested size: 328.82707pt x 137.72905pt.
+<Double slit 2.png, id=60, 218.0145pt x 221.02576pt>
+File: Double slit 2.png Graphic file (type png)
+<use Double slit 2.png>
+Package pdftex.def Info: Double slit 2.png  used on input line 396.
+(pdftex.def)             Requested size: 117.43875pt x 119.06207pt.
+ [13 <./Double slit 1.png> <./Double slit 2.png>]
+<Triple slit.jpg, id=67, 3867.44875pt x 1160.335pt>
+File: Triple slit.jpg Graphic file (type jpg)
+<use Triple slit.jpg>
+Package pdftex.def Info: Triple slit.jpg  used on input line 420.
+(pdftex.def)             Requested size: 375.80544pt x 112.74712pt.
+<Phasor.jpg, id=68, 3920.6475pt x 1723.43875pt>
+File: Phasor.jpg Graphic file (type jpg)
+<use Phasor.jpg>
+Package pdftex.def Info: Phasor.jpg  used on input line 431.
+(pdftex.def)             Requested size: 375.80544pt x 165.17474pt.
+ [14 <./Triple slit.jpg>]
+Overfull \hbox (20.34271pt too wide) detected at line 433
+\OMS/cmsy/m/n/12 k\OML/cmm/m/it/12 y[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 y[]\OMS/cmsy/m/n/12 k \OT1/cmr/m/n/12 = []
+ []
+
+<MaxMin.jpg, id=72, 3174.86125pt x 788.9475pt>
+File: MaxMin.jpg Graphic file (type jpg)
+<use MaxMin.jpg>
+Package pdftex.def Info: MaxMin.jpg  used on input line 443.
+(pdftex.def)             Requested size: 469.75502pt x 116.72388pt.
+[15 <./Phasor.jpg> <./MaxMin.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 448--450
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--459
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--459
+
+ []
+
+
+Overfull \hbox (32.59444pt too wide) detected at line 476
+\OML/cmm/m/it/12 A[] \OT1/cmr/m/n/12 = [] [] = [] [] = [] [] = \OML/cmm/m/it/12 ^^Y
+ []
+
+
+Overfull \hbox (48.76038pt too wide) detected at line 493
+[][] \OMS/cmsy/m/n/12 ^^@\OML/cmm/m/it/12 x []\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 mx\OT1/cmr/m/n/12 ) \OML/cmm/m/it/12 dx \OT1/cmr/m/n/12 = \OMS/cmsy/m/n/12 ^^@ [][] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^@ []
+ []
+
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 532--534
+
+ []
+
+[18]
+<mach cone.png, id=86, 537.207pt x 382.42876pt>
+File: mach cone.png Graphic file (type png)
+<use mach cone.png>
+Package pdftex.def Info: mach cone.png  used on input line 554.
+(pdftex.def)             Requested size: 328.82707pt x 234.09232pt.
+ [19 <./mach cone.png>] (main.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 3587 strings out of 474486
+ 53984 string characters out of 5743755
+ 1939542 words of memory out of 5000000
+ 25830 multiletter control sequences out of 15000+600000
+ 567987 words of font info for 72 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,12n,65p,605b,449s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on main.pdf (19 pages, 3521679 bytes).
+PDF statistics:
+ 134 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,153 @@
+\documentclass[10pt, fleqn]{article}
+\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath, amssymb}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{amsfonts, bm, graphicx}
+\usepackage[font=small, skip=4pt]{caption}
+
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{4pt}
+\setlength{\belowdisplayshortskip}{4pt}
+
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+
+\setlength{\mathindent}{0pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\begin{document}
+
+\begin{center}
+    \Large \textbf{Dynamics Formula Sheet} \\
+    \normalsize Quiz I
+\end{center}
+
+\begin{multicols}{2}
+
+\section*{Kinematics}
+\[\vec{v}=\frac{dx}{dt}\]
+\[\vec{a}=\frac{d\vec{v}}{dt}=\frac{d\vec{x}}{dt}\]
+\underline{Note:} Using the chain rule, $\vec{a}$ can be rewritten
+\[\vec{a}=\vec{v}\frac{d\vec{x}}{dt}\]
+\section*{Constant Acceleration Kinematics}
+\[\vec{v}=\vec{v}_o+\vec{a}_ot\]
+\[\vec{v}_f^2=\vec{v}_o^2+2\vec{a}_o\Delta \vec{x}\]
+\[\vec{x}=\vec{x}_o+\vec{v}_ot+\frac{1}{2}\vec{a}_ot^2\]
+\section*{Relative Motion}
+\[x_{B/A}=x_B-x_A \quad \text{B relative to A}\]
+\underline{Note:} Subscripts cancel $x_B=x_A+x_{B/A}$
+\section*{Normal and Tangential}
+\begin{figure}[H]
+    \includegraphics[width=0.3\textwidth]{normal and tangential.png}
+\end{figure}
+\[\vec{v}=v\hat{u}_t\]
+\[\vec{a}=\frac{dv}{dt}\hat{u}_t+\frac{v^2}{\rho}\hat{u}_n\]
+\[\rho = \frac{\left[1+\left(\frac{dy}{dx}\right)^2 \right]^{3/2}}{\left|\frac{d^2y}{dx^2} \right|} \quad \text{(Radius of curvature)}\]
+\underline{Note:} In 3d, define $\hat{u}_b=\hat{u}_t \times \hat{u}_n$ 
+\section*{Cylindrical (Radial and Transverse)}
+\begin{figure}[H]
+    \includegraphics[width=0.3 \textwidth]{cylindrical.png}
+\end{figure}
+\[\vec{v}=\dot{r}\hat{u}_r+r\dot{\theta}\hat{u}_{\theta}\]
+\[\vec{a}=\left[\ddot{r}-r\dot{\theta}^2\right]\hat{u}_r+\left[r\ddot{\theta}+2\dot{r}\dot{\theta}\right]\hat{u}_{\theta}\]
+\underline{Note:} In 3d, add a $\hat{u}_z$ where $\vec{r}_z=z\hat{u}_z$,$\vec{v}_z=\dot{z}\hat{u}_z$ and $\vec{a}_z=\ddot{z}\hat{u}_z$
+\section*{Work}
+\[U_{1\to2}=\int_{r_1}^{r_2}\vec{F}\cdot d\vec{r}\]
+Constant force in rectilinear motion: $U_{1\to2}=Fcos(\alpha)\Delta x$
+\begin{figure}[H]
+    \includegraphics[width=0.3\textwidth]{work.png}
+\end{figure}
+\noindent\textbf{Work by gravity}
+\[U_{g,1\to2}=-W\Delta y \quad \text{(Weight)}\]
+\[U_{g,1\to2}=\frac{GMm}{r_2}-\frac{GMm}{r_1} \quad \text{(In space)}\]
+\textbf{Work by spring}
+\[U_{s,1\to2}=-\frac{1}{2}k(x_2^2-x_1^2)=\frac{1}{2}k(x_1^2-x_2^2)\]
+\section*{Potential Energy}
+\textbf{Gravitational Potential}\\
+\[V_g=Wy=mgh \quad \text{(On Earth)}\]
+\[V_g=-\frac{GMm}{r}=-\frac{WR^2}{r} \quad \text{(In space)}\]
+\textbf{Elastic Potential}
+\[V_e=\frac{1}{2}kx^2\]
+\section*{Work and Energy}
+\[U_{1\to2}=T_2-T_1\]
+\[T_2=T_1+U_{1\to2}\]
+Work of a force = change in kinetic Energy\\
+Kinetic energy = capacity to do work\\
+\underline{Note:} $T=\frac{1}{2}mv^2$
+\section*{Conservation of Energy}
+\[T_1+V_{g1}+V_{e1}+U_{1\to2}^{NC}=T_2+V_{g2}+V_{e2}\]
+\section*{Power and Efficiency}
+\textbf{Power}
+\[P=\frac{dU}{dt}=\vec{F}\cdot\vec{v}\]
+\textbf{Efficiency}
+\[\eta=\frac{P_{out}}{P_{in}}\]
+\end{multicols}
+\newpage
+\begin{center}
+    \Large \textbf{Orbital Mechanics}
+\end{center}
+\begin{multicols}{2}
+\section*{Newton's Law of Gravitation}
+\[F_g=\frac{GMm}{r^2} \quad (G=6.67\times10^{-11} m^3/kgs^2)\]
+\textbf{Differential equation for shape of orbital trajectory (derived by applying central force motion):}
+\[\frac{d^2u}{d\theta^2} + u = \frac{GM}{h^2}\]
+\begin{itemize}
+    \item $u=1/r$, r is distance from centers of mass 
+    \item $h=r^2\dot{\theta}$ , angular momentum per unit mass (where angular momentum $=H_o=hm=rmv_\theta$ )
+    \item M is the mass of the central body
+\end{itemize}
+\section*{Solutions to this differential equation are conic paths:} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{orbital.png}
+\end{figure}
+\begin{center}
+\boxed{u = \frac{1}{r} = \frac{GM}{h^2} + C\cos\theta = \frac{GM}{h^2}(1 + \varepsilon\cos\theta)}
+\end{center}
+Where C and h are constants defined by the instantaneous r and v at any point along the orbit:
+\begin{itemize}
+    \item $h =  r^2\dot{\theta} = r_0v_0$ 
+    \item $C = \frac{1}{r_0} - \frac{GM}{h^2} = \frac{1}{r_0} - \frac{GM}{r_0^2v_0^2}$
+\end{itemize}
+With \textbf{eccentricity}:
+\[\varepsilon = \frac{C}{GM/h^2} = \frac{Ch^2}{GM}\]
+\underline{Note:} Hyperbola ($\varepsilon > 1$), Parabola ($\varepsilon = 1$), Ellipse ($\varepsilon < 1$), Circle ($\varepsilon = 0$)
+\section*{Initial conditions for each path}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{conditions.png}
+\end{figure}
+\textbf{Parabolic path (barely escaping orbit) $\varepsilon =1$:}\\
+At $\theta=0$ and $r=r_o$ (start of free flight):
+\[\frac{1}{r_o} = \frac{GM}{r_o^2v_o^2}(1 + 1) \quad (h=r_ov_o)\]
+\[v_{esc}=v_o=\sqrt{\frac{2GM}{r_o}}\]
+\textbf{Circular orbit $\varepsilon=0$}\\
+At $\theta=0$ and $r=r_o$ (start of free flight):
+\[\frac{1}{r_o}=\frac{GM}{r_o^2v_o^2} \quad (h=r_ov_o)\]
+\[v_{circ}=v_o=\sqrt{\frac{GM}{r_o}}\]
+\underline{Note:} $GM = gR^2$ where R is the radius of Earth
+\section*{Periodic time $(\tau)$:} 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{periodic time.png}
+\end{figure}
+Time to complete 1 orbit:
+\[\tau=\frac{\text{Area of elliptical orbit}}{\text{Areal velocity}}\]
+From geometry, the major and minor axes are:
+\[a = \frac{1}{2}(r_0 + r_1)\]
+\[b = \sqrt{r_0r_1}\]
+The area of an ellipse is:
+\[A=\pi ab\]
+Areal velocity (constant):
+\[dA=\frac{1}{2}r^2d\theta\]
+\[\frac{dA}{dt}=\frac{1}{2}r^2\frac{d\theta}{dt}=\frac{h}{2} \quad (h=r^2\dot{\theta})\]
+Thus periodic time is:
+\[\boxed{\tau = \frac{A}{h/2} = \frac{2A}{h} = \frac{2\pi ab}{h}}\] 
+\end{multicols}
+\end{document}
