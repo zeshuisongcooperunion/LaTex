@@ -266,7 +266,110 @@ How to read:
 \textbf{Planer Density}
 \[PD=\frac{\text{Number of atoms centered on plane}}{\text{Area of plane}}\]
 \newpage
-\section*{\LARGE\underline{Dislocations and Strengthening Mechanisms}}
-\section*{Basic Concepts}
-\textbf{Types of dislocations}
+\section*{\LARGE\underline{Point Defects}}
+\begin{itemize}
+    \item Vacancies: Missing atoms in the lattice
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{vacancy.png}
+    \end{figure}
+    \item Interstitials: Extra atoms positioned between lattice sites
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{intersitial.png}
+    \end{figure}
+\end{itemize}
+\section*{Equilibrium Concentration of Vacancies}
+\[ N_v = Ne^{\left( \frac{-Q_v}{kT} \right)}\]
+Where:
+\begin{itemize}
+    \item $N_v$ = number of vacancies
+    \item N = total number of atomic sites (each lattice site can be occupied by an atom or be a vacancy)
+    \item $Q_v$ = activation energy required to form a vacancy (J or eV)
+    \item k = Boltzmann's constant ($8.617 \times 10^{-5}$ eV/atom-K)
+    \item T = temperature (K)
+\end{itemize}
+\newpage
+\section*{Alloys}
+Alloys are solid solutions of an impurity element (solute) dissolved in a base element (solvent). There are two types:
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{alloy.png}
+\end{figure}
+\noindent\textbf{Hume-Rothery rule}\\\\
+Conditions for forming a solid solution:
+\begin{itemize}
+    \item Atomic radii must be within 15\% of each other ($\Delta r < 0.15\%$)
+    \item Electronegativity values must be similar (ie. Close together on the periodic table)
+    \item Crystal structures of solvent and solute must be the same (for pure metals)
+    \item Valencies should be similar (All else being equal, a metal will have a greater tendency to dissolve a metal of higher valency than one of lower valency)
+\end{itemize}
+\newpage
+\noindent\textbf{Maximum Radius for an Interstitial Impurity}\\\\
+\noindent\textbf{FCC}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{FCC radius.png}
+\end{figure}
+\vspace{-4em}
+\[2r+2R=a\]
+\[r=\frac{a-2R}{2}\]
+\[\boxed{r=\frac{2R\sqrt{2}-2R}{2}=0.41R}\]
+\noindent\textbf{BCC}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{BCC radius.png}
+\end{figure}
+\vspace{-2em}
+\[\left(\frac{a}{2}\right)^2+\left(\frac{a}{4}\right)^2=(R+r)^2\]
+\[\left(\frac{4R}{2\sqrt{3}}\right)^2+\left(\frac{4R}{4\sqrt{3}}\right)^2=R^2+2Rr+r^2\]
+\[r^2+2Rr-0.667R^2=0\]
+\[\Rightarrow r=\frac{-2R\pm\sqrt{(2R)^2-4(1)(-0.667R^2)}}{2(1)}\]
+\[\boxed{r=0.291R}\]
+\newpage
+\section*{Specification of composition}
+\noindent\textbf{Weight Percent}
+\[C_1=\frac{m_1}{m_1+m_2}\times 100\]
+Where
+\begin{itemize}
+    \item $C_1$ = weight percent of element 1
+    \item $m_1$ = mass of element 1
+    \item $m_2$ = mass of element 2 
+\end{itemize}
+\noindent\textbf{Atomic Percent}
+\[C_1'=\frac{n_{m1}}{n_{m1}+n_{m2}}\times 100\]
+Where
+\begin{itemize}
+    \item $C_1'$ = atomic percent of element 1
+    \item $n_{m1}$ = number of moles of element 1
+    \item $n_{m2}$ = number of moles of element 2
+\end{itemize}
+\underline{Note:}
+\[n_{m1} = \frac{m_1 \text{(grams)}}{A_1 \text{(g/mol)}}\]
+\noindent\textbf{Conversion between wt\% and at\%}
+\[C_1'=\frac{C_1A_2}{C_1A_2 + C_2A_1}\times 100\]
+Where $A_1$ and $A_2$ are the atomic weights of elements 1 and 2 respectively
+\newpage
+\section*{\LARGE\underline{Line Defects}}
+Dislocations are line defects. It occurs when there is slipping between crystal planes when dislocations move and they cause permanent (plastic) deformation. There are two main types:
+\begin{itemize}
+    \item \textbf{Edge Dislocation}
+    \begin{figure}[H]   
+        \centering
+        \includegraphics[width=0.8\textwidth]{Edge dislocation.png}
+    \end{figure}
+    This occurs when an extra half plane of atoms is inserted in a crystal and moves when shear stress is applied. The direction of movement is parallel to the applied shear stress.
+    \item \textbf{Screw Dislocation}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.8\textwidth]{screw dislocation.png}
+    \end{figure}
+    The direction of movement is perpendicular to the applied shear stress.\\\\
+Plastic deformation occurs due to many dislocations. The process by which plastic deformation is produced by dislocation motion is termed \textbf{slip}; the crystallographic plane along which the dislocation line traverses is the \textbf{slip plane}.\\\\
+All metals and alloys contain dislocations formed during solidification. The \textbf{solidification density} is the number of dislocations per unit volume in a material.
+\end{itemize}
+\section*{Characteristics of dislocations}
+Due to the presence of an etra half plane of atoms, there exists regions of compressive, tensile, and shear \textbf{lattice strains} around the dislocation line. \\\\
+\underline{Ex:}
+\begin
 \end{document}
