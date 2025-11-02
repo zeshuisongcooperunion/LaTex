@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  21 OCT 2025 14:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  1 NOV 2025 21:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -523,24 +523,99 @@ File: ABX3.png Graphic file (type png)
 <use ABX3.png>
 Package pdftex.def Info: ABX3.png  used on input line 233.
 (pdftex.def)             Requested size: 187.89914pt x 212.69444pt.
- [14 <./AX.png> <./AX2.png>] [15 <./ABX3.png>] [16] [17] (Materials Science.aux)
+ [14 <./AX.png> <./AX2.png>] [15 <./ABX3.png>] [16]
+<vacancy.png, id=91, 702.82574pt x 181.8795pt>
+File: vacancy.png Graphic file (type png)
+<use vacancy.png>
+Package pdftex.def Info: vacancy.png  used on input line 274.
+(pdftex.def)             Requested size: 234.8775pt x 60.78082pt.
+<intersitial.png, id=92, 689.57625pt x 187.902pt>
+File: intersitial.png Graphic file (type png)
+<use intersitial.png>
+Package pdftex.def Info: intersitial.png  used on input line 279.
+(pdftex.def)             Requested size: 234.8775pt x 64.00052pt.
+ [17 <./vacancy.png> <./intersitial.png>]
+<alloy.png, id=99, 767.86874pt x 263.7855pt>
+File: alloy.png Graphic file (type png)
+<use alloy.png>
+Package pdftex.def Info: alloy.png  used on input line 297.
+(pdftex.def)             Requested size: 375.80544pt x 129.10307pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 299--301
+
+ []
+
+[18 <./alloy.png>]
+<FCC radius.png, id=104, 783.52725pt x 352.9185pt>
+File: FCC radius.png Graphic file (type png)
+<use FCC radius.png>
+Package pdftex.def Info: FCC radius.png  used on input line 312.
+(pdftex.def)             Requested size: 328.82707pt x 148.11166pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 308--313
+
+ []
+
+<BCC radius.png, id=105, 777.50475pt x 293.898pt>
+File: BCC radius.png Graphic file (type png)
+<use BCC radius.png>
+Package pdftex.def Info: BCC radius.png  used on input line 321.
+(pdftex.def)             Requested size: 328.82707pt x 124.29733pt.
+[19 <./FCC radius.png> <./BCC radius.png>] [20]
+<Edge dislocation.png, id=115, 976.8495pt x 352.9185pt>
+File: Edge dislocation.png Graphic file (type png)
+<use Edge dislocation.png>
+Package pdftex.def Info: Edge dislocation.png  used on input line 359.
+(pdftex.def)             Requested size: 375.80544pt x 135.76903pt.
+<screw dislocation.png, id=116, 539.01375pt x 164.41425pt>
+File: screw dislocation.png Graphic file (type png)
+<use screw dislocation.png>
+Package pdftex.def Info: screw dislocation.png  used on input line 365.
+(pdftex.def)             Requested size: 375.80544pt x 114.63258pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--370
+
+ []
+
+<lattice strain.png, id=117, 329.43076pt x 231.86626pt>
+File: lattice strain.png Graphic file (type png)
+<use lattice strain.png>
+Package pdftex.def Info: lattice strain.png  used on input line 376.
+(pdftex.def)             Requested size: 187.89914pt x 132.25357pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 372--377
+
+ []
+
+[21 <./Edge dislocation.png> <./screw dislocation.png>]
+<interaction.png, id=123, 361.95226pt x 476.982pt>
+File: interaction.png Graphic file (type png)
+<use interaction.png>
+Package pdftex.def Info: interaction.png  used on input line 381.
+(pdftex.def)             Requested size: 234.8775pt x 309.53242pt.
+ [22 <./lattice strain.png> <./interaction.png>] (Materials Science.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3696 strings out of 474486
- 55588 string characters out of 5743755
+ 3759 strings out of 474486
+ 56979 string characters out of 5743755
  1930542 words of memory out of 5000000
- 25934 multiletter control sequences out of 15000+600000
+ 25997 multiletter control sequences out of 15000+600000
  576107 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,65p,303b,247s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on "Materials Science.pdf" (17 pages, 1281473 bytes).
+ 57i,12n,65p,462b,307s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "Materials Science.pdf" (22 pages, 2719665 bytes).
 PDF statistics:
- 136 PDF objects out of 1000 (max. 8388607)
+ 175 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 
