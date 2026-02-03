@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{amsmath, amsfonts, bm, graphicx}
+\usepackage{tabularx}
+\usepackage{booktabs} 
+\usepackage{float}
+\usepackage{enumitem}
+\geometry{margin=1in}
+
+\title{}
+\date{}
+\author{}
+
+\begin{document}
+\subsection*{\boxed{\text{HW 1 - Zeshui Song}}}
+
+\section*{2.16}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2-16.png}
+\end{figure}
+\vspace{-1em}
+\textbf{(a)}
+\[[-10^{13}\,\text{C}]\left[\frac{\text{e}}{1.602 \times 10^{-19}\,\text{C}}\right] = -6.242 \times 10^{31}\,\text{e} \implies \boxed{6.242 \times 10^{31}\,\text{electrons}}\]
+\textbf{(b)}
+\[\sigma = \frac{6.242 \times 10^{31}\,\text{electrons}}{\frac{1}{4}\pi (10^{-2}\,\text{m})^2} = \boxed{7.947 \times 10^{35}\,\text{electrons/m}^2}\]
+\textbf{(c)}
+\[i = \frac{dq}{dt} = \frac{[10^6\,\text{electrons}][1.602 \times 10^{-19}\,\text{C/electron}]}{1\,\text{s}} = \boxed{1.602 \times 10^{-13}\,\text{C/s}}\]
+
+\section*{2.25}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2-25.png}
+\end{figure}
+\vspace{-1em}
+\textbf{(a)}
+\[P=[6\,\text{V}][1\times 10^{-12}\,\text{A}]=\boxed{6 \times 10^{-12}\,\text{W}}\]
+\textbf{(b)}
+\[P = [1\,\text{V}][10\times10^{-3}\,\text{A}] = \boxed{0.01\,\text{W}}\]
+\textbf{(c)} The element is supplying 20 W of power.
+\[P = [10\,\text{V}][-2\,\text{A}] = \boxed{-20\,\text{W}}\]
+\underline{Note:} The sign convention is that if current enters the positive terminal, then power is being delivered or absorbed. If current enters the negative terminal, then power is being generated or supplied. Also, power is given by \(P = VI\).
+
+\section*{2.30}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2-30.png}
+\end{figure}
+\vspace{-1em}
+\textbf{(a)} \boxed{3.0\,\text{A (short circuit)}}\\\\
+\textbf{(b)} \boxed{0.500\,\text{V (open circuit)}}\\\\
+\textbf{(c)} For maximum power, the product of current and voltage is max, this seems to happen around 0.375 V.
+\[P_{max}=[0.375\,\text{V}][2.5\,\text{A}]=\boxed{0.9375\,\text{W}}\]
+\underline{Note:} A \textbf{short circuit} is defined as a wire with zero resistance, and thus corresponds to a voltage of 0 V across its terminals. An \textbf{open circuit} is defined as a break in the circuit with infinite resistance, and thus corresponds to a current of 0 A through its terminals.
+
+\section*{2.35}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2-35.png}
+\end{figure}
+\vspace{-1em}
+\textbf{(a)}
+\[w = [3.7\,\text{W}][4000\times10^{-3}\,\text{Ah}] = 14.8\,\text{Wh}\]
+\[t = \frac{[14.8\,\text{Wh}]}{[5\,\text{W}]} = \boxed{2.96\,\text{h}}\]
+\textbf{(b)}
+\[I_{eff} = [2\,\text{A}][0.8] = 1.6\,\text{A}\]
+\[t = \frac{[4000\times10^{-3}\,\text{Ah}]}{[1.6\,\text{A}]} = \boxed{2.5\,\text{h}}\]
+\underline{Note:} Recall that work is the product of power and time, thus energy is given by $\boxed{1\,\text{J} = 1\,\text{W} \times 1\,\text{s}}$. Energy is usually measured in \textbf{watt hours (Wh)} where \boxed{1\,\text{Wh} = 3600\,\text{J}}.\\\\
+\textbf{Battery capacity} (energy stored) is then also given in terms of Wh. Since the voltage of a battery is constant, we can define the energy stored in terms of the charge capacity $Q$ (in Ampere hours, Ah) and voltage $V$ (in Volts, V) as:
+\[w = \int P\,dt = \int VI\,dt = V\int I\,dt = VQ\]
+where $Q$ is in Ah, $V$ is in V, and $w$ is in Wh.\\\\
+To find how long the battery will last, we can divide its battery capacity by the load/output power.
+\[t = \frac{w}{P}\]
+To find how long it will take to charge the battery, we can divide its charge capacity by the charging current.
+\[t = \frac{Q}{I_{eff}}\]
+Where $I_{eff}$ is the effective charging current accounting for any losses ($I_{eff} = I_{in} \times \eta$ where $\eta$ is the efficiency of the charger).
+
+\section*{2.40}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2-40.png}
+\end{figure}
+\vspace{-1em}
+
+
+\section*{2.43}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2-43.png}
+\end{figure}
+\vspace{-1em}
+
+\section*{2.60}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{2-60.png}
+\end{figure}
+\vspace{-1em}
+
+\section*{3.5}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{3-5.png}
+\end{figure}
+\vspace{-2em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{3-5_1.png}
+\end{figure}
+\vspace{-1em}
+
+\section*{3.10}
+\vspace{-2em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{3-10.png}
+\end{figure}
+\vspace{-1em}
+
+\section*{3.12}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{3-12.png}
+\end{figure}
+\vspace{-1em}
+
+\section*{3.20}
+\vspace{-3.5em}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{3-20.png}
+\end{figure}
+\vspace{-1em}
+
+\end{document}
