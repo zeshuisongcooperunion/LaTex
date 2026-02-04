@@ -169,6 +169,13 @@ INPUT .\2-43.png
 INPUT .\2-43.png
 INPUT .\2-43.png
 INPUT .\2-43.png
+INPUT .\2-53.png
+INPUT .\2-53.png
+INPUT .\2-53.png
+INPUT .\2-53.png
+INPUT .\2-53.png
+INPUT .\2-53.png
+INPUT .\2-53.png
 INPUT .\2-60.png
 INPUT .\2-60.png
 INPUT .\2-60.png
@@ -197,6 +204,14 @@ INPUT .\3-10.png
 INPUT .\3-10.png
 INPUT .\3-10.png
 INPUT .\3-10.png
+INPUT .\3-10_1.png
+INPUT .\3-10_1.png
+INPUT .\3-10_1.png
+INPUT .\3-10_1.png
+INPUT .\3-10_1.png
+INPUT .\3-10_1.png
+INPUT .\3-10_1.png
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
 INPUT .\3-12.png
 INPUT .\3-12.png
 INPUT .\3-12.png
@@ -212,6 +227,8 @@ INPUT .\3-20.png
 INPUT .\3-20.png
 INPUT .\3-20.png
 INPUT HW1_ZeshuiSong.aux
+INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
+INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb

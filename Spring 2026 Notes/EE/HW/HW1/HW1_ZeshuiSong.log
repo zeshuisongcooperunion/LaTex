@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  3 FEB 2026 09:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  3 FEB 2026 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -333,58 +333,94 @@ Package pdftex.def Info: 2-40.png  used on input line 88.
 <2-43.png, id=26, 573.342pt x 120.45pt>
 File: 2-43.png Graphic file (type png)
 <use 2-43.png>
-Package pdftex.def Info: 2-43.png  used on input line 97.
+Package pdftex.def Info: 2-43.png  used on input line 99.
 (pdftex.def)             Requested size: 375.80544pt x 78.9532pt.
-<2-60.png, id=27, 570.933pt x 63.23625pt>
+[3 <./2-40.png> <./2-43.png>]
+<2-53.png, id=32, 584.78474pt x 239.09325pt>
+File: 2-53.png Graphic file (type png)
+<use 2-53.png>
+Package pdftex.def Info: 2-53.png  used on input line 117.
+(pdftex.def)             Requested size: 375.80544pt x 153.6503pt.
+<2-60.png, id=33, 570.933pt x 63.23625pt>
 File: 2-60.png Graphic file (type png)
 <use 2-60.png>
-Package pdftex.def Info: 2-60.png  used on input line 105.
+Package pdftex.def Info: 2-60.png  used on input line 129.
 (pdftex.def)             Requested size: 375.80544pt x 41.62508pt.
-<3-5.png, id=28, 464.937pt x 218.0145pt>
+<3-5.png, id=34, 464.937pt x 218.0145pt>
 File: 3-5.png Graphic file (type png)
 <use 3-5.png>
-Package pdftex.def Info: 3-5.png  used on input line 113.
+Package pdftex.def Info: 3-5.png  used on input line 142.
 (pdftex.def)             Requested size: 375.80544pt x 176.22815pt.
-<3-5_1.png, id=29, 201.75375pt x 145.7445pt>
+<3-5_1.png, id=35, 201.75375pt x 145.7445pt>
 File: 3-5_1.png Graphic file (type png)
 <use 3-5_1.png>
-Package pdftex.def Info: 3-5_1.png  used on input line 118.
+Package pdftex.def Info: 3-5_1.png  used on input line 147.
 (pdftex.def)             Requested size: 187.89914pt x 135.73668pt.
-[3 <./2-40.png> <./2-43.png> <./2-60.png>]
-<3-10.png, id=36, 816.651pt x 308.352pt>
+ [4 <./2-53.png> <./2-60.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--156
+
+ []
+
+<3-10.png, id=41, 445.665pt x 81.906pt>
 File: 3-10.png Graphic file (type png)
 <use 3-10.png>
-Package pdftex.def Info: 3-10.png  used on input line 126.
-(pdftex.def)             Requested size: 469.75502pt x 177.3716pt.
-<3-12.png, id=37, 489.027pt x 271.0125pt>
+Package pdftex.def Info: 3-10.png  used on input line 169.
+(pdftex.def)             Requested size: 375.80544pt x 69.06801pt.
+<3-10_1.png, id=42, 701.62125pt x 202.95825pt>
+File: 3-10_1.png Graphic file (type png)
+<use 3-10_1.png>
+Package pdftex.def Info: 3-10_1.png  used on input line 174.
+(pdftex.def)             Requested size: 469.75502pt x 135.88841pt.
+[5 <./3-5.png> <./3-5_1.png>]
+<3-12.png, id=48, 489.027pt x 271.0125pt>
 File: 3-12.png Graphic file (type png)
 <use 3-12.png>
-Package pdftex.def Info: 3-12.png  used on input line 134.
+Package pdftex.def Info: 3-12.png  used on input line 193.
 (pdftex.def)             Requested size: 375.80544pt x 208.275pt.
- [4 <./3-5.png> <./3-5_1.png> <./3-10.png>]
-<3-20.png, id=44, 499.8675pt x 239.09325pt>
+ [6 <./3-10.png> <./3-10_1.png> <./3-12.png>]
+<3-20.png, id=56, 499.8675pt x 239.09325pt>
 File: 3-20.png Graphic file (type png)
 <use 3-20.png>
-Package pdftex.def Info: 3-20.png  used on input line 142.
+Package pdftex.def Info: 3-20.png  used on input line 206.
 (pdftex.def)             Requested size: 375.80544pt x 179.75728pt.
- [5 <./3-12.png> <./3-20.png>] (HW1_ZeshuiSong.aux)
+ [7 <./3-20.png>] (HW1_ZeshuiSong.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3886 strings out of 474486
- 58662 string characters out of 5743755
+ 3911 strings out of 474486
+ 59137 string characters out of 5743755
  1932542 words of memory out of 5000000
- 26127 multiletter control sequences out of 15000+600000
- 571449 words of font info for 85 fonts, out of 8000000 for 9000
+ 26151 multiletter control sequences out of 15000+600000
+ 571786 words of font info for 86 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,6n,65p,408b,237s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW1_ZeshuiSong.pdf (5 pages, 503613 bytes).
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on HW1_ZeshuiSong.pdf (7 pages, 599081 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 
