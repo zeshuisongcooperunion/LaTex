@@ -256,6 +256,27 @@ Use voltage divider rule to find $v_x$:
     \includegraphics[width=0.8\textwidth]{3-56.png}
 \end{figure}
 \vspace{-1em}
+Finding the equivalent resistance of the circuit (starting right to left):\\
+$4\,\Omega$ and $4\,\Omega$ in series:
+\[4+4 = 8\,\Omega\]
+$8\,\Omega$ and $4\,\Omega$ in parallel:
+\[\frac{8\cdot4}{8+4}=2.66\,\Omega\]
+$2.66\,\Omega$ and $5\,\Omega$ in series:
+\[2.66+5 = 7.66\,\Omega\]
+$7.66\,\Omega$ and $2\,\Omega$ in parallel:
+\[\frac{7.66\cdot2}{7.66+2} = 1.66\,\Omega\]
+$1.66\,\Omega$ and $1\,\Omega$ in parallel:
+\[R_{\text{eq}}=\frac{1.66\cdot1}{1.66+1} = 0.624\,\Omega\]
+Thus the voltage over each branch is:
+\[V = [25\,\text{A}][0.624\,\Omega] = 15.6\,\text{V}\]
+Using KCL at the top node of the $1\,\Omega$ resistor to find $i_1$:
+\[[25\,\text{A}]=\frac{[15.6\,\text{V}]}{[1\,\Omega]}+i_1 \quad \implies \boxed{i_1 = 9.4\,\text{A}}\]
+Using KCL at the top node of the $2\,\Omega$ resistor to find $i_2$:
+\[[9.4\,\text{A}] = \frac{15.6\,\text{V}}{[2\,\Omega]}+i_2 \quad \implies \boxed{i_2 = 1.6\,\text{A}}\]
+Using the voltage divider rule to find the voltage after the $5\,\Omega$ resistor (the equivalent resistance over the three $4\,\Omega$ resistors was found to be $2.66\,\Omega$):
+\[v = [15.6\,\text{V}]\frac{[2.66\,\Omega]}{[5\,\Omega]+[2.66\,\Omega]} = 5.417\,\text{V}\]
+Using voltage divider rule again to find the $v_3$:
+\[v_3 = [5.417\,\text{V}]\frac{[4\,\Omega]}{[4\,\Omega]+[4\,\Omega]} = \boxed{2.708\,\text{V}}\]
 
 \section*{3.60}
 \vspace{-3.5em}
@@ -264,6 +285,15 @@ Use voltage divider rule to find $v_x$:
     \includegraphics[width=0.8\textwidth]{3-60.png}
 \end{figure}
 \vspace{-1em}
+Applying Nodal analysis at $v_2$:
+\[\frac{v_2-v_1}{[1\times10^3\,\Omega]} = \frac{v_2}{[15\times10^3\,\Omega]}+\frac{v_{\pi}}{[3\times10^3\,\Omega]}\]
+Since they are parallel, $v_2 = v_{\pi}$. Also since $v_1 = 6cos(2300t) \times 10^{-6}$ V, we can solve for $v_{\pi}$:
+\[\frac{v_{\pi}-6cos(2300t) \times 10^{-6}}{[1\times10^3\,\Omega]} = \frac{v_{\pi}}{[15\times10^3\,\Omega]}+\frac{v_{\pi}}{[3\times10^3\,\Omega]}\]
+\[\implies v_{\pi} = cos(2300t) \times 10^{-5}\,\text{V}\]
+Nodal analysis at $v_{out}$:
+\[-g_mv_{\pi}=\frac{v_{out}}{[3.3\times10^3\,\Omega]}\]
+Plugging in values:
+\[-[0.322\, s][cos(2300t) \times 10^{-5}\,\text{V}]=\frac{v_{out}}{[3.3\times10^3\,\Omega]} \implies \boxed{v_{out} = -1.062cos(2300t) \times 10^{-2}\,\text{V}}\]
 
 \section*{3.61}
 \vspace{-3.5em}
@@ -272,5 +302,28 @@ Use voltage divider rule to find $v_x$:
     \includegraphics[width=0.8\textwidth]{3-61.png}
 \end{figure}
 \vspace{-1em}
+\textbf{(a)}
+Finding the equivalent resistance of the circuit (starting right to left) like in problem \textit{3.56}:\\
+$20\,\Omega$ and $47\,\Omega$ in series:
+\[20+47 = 67\,\Omega\]
+$67\,\Omega$ and $50\,\Omega$ in parallel:
+\[\frac{67\cdot50}{67+50}=24.3589\,\Omega\]
+$24.3589\,\Omega$ and $40\,\Omega$ in series:
+\[24.3589+40 = 64.3589\,\Omega\]
+$64.3589\,\Omega$ and $10\,\Omega$ in parallel:
+\[\frac{64.3589\cdot10}{64.3589+10} = 8.6551\,\Omega\]
+$8.6551\,\Omega$ and $10\,\Omega$ in parallel:
+\[\frac{8.6551\cdot10}{8.6551+10} = 4.6395\,\Omega\]
+Using voltage divider rule to find voltage across the $4.6395\,\Omega$ equivalent resistance (which is the same as across the $10\,\Omega$ resistors) in series with the $20\,\Omega$ resistor:
+\[v=[20\,\text{V}]\frac{[4.6395\,\Omega]}{[20\,\Omega]+[4.6395\,\Omega]}=3.7659\,\text{V}\]
+\[\boxed{v_{10\,\Omega} = 3.7659\,\text{V}}\]\newpage\noindent
+\textbf{(b)}
+Using the voltage divider rule to find voltage across the $24.3589\,\Omega$ equivalent resistance (which is the same as across the $50\,\Omega$ resistor) in series with the $40\,\Omega$ resistor:
+\[v=[3.7659\,\text{V}]\frac{[24.3589\,\Omega]}{[40\,\Omega]+[24.3589\,\Omega]}=1.4253\,\text{V}\]
+Finally, one more time using the voltage divider rule to find voltage across the $47\,\Omega$ resistor:
+\[v=[1.4253\,\text{V}]\frac{[47\,\Omega]}{[20\,\Omega]+[47\,\Omega]}=0.9998\,\text{V}\]
+Thus, the power dissipated by the $47\,\Omega$ resistor is:
+\[P=iv=\frac{v^2}{R}=\frac{[0.9998\,\text{V}]^2}{[47\,\Omega]}=\boxed{0.02126\,\text{W}}\]
+\textbf{(c)} The rating is not exceeded since $0.25\,\text{W} > 0.02126\,\text{W}$.
 
 \end{document}

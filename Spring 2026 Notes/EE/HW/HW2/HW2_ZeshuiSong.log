@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  6 FEB 2026 07:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  6 FEB 2026 09:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -357,17 +357,19 @@ File: 3-56.png Graphic file (type png)
 <use 3-56.png>
 Package pdftex.def Info: 3-56.png  used on input line 256.
 (pdftex.def)             Requested size: 375.80544pt x 148.51936pt.
-<3-60.png, id=59, 672.71326pt x 272.81924pt>
+ [9 <./3-54.png> <./3-56.png>]
+<3-60.png, id=64, 534.798pt x 226.446pt>
 File: 3-60.png Graphic file (type png)
 <use 3-60.png>
-Package pdftex.def Info: 3-60.png  used on input line 264.
-(pdftex.def)             Requested size: 375.80544pt x 152.41139pt.
-<3-61.png, id=60, 670.30424pt x 295.1025pt>
+Package pdftex.def Info: 3-60.png  used on input line 285.
+(pdftex.def)             Requested size: 375.80544pt x 159.12614pt.
+ [10 <./3-60.png>]
+<3-61.png, id=69, 670.30424pt x 295.1025pt>
 File: 3-61.png Graphic file (type png)
 <use 3-61.png>
-Package pdftex.def Info: 3-61.png  used on input line 272.
+Package pdftex.def Info: 3-61.png  used on input line 302.
 (pdftex.def)             Requested size: 375.80544pt x 165.44987pt.
- [9 <./3-54.png> <./3-56.png> <./3-60.png>] [10 <./3-61.png>] (HW2_ZeshuiSong.aux)
+ [11 <./3-61.png>] [12] (HW2_ZeshuiSong.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -382,9 +384,9 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  57i,11n,65p,342b,237s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on HW2_ZeshuiSong.pdf (10 pages, 1539303 bytes).
+Output written on HW2_ZeshuiSong.pdf (12 pages, 1589447 bytes).
 PDF statistics:
- 109 PDF objects out of 1000 (max. 8388607)
+ 115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

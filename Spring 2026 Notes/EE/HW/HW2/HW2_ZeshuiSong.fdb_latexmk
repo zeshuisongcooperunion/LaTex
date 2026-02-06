@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1770381535.66771 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/EE/HW/HW2/HW2_ZeshuiSong.tex" "HW2_ZeshuiSong.pdf" "HW2_ZeshuiSong" 1770381536.67595 0
+["pdflatex"] 1770389170.2057 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/EE/HW/HW2/HW2_ZeshuiSong.tex" "HW2_ZeshuiSong.pdf" "HW2_ZeshuiSong" 1770389171.31575 0
   "3-21.png" 1770340257 54039 f5599bb427ca0e552fa186b2ee3e14f7 ""
   "3-23.png" 1770338399 62507 f4a5ffdcd16d0050d67d3cec926f42c5 ""
   "3-34.png" 1770338464 95730 af05faf04b6c0f799f02b7e23db8e16b ""
@@ -14,7 +14,7 @@
   "3-48_1.jpg" 1770380229 186814 5ed1e70a2ebfc315b66ceeba9638bb22 ""
   "3-54.png" 1770338642 43646 ac5f19386b5f9b6c3dccf39c25c414e1 ""
   "3-56.png" 1770338660 55243 2cac9c9b9ce3952bdf0f2d4b68090cd5 ""
-  "3-60.png" 1770338681 69614 6248c30847b63f962148bfe1f81ea374 ""
+  "3-60.png" 1770387582 109295 f72e3dcc342d28a3f07fba5ce4707265 ""
   "3-61.png" 1770338696 85338 681a9fd39cdcd7b0a27435e38a0d933a ""
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1768086119 80937 91001db6d4ae332437b4b739862cda02 ""
   "C:/Users/zsong/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758289211 24225046 93fab31cee048cd2ef0f58bac36106e4 ""
@@ -89,9 +89,9 @@
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1700599895 12667 e4b5eb11e4b7239e6c8a52bbe074a6c6 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/tex/latex/tools/bm.sty" 1700599895 13231 2c742011581e2bf297e33520567d9464 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/tex/latex/tools/tabularx.sty" 1700599895 7147 d45559f8a31b8c53ada0640516660003 ""
-  "HW2_ZeshuiSong.aux" 1770381536 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
-  "HW2_ZeshuiSong.tex" 1770381535 12089 bc10d3211f51c263cbfde06526c3dfda ""
-  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/EE/HW/HW2/HW2_ZeshuiSong.tex" 1770381535 12089 bc10d3211f51c263cbfde06526c3dfda ""
+  "HW2_ZeshuiSong.aux" 1770389171 33 e6d77a6cc1977d88a849501f83258f9d "pdflatex"
+  "HW2_ZeshuiSong.tex" 1770389169 15854 8875bc6df57b8f9c531e1442a99e7e90 ""
+  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/EE/HW/HW2/HW2_ZeshuiSong.tex" 1770389169 15854 8875bc6df57b8f9c531e1442a99e7e90 ""
   (generated)
   "HW2_ZeshuiSong.aux"
   "HW2_ZeshuiSong.log"
