@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  28 JAN 2026 12:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  8 FEB 2026 08:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -196,39 +196,108 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 \enit@inbox=\box57
 \enit@count@id=\count282
 \enitdp@description=\count283
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count284
+\mult@box=\box58
+\multicol@leftmargin=\dimen181
+\c@unbalance=\count285
+\c@collectmore=\count286
+\doublecol@number=\count287
+\multicoltolerance=\count288
+\multicolpretolerance=\count289
+\full@width=\dimen182
+\page@free=\dimen183
+\premulticols=\dimen184
+\postmulticols=\dimen185
+\multicolsep=\skip56
+\multicolbaselineskip=\skip57
+\partial@page=\box59
+\last@line=\box60
+\mc@boxedresult=\box61
+\maxbalancingoverflow=\dimen186
+\mult@rightbox=\box62
+\mult@grightbox=\box63
+\mult@firstbox=\box64
+\mult@gfirstbox=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\c@minrows=\count290
+\c@columnbadness=\count291
+\c@finalcolumnbadness=\count292
+\last@try=\dimen187
+\multicolovershoot=\dimen188
+\multicolundershoot=\dimen189
+\mult@nat@firstbox=\box102
+\colbreak@box=\box103
+\mc@col@check@num=\count293
 ) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count284
-\l__pdf_internal_box=\box58
+\l__color_backend_stack_int=\count294
+\l__pdf_internal_box=\box104
 ) (Modern.aux)
 \openout1 = `Modern.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count285
-\scratchdimen=\dimen181
-\scratchbox=\box59
-\nofMPsegments=\count286
-\nofMParguments=\count287
+\scratchcounter=\count295
+\scratchdimen=\dimen190
+\scratchbox=\box105
+\nofMPsegments=\count296
+\nofMParguments=\count297
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count288
-\MPscratchDim=\dimen182
-\MPnumerator=\count289
-\makeMPintoPDFobject=\count290
+\MPscratchCnt=\count298
+\MPscratchDim=\dimen191
+\MPnumerator=\count299
+\makeMPintoPDFobject=\count300
 \everyMPtoPDFconversion=\toks31
 ) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -270,38 +339,89 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
 (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
-
-{C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 51--54
+)
+Underfull \hbox (badness 10000) in paragraph at lines 24--27
 
  []
 
-[2] (Modern.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--40
+
+ []
+
+[1
+
+{C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+<1d Plane Wave.jpg, id=16, 2906.86pt x 1401.235pt>
+File: 1d Plane Wave.jpg Graphic file (type jpg)
+<use 1d Plane Wave.jpg>
+Package pdftex.def Info: 1d Plane Wave.jpg  used on input line 42.
+(pdftex.def)             Requested size: 234.8775pt x 113.2129pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
+
+ []
+
+<Fixed z.jpg, id=17, 2890.8pt x 1296.845pt>
+File: Fixed z.jpg Graphic file (type jpg)
+<use Fixed z.jpg>
+Package pdftex.def Info: Fixed z.jpg  used on input line 52.
+(pdftex.def)             Requested size: 234.8775pt x 105.35255pt.
+<Fixed t.jpg, id=18, 2562.57375pt x 1348.03625pt>
+File: Fixed t.jpg Graphic file (type jpg)
+<use Fixed t.jpg>
+Package pdftex.def Info: Fixed t.jpg  used on input line 57.
+(pdftex.def)             Requested size: 234.8775pt x 123.53952pt.
+[2 <./1d Plane Wave.jpg> <./Fixed z.jpg>] [3 <./Fixed t.jpg>]
+Overfull \hbox (30.00227pt too wide) detected at line 102
+[] \OT1/cmr/m/n/12 = []
+ []
+
+<Divergence thm.png, id=25, 744.381pt x 338.4645pt>
+File: Divergence thm.png Graphic file (type png)
+<use Divergence thm.png>
+Package pdftex.def Info: Divergence thm.png  used on input line 106.
+(pdftex.def)             Requested size: 187.89914pt x 85.43192pt.
+<Stokes thm.png, id=27, 615.4995pt x 449.2785pt>
+File: Stokes thm.png Graphic file (type png)
+<use Stokes thm.png>
+Package pdftex.def Info: Stokes thm.png  used on input line 116.
+(pdftex.def)             Requested size: 187.89914pt x 137.15656pt.
+[4 <./Divergence thm.png> <./Stokes thm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
+
+ []
+
+[5] [6] (Modern.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3816 strings out of 474486
- 57627 string characters out of 5743755
- 1934542 words of memory out of 5000000
- 26056 multiletter control sequences out of 15000+600000
- 572085 words of font info for 87 fonts, out of 8000000 for 9000
+ 3985 strings out of 474486
+ 60678 string characters out of 5743755
+ 1940542 words of memory out of 5000000
+ 26220 multiletter control sequences out of 15000+600000
+ 568633 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,9n,65p,314b,232s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on Modern.pdf (2 pages, 115520 bytes).
+ 57i,16n,65p,538b,320s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Modern.pdf (6 pages, 2225870 bytes).
 PDF statistics:
- 59 PDF objects out of 1000 (max. 8388607)
+ 85 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

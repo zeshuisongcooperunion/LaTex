@@ -1,18 +1,17 @@
 \documentclass[12pt]{article}
 \usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
-\usepackage{tabularx, booktabs, float, enumitem}
+\usepackage{tabularx, booktabs, float, enumitem, multicol}
 \geometry{margin=1in}
 
-\title{PH-214 Modern Physics Notes}
+
+\title{}
 \date{}
 \author{}
 
 \begin{document}
-\maketitle
-\vspace{-6em}
+{\centering\LARGE PH-214 Modern Physics Notes\par}
 \section*{Useful Math}
-\begin{itemize}
-    \item Taylor series expansions:
+\textbf{Taylor series expansions:}
 \begin{flalign*}
 \sin x &= \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} 
        = x - \frac{x^3}{3!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \cdots & \\[6pt]
@@ -23,14 +22,110 @@
 (1+x)^m &= \sum_{n=0}^{\infty} \binom{m}{n} x^n 
        = 1 + mx + \frac{m(m-1)}{2}x^2 + \frac{m(m-1)(m-2)}{6}x^3 + \cdots &
 \end{flalign*}
-\underline{Note:} For small x, higher order terms reduce to zero
-
-    \item Use complex exponentials to manipulate complicated trig functions (Euler's Identity).
+\underline{Note:} For small x, higher order terms reduce to zero\\\\
+\textbf{Euler's Identity:}\\ Use complex exponentials to manipulate complicated trig functions and complex amplitudes.
 \[e^{ix} = \cos x + i \sin x\]
+\textbf{Visualizing propagating plane waves:}\\
+A 1D plane wave propagating in the $+z$ direction can be mathematically represented as:
+\[\psi = f(kz - \omega t) \;\iff\; f(z - vt), \; v = \frac{\omega}{k}\]
+Where:
+\begin{itemize}[label=\textopenbullet]
+       \item $(kz - \omega t)$ [rad]:\\ The argument represents the \textbf{phase} of the wave. A change in phase simply moves the wave forward or backward in space and time, without changing its shape, there are a few ways to see this which we will look at later.
+       \item $k$ [rad/m]:\\ is the \textbf{wave number}, representing the spatial frequency of the wave, or how \textit{spread out} the wave is in space. Since $k$ scales the spatial variable $z$, a larger $k$ means the wave advances through the same phase over a smaller change in $z$.
+       \item $\omega$ [rad/s]:\\ is the \textbf{angular frequency}, representing the temporal frequency of the wave, or how \textit{spread out} the wave is in time. As in rotational kinematics, $\omega$ scales time $t$, and a larger $\omega$ means the wave advances through the same phase over a smaller change in $t$.
 \end{itemize}
-\textbf{Del Operator:}
+A plane wave is special in that it represents a wave whose shape is fixed as it propagates through space and time, with it’s shape represented by the function $f$.\\\\
+\textbf{Global View}\\
+As mentioned before, there are two ways to visualize how the phase $(kz - \omega t)$ represents a propagating wave. The first is a \textit{global} view, looking at how $z$ and $t$ change relative to each other for a fixed phase, tracking a specific point on the wave.
 
+\begin{center}
+\includegraphics[width=0.5\textwidth]{1d Plane Wave.jpg}
+\end{center}
+When we track a specific point on the wave, $f$ must give the same value at different positions and times, meaning the phase must stay constant. This shows that as $t$ increases, $z$ must also increase to maintain the phase (the wave moves rightward!). Vice versa, as $z$ increases, $t$ must increase too to keep the phase constant (again, moving rightward!).\\\\
+\underline{Note:} This intuition applies to \textit{any} point on the wave! Thus, by tracking all points, we can clearly see a propagating plane wave.\\\\
+\textbf{Local View}\\
+The second is a \textit{local} view, looking at how the phase changes at a fixed position as time changes, or at a fixed time as position changes. For this, we will look at a sinusoidal wave, to better show oscillation: $\psi = cos(kz - \omega t)$
+\begin{enumerate}
+       \item Fixing $z$, letting $t$ vary:\\
+       Imagine we are at a fixed position $z=z_1$. As time increases, we are effectively watching a cross-section of the wave at that point, seeing only a single point along the wave moving up and down like riding the “surface” of the wave. 
+       \begin{center}
+       \includegraphics[width=0.5\textwidth]{Fixed z.jpg}
+       \end{center}
+       \item Fixing $t$, letting $z$ vary:\\
+       Now imagine we are at a fixed time $t=t_1$. Moving along the $z$ axis, and plotting the wave’s amplitude, we see the full shape of the wave at that instant ($\omega t_1$ becomes a constant phase shift).
+       \begin{center}
+       \includegraphics[width=0.5\textwidth]{Fixed t.jpg}
+       \end{center}
+       \item Letting $z$ and $t$ vary together:\\
+       When we looked at $z$ and $t$ separately, we saw only a \textit{part} of the wave's behavior. For a fixed $z$, we observed how a single point moves over time, capturing the wave's temporal variation. For a fixed $t$, we saw the spatial variation, revealing the full shape of the wave at that instant. When both $z$ and $t$ vary together, we can see the wave's complete behavior, watching how its shape propagates through space and time.
+\end{enumerate}
+\underline{Note:} This intuition will become very useful when we study electromagnetic polarization, where the plane wave is a 2D wave. In our cross-sectional view, the single point along the wave will move along the $xy$ plane instead of just up and down.
+\section*{Vector Calculus}
+\begin{itemize}
+       \item \textbf{Del Operator:}
+       \[\vec{\nabla} = \frac{\partial}{\partial x}\hat{x} + \frac{\partial}{\partial y}\hat{y} + \frac{\partial}{\partial z}\hat{z}\]
+       \item \textbf{Laplacian Operator:} 
+       \[\nabla^2 = \vec{\nabla} \cdot \vec{\nabla} = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2} \quad \text{(in cartesian)}\]
+       \item \textbf{Divergence:} Dot product of del operator with a vector field $\vec{A}$, giving a scalar field that represents how much $\vec{A}$ spreads (diverges) out from a point.
+       \[\vec{\nabla} \cdot \vec{A} = \frac{\partial A_x}{\partial x} + \frac{\partial A_y}{\partial y} + \frac{\partial A_z}{\partial z}\]
+       \underline{Note:} A positive divergence indicates a source, while a negative divergence indicates a sink.
+       \item \textbf{Curl:} Cross product of del operator with a vector field $\vec{A}$, giving a vector field that represents how much $\vec{A}$ curls around a point.
+\begin{align*}
+\vec{\nabla} \times \vec{A}
+&=
+\begin{vmatrix}
+\hat{x} & \hat{y} & \hat{z} \\
+\frac{\partial}{\partial x} &
+\frac{\partial}{\partial y} &
+\frac{\partial}{\partial z} \\
+A_x & A_y & A_z
+\end{vmatrix} \\
+&=
+\underbrace{\left( \frac{\partial A_z}{\partial y}
+- \frac{\partial A_y}{\partial z} \right)}_{\text{curl about }x\text{-axis}} \hat{x}
++
+\underbrace{\left( \frac{\partial A_x}{\partial z}
+- \frac{\partial A_z}{\partial x} \right)}_{\text{curl about }y\text{-axis}} \hat{y}
++
+\underbrace{\left( \frac{\partial A_y}{\partial x}
+- \frac{\partial A_x}{\partial y} \right)}_{\text{curl about }z\text{-axis}} \hat{z}
+\end{align*}
+\underline{Note:} A positive curl indicates a counterclockwise rotation, while a negative curl indicates a clockwise rotation about the respective axis.
+\item \textbf{Vector Identities:} 
+\[\vec{\nabla}\cdot(\vec{A}\times\vec{B}) = \vec{B}\cdot(\vec{\nabla}\times\vec{A}) - \vec{A}\cdot(\vec{\nabla}\times\vec{B}) \quad \text{(Product Rule)}\]
+\[\vec{\nabla} \times (\vec{\nabla}v) = 0 \quad \text{(Curl of a gradient is always zero)}\]
+\[\vec{\nabla}\cdot(\vec{\nabla} \times \vec{A}) = 0 \quad \text{(Divergence of a curl is always zero)}\]
+\end{itemize}
+\section*{Divergence Theorem}
+\begin{minipage}{0.5\textwidth}
+Relates the flux of a vector field $\vec{F}$ through a closed surface $S$ to the divergence of $\vec{F}$ within the volume $V$ enclosed by $S$.
+\[\underbrace{\int_{V} (\vec{\nabla} \cdot \vec{F}) \, d\tau}_{\text{how field spreads inside the volume}} = \underbrace{\oint_{S} \vec{F} \cdot d\vec{a}}_{\text{flux of field through the surface}}\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=\linewidth]{Divergence thm.png}
+\end{minipage}
+
+\section*{Stokes Theorem}
+\begin{minipage}{0.5\textwidth}
+States that inside a surface $A$ bounded by a closed curve $P$, if a vector field $\vec{F}$ has a non-zero curl \textit{about $\vec{A}$ (the normal to the surface)}, then there will be a non-zero circulation of $\vec{F}$ around the curve $P$.
+\[\underbrace{\int_{A} (\vec{\nabla} \times \vec{F}) \cdot d\vec{a}}_{\text{flux of the curl of $\vec{F}$}} = \underbrace{\oint_{P} \vec{F} \cdot d\vec{l}}_{\text{circulation of $\vec{F}$}}\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=\linewidth]{Stokes thm.png}
+\end{minipage}
 \newpage
+\section*{Key Electricity and Magnetism Laws}
+\begin{multicols}{2}
+\begin{itemize}
+\item \textbf{Coulomb's Law} \[\vec{F}_{e} = \frac{1}{4 \pi \varepsilon_0} \frac{q_1 q_2}{r^2} \hat{r}\]
+\item \textbf{Electric Field of a Point Charge} \[\vec{E}=\frac{1}{4 \pi \varepsilon_0} \frac{q}{r^2} \hat{r}\]
+\item \textbf{Magnetic Force} \[\vec{F}_b = q\vec{v}\times\vec{B}\]
+\item \textbf{Biot-Savart Law} \[\vec{B} = \int \frac{\mu_0}{4\pi}\frac{i\,d\vec{s}\times\hat{r}}{r^2}\]
+\end{itemize}
+\end{multicols}
+
 \section*{Unit 1: Electromagnetic Waves}
 \textbf{Maxwell's Equations}
 \begin{enumerate}
@@ -59,7 +154,6 @@
     Both a changing electric field and a non-zero current density induce a circulating (curling) magnetic field.
     \[\vec{\nabla}\times\vec{B}= \mu_0\vec{J}+\mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}, \quad I_{\text{enc}}=\oint_S \vec{J}\cdot d\vec{a}\]
 \end{enumerate}
-
 
 
 \end{document}

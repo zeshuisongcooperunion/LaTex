@@ -57,6 +57,8 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\float\float.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\enumitem\enumitem.sty
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\tools\multicol.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT .\Modern.aux
@@ -72,35 +74,9 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-s
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib7.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy7.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
@@ -112,13 +88,18 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsa.fd
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\amsfonts\umsb.fd
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
-INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmmib10.tfm
@@ -127,8 +108,51 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cme
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy8.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\jknappen\ec\tcrm1200.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmti12.tfm
 OUTPUT Modern.pdf
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT .\1d Plane Wave.jpg
+INPUT .\1d Plane Wave.jpg
+INPUT .\1d Plane Wave.jpg
+INPUT .\1d Plane Wave.jpg
+INPUT .\1d Plane Wave.jpg
+INPUT .\1d Plane Wave.jpg
+INPUT .\1d Plane Wave.jpg
+INPUT .\Fixed z.jpg
+INPUT .\Fixed z.jpg
+INPUT .\Fixed z.jpg
+INPUT .\Fixed z.jpg
+INPUT .\Fixed z.jpg
+INPUT .\Fixed z.jpg
+INPUT .\Fixed z.jpg
+INPUT .\Fixed t.jpg
+INPUT .\Fixed t.jpg
+INPUT .\Fixed t.jpg
+INPUT .\Fixed t.jpg
+INPUT .\Fixed t.jpg
+INPUT .\Fixed t.jpg
+INPUT .\Fixed t.jpg
+INPUT .\Divergence thm.png
+INPUT .\Divergence thm.png
+INPUT .\Divergence thm.png
+INPUT .\Divergence thm.png
+INPUT .\Divergence thm.png
+INPUT .\Divergence thm.png
+INPUT .\Divergence thm.png
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmmib5.tfm
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy5.tfm
+INPUT .\Stokes thm.png
+INPUT .\Stokes thm.png
+INPUT .\Stokes thm.png
+INPUT .\Stokes thm.png
+INPUT .\Stokes thm.png
+INPUT .\Stokes thm.png
+INPUT .\Stokes thm.png
 INPUT Modern.aux
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
@@ -150,3 +174,5 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmti12.pfb
