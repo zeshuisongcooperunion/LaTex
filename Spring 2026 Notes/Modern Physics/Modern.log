@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  8 FEB 2026 08:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  9 FEB 2026 09:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -265,10 +265,38 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \mult@nat@firstbox=\box102
 \colbreak@box=\box103
 \mc@col@check@num=\count293
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtools.sty
+Package: mathtools 2024/10/04 v1.31 mathematical typesetting tools
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count294
+\calc@Bcount=\count295
+\calc@Adimen=\dimen190
+\calc@Bdimen=\dimen191
+\calc@Askip=\skip58
+\calc@Bskip=\skip59
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count296
+\calc@Cskip=\skip60
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+\g_MT_multlinerow_int=\count297
+\l_MT_multwidth_dim=\dimen192
+\origjot=\skip61
+\l_MT_shortvdotswithinadjustabove_dim=\dimen193
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen194
+\l_MT_above_intertext_sep=\dimen195
+\l_MT_below_intertext_sep=\dimen196
+\l_MT_above_shortintertext_sep=\dimen197
+\l_MT_below_shortintertext_sep=\dimen198
+\xmathstrut@box=\box104
+\xmathstrut@dim=\dimen199
 ) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count294
-\l__pdf_internal_box=\box104
+\l__color_backend_stack_int=\count298
+\l__pdf_internal_box=\box105
 ) (Modern.aux)
 \openout1 = `Modern.aux'.
 
@@ -288,16 +316,16 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count295
-\scratchdimen=\dimen190
-\scratchbox=\box105
-\nofMPsegments=\count296
-\nofMParguments=\count297
+\scratchcounter=\count299
+\scratchdimen=\dimen256
+\scratchbox=\box106
+\nofMPsegments=\count300
+\nofMParguments=\count301
 \everyMPshowfont=\toks30
-\MPscratchCnt=\count298
-\MPscratchDim=\dimen191
-\MPnumerator=\count299
-\makeMPintoPDFobject=\count300
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen257
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks31
 ) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -385,14 +413,14 @@ File: Fixed t.jpg Graphic file (type jpg)
 Package pdftex.def Info: Fixed t.jpg  used on input line 57.
 (pdftex.def)             Requested size: 234.8775pt x 123.53952pt.
 [2 <./1d Plane Wave.jpg> <./Fixed z.jpg>] [3 <./Fixed t.jpg>]
-Overfull \hbox (30.00227pt too wide) detected at line 102
+Overfull \hbox (30.00227pt too wide) detected at line 103
 [] \OT1/cmr/m/n/12 = []
  []
 
 <Divergence thm.png, id=25, 744.381pt x 338.4645pt>
 File: Divergence thm.png Graphic file (type png)
 <use Divergence thm.png>
-Package pdftex.def Info: Divergence thm.png  used on input line 106.
+Package pdftex.def Info: Divergence thm.png  used on input line 107.
 (pdftex.def)             Requested size: 187.89914pt x 85.43192pt.
 <Stokes thm.png, id=27, 615.4995pt x 449.2785pt>
 File: Stokes thm.png Graphic file (type png)
@@ -400,28 +428,64 @@ File: Stokes thm.png Graphic file (type png)
 Package pdftex.def Info: Stokes thm.png  used on input line 116.
 (pdftex.def)             Requested size: 187.89914pt x 137.15656pt.
 [4 <./Divergence thm.png> <./Stokes thm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 146--149
+Underfull \hbox (badness 10000) in paragraph at lines 150--153
 
  []
 
-[5] [6] (Modern.aux)
+[5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 186--189
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 203--207
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--223
+
+ []
+
+[8]
+<Continuity.png, id=48, 719.68875pt x 224.63925pt>
+File: Continuity.png Graphic file (type png)
+<use Continuity.png>
+Package pdftex.def Info: Continuity.png  used on input line 232.
+(pdftex.def)             Requested size: 375.80544pt x 117.30324pt.
+
+Overfull \hbox (11.81215pt too wide) detected at line 252
+[]
+ []
+
+
+Overfull \hbox (12.33437pt too wide) detected at line 261
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 243--264
+
+ []
+
+[9 <./Continuity.png>] [10] (Modern.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3985 strings out of 474486
- 60678 string characters out of 5743755
- 1940542 words of memory out of 5000000
- 26220 multiletter control sequences out of 15000+600000
+ 4629 strings out of 474486
+ 72535 string characters out of 5743755
+ 1945542 words of memory out of 5000000
+ 26854 multiletter control sequences out of 15000+600000
  568633 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,16n,65p,538b,320s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Modern.pdf (6 pages, 2225870 bytes).
+ 57i,18n,65p,557b,328s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on Modern.pdf (10 pages, 2327575 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
-\usepackage{tabularx, booktabs, float, enumitem, multicol}
+\usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools}
 \geometry{margin=1in}
 
 
@@ -57,7 +57,7 @@ The second is a \textit{local} view, looking at how the phase changes at a fixed
        \includegraphics[width=0.5\textwidth]{Fixed t.jpg}
        \end{center}
        \item Letting $z$ and $t$ vary together:\\
-       When we looked at $z$ and $t$ separately, we saw only a \textit{part} of the wave's behavior. For a fixed $z$, we observed how a single point moves over time, capturing the wave's temporal variation. For a fixed $t$, we saw the spatial variation, revealing the full shape of the wave at that instant. When both $z$ and $t$ vary together, we can see the wave's complete behavior, watching how its shape propagates through space and time.
+       When we looked at $z$ and $t$ separately, we saw only a \textit{part} of the wave's behavior. For a fixed $z$, we observed how a single point moves over time, capturing the wave's temporal variation. For a fixed $t$, we saw the spatial variation, revealing the full shape of the wave statically at that instant. When both $z$ and $t$ vary together, we can see the wave's complete dynamic behavior, watching how its shape propagates through space and time.
 \end{enumerate}
 \underline{Note:} This intuition will become very useful when we study electromagnetic polarization, where the plane wave is a 2D wave. In our cross-sectional view, the single point along the wave will move along the $xy$ plane instead of just up and down.
 \section*{Vector Calculus}
@@ -93,6 +93,7 @@ A_x & A_y & A_z
 \underline{Note:} A positive curl indicates a counterclockwise rotation, while a negative curl indicates a clockwise rotation about the respective axis.
 \item \textbf{Vector Identities:} 
 \[\vec{\nabla}\cdot(\vec{A}\times\vec{B}) = \vec{B}\cdot(\vec{\nabla}\times\vec{A}) - \vec{A}\cdot(\vec{\nabla}\times\vec{B}) \quad \text{(Product Rule)}\]
+\[\vec{\nabla}\times(\vec{\nabla}\times\vec{A}) = \vec{\nabla}(\vec{\nabla}\cdot\vec{A}) - \nabla^2 \vec{A}\quad\text{(Curl of a curl rule)}\]
 \[\vec{\nabla} \times (\vec{\nabla}v) = 0 \quad \text{(Curl of a gradient is always zero)}\]
 \[\vec{\nabla}\cdot(\vec{\nabla} \times \vec{A}) = 0 \quad \text{(Divergence of a curl is always zero)}\]
 \end{itemize}
@@ -105,7 +106,6 @@ Relates the flux of a vector field $\vec{F}$ through a closed surface $S$ to the
 \begin{minipage}{0.4\textwidth}
 \includegraphics[width=\linewidth]{Divergence thm.png}
 \end{minipage}
-
 \section*{Stokes Theorem}
 \begin{minipage}{0.5\textwidth}
 States that inside a surface $A$ bounded by a closed curve $P$, if a vector field $\vec{F}$ has a non-zero curl \textit{about $\vec{A}$ (the normal to the surface)}, then there will be a non-zero circulation of $\vec{F}$ around the curve $P$.
@@ -120,14 +120,18 @@ States that inside a surface $A$ bounded by a closed curve $P$, if a vector fiel
 \begin{multicols}{2}
 \begin{itemize}
 \item \textbf{Coulomb's Law} \[\vec{F}_{e} = \frac{1}{4 \pi \varepsilon_0} \frac{q_1 q_2}{r^2} \hat{r}\]
-\item \textbf{Electric Field of a Point Charge} \[\vec{E}=\frac{1}{4 \pi \varepsilon_0} \frac{q}{r^2} \hat{r}\]
+\item \textbf{Electric Field of a Point Charge}\\
+sets up a diverging field \[\vec{E}=\frac{1}{4 \pi \varepsilon_0} \frac{q}{r^2} \hat{r}\]
 \item \textbf{Magnetic Force} \[\vec{F}_b = q\vec{v}\times\vec{B}\]
-\item \textbf{Biot-Savart Law} \[\vec{B} = \int \frac{\mu_0}{4\pi}\frac{i\,d\vec{s}\times\hat{r}}{r^2}\]
+\item \textbf{Biot-Savart Law}\\
+sets up a curling field \[\vec{B} = \int \frac{\mu_0}{4\pi}\frac{i\,d\vec{s}\times\hat{r}}{r^2}\]
 \end{itemize}
 \end{multicols}
-
-\section*{Unit 1: Electromagnetic Waves}
-\textbf{Maxwell's Equations}
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+{\centering\LARGE Unit 1: Electromagnetic Waves\par}
+\section*{Maxwell's Equations}
 \begin{enumerate}
     \item \textbf{Gauss's Law for Electricity}\\
     Relates the electric flux through a closed 3D Gaussian surface to the total charge enclosed within that surface.
@@ -143,17 +147,140 @@ States that inside a surface $A$ bounded by a closed curve $P$, if a vector fiel
 
     \item \textbf{Faraday's Law of Induction}\\
     Relates the electric circulation around a closed Faradian loop to the changing magnetic flux through the surface bounded by the loop.    
-    \[\oint_P \vec{E}\cdot d\vec{l}=-\frac{d\Phi_B}{dt}, \quad \Phi_B = \oint_S \vec{B}\cdot\,d\vec{a}\]
+    \[\oint_P \vec{E}\cdot d\vec{l}=-\frac{d\Phi_B}{dt}, \quad \Phi_B = \int_S \vec{B}\cdot\,d\vec{a}\]
     \underline{Note:} For coils with $N$ turns, multiply the flux by $N$.\\\\
     A changing magnetic field induces a circulating (curling) electric field.
     \[\vec{\nabla}\times\vec{E}=-\frac{\partial \vec{B}}{\partial t}\]
 
     \item \textbf{Ampere-Maxwell Law}\\
     Relates the magnetic circulation around a closed Amperian loop to the enclosed current and changing electric flux through the surface bounded by the loop.
-    \[\oint_P \vec{B}\cdot d\vec{l}= \mu_0I_{\text{enc}}+\mu_0\varepsilon_0 \frac{d\Phi_E}{dt},\quad \Phi_E=\oint_S \vec{E}\cdot\,d\vec{a}\]
+    \[\oint_P \vec{B}\cdot d\vec{l}= \mu_0I_{\text{enc}}+\mu_0\varepsilon_0 \frac{d\Phi_E}{dt},\quad \Phi_E=\int_S \vec{E}\cdot\,d\vec{a}\]
     Both a changing electric field and a non-zero current density induce a circulating (curling) magnetic field.
-    \[\vec{\nabla}\times\vec{B}= \mu_0\vec{J}+\mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}, \quad I_{\text{enc}}=\oint_S \vec{J}\cdot d\vec{a}\]
+    \[\vec{\nabla}\times\vec{B}= \mu_0\vec{J}+\mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}, \quad I_{\text{enc}}=\int_S \vec{J}\cdot d\vec{a}\]
 \end{enumerate}
+\section*{Deriving the Differential Forms of Maxwell's Equations}
+By applying the divergence and stokes theorems to the integral forms of Maxwell's equations, we can derive their corresponding differential forms. This process allows us to express the behavior of electric and magnetic fields locally at every point in space and time, rather than just over closed surfaces or loops.
+\begin{enumerate}
+    \item \textbf{Gauss's Law for Electricity}
+\[\oint_S \vec{E}\cdot\,d\vec{a}=\frac{q_{\text{enc}}}{\varepsilon_0}\]
+Applying the divergence theorem to the left-hand side:
+\[\oint_S \vec{E}\cdot\,d\vec{a}=\int_V (\vec{\nabla}\cdot\vec{E})\,d\tau\]
+We can also write the enclosed charge as a volume integral of the charge density:
+\[q_{\text{enc}}=\int_V \rho\,d\tau\,\quad \rho=\text{(vol charge density)}\]
+Thus,
+\[\implies \int_V (\vec{\nabla}\cdot\vec{E})\,d\tau = \frac{1}{\varepsilon_0} \int_V \rho\,d\tau\]
+\[\implies \boxed{\vec{\nabla}\cdot\vec{E} = \frac{\rho}{\varepsilon_0}}\]
 
+    \item \textbf{Gauss's Law for Magnetism}
+\[\oint_S \vec{B}\cdot\,d\vec{a}=0\]
+Applying the divergence theorem:
+\[\oint_S \vec{B}\cdot\,d\vec{a}=\int_V (\vec{\nabla}\cdot\vec{B})\,d\tau = 0\]
+Thus,
+\[\implies \boxed{\vec{\nabla}\cdot\vec{B} = 0}\]
+
+    \item \textbf{Faraday's Law of Induction}
+\[\oint_P \vec{E}\cdot d\vec{l}=-\frac{d\Phi_B}{dt}, \quad \Phi_B = \int_S \vec{B}\cdot\,d\vec{a}\]
+Applying Stokes' theorem to the left-hand side:
+\[\oint_P \vec{E}\cdot d\vec{l} = \int_S (\vec{\nabla}\times\vec{E})\cdot d\vec{a}\]
+We can also write the changing magnetic flux as:
+\[-\frac{d\Phi_B}{dt} = -\frac{d}{dt}\left[\int_S \vec{B}\cdot\,d\vec{a}\right] =-\int_S \frac{\partial \vec{B}}{\partial t}\cdot d\vec{a}\]
+\underline{Note:} Stokes theorem relates the circulation around a curve to the curl over a surface at a single instant in time. In other words, the surface $S$ is \textit{fixed} and does not change in time, so $d\vec{a}$ is \textit{time independent} and the time derivative acts only on the integrand, allowing us to move the time derivative inside the integral.\\\\
+Thus, equating the two sides gives:
+\[\implies \int_S (\vec{\nabla}\times\vec{E})\cdot d\vec{a} = -\int_S \frac{\partial \vec{B}}{\partial t}\cdot d\vec{a}\]
+\[\implies \boxed{\vec{\nabla}\times\vec{E} = -\frac{\partial \vec{B}}{\partial t}}\]
+    \item \textbf{Ampere-Maxwell Law}
+\[\oint_P \vec{B}\cdot d\vec{l}= \mu_0I_{\text{enc}}+\mu_0\varepsilon_0 \frac{d\Phi_E}{dt},\quad \Phi_E=\int_S \vec{E}\cdot\,d\vec{a}\]
+Applying Stokes' theorem to the left-hand side:
+\[\oint_P \vec{B}\cdot d\vec{l} = \int_S (\vec{\nabla}\times\vec{B})\cdot d\vec{a}\]
+We can also write the enclosed current as a surface integral of the current density:
+\[I_{\text{enc}}=\int_S \vec{J}\cdot d\vec{a}, \quad \vec{J}=\text{(area current density)}\]
+And the changing electric flux as:
+\[\frac{d\Phi_E}{dt} = \frac{d}{dt}\left[\int_S \vec{E}\cdot\,d\vec{a}\right] = \int_S \frac{\partial \vec{E}}{\partial t}\cdot d\vec{a}\]
+Thus, equating the two sides gives:
+\[\implies \int_S (\vec{\nabla}\times\vec{B})\cdot d\vec{a} = \int_S \left(\mu_0\vec{J}+\mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}\right)\cdot d\vec{a}\]
+\[\implies \boxed{\vec{\nabla}\times\vec{B} = \mu_0\vec{J}+\mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}}\]
+\end{enumerate}
+\newpage\noindent
+\textbf{Applying Vector Identities}\\
+Additionally, we can apply the vector identities we have to the differential forms of Maxwell's equations to derive some useful results.\\\\
+\underline{Applying divergence of a curl is zero to Faraday's law:}
+\begin{align*}
+    \vec{\nabla}\cdot(\vec{\nabla}\times\vec{E}) &= 0 \\
+\quad \vec{\nabla}\cdot\left(-\frac{\partial \vec{B}}{\partial t}\right) &= 0\\
+    -\frac{\partial}{\partial t} \underbrace{(\nabla \cdot \vec{B})\rule[-10pt]{0pt}{0pt}}_{\mathclap{\text{Gauss's law for magnetism } (=0)}} &= 0 \\
+    \implies 0 &= 0
+\end{align*}
+\underline{Applying divergence of a curl is zero to Ampere-Maxwell law:}
+\begin{align*}
+    \vec{\nabla}\cdot(\vec{\nabla}\times\vec{B}) &= 0 \\
+    \quad \vec{\nabla}\cdot\left(\mu_0\vec{J}+\mu_0\varepsilon_0 \frac{\partial \vec{E}}{\partial t}\right) &= 0 \\
+    \mu_0(\vec{\nabla}\cdot\vec{J}) + \mu_0\varepsilon_0 \frac{\partial}{\partial t} \underbrace{(\nabla \cdot \vec{E}) \rule[-10pt]{0pt}{0pt}}_{\mathclap{\text{Gauss's law for electricity}(=\frac{\rho}{\varepsilon_0})}} &= 0 \\
+    \mu_0(\vec{\nabla}\cdot\vec{J}) + \mu_0\varepsilon_0 \frac{\partial}{\partial t} \left(\frac{\rho}{\varepsilon_0}\right) &= 0
+\end{align*}
+\[\implies \boxed{\vec{\nabla}\cdot\vec{J} + \frac{\partial \rho}{\partial t} = 0}\quad \text{(Continuity Equation)}\]
+We can rewrite the continuity equation into an integral form:\\\\
+Integrating both sides over a volume $V$:
+\[\int_V (\vec{\nabla} \cdot \vec{J}) \, d\tau = \int_V - \frac{\partial \rho}{\partial t} \, d\tau\]
+Apply divergence theorem to the left-hand side:
+\[\int_V (\vec{\nabla} \cdot \vec{J}) \, d\tau = \oint_S \vec{J} \cdot d\vec{a}\]
+Since the volume $V$ is fixed in space, we can pull the time derivative outside the integral. We also know that the total charge enclosed is $q = \int_V \rho \, d\tau$:
+\[\int_V - \frac{\partial \rho}{\partial t} \, d\tau = - \frac{d}{dt} \underbrace{\int_V \rho \, d\tau}_{q_{\text{enclosed}}} = - \frac{dq}{dt}\]
+Thus, equating the two sides gives:
+\[\boxed{\oint_S \vec{J}\cdot\,d\vec{a} = -\frac{dq}{dt}}\]
+\underline{Note:} The continuity equation is also called a flux based conservation law. It represents a local \textbf{conservation of charge} and states that if the total charge enclosed in a volume is changing ($\frac{dq}{dt} \neq 0$), then there must be a net current flowing into or out of the volume ($\oint_S \vec{J}\cdot\,d\vec{a} \neq 0$) that accounts for that change.
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Continuity.png}
+\end{center}
+\textbf{Showing that E and B Fields Exist as Waves in a Vacuum}\\
+In a vacuum, there are no charges or currents, so we can set $\rho = 0$ and $\vec{J} = \vec{0}$ in Maxwell's equations. This simplifies them to:
+\begin{align*}
+  \vec{\nabla} \cdot \vec{E} &= 0 & 
+  \vec{\nabla} \cdot \vec{B} &= 0 & 
+  &\text{no divergent fields (no source charge)} \\[1em]
+  \vec{\nabla} \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} & 
+  \vec{\nabla} \times \vec{B} &= \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} & 
+  &\text{only exist curling fields induced by one another!}
+\end{align*}
+By applying the curl of a curl rule to Faraday's and Ampere-Maxwell laws, we can derive the wave equations for the electric and magnetic fields in a vacuum.\\
+\begin{minipage}{0.45\textwidth}
+\begin{align*}
+    \vec{\nabla} \times (\vec{\nabla} \times \vec{E}) &= \vec{\nabla}(\underbrace{\vec{\nabla} \cdot \vec{E}\rule[-5pt]{0pt}{0pt}}_{\mathclap{0 \text{ in a vacuum}}}) - \nabla^2 \vec{E} \\
+    \vec{\nabla} \times \left(-\frac{\partial \vec{B}}{\partial t}\right) &= - \nabla^2 \vec{E} \\
+    -\frac{\partial}{\partial t} (\vec{\nabla} \times \vec{B}) &= - \nabla^2 \vec{E} \\
+    -\frac{\partial}{\partial t} \left(\mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}\right) &= - \nabla^2 \vec{E} \\[1em]
+    \implies \boxed{\nabla^2 \vec{E} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{E}}{\partial t^2}}
+\end{align*}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{align*}
+    \vec{\nabla} \times (\underbrace{\vec{\nabla} \times \vec{B}\rule[-5pt]{0pt}{0pt}}_{\mathclap{\mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t}\, \text{in a vacuum}}}) &= \vec{\nabla}(\underbrace{\vec{\nabla} \cdot \vec{B}\rule[-5pt]{0pt}{0pt}}_{0}) - \nabla^2 \vec{B} \\[1em]
+    \mu_0 \varepsilon_0 \frac{\partial}{\partial t} (\underbrace{\vec{\nabla} \times \vec{E}\rule[-5pt]{0pt}{0pt}}_{-\frac{\partial \vec{B}}{\partial t}}) &= - \nabla^2 \vec{B} \\
+    -\mu_0 \varepsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2} &= - \nabla^2 \vec{B} \\[1em]
+    \implies \boxed{\nabla^2 \vec{B} = \mu_0 \varepsilon_0 \frac{\partial^2 \vec{B}}{\partial t^2}}
+\end{align*}
+\end{minipage}\\\\
+\underline{Recall:} The classic wave equation is 
+\[\nabla^2 \psi = \frac{1}{v^2} \frac{\partial^2 \psi}{\partial t^2}\quad \implies \quad v = \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = c\]
+\section*{Modeling EM Radiation (Light) in a Vacuum}
+Properties of light:
+\begin{itemize}
+       \item $\vec{E}\times\vec{B}$ points in the direction of propagation.
+       \item $\vec{E}$ and $\vec{B}$ are perpendicular to each other and to the direction of propagation (transverse wave).
+       \item $\vec{E}$ and $\vec{B}$ oscillate in phase as to perpetually induce each other according to Faraday's and Ampere-Maxwell laws.
+       \item The magnitudes of $\vec{E}$ and $\vec{B}$ are related by $E = cB$.
+       \item Light does not require a medium to propagate.
+       \item Light has speed
+       \[v = c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}\]
+\end{itemize}
+Our goal is to find a solution for $\vec{E}$ and $\vec{B}$ that satisfies the 3D wave equations as well as Maxwell's equations in a vacuum.  
+
+
+
+%We will then develop a model of electromagnetic waves in VACUUM (plus conditions for vacuum) by introducing a plane wave (case z)approximation and showing that it is consisten with maxwell's eqns.
+
+%Finally, we will generalize the plane wave model to be propogating in any direction (add some useful techniques for using del operator) and introduce polarization.
+
+%%end UNIT 1
 
 \end{document}
