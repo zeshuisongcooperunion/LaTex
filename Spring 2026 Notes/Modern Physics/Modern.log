@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  9 FEB 2026 22:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  10 FEB 2026 07:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -484,74 +484,116 @@ File: Plane Wave.png Graphic file (type png)
 <use Plane Wave.png>
 Package pdftex.def Info: Plane Wave.png  used on input line 320.
 (pdftex.def)             Requested size: 375.80544pt x 164.45068pt.
-<Plane Wave 1.png, id=57, 567.3195pt x 266.79675pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 322--324
+
+ []
+
+[11 <./Plane Wave.png>]
+<Plane Wave 1.png, id=61, 567.3195pt x 266.79675pt>
 File: Plane Wave 1.png Graphic file (type png)
 <use Plane Wave 1.png>
 Package pdftex.def Info: Plane Wave 1.png  used on input line 331.
 (pdftex.def)             Requested size: 230.18253pt x 108.24748pt.
-<Plane Wave 2.png, id=58, 437.83575pt x 234.27525pt>
+<Plane Wave 2.png, id=62, 437.83575pt x 234.27525pt>
 File: Plane Wave 2.png Graphic file (type png)
 <use Plane Wave 2.png>
 Package pdftex.def Info: Plane Wave 2.png  used on input line 336.
 (pdftex.def)             Requested size: 230.18253pt x 123.16435pt.
-[11 <./Plane Wave.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 339--343
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--343
+Underfull \hbox (badness 10000) in paragraph at lines 339--344
 
  []
 
 <Plane Wave 3.png, id=63, 635.976pt x 243.309pt>
 File: Plane Wave 3.png Graphic file (type png)
 <use Plane Wave 3.png>
-Package pdftex.def Info: Plane Wave 3.png  used on input line 344.
+Package pdftex.def Info: Plane Wave 3.png  used on input line 345.
 (pdftex.def)             Requested size: 375.80544pt x 143.77382pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 347--350
+Underfull \hbox (badness 10000) in paragraph at lines 348--351
 
  []
 
 [12 <./Plane Wave 1.png> <./Plane Wave 2.png> <./Plane Wave 3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 353--357
+Underfull \hbox (badness 10000) in paragraph at lines 354--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--357
+Underfull \hbox (badness 10000) in paragraph at lines 354--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
+
+ []
+
+<Phasor.jpg, id=70, 2814.515pt x 976.64874pt>
+File: Phasor.jpg Graphic file (type jpg)
+<use Phasor.jpg>
+Package pdftex.def Info: Phasor.jpg  used on input line 371.
+(pdftex.def)             Requested size: 375.80544pt x 130.39635pt.
+[13 <./Phasor.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 376--380
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 387--390
 
  []
 
-[13] (Modern.aux)
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 401--405
+
+ []
+
+<Linear Polarization.png, id=78, 1089.47025pt x 439.6425pt>
+File: Linear Polarization.png Graphic file (type png)
+<use Linear Polarization.png>
+Package pdftex.def Info: Linear Polarization.png  used on input line 408.
+(pdftex.def)             Requested size: 375.80544pt x 151.64998pt.
+<Circular Polarization.png, id=79, 1031.052pt x 442.0515pt>
+File: Circular Polarization.png Graphic file (type png)
+<use Circular Polarization.png>
+Package pdftex.def Info: Circular Polarization.png  used on input line 413.
+(pdftex.def)             Requested size: 375.80544pt x 161.12149pt.
+[15 <./Linear Polarization.png> <./Circular Polarization.png>]
+<Elliptical Polarization.png, id=85, 925.056pt x 442.0515pt>
+File: Elliptical Polarization.png Graphic file (type png)
+<use Elliptical Polarization.png>
+Package pdftex.def Info: Elliptical Polarization.png  used on input line 423.
+(pdftex.def)             Requested size: 281.85587pt x 134.68723pt.
+<SHOs.jpg, id=86, 3049.3925pt x 1161.33875pt>
+File: SHOs.jpg Graphic file (type jpg)
+<use SHOs.jpg>
+Package pdftex.def Info: SHOs.jpg  used on input line 429.
+(pdftex.def)             Requested size: 375.80544pt x 143.11139pt.
+ [16 <./Elliptical Polarization.png> <./SHOs.jpg>] [17] (Modern.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4659 strings out of 474486
- 73219 string characters out of 5743755
+ 4694 strings out of 474486
+ 74110 string characters out of 5743755
  1945542 words of memory out of 5000000
- 26884 multiletter control sequences out of 15000+600000
+ 26919 multiletter control sequences out of 15000+600000
  568633 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,18n,65p,557b,323s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,18n,65p,1149b,323s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Modern.pdf (13 pages, 3306621 bytes).
+Output written on Modern.pdf (17 pages, 5879963 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
+ 149 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

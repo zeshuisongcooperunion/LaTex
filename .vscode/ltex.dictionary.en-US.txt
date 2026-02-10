@@ -5,3 +5,5 @@ Perovskite
 Amphere-square
 Zeshui
 Transgranular
+phasor
+deparametrize
