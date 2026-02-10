@@ -429,6 +429,24 @@ Fundamentally, the electric and magnetic fields behave like oscillators, so the 
 \includegraphics[width=0.8\textwidth]{SHOs.jpg}
 \end{center}\newpage
 \section*{General Plane Wave Solution}
+We would like to generalize the case $\hat{z}$ solution
+\[\vec{E} = \left( E_{0_x} e^{i \phi_x} \hat{x} + E_{0_y} e^{i \phi_y} \hat{y} \right) e^{i (k z - \omega t)}\]
+to describe a plane wave propagating in an arbitrary direction. To do this, we can simply replace the $kz$ term in the phase with $\vec{k}\cdot\vec{r}$, where $\vec{k}$ is the \textbf{wavevector} that points in the direction of propagation and has magnitude $k$. This allows us to describe plane waves propagating in any direction, not just along the $z$ axis.
+\[\vec{k} = k_x \hat{x} + k_y \hat{y} + k_z \hat{z}\]
+\[|\vec{k}| = \sqrt{k_x^2 + k_y^2 + k_z^2} = k,\quad k= \frac{2\pi}{\lambda}\]
+and $\vec{r}$ is the position vector from to origin to any point in space:
+\[\vec{r} = x \hat{x} + y \hat{y} + z \hat{z}\]
+Therefore, the general plane wave solution is:
+\[\boxed{\vec{E} = \left( E_{0_x} e^{i \phi_x} \hat{x} + E_{0_y} e^{i \phi_y} \hat{y} \right) e^{i (\vec{k}\cdot\vec{r} - \omega t)}}\]
+This general form of the plane wave solution is intuitive because it is consistent with our understanding that $\vec{E}$ depends only on spatial variations along the direction of propagation. The dot product $\vec{k}\cdot\vec{r}$ extracts the component of $\vec{r}$ in the direction of $\vec{k}$, which for case $\hat{z}$ reduces to variations along the $z$ axis. At the same time, $\vec{E}$ does not depend on spatial variations perpendicular to the direction of propagation (it is a transverse wave). For any $\vec{r}$ perpendicular to $\vec{k}$, we have $\vec{k}\cdot\vec{r}=0$, so in case $\hat{z}$ there are no variations in the $x$ and $y$ directions.\\\\
+\textbf{Useful Properties of the General Plane Wave Form}\\
+Time derivative
+\[\frac{\partial \vec{E}}{\partial t} = -i\omega \vec{E},\quad \frac{\partial^2\vec{E}}{\partial t^2} = -\omega^2 \vec{E}\]
+Spatial derivative
+\[\vec{\nabla} \cdot \vec{E} = i\vec{k} \cdot \vec{E},\quad \nabla^2 \vec{E} = -k^2 \vec{E}\]
+\[\vec{\nabla} \times \vec{E} = i \vec{k} \times \vec{E}\]
+\underline{Note:} These properties follow from the fact that the only spatial and temporal dependence of $\vec{E}$ is contained in the phase $(\vec{k}\cdot\vec{r}-\omega t)$. When taking derivatives, the complex amplitude vector can therefore be treated as a constant, and the chain rule applies directly to the exponential term.
+
 
 
 
