@@ -35,9 +35,10 @@ Where:
        \item $\omega$ [rad/s]:\\ is the \textbf{angular frequency}, representing the temporal frequency of the wave, or how \textit{spread out} the wave is in time. As in rotational kinematics, $\omega$ scales time $t$, and a larger $\omega$ means the wave advances through the same phase over a smaller change in $t$.
 \end{itemize}
 A plane wave is special in that it represents a wave whose shape is fixed as it propagates through space and time, with it’s shape represented by the function $f$.\\\\
+\underline{Note:}
+\[\boxed{k=\frac{2\pi}{\lambda},\quad \frac{\omega}{2\pi} = f = \frac{1}{T}\,[\text{Hz}],\quad v=\frac{\omega}{k}}\]
 \textbf{Global View}\\
 As mentioned before, there are two ways to visualize how the phase $(kz - \omega t)$ represents a propagating wave. The first is a \textit{global} view, looking at how $z$ and $t$ change relative to each other for a fixed phase, tracking a specific point on the wave.
-
 \begin{center}
 \includegraphics[width=0.5\textwidth]{1d Plane Wave.jpg}
 \end{center}
@@ -91,12 +92,46 @@ A_x & A_y & A_z
 - \frac{\partial A_x}{\partial y} \right)}_{\text{curl about }z\text{-axis}} \hat{z}
 \end{align*}
 \underline{Note:} A positive curl indicates a counterclockwise rotation, while a negative curl indicates a clockwise rotation about the respective axis.
-\item \textbf{Vector Identities:} 
-\[\vec{\nabla}\cdot(\vec{A}\times\vec{B}) = \vec{B}\cdot(\vec{\nabla}\times\vec{A}) - \vec{A}\cdot(\vec{\nabla}\times\vec{B}) \quad \text{(Product Rule)}\]
-\[\vec{\nabla}\times(\vec{\nabla}\times\vec{A}) = \vec{\nabla}(\vec{\nabla}\cdot\vec{A}) - \nabla^2 \vec{A}\quad\text{(Curl of a curl rule)}\]
-\[\vec{\nabla} \times (\vec{\nabla}v) = 0 \quad \text{(Curl of a gradient is always zero)}\]
-\[\vec{\nabla}\cdot(\vec{\nabla} \times \vec{A}) = 0 \quad \text{(Divergence of a curl is always zero)}\]
-\end{itemize}
+\item \textbf{Vector Identities:} \\
+\underline{Triple Products}
+\begin{align*}
+\vec{A} \cdot (\vec{B} \times \vec{C})
+&= \vec{B} \cdot (\vec{C} \times \vec{A})
+= \vec{C} \cdot (\vec{A} \times \vec{B}) \\
+\vec{A} \times (\vec{B} \times \vec{C})
+&= \vec{B}(\vec{A} \cdot \vec{C})
+- \vec{C}(\vec{A} \cdot \vec{B})
+\end{align*}
+\underline{Product Rules}
+\begin{align*}
+\vec{\nabla}(fg) &= f(\vec{\nabla} g) + g(\vec{\nabla} f) \\
+\vec{\nabla}(\vec{A} \cdot \vec{B})
+&= \vec{A} \times (\vec{\nabla} \times \vec{B})
++ \vec{B} \times (\vec{\nabla} \times \vec{A})
++ (\vec{A} \cdot \vec{\nabla})\vec{B}
++ (\vec{B} \cdot \vec{\nabla})\vec{A} \\
+\vec{\nabla} \cdot (f\vec{A})
+&= f(\vec{\nabla} \cdot \vec{A}) + \vec{A} \cdot (\vec{\nabla} f) \\
+\vec{\nabla} \cdot (\vec{A} \times \vec{B})
+&= \vec{B} \cdot (\vec{\nabla} \times \vec{A})
+- \vec{A} \cdot (\vec{\nabla} \times \vec{B}) \\
+\vec{\nabla} \times (f\vec{A})
+&= f(\vec{\nabla} \times \vec{A})
+- \vec{A} \times (\vec{\nabla} f) \\
+\vec{\nabla} \times (\vec{A} \times \vec{B})
+&= (\vec{B} \cdot \vec{\nabla})\vec{A}
+- (\vec{A} \cdot \vec{\nabla})\vec{B}
++ \vec{A}(\vec{\nabla} \cdot \vec{B})
+- \vec{B}(\vec{\nabla} \cdot \vec{A}) 
+\end{align*}
+\underline{Second Derivatives}
+\begin{align*}
+\vec{\nabla} \cdot (\vec{\nabla} \times \vec{A}) &= 0 \quad \text{(Divergence of a curl is always zero)}\\
+\vec{\nabla} \times (\vec{\nabla} f) &= 0 \quad \text{(Curl of a gradient is always zero)}\\
+\vec{\nabla} \times (\vec{\nabla} \times \vec{A})
+&= \vec{\nabla}(\vec{\nabla} \cdot \vec{A}) - \nabla^2 \vec{A} \quad\text{(Curl of a curl)}
+\end{align*}
+\end{itemize}\newpage
 \section*{Divergence Theorem}
 \begin{minipage}{0.5\textwidth}
 Relates the flux of a vector field $\vec{F}$ through a closed surface $S$ to the divergence of $\vec{F}$ within the volume $V$ enclosed by $S$.
@@ -115,7 +150,6 @@ States that inside a surface $A$ bounded by a closed curve $P$, if a vector fiel
 \begin{minipage}{0.4\textwidth}
 \includegraphics[width=\linewidth]{Stokes thm.png}
 \end{minipage}
-\newpage
 \section*{Key Electricity and Magnetism Laws}
 \begin{multicols}{2}
 \begin{itemize}
@@ -130,6 +164,7 @@ sets up a curling field \[\vec{B} = \int \frac{\mu_0}{4\pi}\frac{i\,d\vec{s}\tim
 \vspace{1em}
 \noindent\hrule
 \vspace{1em}
+\newpage
 {\centering\LARGE Unit 1: Electromagnetic Waves\par}
 \section*{Maxwell's Equations}
 \begin{enumerate}
@@ -233,14 +268,19 @@ Thus, equating the two sides gives:
 \end{center}
 \textbf{Showing that E and B Fields Exist as Waves in a Vacuum}\\
 In a vacuum, there are no charges or currents, so we can set $\rho = 0$ and $\vec{J} = \vec{0}$ in Maxwell's equations. This simplifies them to:
-\begin{align*}
-  \vec{\nabla} \cdot \vec{E} &= 0 & 
-  \vec{\nabla} \cdot \vec{B} &= 0 & 
+\[\boxed{
+\begin{aligned}
+  \vec{\nabla} \cdot \vec{E} &= 0 
+  &\qquad
+  \vec{\nabla} \cdot \vec{B} &= 0 
+  &\qquad
   &\text{no divergent fields (no source charge)} \\[1em]
-  \vec{\nabla} \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} & 
-  \vec{\nabla} \times \vec{B} &= \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} & 
+  \vec{\nabla} \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} 
+  &\qquad
+  \vec{\nabla} \times \vec{B} &= \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} 
+  &\qquad
   &\text{only exist curling fields induced by one another!}
-\end{align*}
+\end{aligned}}\]
 By applying the curl of a curl rule to Faraday's and Ampere-Maxwell laws, we can derive the wave equations for the electric and magnetic fields in a vacuum.\\
 \begin{minipage}{0.45\textwidth}
 \begin{align*}
@@ -273,14 +313,60 @@ Properties of light:
        \item Light has speed
        \[v = c = \frac{1}{\sqrt{\mu_0 \varepsilon_0}}\]
 \end{itemize}
-Our goal is to find a solution for $\vec{E}$ and $\vec{B}$ that satisfies the 3D wave equations as well as Maxwell's equations in a vacuum.  
+Our goal is to find a solution for $\vec{E}$ and $\vec{B}$ that satisfies the 3D wave equations as well as Maxwell's equations in a vacuum.\\\\
+\textbf{Plane Wave Approximation}\\
+Consider the following wavefronts generated by a point source of light (ie. a star):
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Plane Wave.png}
+\end{center}
+The radius of curvature of the wavefronts increases as they travel outward. Thus, at a far enough distance from the source, the wavefronts will appear to be flat planes consisting of electric and magnetic fields with \textit{uniform} magnitude and direction. This is called the \textbf{plane wave approximation}.\\
+The plane wave model also assumes \textbf{monochromatic light}, having a fixed wavelength $\lambda$ and wavenumber $k$ ($k = 2\pi/\lambda$). This also implies a fixed frequency $\omega$, since the speed of light is constant:
+\[
+v = \frac{\omega}{k} = c \quad \implies \quad \omega = c k.
+\]
+Without a single frequency, the wavefronts would interfere with one another and would no longer form the ideal uniform planes described by the plane wave approximation.
+\begin{center}
+\begin{minipage}{0.49\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Plane Wave 1.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{Plane Wave 2.png}
+\end{minipage}
+\end{center}
+\underline{Note:} Although light consists of both electric and magnetic fields, we will primarily focus on the electric field when modeling light, since the magnetic field can be readily derived from it using Faraday’s law. We will also focus on the electric field when analyzing polarization, since the direction of the electric field determines the polarization of light.\\\\
+\textbf{Case $\hat{z}$}\\
+For the case $\hat{z}$, we take the direction of propagation to be along the $+z$ axis. At any fixed position $z$, the electric field $\vec{E}$ has a uniform magnitude and direction across the entire $xy$ plane. As with the 1D plane wave, the \textit{local view} at a fixed point along the $z$ axis shows the electric field oscillating in time as the light wave passes through, with the electric field remaining transverse to the direction of propagation.\\\\
+\underline{Note:} Don't forget that the magnetic field $\vec{B}$ is also oscillating in phase with and is perpendicular to both $\vec{E}$ and the direction of propagation.
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Plane Wave 3.png}
+\end{center}
+Therefore, a solution for the electric field of a plane wave in case $\hat{z}$ is:
+\[\boxed{\vec{E} = \underbrace{\left( E_{0_x} e^{i \phi_x} \hat{x} + E_{0_y} e^{i \phi_y} \hat{y} \right)}_{\text{complex amplitude vector}} e^{i (k z - \omega t)}}\]
+From the equation, we can see that the magnitudes of the electric field in the $x$ and $y$ directions need not be the same, and that there is no $z$ component of the electric field, since the wave is transverse. Like the 1D plane wave, the space and time dependence of this 3D plane wave is contained in the phase $(kz - \omega t)$.\\\\
+The amplitude of the electric field is given by
+\[|\vec{E}| = \sqrt{|E_{0_x}|^2 + |E_{0_y}|^2}\]
+\underline{Note:} The phases $\phi_x$ and $\phi_y$ of the complex amplitude vector do not affect the magnitude of the electric field, but they do govern the polarization of the light wave. This is because of the dot product:
+\[|\vec{E}|^2 = \vec{E}\cdot\vec{E}^*,\quad \vec{E}^*=\text{(complex conjugate of $\vec{E}$)}\]
+\[\vec{E}\cdot\vec{E}^* = \left( E_{0_x} e^{i \phi_x} \hat{x} + E_{0_y} e^{i \phi_y} \hat{y} \right) \cdot \left( E_{0_x} e^{-i \phi_x} \hat{x} + E_{0_y} e^{-i \phi_y} \hat{y} \right) = |E_{0_x}|^2 + |E_{0_y}|^2\]
+The exponentials multiply to 1.\\\\
+\underline{Note:} The $xy$ components for both the electric and magnetic fields have the same harmonic properties of $k$ and $\omega$ (wavelength and frequency), since they are both derived from the same phase $(kz - \omega t)$.\\\\
+Finally, note that we have switched from sinusoidal functions to complex exponentials. This is because complex exponentials are easier to work with mathematically, and if we want to get back to the real-valued (physically measurable) electric field, we can simply take the real part of the complex expression (using Euler's formula).
+\[
+\vec{E}_{\text{real}} = \Re\! \Big\{ \vec{E} \Big\} 
+= \Re\! \Big\{ \big( E_{0_x} e^{i \phi_x} \hat{x} + E_{0_y} e^{i \phi_y} \hat{y} \big) e^{i (k z - \omega t)} \Big\}
+\]
+\[
+\vec{E}_{\text{real}} = 
+E_{0_x} \cos(k z - \omega t + \phi_x)\,\hat{x}
++ E_{0_y} \cos(k z - \omega t + \phi_y)\,\hat{y}
+\]
+\section*{Polarization of Light}
+Polarization has been mentioned a few times already, but what exactly is it? Simply put, polarization describes the path traced out by the tip of the electric field vector $\vec{E}$ in the $xy$ plane as the light wave propagates along the $z$ axis.\\\\
 
+%Start with the most general polarization: elliptical, where lines and circles are degenerate cases. Focus more on the parametric eqns and build intituition that way. End by explaining why it must be periodic and closed cycloids, and how we can visualize it accroding to feynman's pendulum/2 SHO.
 
-
-%We will then develop a model of electromagnetic waves in VACUUM (plus conditions for vacuum) by introducing a plane wave (case z)approximation and showing that it is consisten with maxwell's eqns.
-
-%Finally, we will generalize the plane wave model to be propogating in any direction (add some useful techniques for using del operator) and introduce polarization.
-
-%%end UNIT 1
 
 \end{document}

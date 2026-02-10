@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  9 FEB 2026 09:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  9 FEB 2026 22:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -380,7 +380,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--27
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+Underfull \hbox (badness 10000) in paragraph at lines 37--39
 
  []
 
@@ -390,102 +390,168 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--40
 <1d Plane Wave.jpg, id=16, 2906.86pt x 1401.235pt>
 File: 1d Plane Wave.jpg Graphic file (type jpg)
 <use 1d Plane Wave.jpg>
-Package pdftex.def Info: 1d Plane Wave.jpg  used on input line 42.
+Package pdftex.def Info: 1d Plane Wave.jpg  used on input line 43.
 (pdftex.def)             Requested size: 234.8775pt x 113.2129pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--49
+Underfull \hbox (badness 10000) in paragraph at lines 45--50
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 44--49
+Underfull \hbox (badness 10000) in paragraph at lines 45--50
 
  []
 
 <Fixed z.jpg, id=17, 2890.8pt x 1296.845pt>
 File: Fixed z.jpg Graphic file (type jpg)
 <use Fixed z.jpg>
-Package pdftex.def Info: Fixed z.jpg  used on input line 52.
+Package pdftex.def Info: Fixed z.jpg  used on input line 53.
 (pdftex.def)             Requested size: 234.8775pt x 105.35255pt.
-<Fixed t.jpg, id=18, 2562.57375pt x 1348.03625pt>
+[2 <./1d Plane Wave.jpg> <./Fixed z.jpg>]
+<Fixed t.jpg, id=21, 2562.57375pt x 1348.03625pt>
 File: Fixed t.jpg Graphic file (type jpg)
 <use Fixed t.jpg>
-Package pdftex.def Info: Fixed t.jpg  used on input line 57.
+Package pdftex.def Info: Fixed t.jpg  used on input line 58.
 (pdftex.def)             Requested size: 234.8775pt x 123.53952pt.
-[2 <./1d Plane Wave.jpg> <./Fixed z.jpg>] [3 <./Fixed t.jpg>]
-Overfull \hbox (30.00227pt too wide) detected at line 103
+ [3 <./Fixed t.jpg>] [4]
+Overfull \hbox (30.00227pt too wide) detected at line 138
 [] \OT1/cmr/m/n/12 = []
  []
 
-<Divergence thm.png, id=25, 744.381pt x 338.4645pt>
+<Divergence thm.png, id=28, 744.381pt x 338.4645pt>
 File: Divergence thm.png Graphic file (type png)
 <use Divergence thm.png>
-Package pdftex.def Info: Divergence thm.png  used on input line 107.
+Package pdftex.def Info: Divergence thm.png  used on input line 142.
 (pdftex.def)             Requested size: 187.89914pt x 85.43192pt.
-<Stokes thm.png, id=27, 615.4995pt x 449.2785pt>
+<Stokes thm.png, id=30, 615.4995pt x 449.2785pt>
 File: Stokes thm.png Graphic file (type png)
 <use Stokes thm.png>
-Package pdftex.def Info: Stokes thm.png  used on input line 116.
+Package pdftex.def Info: Stokes thm.png  used on input line 151.
 (pdftex.def)             Requested size: 187.89914pt x 137.15656pt.
-[4 <./Divergence thm.png> <./Stokes thm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 150--153
+[5 <./Divergence thm.png> <./Stokes thm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 185--188
 
  []
 
-[5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 186--189
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 221--224
 
  []
 
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 203--207
+[7] [8]
+Underfull \hbox (badness 10000) in paragraph at lines 238--242
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--223
+Underfull \hbox (badness 10000) in paragraph at lines 255--258
 
  []
 
-[8]
-<Continuity.png, id=48, 719.68875pt x 224.63925pt>
+[9]
+<Continuity.png, id=51, 719.68875pt x 224.63925pt>
 File: Continuity.png Graphic file (type png)
 <use Continuity.png>
-Package pdftex.def Info: Continuity.png  used on input line 232.
+Package pdftex.def Info: Continuity.png  used on input line 267.
 (pdftex.def)             Requested size: 375.80544pt x 117.30324pt.
 
-Overfull \hbox (11.81215pt too wide) detected at line 252
+Overfull \hbox (19.64516pt too wide) detected at line 283
 []
  []
 
 
-Overfull \hbox (12.33437pt too wide) detected at line 261
+Overfull \hbox (11.81215pt too wide) detected at line 292
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--264
+Overfull \hbox (12.33437pt too wide) detected at line 301
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 283--304
 
  []
 
-[9 <./Continuity.png>] [10] (Modern.aux)
+[10 <./Continuity.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
+
+ []
+
+<Plane Wave.png, id=56, 800.9925pt x 350.5095pt>
+File: Plane Wave.png Graphic file (type png)
+<use Plane Wave.png>
+Package pdftex.def Info: Plane Wave.png  used on input line 320.
+(pdftex.def)             Requested size: 375.80544pt x 164.45068pt.
+<Plane Wave 1.png, id=57, 567.3195pt x 266.79675pt>
+File: Plane Wave 1.png Graphic file (type png)
+<use Plane Wave 1.png>
+Package pdftex.def Info: Plane Wave 1.png  used on input line 331.
+(pdftex.def)             Requested size: 230.18253pt x 108.24748pt.
+<Plane Wave 2.png, id=58, 437.83575pt x 234.27525pt>
+File: Plane Wave 2.png Graphic file (type png)
+<use Plane Wave 2.png>
+Package pdftex.def Info: Plane Wave 2.png  used on input line 336.
+(pdftex.def)             Requested size: 230.18253pt x 123.16435pt.
+[11 <./Plane Wave.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 339--343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 339--343
+
+ []
+
+<Plane Wave 3.png, id=63, 635.976pt x 243.309pt>
+File: Plane Wave 3.png Graphic file (type png)
+<use Plane Wave 3.png>
+Package pdftex.def Info: Plane Wave 3.png  used on input line 344.
+(pdftex.def)             Requested size: 375.80544pt x 143.77382pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--350
+
+ []
+
+[12 <./Plane Wave 1.png> <./Plane Wave 2.png> <./Plane Wave 3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 353--357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+
+ []
+
+[13] (Modern.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4629 strings out of 474486
- 72535 string characters out of 5743755
+ 4659 strings out of 474486
+ 73219 string characters out of 5743755
  1945542 words of memory out of 5000000
- 26854 multiletter control sequences out of 15000+600000
+ 26884 multiletter control sequences out of 15000+600000
  568633 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,18n,65p,557b,328s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,18n,65p,557b,323s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Modern.pdf (10 pages, 2327575 bytes).
+Output written on Modern.pdf (13 pages, 3306621 bytes).
 PDF statistics:
- 111 PDF objects out of 1000 (max. 8388607)
+ 129 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 
