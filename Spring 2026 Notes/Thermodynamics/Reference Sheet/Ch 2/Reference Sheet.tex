@@ -1,0 +1,156 @@
+\documentclass[10pt, fleqn]{article}
+\usepackage[a4paper,margin=0.5in]{geometry}
+\usepackage{multicol}
+\usepackage{amsmath, amssymb}
+\usepackage{titlesec}
+\usepackage{float}
+\usepackage{amsfonts, bm, graphicx}
+\usepackage{enumitem}
+\usepackage[font=small, skip=4pt]{caption}
+
+\setlength{\abovedisplayskip}{6pt}
+\setlength{\belowdisplayskip}{6pt}
+\setlength{\abovedisplayshortskip}{4pt}
+\setlength{\belowdisplayshortskip}{4pt}
+
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}
+
+\setlength{\mathindent}{0pt}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+% Uppercase Volume - Wrapped in \mathord to prevent shifting
+\newcommand{\vol}{\mathord{\text{\ooalign{\hidewidth $V$\hidewidth\cr\kern-1.0pt--}}}}
+
+% Lowercase Volume - Adjusted for math mode stability
+\newcommand{\svol}{\mathord{\text{\ooalign{\hidewidth $v$\hidewidth\cr\kern-0.2pt\raisebox{-0.1ex}{--}}}}}
+\begin{document}
+
+\begin{center}
+    \Large \textbf{Thermodynamics Formula Sheet} \\
+    \normalsize Chapter 2
+\end{center}
+
+\begin{multicols}{2}
+
+\section*{Pressure}
+\textbf{Constants}
+\[\begin{aligned}
+1 \text{ atm} &= 101.325 \text{ kPa} \\
+&= 1.01325 \text{ bar} \\
+&= 760 \text{ Torr} \\
+&= 760 \text{ mmHg} \\
+&= 29.92 \text{ inHg} \\
+&= 14.696 \text{ psi}\\
+&= 10.33 \text{ m H}_2\text{O (at 4$^\circ$C)} \\
+\end{aligned}\]
+\textbf{Pressure Conversions}
+\[1\,\text{Pa} = 1\,\text{N/m}^2\]
+\[1\, \text{ bar} = 10^{5}\, \text{ Pa}\]
+\[1\, \text{ psi} = 6.89476 \times 10^{3}\, \text{ Pa}\]
+\[1\, \text{ Torr} = 133.322\, \text{ Pa}\]
+\[1\, \text{ mmHg} = 133.322\, \text{ Pa}\]
+\[1\, \text{ inHg} = 3.38639 \times 10^{3}\, \text{ Pa}\]
+\textbf{Gauge vs Absolute Pressure}
+\[P_{\text{gauge}} = P_{\text{absolute}} - P_{\text{atmospheric}}\]
+\[P_{\text{vacuum}} = P_{\text{atmospheric}} - P_{\text{absolute}}\]
+\underline{Note:} Generally, gauge pressures already account for atmospheric pressure, and thus reads zero when open to the atmosphere.\\
+\textbf{Pressure Formulas}
+\[P=F/A\]
+\[P = \rho g h\quad \text{(hydrostatic pressure)}\]
+\section*{Temperature}
+\textbf{Temperature Conversions}
+\begin{itemize}[label=\textbullet]
+    \item Absolute temperature conversions
+    \begin{itemize}[label=\textopenbullet]
+        \item $T_{K} = T_{^\circ C} + 273.15$
+        \item $T_{^\circ R} = T_{^\circ F} + 459.67$
+        \item $T_{^\circ F} = \frac{9}{5}T_{^\circ C} + 32$
+        \item $T_{^\circ R} = \frac{9}{5}T_{K}$
+    \end{itemize}
+    \item Temperature difference conversions
+    \begin{itemize}[label=\textopenbullet]
+        \item $\Delta K = \Delta ^\circ C$
+        \item $\Delta ^\circ R = \Delta ^\circ F$
+        \item $\Delta ^\circ F = \frac{9}{5}\Delta ^\circ C$
+        \item $\Delta ^\circ R = \frac{9}{5}\Delta K$
+    \end{itemize}
+\end{itemize}
+\section*{SI Prefixes}
+\makeatletter
+\@fleqnfalse
+\makeatother
+\[\begin{aligned}
+\text{femto (f)}  &= 10^{-15} \\
+\text{pico (p)}   &= 10^{-12} \\
+\text{nano (n)}   &= 10^{-9} \\
+\text{micro ($\mu$)}  &= 10^{-6} \\
+\text{milli (m)}  &= 10^{-3} \\
+\text{centi (c)}  &= 10^{-2} \\
+\text{deci (d)}   &= 10^{-1} \\
+\text{deca (da)}  &= 10^{1} \\
+\text{hecto (h)}  &= 10^{2} \\
+\text{kilo (k)}   &= 10^{3} \\
+\text{mega (M)}   &= 10^{6} \\
+\text{giga (G)}   &= 10^{9} \\
+\text{tera (T)}   &= 10^{12} \\
+\text{peta (P)}   &= 10^{15} \\
+\end{aligned}\]
+\makeatletter
+\@fleqntrue
+\makeatother
+\underline{Note:} $1\text{Angstrom}\,(\text{\AA}) = 10^{-10}$ m
+\section*{Density and Specific Gravity}
+\[\rho = \frac{m}{\vol}\quad \text{(density)}\]
+\[\svol = \frac{\vol}{m} = \frac{1}{\rho} \quad \text{(specific volume)}\]
+\textbf{Specific gravity} is defined as a relative density compared to water (at 4$^\circ$C) where $\rho_{water} = 1000\,\text{kg/m}^3$:
+\[\boxed{SG = \frac{\rho_{fluid}}{\rho_{water}} \implies \rho_{fluid} = SG \cdot \rho_{water}}\]
+\textbf{Specific Weight}
+\[\gamma_s = \rho g \quad \text{(specific weight)}\]
+Where hydrostatic pressure can be written as $P = \gamma_s h$\\\\
+\textbf{Slugs and lbm}
+\[\left[\frac{1\,\text{lbf}}{32.174\,\frac{\text{lbm}\cdot\text{ft}}{\text{s}^2}}\right],\quad
+\left[\frac{1\,\text{slug}}{32.174\,\text{lb,}}\right], \quad
+\left[\frac{1\,\text{lbf}}{1\,\frac{\text{slug}\cdot\text{ft}}{\text{s}^2}}\right]\]
+\textbf{Energy Units}\\
+1 Btu = 778.17 ft$\cdot$lbf = 1055.06 J\\\\
+\textbf{Work Units}\\
+1 hp = 550 ft$\cdot$lbf/s = 745.7 W
+\end{multicols}\newpage
+\makeatletter
+\@fleqnfalse
+\makeatother
+\section*{Power}
+Power ($\dot{W}$) is the rate of work done, and can be calculated for a control volume (open system with mass flow) using the first law of thermodynamics:
+\[\boxed{\frac{dE}{dt} = \dot{Q}-\dot{W}+\sum \dot{m_i}\left[h_i+\frac{1}{2}v_i^2+g z_i\right]-\sum \dot{m_e}\left[h_e+\frac{1}{2}v_e^2+g z_e\right]}\]
+Where:
+\begin{itemize}
+\item $dE/dt$ is the rate of change of the total energy of the system over time
+\item $\dot{Q}$ is the rate of heat transfer into the system from the surroundings
+\item $\dot{W}$ is the rate of work done by the system on its surroundings (power output)
+\item The summations represent the total energy entering and leaving the system due to mass flow, where $h$ is the specific enthalpy, $v/2$ is the specific kinetic energy, and $gz$ is the specific potential energy at the inlet ($i$) and outlet ($e$) of the control volume.
+\end{itemize}
+For a steady state process ($dE/dt = 0$) with no heat transfer ($\dot{Q}=0$), the equation becomes
+\[\dot{W} = \dot{m} e_{\text{mech}}\]
+\[e_{\text{mech}} = \frac{P}{\rho} +\frac{v^2}{2}+gz \quad \text{(P is pressure)}\]
+Where $e_{\text{mech}}$ is the mechanical energy per unit mass, and $\dot{m}$ is the mass flow rate. 
+\[\boxed{\dot{m}= \rho v A}\]
+\[\boxed{\dot{m}= \rho\, \dot{\vol}}\]
+\underline{Note:} $\dot{\vol}$ is the volumetric flow rate, and $A$ is the cross-sectional area of the flow.\\
+From physics, power is also defined as 
+\[\dot{W} = F \cdot v\]
+Where $F$ is the force applied to an object and $v$ is the velocity of the object.\\\\
+\textbf{Fluid Flow}
+\[\boxed{\dot{W} = \dot{\vol}(P_e - P_i)}\]
+\textbf{Spring}
+\[\boxed{\dot{W}_{\text{spring}} = \frac{1}{2} k (x_f^2 - x_i^2)}\]
+\section*{Heat Transfer by Conduction}
+\[\boxed{\dot{Q}_{\text{cond}} = kA\frac{\Delta T}{\Delta x}}\]
+Where: $\Delta T = T_i - T_e$, $A$ is the area of the window, $k$ is the thermal conductivity of the material, and $\Delta x$ is the thickness of the material. The amount of heat transferred is then given by
+\[\boxed{Q_{\text{cond}} = \dot{Q}_{\text{cond}} \cdot t}\]
+Where $t$ is the time duration of heat transfer.
+
+
+\end{document}
