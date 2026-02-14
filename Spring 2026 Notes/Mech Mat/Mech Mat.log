@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  14 FEB 2026 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  14 FEB 2026 18:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Modern Physics/Modern.tex"
-(c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Modern Physics/Modern.tex
+**"c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Mech Mat/Mech Mat.tex"
+(c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Mech Mat/Mech Mat.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -297,8 +297,8 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count298
 \l__pdf_internal_box=\box105
-) (Modern.aux)
-\openout1 = `Modern.aux'.
+) (Mech Mat.aux)
+\openout1 = `"Mech Mat.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
 LaTeX Font Info:    ... okay on input line 11.
@@ -367,238 +367,199 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 15.
-(C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
- (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
+LaTeX Font Info:    Trying to load font information for U+msa on input line 22.
+(C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+<Normal Stress.png, id=1, 251.13824pt x 305.943pt>
+File: Normal Stress.png Graphic file (type png)
+<use Normal Stress.png>
+Package pdftex.def Info: Normal Stress.png  used on input line 27.
+(pdftex.def)             Requested size: 187.89914pt x 228.91048pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--39
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 20--29
+[]  [] 
+ []
+
+<Shear Stress.png, id=3, 501.67426pt x 148.75575pt>
+File: Shear Stress.png Graphic file (type png)
+<use Shear Stress.png>
+Package pdftex.def Info: Shear Stress.png  used on input line 34.
+(pdftex.def)             Requested size: 375.80544pt x 111.43488pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--38
 
  []
 
 [1
 
-{C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-<1d Plane Wave.jpg, id=16, 2906.86pt x 1401.235pt>
-File: 1d Plane Wave.jpg Graphic file (type jpg)
-<use 1d Plane Wave.jpg>
-Package pdftex.def Info: 1d Plane Wave.jpg  used on input line 43.
-(pdftex.def)             Requested size: 234.8775pt x 113.2129pt.
+{C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Normal Stress.png> <./Shear Stress.png>]
+<Stress FBD.png, id=16, 657.05475pt x 301.125pt>
+File: Stress FBD.png Graphic file (type png)
+<use Stress FBD.png>
+Package pdftex.def Info: Stress FBD.png  used on input line 39.
+(pdftex.def)             Requested size: 469.75502pt x 215.29353pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 45--50
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--50
-
- []
-
-<Fixed z.jpg, id=17, 2890.8pt x 1296.845pt>
-File: Fixed z.jpg Graphic file (type jpg)
-<use Fixed z.jpg>
-Package pdftex.def Info: Fixed z.jpg  used on input line 53.
-(pdftex.def)             Requested size: 234.8775pt x 105.35255pt.
-[2 <./1d Plane Wave.jpg> <./Fixed z.jpg>]
-<Fixed t.jpg, id=21, 2562.57375pt x 1348.03625pt>
-File: Fixed t.jpg Graphic file (type jpg)
-<use Fixed t.jpg>
-Package pdftex.def Info: Fixed t.jpg  used on input line 58.
-(pdftex.def)             Requested size: 234.8775pt x 123.53952pt.
- [3 <./Fixed t.jpg>] [4]
-Overfull \hbox (30.00227pt too wide) detected at line 138
-[] \OT1/cmr/m/n/12 = []
- []
-
-<Divergence thm.png, id=28, 744.381pt x 338.4645pt>
-File: Divergence thm.png Graphic file (type png)
-<use Divergence thm.png>
-Package pdftex.def Info: Divergence thm.png  used on input line 142.
-(pdftex.def)             Requested size: 187.89914pt x 85.43192pt.
-<Stokes thm.png, id=30, 615.4995pt x 449.2785pt>
-File: Stokes thm.png Graphic file (type png)
-<use Stokes thm.png>
-Package pdftex.def Info: Stokes thm.png  used on input line 151.
-(pdftex.def)             Requested size: 187.89914pt x 137.15656pt.
-[5 <./Divergence thm.png> <./Stokes thm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 185--188
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 221--224
-
- []
-
-[7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 238--242
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
-
- []
-
-[9]
-<Continuity.png, id=51, 719.68875pt x 224.63925pt>
-File: Continuity.png Graphic file (type png)
-<use Continuity.png>
-Package pdftex.def Info: Continuity.png  used on input line 267.
-(pdftex.def)             Requested size: 375.80544pt x 117.30324pt.
-
-Overfull \hbox (19.64516pt too wide) detected at line 283
-[]
- []
-
-
-Overfull \hbox (11.81215pt too wide) detected at line 292
-[]
- []
-
-
-Overfull \hbox (12.33437pt too wide) detected at line 301
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 283--304
-
- []
-
-[10 <./Continuity.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 316--319
-
- []
-
-<Plane Wave.png, id=56, 800.9925pt x 350.5095pt>
-File: Plane Wave.png Graphic file (type png)
-<use Plane Wave.png>
-Package pdftex.def Info: Plane Wave.png  used on input line 320.
-(pdftex.def)             Requested size: 375.80544pt x 164.45068pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 322--324
-
- []
-
-[11 <./Plane Wave.png>]
-<Plane Wave 1.png, id=61, 567.3195pt x 266.79675pt>
-File: Plane Wave 1.png Graphic file (type png)
-<use Plane Wave 1.png>
-Package pdftex.def Info: Plane Wave 1.png  used on input line 331.
-(pdftex.def)             Requested size: 230.18253pt x 108.24748pt.
-<Plane Wave 2.png, id=62, 437.83575pt x 234.27525pt>
-File: Plane Wave 2.png Graphic file (type png)
-<use Plane Wave 2.png>
-Package pdftex.def Info: Plane Wave 2.png  used on input line 336.
-(pdftex.def)             Requested size: 230.18253pt x 123.16435pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 339--344
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--344
-
+Underfull \hbox (badness 1406) in paragraph at lines 44--45
+\OT1/cmr/m/n/12 solving ap-proach. Start-ing from
  []
 
-<Plane Wave 3.png, id=63, 635.976pt x 243.309pt>
-File: Plane Wave 3.png Graphic file (type png)
-<use Plane Wave 3.png>
-Package pdftex.def Info: Plane Wave 3.png  used on input line 345.
-(pdftex.def)             Requested size: 375.80544pt x 143.77382pt.
+<Stress FBD 1.png, id=17, 456.5055pt x 555.87675pt>
+File: Stress FBD 1.png Graphic file (type png)
+<use Stress FBD 1.png>
+Package pdftex.def Info: Stress FBD 1.png  used on input line 48.
+(pdftex.def)             Requested size: 281.85587pt x 343.20657pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--351
-
- []
-
-[12 <./Plane Wave 1.png> <./Plane Wave 2.png> <./Plane Wave 3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 354--358
-
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 41--50
+[]  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--358
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--370
+Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
-<Phasor.jpg, id=70, 2814.515pt x 976.64874pt>
-File: Phasor.jpg Graphic file (type jpg)
-<use Phasor.jpg>
-Package pdftex.def Info: Phasor.jpg  used on input line 371.
-(pdftex.def)             Requested size: 375.80544pt x 130.39635pt.
-[13 <./Phasor.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 376--380
+<General Stress.png, id=18, 242.70676pt x 380.622pt>
+File: General Stress.png Graphic file (type png)
+<use General Stress.png>
+Package pdftex.def Info: General Stress.png  used on input line 60.
+(pdftex.def)             Requested size: 187.89914pt x 294.67117pt.
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 52--62
+[]  [] 
+ []
+
+[2 <./Stress FBD.png> <./Stress FBD 1.png>]
+<Tension-Stress.png, id=24, 302.93175pt x 191.5155pt>
+File: Tension-Stress.png Graphic file (type png)
+<use Tension-Stress.png>
+Package pdftex.def Info: Tension-Stress.png  used on input line 74.
+(pdftex.def)             Requested size: 187.89914pt x 118.79388pt.
+
+Overfull \hbox (31.98576pt too wide) in paragraph at lines 66--75
+[]  [] 
+ []
+
+[3 <./General Stress.png> <./Tension-Stress.png>]
+<Compression-Stress.png, id=34, 196.93575pt x 161.403pt>
+File: Compression-Stress.png Graphic file (type png)
+<use Compression-Stress.png>
+Package pdftex.def Info: Compression-Stress.png  used on input line 83.
+(pdftex.def)             Requested size: 187.89914pt x 154.00677pt.
+
+Overfull \hbox (31.98576pt too wide) in paragraph at lines 76--85
+[]  [] 
+ []
+
+<Tension-Shear.png, id=35, 302.3295pt x 175.857pt>
+File: Tension-Shear.png Graphic file (type png)
+<use Tension-Shear.png>
+Package pdftex.def Info: Tension-Shear.png  used on input line 95.
+(pdftex.def)             Requested size: 187.89914pt x 109.29585pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+<Bearing Stress.png, id=36, 283.0575pt x 308.352pt>
+File: Bearing Stress.png Graphic file (type png)
+<use Bearing Stress.png>
+Package pdftex.def Info: Bearing Stress.png  used on input line 106.
+(pdftex.def)             Requested size: 187.89914pt x 204.69391pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--108
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--390
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 86--108
+[]  [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--108
 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 401--405
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 86--108
+[]  [] 
+ []
+
+[4 <./Compression-Stress.png> <./Tension-Shear.png> <./Bearing Stress.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
 
  []
 
-<Linear Polarization.png, id=78, 1089.47025pt x 439.6425pt>
-File: Linear Polarization.png Graphic file (type png)
-<use Linear Polarization.png>
-Package pdftex.def Info: Linear Polarization.png  used on input line 408.
-(pdftex.def)             Requested size: 375.80544pt x 151.64998pt.
-<Circular Polarization.png, id=79, 1031.052pt x 442.0515pt>
-File: Circular Polarization.png Graphic file (type png)
-<use Circular Polarization.png>
-Package pdftex.def Info: Circular Polarization.png  used on input line 413.
-(pdftex.def)             Requested size: 375.80544pt x 161.12149pt.
-[15 <./Linear Polarization.png> <./Circular Polarization.png>]
-<Elliptical Polarization.png, id=85, 925.056pt x 442.0515pt>
-File: Elliptical Polarization.png Graphic file (type png)
-<use Elliptical Polarization.png>
-Package pdftex.def Info: Elliptical Polarization.png  used on input line 423.
-(pdftex.def)             Requested size: 281.85587pt x 134.68723pt.
-<SHOs.jpg, id=86, 3049.3925pt x 1161.33875pt>
-File: SHOs.jpg Graphic file (type jpg)
-<use SHOs.jpg>
-Package pdftex.def Info: SHOs.jpg  used on input line 429.
-(pdftex.def)             Requested size: 375.80544pt x 143.11139pt.
- [16 <./Elliptical Polarization.png> <./SHOs.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 440--444
+<Single Shear.png, id=43, 392.667pt x 132.495pt>
+File: Single Shear.png Graphic file (type png)
+<use Single Shear.png>
+Package pdftex.def Info: Single Shear.png  used on input line 124.
+(pdftex.def)             Requested size: 375.80544pt x 126.80759pt.
+<Double Shear.png, id=44, 437.83575pt x 163.812pt>
+File: Double Shear.png Graphic file (type png)
+<use Double Shear.png>
+Package pdftex.def Info: Double Shear.png  used on input line 130.
+(pdftex.def)             Requested size: 375.80544pt x 140.6106pt.
+[5 <./Single Shear.png>]
+<Axial Strain.png, id=49, 200.54926pt x 275.8305pt>
+File: Axial Strain.png Graphic file (type png)
+<use Axial Strain.png>
+Package pdftex.def Info: Axial Strain.png  used on input line 146.
+(pdftex.def)             Requested size: 187.89914pt x 258.43051pt.
 
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 138--149
+[]  []
  []
 
-[17] (Modern.aux)
+[6 <./Double Shear.png> <./Axial Strain.png>]
+<Deflection FBD.jpg, id=56, 3276.24pt x 1238.6275pt>
+File: Deflection FBD.jpg Graphic file (type jpg)
+<use Deflection FBD.jpg>
+Package pdftex.def Info: Deflection FBD.jpg  used on input line 158.
+(pdftex.def)             Requested size: 375.80544pt x 142.07062pt.
+ [7 <./Deflection FBD.jpg>] (Mech Mat.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4694 strings out of 474486
- 74110 string characters out of 5743755
- 1945542 words of memory out of 5000000
- 26919 multiletter control sequences out of 15000+600000
- 568633 words of font info for 74 fonts, out of 8000000 for 9000
+ 4654 strings out of 474486
+ 73349 string characters out of 5743755
+ 1931542 words of memory out of 5000000
+ 26884 multiletter control sequences out of 15000+600000
+ 567072 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,18n,65p,1149b,323s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Modern.pdf (17 pages, 5882893 bytes).
+ 57i,7n,65p,601b,330s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on "Mech Mat.pdf" (7 pages, 2067650 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
+ 112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
