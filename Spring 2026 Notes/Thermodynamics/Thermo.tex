@@ -27,6 +27,9 @@ The \textbf{First Law of Thermodynamics} states that energy is conserved: energy
 The \textbf{Second Law of Thermodynamics} states that while energy is conserved, real processes are irreversible and occur in a preferred direction, leading to an increase in the entropy of an isolated system. This increase in entropy reduces the maximum amount of work that can be extracted from energy.\\\\
 Entropy is a thermodynamic property that quantifies irreversibility and constrains the availability of energy to perform work.\\\\
 Also note that thermodynamics is a science that emerged in the 1800s, around the same time as the development of the steam engine, before modern chemistry and physics were fully established. As a result, it is primarily an observational and experimental science, focusing on the macroscopic properties and behavior of matter rather than the microscopic details of atoms and molecules.
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
 \begin{center}
 {\LARGE Chapter 1: Introduction and Basic Concepts\par}
 \end{center}
@@ -258,8 +261,133 @@ A \textbf{process} is a transformation that takes a system from one state to ano
 \centering
 \includegraphics[width=\textwidth]{Process.png}
 \end{minipage}
-
-
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+{\LARGE Chapter 2: Energy, Energy Transfer, and General Energy Analysis\par}
+\end{center}
+In Chapter 2, we apply the First Law of Thermodynamics, the principle of conservation of energy, to the analysis of energy transfer in systems. Beyond tracking how much energy is transferred, we also focus on the \textit{rate} at which energy is transferred, known as power or the rate of work being done. In this chapter, we mostly focus on the energy transfer through the mechanism of work and heat separately on systems.
+\section*{Forms of Energy and Energy Transfer}
+As always, energy is the capacity to do work, the total energy of a system consisting of internal energy, kinetic energy, and potential energy is:
+\[E = U + KE + PE = U + \frac{1}{2}mv^2 + mgh\]
+or in specific form (per unit mass):
+\[e = u + \frac{1}{2}v^2 + gh\]
+As mentioned before, internal energy is the energy contained within the system, while kinetic and potential energy are forms of mechanical energy associated with the motion and position of the system.\\\\
+\textbf{Mechanisms of Energy Transfer}
+\begin{enumerate}
+    \item \textbf{Heat Transfer} $Q$:\\
+    Heat transfer \textit{to} a system increases its internal energy while heat transfer \textit{from} a system decreases its internal energy. Heat transfer can occur through three modes: conduction, convection, and radiation.
+    \item \textbf{Work Transfer} $W$:\\
+    Work is a common form of energy transfer and occurs when energy crosses a system boundary by means other than heat (temperature difference) or mass flow. It is associated with a force acting through a distance by mechanical means. Work can be done on a system, increasing its energy, or by a system, decreasing its energy.
+    \item \textbf{Mass Flow} $\dot{m}$:\\
+    Mass flow is a form of energy transfer that occurs in control volumes. As mass enters the system, it increases the system's energy because mass carries energy with it. Likewise, as mass leaves the system, it decreases the system's energy.
+\end{enumerate}
+\textbf{Closed Systems}\\
+For closed systems where $\Delta KE = \Delta PE = 0$ are referred to as \textbf{stationary systems}. In a stationary system, energy transfer can occur only through heat and work, so the change in total energy is equal to the change in internal energy:
+\[\Delta E = \Delta U\]
+\[\boxed{\Delta U = Q - W}\]
+\textbf{Open Systems}\\
+For open systems (control volumes), mass can flow across the boundary, carrying energy with it. Most open systems involve fluid flow so it is easier to express energy flow associated with fluid flow in terms of rates.\\\\
+We define the \textbf{mass flow rate} as the amount of mass flowing through a cross-section per unit time, it is related to the volumetric flow rate $\dot{\vol}$ by:
+\[\boxed{\dot{m} = \rho \,\dot{\vol} = \rho A_c V_{\text{avg}} \quad [\text{kg/s}]}\]
+Where $A_c$ is the cross-sectional area and $V_{\text{avg}}$ is the average velocity of the fluid normal to the cross-section.\\\\
+Thus, the energy flow rate associated with fluid flowing at a rate of $\dot{m}$ is:
+\[\dot{E} = \dot{m} e \quad \text{[J/s]}\]
+The mechanical energy flow rate associated with fluid flow is the sum of flow, kinetic, and potential energy:
+\[\boxed{e_{\text{mech}} = \frac{P}{\rho} + \frac{1}{2}v^2 + gz}\]
+\section*{Energy Transfer by Work}
+The most general definition of work is the energy transfer that occurs when a force acts through a distance. 
+\[W = \int_{1}^{2} F \cdot dx\]
+Here are some other types of work:
+\begin{itemize}
+    \item \textbf{Electrical work}\\
+We know that the power associated with electrical work across a load of resistance $R$ is given by:
+\[\dot{W}_{\text{elec}} = VI = RI^2 = \frac{V^2}{R}\]
+Where $I$ is the current and $V$ is the voltage across the load. Thus, the work done over time $\Delta t$ when both $V$ and $I$ are constant is:
+\[W_{\text{elec}} = \dot{W}_{\text{elec}} \Delta t = VI \Delta t\]
+    \item \textbf{Shaft work}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+Where $n$ is the number of revolutions, $\dot{n}$ is the rate of revolutions, and $F$ is a constant force acting $r$ away:
+\[W_{\text{shaft}} = F\Delta s = \left(\frac{T}{r}\right) (2\pi rn) = 2\pi nT\]
+The power associated with shaft work is:
+\[\dot{W}_{\text{shaft}} = 2\pi \dot{n} T\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
+\centering
+\includegraphics[width=\textwidth]{Shaft.png}
+\end{minipage}
+    \item \textbf{Spring Work}\\
+We all know spring work is given by Hooke's law:
+\[W_{\text{spring}} = \int_{x_1}^{x_2} kx \, dx = \frac{1}{2}k(x_2^2 - x_1^2)\]
+\end{itemize}
+\section*{Energy Transfer by Heat}
+\textbf{Heat} is defined as the form of energy transfer that occurs due to a temperature difference, it has units of energy [J], and it is NOT a property so don't get it confused with temperature.\\\\
+Heat transfer per unit mass or specific heat is defined as:
+\[q = \frac{Q}{m} \quad \text{[J/kg]}\]
+Where $Q$ is the total heat transfer and $m$ is the mass of the system.\\\\
+We can also relate the amount of heat transfer to the rate of heat transfer $\dot{Q}$ by:
+\[Q = \int_{t_1}^{t_2} \dot{Q} \, dt \quad [\text{J}]\]
+or if $\dot{Q}$ is constant:
+\[Q = \dot{Q} \Delta t\]
+\textbf{Modes of Heat Transfer}
+\begin{itemize}
+    \item \textbf{Conduction}\\
+From its name, conduction occurs when heat is transferred through direct contact between materials. The rate of heat transfer by conduction can be calculated using Fourier's law:
+\[\boxed{\dot{Q}_{\text{cond}} = k A \frac{\Delta T}{\Delta x}}\]
+Where $k$ is the thermal conductivity of the material, $A$ is the area normal to the direction of heat transfer, $\Delta T$ is the temperature difference across the material, and $\Delta x$ is the thickness of the material.
+    \item \textbf{Convection}\\
+Convection occurs when heat is transferred between a solid surface and a liquid or gas in motion, the faster the motion, the higher the rate of heat transfer. The rate of heat transfer by convection can be calculated using Newton's law of cooling:
+\[\boxed{\dot{Q}_{\text{conv}} = h A (T_s - T_f)}\]
+Where $h$ is the convection heat transfer coefficient, $A$ is the area of the solid surface, $T_s$ is the temperature of the solid surface, and $T_f$ is the temperature of the fluid away from the surface (at the surface the fluid temp equals $T_s$).
+    \item \textbf{Radiation}\\
+This is heat transfer by electromagnetic radiation. The maximum possible rate of radiation is given by the Stefan--Boltzmann law, and ideal surfaces that emit radiation at this maximum rate are called \textbf{black bodies}. Real surfaces emit less radiation, which is accounted for by the surface emissivity $\epsilon$, and they also absorb radiation from their surroundings according to their absorptivity $\alpha$. The detailed formulas are omitted since they are unlikely to be needed.
+\end{itemize}
+\section*{Applying the First Law}
+The first law of themodynamics states that energy is conserved, so the change in total energy of a system is equal to net energy transfer across the system boundary:
+$$ \left( \begin{gathered} \text{Total energy} \\ \text{entering the system} \end{gathered} \right) - \left( \begin{gathered} \text{Total energy} \\ \text{leaving the system} \end{gathered} \right) = \left( \begin{gathered} \text{Change in the total} \\ \text{energy of the system} \end{gathered} \right) $$
+or in terms of rates (power):
+\[\dot{E}_{\text{in}} - \dot{E}_{\text{out}} = \frac{dE_{\text{system}}}{dt}\]
+\underline{Note:} For constant rates, we can multiply by time to get the total energy transfers: \\$W = \dot{W} \Delta t$, $Q = \dot{Q} \Delta t$, and $\Delta E_{\text{system}} = \dot{E}_{\text{system}} \Delta t$.\\\\
+Thus, for a control volume with mass flow, the first law can be expressed as:
+\[\boxed{\frac{dE}{dt} = \dot{Q}-\dot{W}+
+\underbrace{\sum \dot{m_i}\left[h_i+\frac{1}{2}V_i^2+g z_i\right]}_{\text{Inlet}}
+-\underbrace{\sum \dot{m_e}\left[h_e+\frac{1}{2}V_e^2+g z_e\right]}_{\text{Outlet}}}\]
+Where:
+\begin{itemize}
+\item $dE/dt$ is the rate of change of the total energy of the system over time
+\item $\dot{Q}$ is the rate of heat transfer into the system from the surroundings
+\item $\dot{W}$ is the rate of work done by the system on its surroundings (power output)
+\item The summations represent the total energy entering and leaving the system due to mass flow, where $h$ is the specific enthalpy, $V^2/2$ is the specific kinetic energy, and $gz$ is the specific potential energy at the inlet ($i$) and outlet ($e$) of the control volume.
+\end{itemize}
+\underline{Note:} Here we introduce specific enthalpy $h$, but it is basically a convenient way to group internal energy and flow energy together:
+\[\boxed{h = u + \frac{P}{\rho} = u + P\svol, \quad \svol = \frac{1}{\rho}}\]
+For a steady state process ($dE/dt = 0$) with no heat transfer ($\dot{Q}=0$), the equation becomes
+\[\boxed{\dot{W} = \dot{m} e_{\text{mech}}}\]
+\[e_{\text{mech}} = \frac{P}{\rho} +\frac{V^2}{2}+gz \quad \text{(P is pressure)}\]
+For a steady state process with no heat transfer and no change in kinetic or potential energy, the equation further simplifies to
+\[\boxed{\dot{W} = \dot{m}\frac{\Delta P}{\rho}=\dot{\vol} \Delta P}\]
+Which describes the required power input to a pump where $\dot{\vol}$ is the volumetric flow rate and $\Delta P$ is the pressure change across the pump.
+\section*{Sign Convention}
+Sign convention is always set according to the perspective of the system. In this case, engineers have always been wanting to convert heat into work, therefore we have the following sign convention:
+\begin{table}[H]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|c|c|}
+\hline
+ & \textbf{IN} & \textbf{OUT} \\ \hline
+Heat $Q$ & $+$ & $-$ \\ \hline
+Work $W$ & $-$ & $+$ \\ \hline
+\end{tabular}
+\end{table}
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\begin{center}
+{\LARGE Chapter 3: Properties of Pure Substances\par}
+\end{center}
 
 
 

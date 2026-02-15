@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771169483.3415 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" "Thermo.pdf" "Thermo" 1771169484.29904 0
+["pdflatex"] 1771185379.07556 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" "Thermo.pdf" "Thermo" 1771185379.95793 0
   "1-110.png" 1769446591 113472 2c7f01c4bd268712f5dd3d69ee7543a4 ""
   "Barometer.png" 1771166968 23778 a436484bbf9db7d9b1ac0045ca610a77 ""
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1770641952 80937 91001db6d4ae332437b4b739862cda02 ""
@@ -46,6 +46,7 @@
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1247596667 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1247596666 32362 bc3f3eec7ab7d65fe700963d4017d32c ""
+  "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1247596667 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1247596667 32587 65067f817f408bc71a7312f3d9828a9b ""
@@ -93,11 +94,12 @@
   "Pascal.png" 1771166741 43874 e28955d65b189f76c72f09539a821bd6 ""
   "Piston.png" 1768932391 38988 39b68a76c6b6a618911f0209996d1143 ""
   "Process.png" 1768934382 28588 bcca625891c9e3404bf42300445178a7 ""
+  "Shaft.png" 1771181994 35064 df8ab370d05599d2a0026ae5c11ef51f ""
   "Stacked Fluid.png" 1769567069 20853 d504e15f09cdd86339f22f3259e585bc ""
   "State.png" 1771163111 88041 d259a2e5cf39174e3d45fe949e983484 ""
-  "Thermo.aux" 1771169484 33 06c322e1d88c4778ac780ba5e7d05c77 "pdflatex"
-  "Thermo.tex" 1771169451 19449 9a4a2ace0fba868c24034b65467a399a ""
-  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" 1771169451 19449 9a4a2ace0fba868c24034b65467a399a ""
+  "Thermo.aux" 1771185379 33 f5162ef287409618820a40adc8e2d2a1 "pdflatex"
+  "Thermo.tex" 1771185378 29504 31e61d084a0377f06a5d463210cc17ef ""
+  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" 1771185378 29504 31e61d084a0377f06a5d463210cc17ef ""
   (generated)
   "Thermo.aux"
   "Thermo.log"
