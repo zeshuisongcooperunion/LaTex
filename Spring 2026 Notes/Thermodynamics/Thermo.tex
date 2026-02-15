@@ -1,0 +1,266 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
+\usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools}
+\geometry{margin=1in}
+
+\title{}
+\date{}
+\author{}
+
+% Uppercase Volume with thicker, higher line
+\newcommand{\vol}{\mathord{\text{\ooalign{\hidewidth $V$\hidewidth\cr\kern-0.5pt\raisebox{0.8ex}{\rule[0pt]{1em}{0.5pt}}}}}}
+
+% Lowercase Volume with built-in shifts
+\newcommand{\svol}{%
+  \mathord{\text{\ooalign{%
+    \hspace{0.1em}$v$\cr         % built-in horizontal shift of 'v'
+    \hspace{-0.02em}\rule[0.6ex]{0.8em}{0.5pt} % built-in horizontal shift of the bar, vertical raise, length, thickness
+  }}}%
+}
+\begin{document}
+
+\begin{center}
+{\LARGE ESC-330 Engineering Thermodynamics Notes\par}
+\end{center}
+The key question in thermodynamics is: \textit{How can we use energy to do work?} Accordingly, we will be looking at the ways in which energy is stored, transformed, and transferred, as constrained by the laws of thermodynamics (conservation of energy and the increase of entropy), as well as the accompanying changes in the state of matter. To begin, we will define some key concepts such as systems, states, processes, and properties which are the frame through which we will analyze thermodynamic processes.\\\\
+The \textbf{First Law of Thermodynamics} states that energy is conserved: energy can be transferred or transformed, but the total energy of an isolated system remains constant.\\\\
+The \textbf{Second Law of Thermodynamics} states that while energy is conserved, real processes are irreversible and occur in a preferred direction, leading to an increase in the entropy of an isolated system. This increase in entropy reduces the maximum amount of work that can be extracted from energy.\\\\
+Entropy is a thermodynamic property that quantifies irreversibility and constrains the availability of energy to perform work.\\\\
+Also note that thermodynamics is a science that emerged in the 1800s, around the same time as the development of the steam engine, before modern chemistry and physics were fully established. As a result, it is primarily an observational and experimental science, focusing on the macroscopic properties and behavior of matter rather than the microscopic details of atoms and molecules.
+\begin{center}
+{\LARGE Chapter 1: Introduction and Basic Concepts\par}
+\end{center}
+\section*{Systems and Control Volumes}
+In thermodynamics, we begin every problem by defining a \textbf{system} which is a quantity of matter or a region in space chosen for study. The \textbf{surroundings} are everything outside the system, and the \textbf{boundary} is the real or imaginary surface that separates the system from its surroundings. \\\\
+When defining a system, we are mostly interested in regions that contain \textit{mass} since fundamentally, mass is the carrier of energy. Therefore, we specify two types of systems: closed systems and open systems.\\\\
+In a \textbf{closed system} (or \textit{control mass}), a fixed amount of matter is enclosed, and no mass crosses the boundary. In an \textbf{open system} (or \textit{control volume}), a specified region in space is enclosed, and mass may flow across the boundary. For both closed and open systems, energy may cross the boundary in the form of heat or work.\\\\
+Because a closed system does not permit mass transfer, energy transfer is limited to heat and boundary work; mechanical energy associated with mass flow (kinetic, potential, and flow energy) cannot cross the boundary. In contrast, an open system allows mass transfer, enabling energy to be carried across the boundary in the form of kinetic, potential, and flow energy, in addition to heat transfer and work.\\\\
+\underline{Note:} \textbf{Flow energy} is the pressure work per unit mass associated with mass flow, it describes the energy needed to push mass into or out of a control volume against pressure (like in pumps). 
+\[\boxed{\text{Flow Energy} = P\svol}\]
+Note that while pressure isn't a form of energy, when a pressure force acts on a fluid through a distance, it does \textit{flow work}. In fact the units of pressure is energy per unit volume: Pa = N/m$^2$ = N$\cdot$m/m$^3$ = J/m$^3$. In this case, we used $\svol$ which is the specific volume (volume per unit mass).\\\\
+A \textbf{isolated system} is a special type of closed system that does not exchange either mass or energy with its surroundings.\\\\
+\underline{Ex}: Piston–cylinder (closed sys): gas does work by moving the piston and heat can cross the walls. Nozzle (open sys): fluid carries energy as it flows through the system.
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{Piston.png}
+    \hspace{0.05\textwidth}
+    \includegraphics[width=0.3\textwidth]{Nozzle.png}
+\end{center}
+\textbf{Control surfaces} are the boundaries of control volumes. They may be real or imaginary, fixed or moving.
+\section*{Properties}
+In classical thermodynamics, we focus on macroscopic, measurable characteristics of a system, ignoring microscopic behavior like molecular interactions. A \textbf{property} is thus a macroscopic quantity that can be measured at a single instant in time. Properties exclude quantities such as energy or work, which describe the system’s interactions with its surroundings rather than the system itself.\\\\
+We define properties as extensive and intensive. \textbf{Extensive properties} depend on the size or mass of the system, while \textbf{intensive properties} do not. By normalizing an extensive property by mass, we obtain a \textbf{specific property}, which is intensive. Intensive and specific properties are particularly useful for describing a system’s state, since they are independent of the amount of matter present.
+\begin{center}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Extensive Properties} & \textbf{Intensive Properties} \\
+\hline
+Temperature: $T$ & $T$ \\
+Pressure: $P$ & $P$ \\
+Volume: $\vol$ & Specific Volume: $\svol = \vol / m$ \\
+Internal Energy: $U$ & Specific Internal Energy: $u = U / m$ \\
+Entropy: $S$ & Specific Entropy: $s = S / m$ \\
+\hline
+\end{tabular}
+\end{center}
+\underline{Note:} Internal energy $U$ and entropy $S$ are examples of extensive properties that cannot be measured directly. However, they do have a definite value at any given state, found using changes in these properties from a reference state.
+\[\Delta U = Q - W\]  
+\[\Delta S = \int \frac{\delta Q_\mathrm{rev}}{T}\]  
+where $Q$ is the heat added to the system and $W$ is the work done by the system, and $\delta Q_\mathrm{rev}$ is the infinitesimal heat transfer in a reversible process. Internal energy is then the energy contained, well, within the system since $Q$ and $W$ represent energy transfer across the boundary.\\\\
+\textbf{Density and Specific Gravity}
+\[\rho = \frac{m}{\vol}\quad \text{(density)}\]
+\[\svol = \frac{\vol}{m} = \frac{1}{\rho} \quad \text{(specific volume)}\]
+\textbf{Specific gravity} is defined as a relative density compared to water (at 4$^\circ$C) where $\rho_{water} = 1000\,\text{kg/m}^3$:
+\[\boxed{SG = \frac{\rho_{fluid}}{\rho_{water}} \implies \rho_{fluid} = SG \cdot \rho_{water}}\]
+\textbf{Specific Weight}
+\[\gamma_s = \rho g \quad \text{(specific weight)}\]
+Thus hydrostatic pressure can be written as $P = \rho gh=\gamma_s h$
+\newpage
+\section*{States and Equilibrium}
+Now that we have defined properties, we can define the \textbf{state} of a system as the condition of the system described by its properties. The state can be visualized as a single point in a three-dimensional plot of pressure, temperature, and specific volume, with the properties serving as the coordinates of that point. The plot below shows a $P$–\;\,$\svol$–$T$ surface for a substance that expands upon freezing (like water). For a simple compressible system, specifying any two independent properties (such as $P$ and $T$) uniquely determines the third property ($\;\svol$) on the surface, this is known as the \textbf{state postulate}.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{State.png}
+\end{center}\vspace{-1em}
+\underline{Note:} A simple compressible system is one where electrical, magnetic, gravitational, motion, and surface tension effects are negligible. If any of these effects are significant, an extra property must be specified for each.\\\\
+\textbf{Ideal Gas Law}\\
+A direct application of the state postulate is the ideal gas law, which defines the relationship between these three properties for an ideal gas, so that specifying any two properties automatically determines the third:
+\[\boxed{P \, \svol = R \, T, \quad
+R = \frac{\bar{R}}{M} \quad \text{(specific gas constant, J/kg·K)}} \]
+Where:
+\begin{itemize}[label=\textbullet]
+    \item $P$ = \textit{absolute} pressure (Pa)
+    \item $\svol$ = specific volume (m$^3$/kg), where $\svol = V/m$
+    \item $T$ = \textit{absolute} temperature (K)
+    \item $\bar{R}$ = universal gas constant, $8.314$ J/(mol·K)
+    \item $M$ = molar mass of the gas (kg/mol)
+    \item $R$ = specific gas constant, $R = \bar{R}/M$ (J/kg·K)
+\end{itemize}
+Additionally, classical thermodynamics assumes that states are always in \textbf{equilibrium} and that processes occur in \textbf{quasi-equilibrium}, meaning the system remains balanced and changes happen slowly enough for it to adjust and maintain equilibrium throughout, and properties are well-defined. Below are some types of equilibrium that can exist in a system:
+\begin{itemize}
+\item \textbf{Thermal equilibrium} occurs when the temperature is uniform throughout the system.
+\item \textbf{Mechanical equilibrium} occurs when there are no unbalanced forces within the system or with its surroundings, meaning pressure does not change at any point over time.
+\item \textbf{Phase equilibrium} occurs when the different phases of a system (solid, liquid, gas) remain constant with no mass transfer.
+\item \textbf{Chemical equilibrium} occurs when the chemical composition of the system does not change over time, with no reactions taking place.
+\end{itemize}
+\section*{Pressure}
+Pressure is a fundamental property in thermodynamics, defined as the normal force per unit area exerted by a fluid on a surface. 
+\[P=F/A\]
+\[P = \rho g h\quad \text{(hydrostatic pressure)}\]
+When measuring pressure, we must specify the reference point. \textbf{Absolute pressure} is measured relative to a perfect vacuum, while \textbf{gauge pressure} is measured relative to atmospheric pressure. The relationship between them is:
+\[\boxed{P_{\text{gauge}} = P_{\text{absolute}} - P_{\text{atmospheric}}}\]
+\[\boxed{P_{\text{vacuum}} = P_{\text{atmospheric}} - P_{\text{absolute}}}\]
+\underline{Note:} Generally, gauge pressures already account for atmospheric pressure, and thus reads zero when open to the atmosphere. This fact allows us to ignore atmospheric pressure when a problem involves only gauge pressures, since it will cancel out in the calculations.
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{Gauge pressure.png}
+\end{center}
+Below are some ways to calculate pressure:
+\begin{itemize}
+\item \textbf{Hydrostatic Pressure}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+This is probably the simplest way to calculate pressure, it is the pressure exerted by a fluid at rest due to the weight of the fluid above it. It can be calculated using the formula:
+\[P = \rho g h\]
+If we are finding absolute pressure, we need to add atmospheric pressure to this value: $P_{\text{absolute}} = P_{\text{atmo}} + \rho g h$. Gauge pressure ignores atmospheric pressure, so it is simply $P_{\text{gauge}} = \rho g h$.\\\\
+\underline{Note:} If density is equal (ie. the fluid is continuous) then the pressure at equal depths are equal, regardless of the shape of the container, this will be used for Pascal's law.\\\\
+\textbf{Pascal's Law} states that the pressure applied to a confined fluid increases the pressure throughout the fluid by the same amount. Therefore, in the hydraulic jack, Pascal's law allows a small force applied to the smaller piston to be transformed into a larger force on the larger piston, enabling us to lift heavy objects with less effort.
+\[P_1=P_2 \quad \implies \quad \frac{F_1}{A_1} = \frac{F_2}{A_2} \quad \implies \frac{F_2}{F_1} = \frac{A_2}{A_1}\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
+\centering
+\includegraphics[width=\textwidth]{Hydrostatic.png}
+\includegraphics[width=\textwidth]{Pascal.png}
+\end{minipage}
+\newpage
+\item \textbf{The Barometer}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+In the barometer, we apply the hydrostatic pressure formula to find the atmospheric pressure in terms of the height of mercury within the column $h$. From Pascal's law, the pressure at point B is equal to the atmospheric pressure (equal elevation), so we can write the force balance at B:
+\[\sum F =0 \quad \implies \quad P_{\text{atm}} = \rho g h\]
+Pressure at point C is approximately zero since there is only mercury vapor above it.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
+\centering
+\includegraphics[width=\textwidth]{Barometer.png}
+\end{minipage}
+\item \textbf{The Manometer}\\
+The manometer is a device that measures pressure differences, and thus can measure a pressure relative to atmospheric pressure (gauge pressure) or a pressure relative to a vacuum (absolute pressure). We will build the intuition for how to solve manometer problems by following the steps below:
+\begin{itemize}
+    \item \textbf{Basic Single Fluid Manometer:}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+The pressure in a fluid does not change with horizontal position (equal depth), so the pressure at points 1 and 2 are equal:
+    \[P_1 = P_2\]
+    Where we use the hydrostatic pressure formula to express the pressures at points 1 and 2:
+    \[P_1 = P_{gas}, \quad P_2 = P_{atm} + \rho g h\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
+\centering
+        \includegraphics[width=\textwidth]{Manometer.png}
+\end{minipage}
+\newpage
+    \item \textbf{Pressure with Multiple Layers of Fluid:}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+We use the following rules to find the pressure at different points in a fluid with multiple layers:
+    \begin{enumerate}
+        \item The pressure change across a fluid layer is given by the hydrostatic pressure formula: $\Delta P = \rho g h$
+        \item Pressure increases downward (+) and decreases upward (-).
+        \item The pressure at points of equal depth in a fluid are equal (Pascal's Principle).
+    \end{enumerate}
+    Ex: At point 1 in the figure, $P_1 = P_{atm}+\rho_1g h_1+\rho_2 g h_2 + \rho_3 g h_3$
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
+\centering
+        \includegraphics[width=\textwidth]{Stacked Fluid.png}
+\end{minipage}
+\item \textbf{Multi-fluid Manometer:}\\
+\begin{enumerate}
+    \item Begin at a known pressure point (gauge or atmospheric pressure) and follow the fluid layers to the unknown pressure point.
+    \item Sign convention: add when going down, subtract when going up.
+    \item \textbf{Horizontal jump:} We can "jump" horizontally across bends in the tube if both sides of the jump are within the \textbf{same continuous fluid}. This is because pressure is identical at the same horizontal level within a single static fluid. \textit{Any pressure decrease from moving upward is perfectly balanced by an equal pressure increase when moving back down to that same level on the other side.}
+    \item The pressure at each end of the manometer equals the total pressure obtained by summing the contributions of all fluid columns along the vertical path.
+\end{enumerate}   
+\end{itemize}
+\end{itemize}
+\newpage\noindent
+\underline{Ex: 1-110}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+\centering
+\includegraphics[width=\textwidth]{1-110.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
+Given:
+\begin{itemize}
+    \item $P_{gauge} = 370\,\text{kPa}$
+    \item Specific gravities
+    \begin{itemize}
+        \item Oil: $SG_{oil} = 0.79$
+        \item Mercury: $SG_{Hg} = 13.6$
+        \item Gasoline: $SG_{gas} = 0.70$
+    \end{itemize}
+    \item Height differences:
+    \begin{itemize}
+        \item $h_{water} = 45\,\text{cm}$
+        \item $h_{oil} = 50\,\text{cm}$
+        \item $h_{Hg} = 10\,\text{cm}$
+        \item $h_{gas} = 22\,\text{cm}$
+    \end{itemize}
+\end{itemize}
+Find: 
+\begin{itemize}
+    \item Gauge pressure of gas line.
+\end{itemize}
+\end{minipage}\\\\\\
+Therefore:
+\[P_{gauge} - \rho_{water}gh_{water} + \rho_{oil}gh_{oil} - \rho_{Hg}gh_{Hg} - \rho_{gas}gh_{gas} = P_{gas}\]
+\[\implies P_{gas} = P_{gauge} + \rho_{water}g(-h_{water} + SG_{oil}h_{oil} - SG_{Hg}h_{Hg} - SG_{gas}h_{gas})\]
+Plugging in the values:
+\[P_{gas} = [370\,\text{kPa}]+[1000\,\text{kg/m}^3][9.81\,\text{m/s}^2]\bigg(-[0.45\,\text{m}] + [0.79][0.5\,\text{m}] - [13.6][0.1\,\text{m}] - [0.70][0.22\,\text{m}]\bigg)\]
+\[P_{gas} = [370\,\text{kPa}]-
+\left[15391.89\,\frac{kg}{m\cdot s^2}\right]
+\left[\frac{N}{kg \cdot m/s^2}\right]
+\left[\frac{Pa}{N/m^2}\right]\]
+\[= [370\,\text{kPa}]-
+[15.391\,\text{kPa}] = 354.609\,\text{kPa} \approx \boxed{354.6\,\text{kPa}}\]
+\section*{Temperature and Zeroth Law of Thermodynamics}
+Before introducing temperature, we first define the \textbf{Zeroth Law of Thermodynamics}: if two systems are each in thermal equilibrium with a third system, they are in thermal equilibrium with each other. Replacing the third system with a \textit{thermometer} allows us to define temperature as a property that is the same for any two systems in thermal equilibrium.\newpage\noindent
+\textbf{Temperature Conversions}
+\begin{itemize}[label=\textbullet]
+    \item Absolute temperature conversions
+    \begin{itemize}[label=\textopenbullet]
+        \item $T_{K} = T_{^\circ C} + 273.15$
+        \item $T_{^\circ R} = T_{^\circ F} + 459.67$
+        \item $T_{^\circ F} = \frac{9}{5}T_{^\circ C} + 32$
+        \item $T_{^\circ R} = \frac{9}{5}T_{K}$
+    \end{itemize}
+    \item Temperature difference conversions
+    \begin{itemize}[label=\textopenbullet]
+        \item $\Delta K = \Delta ^\circ C$
+        \item $\Delta ^\circ R = \Delta ^\circ F$
+        \item $\Delta ^\circ F = \frac{9}{5}\Delta ^\circ C$
+        \item $\Delta ^\circ R = \frac{9}{5}\Delta K$
+    \end{itemize}
+\end{itemize}
+\underline{Note:} Fahrenheit and Celsius are relative temperature scales (based on the freezing/boiling points of water), while Rankine and Kelvin are absolute temperature scales (starting at absolute zero).
+\section*{Processes}
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+A \textbf{process} is a transformation that takes a system from one state to another, during which its properties change. The process can be represented by a \textbf{path}, which is the sequence of states the system passes through. The path is important because it determines the work and heat transfer, which depend on how the system moves between states rather than the states themselves.\\\\
+\textbf{Types of Processes}
+\begin{itemize}
+    \item \textbf{Isobaric process}: constant pressure
+    \item \textbf{Isochoric process}: constant volume 
+    \item \textbf{Isothermal process}: constant temperature 
+    \item \textbf{Adiabatic process}: no heat transfer
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
+\centering
+\includegraphics[width=\textwidth]{Process.png}
+\end{minipage}
+
+
+
+
+
+\end{document}

@@ -21,11 +21,16 @@
 
 \titleformat{\section}{\large\bfseries}{}{0em}{}
 \titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
-% Uppercase Volume - Wrapped in \mathord to prevent shifting
-\newcommand{\vol}{\mathord{\text{\ooalign{\hidewidth $V$\hidewidth\cr\kern-1.0pt--}}}}
+% Uppercase Volume with thicker, higher line
+\newcommand{\vol}{\mathord{\text{\ooalign{\hidewidth $V$\hidewidth\cr\kern-0.5pt\raisebox{0.8ex}{\rule[0pt]{1em}{0.5pt}}}}}}
 
-% Lowercase Volume - Adjusted for math mode stability
-\newcommand{\svol}{\mathord{\text{\ooalign{\hidewidth $v$\hidewidth\cr\kern-0.2pt\raisebox{-0.1ex}{--}}}}}
+% Lowercase Volume with manual horizontal shift
+\newcommand{\svol}[1][-0.15em]{% optional argument is horizontal shift
+  \mathord{\text{\ooalign{
+    $v$\cr
+    \hspace{#1}\rule[0.6ex]{0.8em}{0.5pt} % 0.6ex vertical raise, 0.8em length, 0.5pt thickness
+  }}}%
+}
 \begin{document}
 
 \begin{center}
