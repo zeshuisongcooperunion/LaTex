@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  15 FEB 2026 22:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  16 FEB 2026 09:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -311,72 +311,164 @@ File: 4-20.png Graphic file (type png)
 Package pdftex.def Info: 4-20.png  used on input line 63.
 (pdftex.def)             Requested size: 375.80544pt x 232.25752pt.
 [2 <./4-12_1.jpg>]
-<4-32.png, id=20, 486.01575pt x 184.89075pt>
+<4-32.png, id=20, 605.8635pt x 219.82124pt>
 File: 4-32.png Graphic file (type png)
 <use 4-32.png>
 Package pdftex.def Info: 4-32.png  used on input line 82.
-(pdftex.def)             Requested size: 375.80544pt x 142.96721pt.
-<4-36.png, id=21, 476.982pt x 214.401pt>
+(pdftex.def)             Requested size: 375.80544pt x 136.35483pt.
+ [3 <./4-20.png> <./4-32.png>]
+<4-36.png, id=26, 476.982pt x 214.401pt>
 File: 4-36.png Graphic file (type png)
 <use 4-36.png>
-Package pdftex.def Info: 4-36.png  used on input line 89.
+Package pdftex.def Info: 4-36.png  used on input line 94.
 (pdftex.def)             Requested size: 375.80544pt x 168.92673pt.
- [3 <./4-20.png> <./4-32.png>]
-<4-46.png, id=27, 507.0945pt x 249.93375pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
+
+ []
+
+<4-46.png, id=27, 516.12825pt x 260.172pt>
 File: 4-46.png Graphic file (type png)
 <use 4-46.png>
-Package pdftex.def Info: 4-46.png  used on input line 96.
-(pdftex.def)             Requested size: 375.80544pt x 185.2341pt.
-<4-56.png, id=28, 512.51476pt x 186.09525pt>
+Package pdftex.def Info: 4-46.png  used on input line 125.
+(pdftex.def)             Requested size: 375.80544pt x 189.43567pt.
+[4 <./4-36.png>]
+Overfull \hbox (5.8243pt too wide) detected at line 132
+\OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 [7 []] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 [5 
+](\OML/cmm/m/it/12 i[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 i[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 [11 
+](\OML/cmm/m/it/12 i[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 i[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 [1 
+](\OML/cmm/m/it/12 i[] \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 i[]\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 [5 
+]\OML/cmm/m/it/12 i[] \OT1/cmr/m/n/12 = 0   =[]\OMS/cmsy/m/n/12 )   \OT1/cmr/m/n/12 7 = 16\OML/cmm/m/it/12 i[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 5\OML/cmm/m/it/12 i[] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 17\OML/cmm/m/it/12 i[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 i[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 138--141
+
+ []
+
+<4-56.png, id=32, 525.162pt x 190.91325pt>
 File: 4-56.png Graphic file (type png)
 <use 4-56.png>
-Package pdftex.def Info: 4-56.png  used on input line 103.
-(pdftex.def)             Requested size: 375.80544pt x 136.4589pt.
-<4-57.png, id=29, 506.49225pt x 308.95425pt>
+Package pdftex.def Info: 4-56.png  used on input line 147.
+(pdftex.def)             Requested size: 375.80544pt x 136.61845pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--158
+
+ []
+
+[5 <./4-46.png> <./4-56.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 163--167
+
+ []
+
+<4-57.png, id=38, 506.49225pt x 308.95425pt>
 File: 4-57.png Graphic file (type png)
 <use 4-57.png>
-Package pdftex.def Info: 4-57.png  used on input line 110.
+Package pdftex.def Info: 4-57.png  used on input line 173.
 (pdftex.def)             Requested size: 375.80544pt x 229.24484pt.
- [4 <./4-36.png> <./4-46.png> <./4-56.png>]
-<5-3.png, id=36, 489.62926pt x 202.356pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--179
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 176--179
+
+ []
+
+[6 <./4-57.png>]
+<5-3.png, id=43, 489.62926pt x 202.356pt>
 File: 5-3.png Graphic file (type png)
 <use 5-3.png>
-Package pdftex.def Info: 5-3.png  used on input line 117.
+Package pdftex.def Info: 5-3.png  used on input line 183.
 (pdftex.def)             Requested size: 375.80544pt x 155.31438pt.
-<5-5.png, id=37, 513.71925pt x 211.992pt>
+<5-5.png, id=44, 513.71925pt x 211.992pt>
 File: 5-5.png Graphic file (type png)
 <use 5-5.png>
-Package pdftex.def Info: 5-5.png  used on input line 124.
+Package pdftex.def Info: 5-5.png  used on input line 198.
 (pdftex.def)             Requested size: 375.80544pt x 155.08928pt.
-<5-11.png, id=38, 501.072pt x 217.41225pt>
+ [7 <./5-3.png>]
+<5-5-1.jpg, id=51, 2273.49374pt x 1365.1pt>
+File: 5-5-1.jpg Graphic file (type jpg)
+<use 5-5-1.jpg>
+Package pdftex.def Info: 5-5-1.jpg  used on input line 204.
+(pdftex.def)             Requested size: 281.85587pt x 169.22066pt.
+<5-5-2.jpg, id=52, 3061.4375pt x 1505.625pt>
+File: 5-5-2.jpg Graphic file (type jpg)
+<use 5-5-2.jpg>
+Package pdftex.def Info: 5-5-2.jpg  used on input line 212.
+(pdftex.def)             Requested size: 281.85587pt x 138.60188pt.
+ [8 <./5-5.png> <./5-5-1.jpg> <./5-5-2.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 221--225
+
+ []
+
+<5-11.png, id=58, 501.072pt x 217.41225pt>
 File: 5-11.png Graphic file (type png)
 <use 5-11.png>
-Package pdftex.def Info: 5-11.png  used on input line 131.
+Package pdftex.def Info: 5-11.png  used on input line 230.
 (pdftex.def)             Requested size: 375.80544pt x 163.06209pt.
- [5 <./4-57.png> <./5-3.png> <./5-5.png>]
-<5-18.png, id=45, 497.4585pt x 254.1495pt>
+<5-11-1.jpg, id=59, 1857.94125pt x 754.82pt>
+File: 5-11-1.jpg Graphic file (type jpg)
+<use 5-11-1.jpg>
+Package pdftex.def Info: 5-11-1.jpg  used on input line 235.
+(pdftex.def)             Requested size: 281.85587pt x 114.50809pt.
+[9 <./5-11.png> <./5-11-1.jpg>]
+<5-11-2.jpg, id=64, 1805.74625pt x 818.05624pt>
+File: 5-11-2.jpg Graphic file (type jpg)
+<use 5-11-2.jpg>
+Package pdftex.def Info: 5-11-2.jpg  used on input line 244.
+(pdftex.def)             Requested size: 281.85587pt x 127.68365pt.
+<5-11-3.jpg, id=65, 1927.2pt x 823.075pt>
+File: 5-11-3.jpg Graphic file (type jpg)
+<use 5-11-3.jpg>
+Package pdftex.def Info: 5-11-3.jpg  used on input line 254.
+(pdftex.def)             Requested size: 281.85587pt x 120.36638pt.
+ [10 <./5-11-2.jpg> <./5-11-3.jpg>]
+<5-18.png, id=69, 497.4585pt x 254.1495pt>
 File: 5-18.png Graphic file (type png)
 <use 5-18.png>
-Package pdftex.def Info: 5-18.png  used on input line 138.
+Package pdftex.def Info: 5-18.png  used on input line 269.
 (pdftex.def)             Requested size: 375.80544pt x 192.00386pt.
- [6 <./5-11.png> <./5-18.png>] (HW3_ZeshuiSong.aux)
+<5-18-1.jpg, id=70, 3171.85pt x 972.63374pt>
+File: 5-18-1.jpg Graphic file (type jpg)
+<use 5-18-1.jpg>
+Package pdftex.def Info: 5-18-1.jpg  used on input line 275.
+(pdftex.def)             Requested size: 375.80544pt x 115.22688pt.
+ [11 <./5-18.png> <./5-18-1.jpg>]
+<5-18-2.jpg, id=75, 3056.41875pt x 750.805pt>
+File: 5-18-2.jpg Graphic file (type jpg)
+<use 5-18-2.jpg>
+Package pdftex.def Info: 5-18-2.jpg  used on input line 281.
+(pdftex.def)             Requested size: 375.80544pt x 92.31523pt.
+<5-18-3.jpg, id=76, 3276.24pt x 695.59875pt>
+File: 5-18-3.jpg Graphic file (type jpg)
+<use 5-18-3.jpg>
+Package pdftex.def Info: 5-18-3.jpg  used on input line 292.
+(pdftex.def)             Requested size: 375.80544pt x 79.7852pt.
+<5-18-4.jpg, id=77, 2447.1425pt x 1477.52pt>
+File: 5-18-4.jpg Graphic file (type jpg)
+<use 5-18-4.jpg>
+Package pdftex.def Info: 5-18-4.jpg  used on input line 302.
+(pdftex.def)             Requested size: 234.8775pt x 141.80875pt.
+ [12 <./5-18-2.jpg> <./5-18-3.jpg>] [13 <./5-18-4.jpg>] (HW3_ZeshuiSong.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3893 strings out of 474486
- 58796 string characters out of 5743755
+ 3956 strings out of 474486
+ 59844 string characters out of 5743755
  1933542 words of memory out of 5000000
- 26134 multiletter control sequences out of 15000+600000
+ 26197 multiletter control sequences out of 15000+600000
  571449 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,295b,193s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on HW3_ZeshuiSong.pdf (6 pages, 774394 bytes).
+ 57i,6n,65p,392b,193s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on HW3_ZeshuiSong.pdf (13 pages, 3006075 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 115 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
