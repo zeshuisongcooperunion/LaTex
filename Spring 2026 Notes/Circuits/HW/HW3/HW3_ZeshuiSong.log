@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  15 FEB 2026 15:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  15 FEB 2026 22:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/EE/HW/HW3/HW3_ZeshuiSong.tex"
-(c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/EE/HW/HW3/HW3_ZeshuiSong.tex
+**"c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Circuits/HW/HW3/HW3_ZeshuiSong.tex"
+(c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Circuits/HW/HW3/HW3_ZeshuiSong.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -278,89 +278,105 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<4-6.png, id=1, 407.72325pt x 165.61874pt>
+<4-6.png, id=1, 501.67426pt x 212.59425pt>
 File: 4-6.png Graphic file (type png)
 <use 4-6.png>
-Package pdftex.def Info: 4-6.png  used on input line 23.
-(pdftex.def)             Requested size: 375.80544pt x 152.65411pt.
+Package pdftex.def Info: 4-6.png  used on input line 22.
+(pdftex.def)             Requested size: 375.80544pt x 159.25714pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
+
+ []
+
 <4-12.png, id=3, 517.935pt x 278.2395pt>
 File: 4-12.png Graphic file (type png)
 <use 4-12.png>
-Package pdftex.def Info: 4-12.png  used on input line 31.
+Package pdftex.def Info: 4-12.png  used on input line 37.
 (pdftex.def)             Requested size: 375.80544pt x 201.89465pt.
-<4-20.png, id=4, 411.33675pt x 248.127pt>
-File: 4-20.png Graphic file (type png)
-<use 4-20.png>
-Package pdftex.def Info: 4-20.png  used on input line 39.
-(pdftex.def)             Requested size: 375.80544pt x 226.70456pt.
- [1
+<4-12_1.jpg, id=4, 3276.24pt x 1572.87625pt>
+File: 4-12_1.jpg Graphic file (type jpg)
+<use 4-12_1.jpg>
+Package pdftex.def Info: 4-12_1.jpg  used on input line 42.
+(pdftex.def)             Requested size: 281.85587pt x 135.31271pt.
+[1
 
 {C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./4-6.png> <./4-12.png>]
-<4-32.png, id=13, 486.01575pt x 184.89075pt>
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
+
+ []
+
+<4-20.png, id=16, 528.17325pt x 326.4195pt>
+File: 4-20.png Graphic file (type png)
+<use 4-20.png>
+Package pdftex.def Info: 4-20.png  used on input line 63.
+(pdftex.def)             Requested size: 375.80544pt x 232.25752pt.
+[2 <./4-12_1.jpg>]
+<4-32.png, id=20, 486.01575pt x 184.89075pt>
 File: 4-32.png Graphic file (type png)
 <use 4-32.png>
-Package pdftex.def Info: 4-32.png  used on input line 47.
+Package pdftex.def Info: 4-32.png  used on input line 82.
 (pdftex.def)             Requested size: 375.80544pt x 142.96721pt.
-<4-36.png, id=14, 476.982pt x 214.401pt>
+<4-36.png, id=21, 476.982pt x 214.401pt>
 File: 4-36.png Graphic file (type png)
 <use 4-36.png>
-Package pdftex.def Info: 4-36.png  used on input line 55.
+Package pdftex.def Info: 4-36.png  used on input line 89.
 (pdftex.def)             Requested size: 375.80544pt x 168.92673pt.
-<4-46.png, id=15, 507.0945pt x 249.93375pt>
+ [3 <./4-20.png> <./4-32.png>]
+<4-46.png, id=27, 507.0945pt x 249.93375pt>
 File: 4-46.png Graphic file (type png)
 <use 4-46.png>
-Package pdftex.def Info: 4-46.png  used on input line 63.
+Package pdftex.def Info: 4-46.png  used on input line 96.
 (pdftex.def)             Requested size: 375.80544pt x 185.2341pt.
- [2 <./4-20.png> <./4-32.png> <./4-36.png>]
-<4-56.png, id=22, 512.51476pt x 186.09525pt>
+<4-56.png, id=28, 512.51476pt x 186.09525pt>
 File: 4-56.png Graphic file (type png)
 <use 4-56.png>
-Package pdftex.def Info: 4-56.png  used on input line 71.
+Package pdftex.def Info: 4-56.png  used on input line 103.
 (pdftex.def)             Requested size: 375.80544pt x 136.4589pt.
-<4-57.png, id=23, 506.49225pt x 308.95425pt>
+<4-57.png, id=29, 506.49225pt x 308.95425pt>
 File: 4-57.png Graphic file (type png)
 <use 4-57.png>
-Package pdftex.def Info: 4-57.png  used on input line 79.
+Package pdftex.def Info: 4-57.png  used on input line 110.
 (pdftex.def)             Requested size: 375.80544pt x 229.24484pt.
-<5-3.png, id=24, 489.62926pt x 202.356pt>
+ [4 <./4-36.png> <./4-46.png> <./4-56.png>]
+<5-3.png, id=36, 489.62926pt x 202.356pt>
 File: 5-3.png Graphic file (type png)
 <use 5-3.png>
-Package pdftex.def Info: 5-3.png  used on input line 87.
+Package pdftex.def Info: 5-3.png  used on input line 117.
 (pdftex.def)             Requested size: 375.80544pt x 155.31438pt.
- [3 <./4-46.png> <./4-56.png> <./4-57.png>]
-<5-5.png, id=31, 513.71925pt x 211.992pt>
+<5-5.png, id=37, 513.71925pt x 211.992pt>
 File: 5-5.png Graphic file (type png)
 <use 5-5.png>
-Package pdftex.def Info: 5-5.png  used on input line 95.
+Package pdftex.def Info: 5-5.png  used on input line 124.
 (pdftex.def)             Requested size: 375.80544pt x 155.08928pt.
-<5-11.png, id=32, 501.072pt x 217.41225pt>
+<5-11.png, id=38, 501.072pt x 217.41225pt>
 File: 5-11.png Graphic file (type png)
 <use 5-11.png>
-Package pdftex.def Info: 5-11.png  used on input line 103.
+Package pdftex.def Info: 5-11.png  used on input line 131.
 (pdftex.def)             Requested size: 375.80544pt x 163.06209pt.
-<5-18.png, id=33, 497.4585pt x 254.1495pt>
+ [5 <./4-57.png> <./5-3.png> <./5-5.png>]
+<5-18.png, id=45, 497.4585pt x 254.1495pt>
 File: 5-18.png Graphic file (type png)
 <use 5-18.png>
-Package pdftex.def Info: 5-18.png  used on input line 111.
+Package pdftex.def Info: 5-18.png  used on input line 138.
 (pdftex.def)             Requested size: 375.80544pt x 192.00386pt.
- [4 <./5-3.png> <./5-5.png> <./5-11.png>] [5 <./5-18.png>] (HW3_ZeshuiSong.aux)
+ [6 <./5-11.png> <./5-18.png>] (HW3_ZeshuiSong.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3845 strings out of 474486
- 58155 string characters out of 5743755
- 1926542 words of memory out of 5000000
- 26099 multiletter control sequences out of 15000+600000
- 564333 words of font info for 59 fonts, out of 8000000 for 9000
+ 3893 strings out of 474486
+ 58796 string characters out of 5743755
+ 1933542 words of memory out of 5000000
+ 26134 multiletter control sequences out of 15000+600000
+ 571449 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,5n,65p,289b,193s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-Output written on HW3_ZeshuiSong.pdf (5 pages, 374641 bytes).
+ 57i,5n,65p,295b,193s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on HW3_ZeshuiSong.pdf (6 pages, 774394 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
+ 72 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
