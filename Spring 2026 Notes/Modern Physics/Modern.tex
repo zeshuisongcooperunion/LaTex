@@ -1,5 +1,5 @@
 \documentclass[12pt]{article}
-\usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
+\usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry,cancel}
 \usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools}
 \geometry{margin=1in}
 
@@ -352,7 +352,7 @@ The amplitude of the electric field is given by
 \underline{Note:} The phases $\phi_x$ and $\phi_y$ of the complex amplitude vector do not affect the magnitude of the electric field, but they do govern the polarization of the light wave. This is because of the dot product:
 \[|\vec{E}|^2 = \vec{E}\cdot\vec{E}^*,\quad \vec{E}^*=\text{(complex conjugate of $\vec{E}$)}\]
 \[\vec{E}\cdot\vec{E}^* = \left( E_{0_x} e^{i \phi_x} \hat{x} + E_{0_y} e^{i \phi_y} \hat{y} \right) \cdot \left( E_{0_x} e^{-i \phi_x} \hat{x} + E_{0_y} e^{-i \phi_y} \hat{y} \right) = |E_{0_x}|^2 + |E_{0_y}|^2\]
-The exponentials multiply to 1.\\\\
+The exponentials multiply to 1 ($e^0$), and $\hat{x}\cdot\hat{x} = \hat{y}\cdot\hat{y} = 1$, while $\hat{x}\cdot\hat{y} = \hat{y}\cdot\hat{x} = 0$, so the cross terms cancel out.\\\\
 \underline{Note:} The $xy$ components for both the electric and magnetic fields have the same harmonic properties of $k$ and $\omega$ (wavelength and frequency), since they are both derived from the same phase $(kz - \omega t)$.\\\\
 Finally, note that we have switched from sinusoidal functions to complex exponentials. This is because complex exponentials are easier to work with mathematically, and if we want to get back to the real-valued (physically measurable) electric field, we can simply take the real part of the complex expression (using Euler's formula).
 \[
@@ -446,12 +446,185 @@ Spatial derivative
 \[\vec{\nabla} \cdot \vec{E} = i\vec{k} \cdot \vec{E},\quad \nabla^2 \vec{E} = -k^2 \vec{E}\]
 \[\vec{\nabla} \times \vec{E} = i \vec{k} \times \vec{E}\]
 \underline{Note:} These properties follow from the fact that the only spatial and temporal dependence of $\vec{E}$ is contained in the phase $(\vec{k}\cdot\vec{r}-\omega t)$. When taking derivatives, the complex amplitude vector can therefore be treated as a constant, and the chain rule applies directly to the exponential term.
-
-
-
-
-
-
+\newpage\noindent
+\textbf{Constraints on Plane Wave Solutions from Maxwell's Equations}\\
+For \textbf{case $\mathbf{\hat{z}}$}, we have the general plane wave solution of the form
+\[\vec{E} = E_x \hat{x} + E_y \hat{y} + E_z \hat{z}\]
+\[\vec{B} = B_x \hat{x} + B_y \hat{y} + B_z \hat{z}\]
+Where $E_x$, $E_y$, $E_z$, $B_x$, $B_y$, and $B_z$  are complex functions of the form:
+\[E_x = E_{0_x} e^{i (kz - \omega t + \phi_{x_E})}\]
+Using the properties of time and spatial derivatives of the general plane wave form, we can apply Maxwell's equations to derive constraints on the components of $\vec{E}$ and $\vec{B}$.\\\\
+\underline{(1) Applying Gauss's law for electricity:}
+\[\vec{\nabla} \cdot \vec{E} = 0 \]
+\[\left(\frac{\partial E_x}{\partial x} + \frac{\partial E_y}{\partial y} + \frac{\partial E_z}{\partial z}\right) = 0\]
+Since $E_x$ and $E_y$ are only dependent on $z$ and $t$, their spatial derivatives with respect to $x$ and $y$ are zero. 
+\[\frac{\partial E_x}{\partial x} = \frac{\partial E_y}{\partial y} = 0\]
+Thus,
+\[\frac{\partial E_z}{\partial z} = \frac{\partial}{\partial z} \left( E_{0_z} e^{i (kz - \omega t+\phi_{z_E})} \right) = 0\]
+\[\implies ik E_{0_z} e^{i (kz - \omega t+\phi_{z_E})} =0\]
+Since the exponential term is never zero, $\boxed{E_{0_z}\text{ must be zero}}$.\\\\
+This matches our expectation that the electric field of a plane wave must be transverse to the direction of propagation, so there can be no $z$ component of the electric field for case $\hat{z}$.\\\\
+\underline{(2) Applying Gauss's law for magnetism:}
+\[\vec{\nabla} \cdot \vec{B} = 0\]
+Similarly to (1), we can see that $B_{0_z}$ must also be zero. Also note that the lack of an $x$ and $y$ dependence in both $\vec{E}$ and $\vec{B}$ shows that the fields are \textit{uniform} across the entire $xy$ plane, which is consistent with the plane wave approximation.\\\\
+\underline{(3) Applying Faraday's law:} Setting $E_{0_z}$ and $B_{0_z}$ to zero as found in (1) and (2).
+\[\vec{\nabla}\times\vec{E} = -\frac{\partial \vec{B}}{\partial t}\]
+\[\begin{aligned}
+\begin{vmatrix} 
+\hat{x} & \hat{y} & \hat{z} \\ 
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ 
+E_x & E_y & 0 
+\end{vmatrix} &= -\frac{\partial}{\partial z} E_y \hat{x} + \frac{\partial}{\partial z} E_x \hat{y} + \underbrace{\left( \frac{\partial}{\partial x} E_y - \frac{\partial}{\partial y} E_x \right)}_{0} \hat{z}\\
+&= -\frac{\partial}{\partial z} \left( E_{0_y} e^{i (kz - \omega t + \phi_{y_E})} \right) \hat{x} + \frac{\partial}{\partial z} \left( E_{0_x} e^{i (kz - \omega t + \phi_{x_E})} \right) \hat{y}\\
+&= -ik E_{0_y} e^{i (kz - \omega t + \phi_{y_E})} \hat{x} + ik E_{0_x} e^{i (kz - \omega t + \phi_{x_E})} \hat{y}\\
+&= ik e^{i (kz - \omega t)} \left( -E_{0_y} e^{i \phi_{y_E}} \hat{x} + E_{0_x} e^{i \phi_{x_E}} \hat{y} \right)
+\end{aligned}\]
+Now solving for $-\frac{\partial \vec{B}}{\partial t}$.
+\[\begin{aligned}
+    -\frac{\partial}{\partial t}\left(B_x \hat{x} + B_y \hat{y}\right) &= -\left[\frac{\partial}{\partial t}\left(B_{0_x} e^{i (kz - \omega t + \phi_{x_B})}\right)\hat{x} + \frac{\partial}{\partial t}\left(B_{0_y} e^{i (kz - \omega t + \phi_{y_B})}\right) \hat{y}\right]\\
+    &= -\left[-i\omega B_{0_x} e^{i (kz - \omega t + \phi_{x_B})}\hat{x} - i\omega B_{0_y} e^{i (kz - \omega t + \phi_{y_B})} \hat{y}\right]\\
+    &= i\omega e^{i (kz - \omega t)} \left(B_{0_x} e^{i \phi_{x_B}} \hat{x} + B_{0_y} e^{i \phi_{y_B}} \hat{y}\right)
+\end{aligned}\]
+Setting them equal to each other gives:
+\[k \left( -E_{0_y} e^{i \phi_{y_E}} \hat{x} + E_{0_x} e^{i \phi_{x_E}} \hat{y} \right) = \omega \left(B_{0_x} e^{i \phi_{x_B}} \hat{x} + B_{0_y} e^{i \phi_{y_B}} \hat{y}\right)\]
+Looking at the $x$ components, the magnitudes and phases must match:
+\[\begin{aligned}
+    -kE_{0_y}e^{i\phi_{y_E}} &= \omega B_{0_x} e^{i\phi_{x_B}} \\
+    \implies E_{0_y}e^{i\pi}e^{i\phi_{y_E}} &= \frac{\omega}{k} B_{0_x}e^{i\phi_{x_B}} \\
+\end{aligned}\]
+Thus,
+\[\boxed{\frac{E_{0_y}}{B_{0_x}} = \frac{\omega}{k} = c, \quad \phi_{y_E} + \pi= \phi_{x_B}}\]
+Looking at the $y$ components, the magnitudes and phases must match:
+\[\begin{aligned}
+    kE_{0_x}e^{i\phi_{x_E}} &= \omega B_{0_y} e^{i\phi_{y_B}} \\
+    \implies E_{0_x}e^{i\phi_{x_E}} &= \frac{\omega}{k} B_{0_y} e^{i\phi_{y_B}} \\
+\end{aligned}\]
+Thus,
+\[\boxed{\frac{E_{0_x}}{B_{0_y}} = \frac{\omega}{k} = c, \quad \phi_{x_E} = \phi_{y_B}}\]
+\underline{(4) Applying Ampere-Maxwell law:} Setting $E_{0_z}$ and $B_{0_z}$ to zero as found in (1) and (2).
+\[\vec{\nabla} \times \vec{B} = \frac{1}{c^2} \frac{\partial \vec{E}}{\partial t}\]
+We will see the same relationships found in (3) emerge, physics is consistent!
+\[\begin{aligned}
+\begin{vmatrix} 
+\hat{x} & \hat{y} & \hat{z} \\ 
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\ 
+B_x & B_y & 0 
+\end{vmatrix} &= -\frac{\partial}{\partial z} B_y \hat{x} + \frac{\partial}{\partial z} B_x \hat{y} + \underbrace{\left( \frac{\partial}{\partial x} B_y - \frac{\partial}{\partial y} B_x \right)}_{0} \hat{z}\\
+&= -\frac{\partial}{\partial z} \left( B_{0_y} e^{i(kx - \omega t + \phi_{y_B})} \right) \hat{x} + \frac{\partial}{\partial z} \left( B_{0_x} e^{i(kx - \omega t + \phi_{x_B})} \right) \hat{y}\\
+&= i k e^{i(kx - \omega t)} \left[ -B_{0_y} e^{i \phi_{y_B}} \hat{x} + B_{0_x} e^{i \phi_{x_B}} \hat{y} \right]
+\end{aligned}\]
+Now solving for $\frac{1}{c^2} \frac{\partial \vec{E}}{\partial t}$. 
+\[\begin{aligned}
+\frac{1}{c^2} \frac{\partial}{\partial t} (E_x \hat{x} + E_y \hat{y}) &= \frac{1}{c^2} \left[ \frac{\partial}{\partial t} (E_{0_x} e^{i(kx - \omega t + \phi_{x_E})}) \hat{x} + \frac{\partial}{\partial t} (E_{0_y} e^{i(kx - \omega t + \phi_{y_E})}) \hat{y} \right] \\
+&= \frac{1}{c^2} \left[ -i \omega E_{0_x} e^{i(kx - \omega t + \phi_{x_E})} \hat{x} - i \omega E_{0_y} e^{i(kx - \omega t + \phi_{y_E})} \hat{y} \right] \\
+&= -\frac{1}{c^2} i \omega e^{i(kx - \omega t)} \left[ E_{0_x} e^{i \phi_{x_E}} \hat{x} + E_{0_y} e^{i \phi_{y_E}} \hat{y} \right]
+\end{aligned}\]
+$\hat{x}$ components:
+\[\begin{aligned}
+-k B_{0_y} e^{i \phi_{y_B}} &= -\frac{1}{c^2} \omega E_{0_x} e^{i \phi_{x_E}} \\
+\implies B_{0_y} e^{i \phi_{y_B}} &= \frac{1}{c^2} \frac{\omega}{k} E_{0_x} e^{i \phi_{x_E}} \quad \implies \boxed{B_{0_y} = \frac{1}{c} E_{0_x}, \quad \phi_{y_B} = \phi_{x_E}}
+\end{aligned}\]
+$\hat{y}$ components:
+\[\begin{aligned}
+k B_{0_x} e^{i \phi_{x_B}} &= -\frac{1}{c^2} \omega E_{0_y} e^{i \phi_{y_E}} \\
+\implies B_{0_x} e^{i \phi_{x_B}} &= \frac{1}{c^2} \frac{\omega}{k} E_{0_y} e^{i \pi} e^{i \phi_{y_E}} \quad \implies \boxed{B_{0_x} = \frac{1}{c} E_{0_y}, \quad \phi_{x_B} = \phi_{y_E} + \pi}
+\end{aligned}\]
+\underline{A \textit{slightly} better method}\\
+Regrettably, while this previous method is rigorous, it is also very tedious and didn't use our newfound properties of general plane wave derivatives! Below is a (quick, I hope) method from Professor Corn:\\\\
+We saw from before that when applying Faraday's law, we get
+\[\vec{\nabla}\times\vec{E} = -\frac{\partial \vec{B}}{\partial t}\]
+\[-\frac{\partial E_y}{\partial z}\hat{x} + \frac{\partial E_x}{\partial z}\hat{y} = -\frac{\partial B_x}{\partial t}\hat{x} - \frac{\partial B_y}{\partial t}\hat{y}\]
+Setting the terms equal:
+\[\implies \frac{\partial E_y}{\partial z}= \frac{\partial B_x}{\partial t} \quad \text{and} \quad \frac{\partial E_x}{\partial z}= -\frac{\partial B_y}{\partial t}\]
+From the general plane wave solution:
+\[\begin{aligned}
+\frac{\partial E_y}{\partial z} &= \frac{\partial}{\partial z} \left[ E_{0_y} e^{i \phi_{y_E}} e^{i(kz - \omega t)} \right] = i k E_y \quad \text{and} \quad \frac{\partial E_x}{\partial z} = i k E_x \\
+\frac{\partial B_x}{\partial t} &= \frac{\partial}{\partial t} \left[ B_{0_x} e^{i \phi_{x_B}} e^{i(kz - \omega t)} \right] = -i \omega B_x \quad \text{and} \quad \frac{\partial B_y}{\partial t} = -i \omega B_y
+\end{aligned}\]
+\[\begin{aligned}
+&\implies i k E_y = -i \omega B_x && \implies i k E_x = -(-i \omega B_y) \\
+&\qquad \frac{E_y}{B_x} = \frac{-\omega}{k} = -c && \qquad \frac{E_x}{B_y} = \frac{\omega}{k} = c \\
+\end{aligned}\]
+Plugging in for $E_x$, $E_y$, $B_x$, and $B_y$:
+\[\frac{E_y}{B_x} = \frac{E_{0_y} e^{i \phi_{y_E}} e^{i(kz - \omega t)}}{B_{0_x} e^{i \phi_{x_B}} e^{i(kz - \omega t)}} = \frac{E_{0_y}}{B_{0_x}} e^{i(\phi_{y_E} - \phi_{x_B})} = -c, \quad -c = ce^{i\pi}\]
+Equating the magnitudes and phases once again gives:
+\[\frac{E_{0_y}}{B_{0_x}} = c \quad \text{and} \quad \phi_{y_E} - \phi_{x_B} = \pi\]
+Similarly for the $x$ component:
+\[\frac{E_x}{B_y} = \frac{E_{0_x} e^{i \phi_{x_E}} e^{i(kz - \omega t)}}{B_{0_y} e^{i \phi_{y_B}} e^{i(kz - \omega t)}} = \frac{E_{0_x}}{B_{0_y}} e^{i(\phi_{x_E} - \phi_{y_B})} = c\]
+Equating the magnitudes and phases once again gives:
+\[\frac{E_{0_x}}{B_{0_y}} = c \quad \text{and} \quad \phi_{x_E} - \phi_{y_B} = 0\]
+\underline{Note}: If we didn't add in a phase difference of $\pi$ then we would see that $E_{0_y}/B_{0_x} = -\omega/k$. In either case, the right-hand rule requires $E_{0_y}$ and $B_{0_x}$ to have opposite signs since $\vec{E}\times\vec{B}$ always points in the $\vec{k}$ direction. This can be expressed either by introducing a phase difference of $\pi$ or by keeping the negative sign in the ratio.
+\begin{center}
+\includegraphics[width=1\textwidth]{RHR.png}
+\end{center}
+\section*{Energy Transported by EM Waves}
+Recall that energy is stored in the electric and magnetic fields, with energy densities given by
+\[u_E = \frac{1}{2} \varepsilon_0 |\vec{E}|^2 \quad (\text{energy density of electric field})\]
+\[u_B = \frac{1}{2 \mu_0} |\vec{B}|^2 \quad (\text{energy density of magnetic field})\]
+\underline{Note:} As mentioned before, since we are now dealing with physically measurable quantities of the $\vec{E}$ and $\vec{B}$ fields, we need to use the \textit{real} components of the fields.\\\\
+Additionally, we are ignoring phase differences for now to simplify calculations, so $\phi_x = \phi_y = \phi_z = 0$ for the electric field (this simplification also applies to the magnetic field, but we'll focus on just the electric field for now).
+\[\vec{E} = \Re\! \Big\{ \vec{E}_{\text{complex}} \Big\} 
+= \Re\! \Big\{ \big( E_{0_x} \hat{x} + E_{0_y} \hat{y} + E_{0_z} \hat{z} \big) e^{i (\vec{k} \cdot \vec{r} - \omega t)} \Big\}\]
+\[\vec{E} = 
+E_{0_x} \cos(\vec{k} \cdot \vec{r} - \omega t)\,\hat{x}
++ E_{0_y} \cos(\vec{k} \cdot \vec{r} - \omega t)\,\hat{y}
++ E_{0_z} \cos(\vec{k} \cdot \vec{r} - \omega t)\,\hat{z}\]
+Now the magnitude of the electric field is given by the dot product:
+\[|\vec{E}|^2 = \vec{E}\cdot\vec{E} = |\vec{E}_0|^2 \cos^2(\vec{k} \cdot \vec{r} - \omega t),\quad \text{where} \quad \vec{E}_0 = E_{0_x} \hat{x} + E_{0_y} \hat{y} + E_{0_z} \hat{z}\]
+\underline{For EM Waves}
+\begin{itemize}
+    \item Since the magnitudes of the electric and magnetic fields are related by $|\vec{E}| = c |\vec{B}|$, the energy densities of the electric and magnetic fields are also equal ($c = \frac{1}{\sqrt{\varepsilon_0 \mu_0}}$):
+    \[\boxed{u_E = u_B}\]
+    \item The \textbf{total energy density} $u$ is then the sum of the electric and magnetic energy densities:
+    \[\boxed{u = u_E + u_B = 2u_E = \varepsilon_0 |\vec{E}|^2}\]
+\end{itemize}
+\textbf{Poynting Vector $\vec{S}$}
+We can derive the Poynting vector $\vec{S}$, which describes the flow of electromagnetic energy carried by the $\vec{E}$ and $\vec{B}$ fields in the direction of $\vec{k}$. Its units are power per unit area, W/m$^2$. We can derive $\vec{S}$ by applying the \textit{continuity equation} (local conservation of energy) to the energy density $u$. We should expect to see that:
+\[
+\frac{\partial u}{\partial t} + \nabla \cdot \vec{S} = 0,
+\]
+Similar to how we relate the change in charge density to the divergence of current density in the continuity equation for charge, here the change in energy density is related to the divergence of the Poynting vector which describes the rate at which energy flows through an area.\\\\
+Starting from $u = \frac{1}{2} \varepsilon_0 \vec{E}\cdot\vec{E} + \frac{1}{2\mu_0} \vec{B}\cdot\vec{B}$, we want to show that $\frac{\partial u}{\partial t} =- \vec{\nabla} \cdot \vec{S}$:
+\[
+\frac{\partial u}{\partial t} = \frac{\partial}{\partial t} \left[\frac{1}{2} \varepsilon_0 \vec{E}\cdot\vec{E} + \frac{1}{2\mu_0} \vec{B}\cdot\vec{B}\right] = \frac{1}{2} \varepsilon_0 \frac{\partial}{\partial t}(\vec{E}\cdot\vec{E}) + \frac{1}{2\mu_0} \frac{\partial}{\partial t}(\vec{B}\cdot\vec{B}) 
+\]
+Applying the product rule to the dot products:
+\[\frac{\partial}{\partial t}(\vec{E}\cdot\vec{E}) = 2\vec{E}\cdot\frac{\partial \vec{E}}{\partial t} \quad \text{and} \quad \frac{\partial}{\partial t}(\vec{B}\cdot\vec{B}) = 2\vec{B}\cdot\frac{\partial \vec{B}}{\partial t}\]
+\[\implies \frac{\partial u}{\partial t} = \varepsilon_0 \vec{E}\cdot\frac{\partial \vec{E}}{\partial t} + \frac{1}{\mu_0} \vec{B}\cdot\frac{\partial \vec{B}}{\partial t}\]
+From Faraday's Law:
+\[\vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} \quad\implies\quad \frac{\partial \vec{B}}{\partial t} = -\vec{\nabla} \times \vec{E}\]
+From Ampere-Maxwell Law:
+\[\vec{\nabla} \times \vec{B} = \mu_0 \varepsilon_0 \frac{\partial \vec{E}}{\partial t} \quad\implies\quad \frac{\partial \vec{E}}{\partial t} = \frac{1}{\mu_0 \varepsilon_0} \vec{\nabla} \times \vec{B}\]
+Substituting these into the expression for $\frac{\partial u}{\partial t}$:
+\[\begin{aligned}
+\frac{\partial u}{\partial t} &= \varepsilon_0 \vec{E}\cdot\left(\frac{1}{\mu_0 \varepsilon_0} \vec{\nabla} \times \vec{B}\right) + \frac{1}{\mu_0} \vec{B}\cdot(-\vec{\nabla} \times \vec{E})\\
+&= \frac{1}{\mu_0} \left[\vec{E}\cdot(\vec{\nabla} \times \vec{B}) - \vec{B}\cdot(\vec{\nabla} \times \vec{E})\right]\\
+&= \frac{1}{\mu_0} \left[-\vec{\nabla} \cdot (\vec{E} \times \vec{B})\right]
+\end{aligned}\]
+\underline{Note:} The last step uses the vector identity $\vec{\nabla} \cdot (\vec{A} \times \vec{B}) = \vec{B}\cdot(\vec{\nabla} \times \vec{A}) - \vec{A}\cdot(\vec{\nabla} \times \vec{B})$.\\\\
+Therefore, the Poynting vector is
+\[\boxed{\vec{S} = \frac{1}{\mu_0} \vec{E} \times \vec{B}}\]
+It is also equivalent to 
+\[\vec{S} = \frac{1}{\mu_0} \vec{E}\times\vec{B} = \frac{1}{\mu_0} |\vec{E}|\underbrace{|\vec{B}|}_{\frac{1}{c}|\vec{E}|}\hat{k} = \underbrace{\frac{1}{\mu_0 c}}_{\varepsilon_0 c} |\vec{E}|^2 \hat{k}\]
+\[\implies \boxed{\vec{S} = cu\hat{k}}\]
+\textbf{Intensity}\\
+Intensity is defined as the time-averaged magnitude of the Poynting vector, which describes the \textit{average} power per unit area carried by the electromagnetic wave.
+\[\langle\vec{S}\rangle = c \langle u \rangle, \qquad \langle\quad\rangle: \text{ time average}\]
+Where
+\[\langle u \rangle = \varepsilon_0 \langle |\vec{E}|^2 \rangle = \varepsilon_0 E_0^2 \langle \cos^2(\vec{k} \cdot \vec{r} - \omega t) \rangle = \frac{1}{2} \varepsilon_0 E_0^2\]
+The time average of $\cos^2$ is 1/2 because the function oscillates between 0 and 1, and over a full period, it spends equal time at all values in that range. Therefore, the average value of $\cos^2$ over one period is 1/2.\\\\
+Thus, the intensity of an electromagnetic wave is given by
+\[\boxed{I = \langle\vec{S}\rangle = c \langle u \rangle=\frac{1}{2} \varepsilon_0 E_0^2 c}\]
+\underline{Note:} A higher light intensity corresponds to a larger electric-field amplitude, meaning the wave transports energy at a greater rate per unit area. This aligns with the physical interpretation of intensity as a measure of brightness: brighter light delivers more energy to a surface per unit time.
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+   {\LARGE Unit 2: Radiation and Scattering\par} 
+\end{center}
+The goal of this unit is to model how electromagnetic waves are generated by an accelerated charge (via radiation and scattering) using \textit{classical physics}. Along the way, we will make some approximations and assumptions that will yield a usable model but also introduce some limitations that we will later address with quantum mechanics.
+\section*{Thompson Radiation} 
 
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  14 FEB 2026 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  18 FEB 2026 13:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -143,7 +143,9 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen158
 \Gm@layoutvoffset=\dimen159
 \Gm@dimlist=\toks24
- (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
+ (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
@@ -581,24 +583,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 440--444
 
  []
 
-[17] (Modern.aux)
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 455--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--468
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--471
+
+ []
+
+[18] [19]
+Underfull \hbox (badness 10000) in paragraph at lines 531--535
+
+ []
+
+[20]
+<RHR.png, id=104, 784.1295pt x 301.125pt>
+File: RHR.png Graphic file (type png)
+<use RHR.png>
+Package pdftex.def Info: RHR.png  used on input line 558.
+(pdftex.def)             Requested size: 469.75502pt x 180.3961pt.
+ [21 <./RHR.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 563--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--588
+
+ []
+
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 603--606
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 614--617
+
+ []
+
+[23] [24] [25] (Modern.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4694 strings out of 474486
- 74110 string characters out of 5743755
- 1945542 words of memory out of 5000000
- 26919 multiletter control sequences out of 15000+600000
+ 4742 strings out of 474486
+ 74993 string characters out of 5743755
+ 1947542 words of memory out of 5000000
+ 26963 multiletter control sequences out of 15000+600000
  568633 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,18n,65p,1149b,323s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Modern.pdf (17 pages, 5882893 bytes).
+Output written on Modern.pdf (25 pages, 6055872 bytes).
 PDF statistics:
- 149 PDF objects out of 1000 (max. 8388607)
+ 177 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 

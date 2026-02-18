@@ -47,6 +47,8 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\generic\iftex\iftex.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
+INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\tools\array.sty
@@ -229,6 +231,13 @@ INPUT .\SHOs.jpg
 INPUT .\SHOs.jpg
 INPUT .\SHOs.jpg
 INPUT .\SHOs.jpg
+INPUT .\RHR.png
+INPUT .\RHR.png
+INPUT .\RHR.png
+INPUT .\RHR.png
+INPUT .\RHR.png
+INPUT .\RHR.png
+INPUT .\RHR.png
 INPUT Modern.aux
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
