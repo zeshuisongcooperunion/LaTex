@@ -59,8 +59,12 @@ The second is a \textit{local} view, looking at how the phase changes at a fixed
        \end{center}
        \item Letting $z$ and $t$ vary together:\\
        When we looked at $z$ and $t$ separately, we saw only a \textit{part} of the wave's behavior. For a fixed $z$, we observed how a single point moves over time, capturing the wave's temporal variation. For a fixed $t$, we saw the spatial variation, revealing the full shape of the wave statically at that instant. When both $z$ and $t$ vary together, we can see the wave's complete dynamic behavior, watching how its shape propagates through space and time.
+       \begin{center}
+       \includegraphics[width=0.5\textwidth]{Combined Views.png}
+       \end{center}
 \end{enumerate}
 \underline{Note:} This intuition will become very useful when we study electromagnetic polarization, where the plane wave is a 2D wave. In our cross-sectional view, the single point along the wave will move along the $xy$ plane instead of just up and down.
+\newpage
 \section*{Vector Calculus}
 \begin{itemize}
        \item \textbf{Del Operator:}
@@ -131,7 +135,7 @@ A_x & A_y & A_z
 \vec{\nabla} \times (\vec{\nabla} \times \vec{A})
 &= \vec{\nabla}(\vec{\nabla} \cdot \vec{A}) - \nabla^2 \vec{A} \quad\text{(Curl of a curl)}
 \end{align*}
-\end{itemize}\newpage
+\end{itemize}
 \section*{Divergence Theorem}
 \begin{minipage}{0.5\textwidth}
 Relates the flux of a vector field $\vec{F}$ through a closed surface $S$ to the divergence of $\vec{F}$ within the volume $V$ enclosed by $S$.
@@ -445,7 +449,9 @@ Time derivative
 Spatial derivative
 \[\vec{\nabla} \cdot \vec{E} = i\vec{k} \cdot \vec{E},\quad \nabla^2 \vec{E} = -k^2 \vec{E}\]
 \[\vec{\nabla} \times \vec{E} = i \vec{k} \times \vec{E}\]
-\underline{Note:} These properties follow from the fact that the only spatial and temporal dependence of $\vec{E}$ is contained in the phase $(\vec{k}\cdot\vec{r}-\omega t)$. When taking derivatives, the complex amplitude vector can therefore be treated as a constant, and the chain rule applies directly to the exponential term.
+\underline{Note:} These properties follow from the fact that the only spatial and temporal dependence of $\vec{E}$ is contained in the phase $(\vec{k}\cdot\vec{r}-\omega t)$. When taking derivatives, the complex amplitude vector can therefore be treated as a constant, and the chain rule applies directly to the exponential term.\\\\
+Also since we can find the direction of the magnetic field $\vec{B}$ using Faraday's law ($\vec{\nabla}\times\vec{E} = i\hat{k}\times\vec{E} $) and the relationship between the magnitudes of $\vec{E}$ and $\vec{B}$ ($|\vec{E}| = c|\vec{B}|$), we can also write:
+\[\boxed{\vec{B}=\frac{1}{c}\hat{k}\times\vec{E}}\]
 \newpage\noindent
 \textbf{Constraints on Plane Wave Solutions from Maxwell's Equations}\\
 For \textbf{case $\mathbf{\hat{z}}$}, we have the general plane wave solution of the form
@@ -681,16 +687,58 @@ Therefore, the electric field kink is
 Since the radial component $E_r$ falls off as $1/R^2$ while the transverse component $E_\theta$ falls off as $1/R$, for large observation distances $R$, $E_r \ll E_\theta$ and the electric field is dominated by the transverse component. Therefore, for radiation, and also for quantifying the resulting electromagnetic wave, we can use just $E_\theta$, the transverse component of the electric field.\\\\
 This also makes intuitive sense in our model. Since $R = cT$, a large $R$ corresponds to a large $T$, so the approximation $\tau \ll T$ becomes increasingly valid. In this limit, the region between regions I and II effectively shrinks to a spherical shell of negligible thickness, and the field lines become squished so that they are essentially tangential to the sphere, meaning they are purely transverse.\\\\
 Finally, putting all the intuition and math together, we have the formula for the \textbf{Thompson radiation} generated from an accelerating charge:
-\[\boxed{\vec{E}_\theta = \frac{1}{4\pi\varepsilon_0} \frac{qa\sin\theta}{c^2r}\,\hat{\theta}\quad (\text{Thompson radiation})}\]
+\[\boxed{\vec{E}(\vec{r},t) = \frac{1}{4\pi\varepsilon_0} \frac{qa\sin\theta}{c^2|\vec{r}|}\,\hat{\theta}\quad (\text{Thompson radiation})}\]
 Where:
 \begin{itemize}
     \item $a$ is the acceleration of the charge.
+    \item $q$ is the charge of the particle.
     \item $\theta$ is the angle between the direction of acceleration and the direction of observation.
-    \item $r$ is the distance from the charge to the point of observation.
+    \item $c$ is the speed of light.
 \end{itemize}
+$\vec{r}$ is the position vector from the charge's initial position to the observation point, and is also the \textit{direction of the electromagnetic wave propagation $\vec{k}$}. This is because the kink in the electric field lines spreads out radially outward, while the electric field itself is always tangential to $\hat{r}$.\\\\
+Also, while time $t$ doesn't explicitly appear in the formula physically, recall that the radius $|\vec{r}|$ is related to the time of observation $T$ by $|\vec{r}|=cT$. Additionally, the acceleration $a$ can also be a function of time, and the formula for Thompson radiation can be applied to each instantaneous value of $a$.\\\\
 As a concluding thought, electromagnetic waves are generated by an accelerated charge fundamentally because of relativistic causality. The discrepancy between the travelling spheres of information about the beginning and the end of the acceleration simply can only be resolved by the electric field lines developing a kink in the region between the two spheres. From the arguments developed in the past four pages, this kink is not optional but required, and it is precisely this feature that constitutes the radiation field.\\\\
+\begin{minipage}{0.7\textwidth}
+    \vspace{-9em}
+\underline{Note:} Recall from the general plane wave solution that we can also define the magnetic field \textit{induced} by the radiated electric field kink using
+\[\vec{B}(\vec{r},t) = \frac{1}{c}\hat{k}\times\vec{E},\quad \hat{k}=\hat{r}\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+    \begin{center}
+       \includegraphics[width=\linewidth]{Cross-section.png} 
+    \end{center}
+\end{minipage}\\\\
+\textbf{Poynting Flux}\\
+Using the Poynting flux vector, we can calculate the rate of energy radiated by the accelerating charge:
+\[\vec{S}(\vec{r},t)=\frac{1}{\mu_0}\vec{E}\times\vec{B}\]
+\[\boxed{|\vec{S}|=\varepsilon_0 c |\vec{E}|^2 = \frac{q^2a^2\sin^2\theta}{16\pi^2\varepsilon_0r^2c^3}\quad\left[\frac{\text{W}}{\text{m}^2}\right]}\]
+this is the power per unit area at a distance $r=|\vec{r}|$ from the charge and an angle $\theta$ from the direction of acceleration due to a short acceleration $a$.
+\newpage\noindent
 \textbf{What Does it Look Like?}\\
-\textbf{Radiated Power}
+The Poynting vector \(\vec{S}\) points in the direction of electromagnetic wave propagation \(\hat{r}\), so energy flows radially outward from the charge. Thus, the radiated power spreads away from the source in spherical wavefronts, like sound waves or ripples on a pond from an isotropic source.
+\begin{center}
+    \includegraphics[width=0.5\linewidth]{Ripples.png}
+\end{center}
+\begin{minipage}{0.5\textwidth}
+    \vspace{-4em}
+Power depends on the angle \(\theta\), meaning that it is strongest at \(\theta = \pi/2\) (perpendicular to the direction of acceleration) and weakest at \(\theta = 0\) or \(\pi\) (along the direction of acceleration). This results in a doughnut (toroidal) radiation pattern, with the charge at the center and the hole of the doughnut along the axis of acceleration.
+\end{minipage}
+\hfill
+\begin{minipage}{0.4\textwidth}
+\includegraphics[width=\linewidth]{Dipole-Antenna.png}
+\end{minipage}
+\begin{minipage}{0.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{Radiation pattern.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.49\textwidth}
+\centering
+\includegraphics[width=\linewidth]{Oscilating dipole.png}
+\end{minipage}
+\newpage
+\section*{Larmor Power}
 
 
 \end{document}

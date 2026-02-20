@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  19 FEB 2026 22:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  20 FEB 2026 07:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -415,320 +415,376 @@ File: Fixed t.jpg Graphic file (type jpg)
 <use Fixed t.jpg>
 Package pdftex.def Info: Fixed t.jpg  used on input line 58.
 (pdftex.def)             Requested size: 234.8775pt x 123.53952pt.
- [3 <./Fixed t.jpg>] [4]
-Overfull \hbox (30.00227pt too wide) detected at line 138
+<Combined Views.png, id=22, 439.6425pt x 340.8735pt>
+File: Combined Views.png Graphic file (type png)
+<use Combined Views.png>
+Package pdftex.def Info: Combined Views.png  used on input line 63.
+(pdftex.def)             Requested size: 234.8775pt x 182.10805pt.
+ [3 <./Fixed t.jpg> <./Combined Views.png>] [4]
+Overfull \hbox (30.00227pt too wide) detected at line 142
 [] \OT1/cmr/m/n/12 = []
  []
 
-<Divergence thm.png, id=28, 744.381pt x 338.4645pt>
+<Divergence thm.png, id=31, 744.381pt x 338.4645pt>
 File: Divergence thm.png Graphic file (type png)
 <use Divergence thm.png>
-Package pdftex.def Info: Divergence thm.png  used on input line 142.
+Package pdftex.def Info: Divergence thm.png  used on input line 146.
 (pdftex.def)             Requested size: 187.89914pt x 85.43192pt.
-<Stokes thm.png, id=30, 615.4995pt x 449.2785pt>
+<Stokes thm.png, id=32, 615.4995pt x 449.2785pt>
 File: Stokes thm.png Graphic file (type png)
 <use Stokes thm.png>
-Package pdftex.def Info: Stokes thm.png  used on input line 151.
+Package pdftex.def Info: Stokes thm.png  used on input line 155.
 (pdftex.def)             Requested size: 187.89914pt x 137.15656pt.
 [5 <./Divergence thm.png> <./Stokes thm.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 185--188
+Underfull \hbox (badness 10000) in paragraph at lines 189--192
 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 221--224
+Underfull \hbox (badness 10000) in paragraph at lines 225--228
 
  []
 
 [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 238--242
+Underfull \hbox (badness 10000) in paragraph at lines 242--246
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--258
+Underfull \hbox (badness 10000) in paragraph at lines 259--262
 
  []
 
 [9]
-<Continuity.png, id=51, 719.68875pt x 224.63925pt>
+<Continuity.png, id=53, 719.68875pt x 224.63925pt>
 File: Continuity.png Graphic file (type png)
 <use Continuity.png>
-Package pdftex.def Info: Continuity.png  used on input line 267.
+Package pdftex.def Info: Continuity.png  used on input line 271.
 (pdftex.def)             Requested size: 375.80544pt x 117.30324pt.
 
-Overfull \hbox (19.64516pt too wide) detected at line 283
+Overfull \hbox (19.64516pt too wide) detected at line 287
 []
  []
 
 
-Overfull \hbox (11.81215pt too wide) detected at line 292
+Overfull \hbox (11.81215pt too wide) detected at line 296
 []
  []
 
 
-Overfull \hbox (12.33437pt too wide) detected at line 301
+Overfull \hbox (12.33437pt too wide) detected at line 305
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--304
+Underfull \hbox (badness 10000) in paragraph at lines 287--308
 
  []
 
 [10 <./Continuity.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 316--319
+Underfull \hbox (badness 10000) in paragraph at lines 320--323
 
  []
 
-<Plane Wave.png, id=56, 800.9925pt x 350.5095pt>
+<Plane Wave.png, id=58, 800.9925pt x 350.5095pt>
 File: Plane Wave.png Graphic file (type png)
 <use Plane Wave.png>
-Package pdftex.def Info: Plane Wave.png  used on input line 320.
+Package pdftex.def Info: Plane Wave.png  used on input line 324.
 (pdftex.def)             Requested size: 375.80544pt x 164.45068pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 322--324
+Underfull \hbox (badness 10000) in paragraph at lines 326--328
 
  []
 
 [11 <./Plane Wave.png>]
-<Plane Wave 1.png, id=61, 567.3195pt x 266.79675pt>
+<Plane Wave 1.png, id=63, 567.3195pt x 266.79675pt>
 File: Plane Wave 1.png Graphic file (type png)
 <use Plane Wave 1.png>
-Package pdftex.def Info: Plane Wave 1.png  used on input line 331.
+Package pdftex.def Info: Plane Wave 1.png  used on input line 335.
 (pdftex.def)             Requested size: 230.18253pt x 108.24748pt.
-<Plane Wave 2.png, id=62, 437.83575pt x 234.27525pt>
+<Plane Wave 2.png, id=64, 437.83575pt x 234.27525pt>
 File: Plane Wave 2.png Graphic file (type png)
 <use Plane Wave 2.png>
-Package pdftex.def Info: Plane Wave 2.png  used on input line 336.
+Package pdftex.def Info: Plane Wave 2.png  used on input line 340.
 (pdftex.def)             Requested size: 230.18253pt x 123.16435pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--344
+Underfull \hbox (badness 10000) in paragraph at lines 343--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--344
+Underfull \hbox (badness 10000) in paragraph at lines 343--348
 
  []
 
-<Plane Wave 3.png, id=63, 635.976pt x 243.309pt>
+<Plane Wave 3.png, id=65, 635.976pt x 243.309pt>
 File: Plane Wave 3.png Graphic file (type png)
 <use Plane Wave 3.png>
-Package pdftex.def Info: Plane Wave 3.png  used on input line 345.
+Package pdftex.def Info: Plane Wave 3.png  used on input line 349.
 (pdftex.def)             Requested size: 375.80544pt x 143.77382pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 348--351
+Underfull \hbox (badness 10000) in paragraph at lines 352--355
 
  []
 
 [12 <./Plane Wave 1.png> <./Plane Wave 2.png> <./Plane Wave 3.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 354--358
+Underfull \hbox (badness 10000) in paragraph at lines 358--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 354--358
+Underfull \hbox (badness 10000) in paragraph at lines 358--362
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--370
+Underfull \hbox (badness 10000) in paragraph at lines 372--374
 
  []
 
-<Phasor.jpg, id=70, 2814.515pt x 976.64874pt>
+<Phasor.jpg, id=72, 2814.515pt x 976.64874pt>
 File: Phasor.jpg Graphic file (type jpg)
 <use Phasor.jpg>
-Package pdftex.def Info: Phasor.jpg  used on input line 371.
+Package pdftex.def Info: Phasor.jpg  used on input line 375.
 (pdftex.def)             Requested size: 375.80544pt x 130.39635pt.
 [13 <./Phasor.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 376--380
+Underfull \hbox (badness 10000) in paragraph at lines 380--384
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 387--390
+Underfull \hbox (badness 10000) in paragraph at lines 391--394
 
  []
 
 [14]
-Underfull \hbox (badness 10000) in paragraph at lines 401--405
+Underfull \hbox (badness 10000) in paragraph at lines 405--409
 
  []
 
-<Linear Polarization.png, id=78, 1089.47025pt x 439.6425pt>
+<Linear Polarization.png, id=80, 1089.47025pt x 439.6425pt>
 File: Linear Polarization.png Graphic file (type png)
 <use Linear Polarization.png>
-Package pdftex.def Info: Linear Polarization.png  used on input line 408.
+Package pdftex.def Info: Linear Polarization.png  used on input line 412.
 (pdftex.def)             Requested size: 375.80544pt x 151.64998pt.
-<Circular Polarization.png, id=79, 1031.052pt x 442.0515pt>
+<Circular Polarization.png, id=81, 1031.052pt x 442.0515pt>
 File: Circular Polarization.png Graphic file (type png)
 <use Circular Polarization.png>
-Package pdftex.def Info: Circular Polarization.png  used on input line 413.
+Package pdftex.def Info: Circular Polarization.png  used on input line 417.
 (pdftex.def)             Requested size: 375.80544pt x 161.12149pt.
 [15 <./Linear Polarization.png> <./Circular Polarization.png>]
-<Elliptical Polarization.png, id=85, 925.056pt x 442.0515pt>
+<Elliptical Polarization.png, id=87, 925.056pt x 442.0515pt>
 File: Elliptical Polarization.png Graphic file (type png)
 <use Elliptical Polarization.png>
-Package pdftex.def Info: Elliptical Polarization.png  used on input line 423.
+Package pdftex.def Info: Elliptical Polarization.png  used on input line 427.
 (pdftex.def)             Requested size: 281.85587pt x 134.68723pt.
-<SHOs.jpg, id=86, 3049.3925pt x 1161.33875pt>
+<SHOs.jpg, id=88, 3049.3925pt x 1161.33875pt>
 File: SHOs.jpg Graphic file (type jpg)
 <use SHOs.jpg>
-Package pdftex.def Info: SHOs.jpg  used on input line 429.
+Package pdftex.def Info: SHOs.jpg  used on input line 433.
 (pdftex.def)             Requested size: 375.80544pt x 143.11139pt.
  [16 <./Elliptical Polarization.png> <./SHOs.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 440--444
+Underfull \hbox (badness 10000) in paragraph at lines 444--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 451--454
 
  []
 
 [17]
-Underfull \hbox (badness 10000) in paragraph at lines 455--458
+Underfull \hbox (badness 10000) in paragraph at lines 461--464
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--468
+Underfull \hbox (badness 10000) in paragraph at lines 470--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 464--468
+Underfull \hbox (badness 10000) in paragraph at lines 470--474
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 468--471
+Underfull \hbox (badness 10000) in paragraph at lines 474--477
 
  []
 
 [18] [19]
-Underfull \hbox (badness 10000) in paragraph at lines 531--535
+Underfull \hbox (badness 10000) in paragraph at lines 537--541
 
  []
 
 [20]
-<RHR.png, id=104, 784.1295pt x 301.125pt>
+<RHR.png, id=106, 784.1295pt x 301.125pt>
 File: RHR.png Graphic file (type png)
 <use RHR.png>
-Package pdftex.def Info: RHR.png  used on input line 558.
+Package pdftex.def Info: RHR.png  used on input line 564.
 (pdftex.def)             Requested size: 469.75502pt x 180.3961pt.
  [21 <./RHR.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 563--566
+Underfull \hbox (badness 10000) in paragraph at lines 569--572
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 585--588
+Underfull \hbox (badness 10000) in paragraph at lines 591--594
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 603--606
+Underfull \hbox (badness 10000) in paragraph at lines 609--612
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--617
+Underfull \hbox (badness 10000) in paragraph at lines 620--623
 
  []
 
 [23] [24]
-Underfull \hbox (badness 10000) in paragraph at lines 628--631
+Underfull \hbox (badness 10000) in paragraph at lines 634--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 628--631
+Underfull \hbox (badness 10000) in paragraph at lines 634--637
 
  []
 
-<E Moving Charge.png, id=118, 900.966pt x 611.886pt>
+<E Moving Charge.png, id=120, 900.966pt x 611.886pt>
 File: E Moving Charge.png Graphic file (type png)
 <use E Moving Charge.png>
-Package pdftex.def Info: E Moving Charge.png  used on input line 632.
+Package pdftex.def Info: E Moving Charge.png  used on input line 638.
 (pdftex.def)             Requested size: 281.85587pt x 191.4193pt.
 [25 <./E Moving Charge.png>]
-<Thompson Model.png, id=124, 549.85425pt x 443.85825pt>
+<Thompson Model.png, id=126, 549.85425pt x 443.85825pt>
 File: Thompson Model.png Graphic file (type png)
 <use Thompson Model.png>
-Package pdftex.def Info: Thompson Model.png  used on input line 643.
+Package pdftex.def Info: Thompson Model.png  used on input line 649.
 (pdftex.def)             Requested size: 375.80544pt x 303.36378pt.
  [26 <./Thompson Model.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 645--649
+Underfull \hbox (badness 10000) in paragraph at lines 651--655
 
  []
 
-<Thompson Model-1.jpg, id=129, 3061.4375pt x 1913.1475pt>
+<Thompson Model-1.jpg, id=131, 3061.4375pt x 1913.1475pt>
 File: Thompson Model-1.jpg Graphic file (type jpg)
 <use Thompson Model-1.jpg>
-Package pdftex.def Info: Thompson Model-1.jpg  used on input line 653.
+Package pdftex.def Info: Thompson Model-1.jpg  used on input line 659.
 (pdftex.def)             Requested size: 469.75502pt x 293.55719pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--657
+Underfull \hbox (badness 10000) in paragraph at lines 661--663
 
  []
 
-<Thompson Model-2.jpg, id=130, 3121.6625pt x 1841.88126pt>
+<Thompson Model-2.jpg, id=132, 3121.6625pt x 1841.88126pt>
 File: Thompson Model-2.jpg Graphic file (type jpg)
 <use Thompson Model-2.jpg>
-Package pdftex.def Info: Thompson Model-2.jpg  used on input line 658.
+Package pdftex.def Info: Thompson Model-2.jpg  used on input line 664.
 (pdftex.def)             Requested size: 469.75502pt x 277.16962pt.
 [27 <./Thompson Model-1.jpg>]
-<Radiated.png, id=134, 395.67825pt x 328.8285pt>
+<Radiated.png, id=136, 395.67825pt x 328.8285pt>
 File: Radiated.png Graphic file (type png)
 <use Radiated.png>
-Package pdftex.def Info: Radiated.png  used on input line 674.
+Package pdftex.def Info: Radiated.png  used on input line 680.
 (pdftex.def)             Requested size: 187.89914pt x 156.15501pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--678
+Underfull \hbox (badness 10000) in paragraph at lines 666--684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--678
+Underfull \hbox (badness 10000) in paragraph at lines 666--684
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 660--678
+Underfull \hbox (badness 10000) in paragraph at lines 666--684
 
  []
 
 [28 <./Thompson Model-2.jpg> <./Radiated.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 680--684
+Underfull \hbox (badness 10000) in paragraph at lines 686--690
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 680--684
+Underfull \hbox (badness 10000) in paragraph at lines 686--690
+
+ []
+
+<Cross-section.png, id=141, 308.95425pt x 440.847pt>
+File: Cross-section.png Graphic file (type png)
+<use Cross-section.png>
+Package pdftex.def Info: Cross-section.png  used on input line 709.
+(pdftex.def)             Requested size: 140.92793pt x 201.0902pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--714
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 691--694
+Underfull \hbox (badness 10000) in paragraph at lines 698--714
 
  []
 
-[29] (Modern.aux)
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--714
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 698--714
+[]$  $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 698--714
+
+ []
+
+[29] [30 <./Cross-section.png>]
+<Ripples.png, id=149, 1927.2pt x 1084.05pt>
+File: Ripples.png Graphic file (type png)
+<use Ripples.png>
+Package pdftex.def Info: Ripples.png  used on input line 721.
+(pdftex.def)             Requested size: 234.8775pt x 132.11496pt.
+<Dipole-Antenna.png, id=150, 406.51875pt x 352.9185pt>
+File: Dipole-Antenna.png Graphic file (type png)
+<use Dipole-Antenna.png>
+Package pdftex.def Info: Dipole-Antenna.png  used on input line 729.
+(pdftex.def)             Requested size: 187.89914pt x 163.11993pt.
+<Radiation pattern.png, id=151, 437.83575pt x 386.6445pt>
+File: Radiation pattern.png Graphic file (type png)
+<use Radiation pattern.png>
+Package pdftex.def Info: Radiation pattern.png  used on input line 733.
+(pdftex.def)             Requested size: 230.18253pt x 203.26869pt.
+<Oscilating dipole.png, id=152, 714.87074pt x 331.2375pt>
+File: Oscilating dipole.png Graphic file (type png)
+<use Oscilating dipole.png>
+Package pdftex.def Info: Oscilating dipole.png  used on input line 738.
+(pdftex.def)             Requested size: 230.18253pt x 106.65521pt.
+ [31 <./Ripples.png (PNG copy)> <./Dipole-Antenna.png> <./Radiation pattern.png> <./Oscilating dipole.png>] [32] (Modern.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4777 strings out of 474486
- 75856 string characters out of 5743755
- 1947542 words of memory out of 5000000
- 26998 multiletter control sequences out of 15000+600000
+ 4819 strings out of 474486
+ 76886 string characters out of 5743755
+ 1948542 words of memory out of 5000000
+ 27040 multiletter control sequences out of 15000+600000
  568633 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,18n,65p,1149b,323s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,18n,65p,1149b,325s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Modern.pdf (29 pages, 8129798 bytes).
+Output written on Modern.pdf (32 pages, 9970602 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
+ 218 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
