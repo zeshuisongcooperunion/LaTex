@@ -615,13 +615,14 @@ It is also equivalent to
 \[\implies \boxed{\vec{S} = cu\hat{k}}\]
 \textbf{Intensity}\\
 Intensity is defined as the time-averaged magnitude of the Poynting vector, which describes the \textit{average} power per unit area carried by the electromagnetic wave.
-\[\langle\vec{S}\rangle = c \langle u \rangle, \qquad \langle\quad\rangle: \text{ time average}\]
+\[\langle\vec{S}\rangle = c \langle u \rangle\hat{k}, \qquad \langle\quad\rangle : \text{ time average}\]
 Where
 \[\langle u \rangle = \varepsilon_0 \langle |\vec{E}|^2 \rangle = \varepsilon_0 E_0^2 \langle \cos^2(\vec{k} \cdot \vec{r} - \omega t) \rangle = \frac{1}{2} \varepsilon_0 E_0^2\]
 The time average of $\cos^2$ is 1/2 because the function oscillates between 0 and 1, and over a full period, it spends equal time at all values in that range. Therefore, the average value of $\cos^2$ over one period is 1/2.\\\\
 Thus, the intensity of an electromagnetic wave is given by
-\[\boxed{I = \langle\vec{S}\rangle = c \langle u \rangle=\frac{1}{2} \varepsilon_0 E_0^2 c}\]
-\underline{Note:} A higher light intensity corresponds to a larger electric-field amplitude, meaning the wave transports energy at a greater rate per unit area. This aligns with the physical interpretation of intensity as a measure of brightness: brighter light delivers more energy to a surface per unit time.
+\[\boxed{I = |\langle\vec{S}\rangle| = c \langle u \rangle=\frac{1}{2} \varepsilon_0 E_0^2 c}\]
+\underline{Note:} A higher light intensity corresponds to a larger electric-field amplitude, meaning the wave transports energy at a greater rate per unit area. This aligns with the physical interpretation of intensity as a measure of brightness: brighter light delivers more energy to a surface per unit time.\\\\
+When dealing with electromagnetic waves, taking the time average is important because the fields oscillate rapidly, and we typically observe them on a macroscopic scale where the average behavior is more meaningful than the instantaneous values.
 \vspace{1em}
 \noindent\hrule
 \vspace{1em}
@@ -739,6 +740,137 @@ Power depends on the angle \(\theta\), meaning that it is strongest at \(\theta 
 \end{minipage}
 \newpage
 \section*{Larmor Power}
+Larmor power is the total power radiated by an accelerating charge, which can be found by integrating the Poynting flux (power per area) over a spherical surface that contains the charge, thus capturing all the flux. The sphere is centered on the charge’s initial position, and its radius $r$ is arbitrary, since the total radiated power is independent of the distance from the charge.\\
+\begin{minipage}{0.65\textwidth}
+Since $\vec{S}$ is points in the $\hat{r}$ direction and is always normal to the sphere surface,
+\[\begin{aligned}
+P &= \oint_S \vec{S}\cdot d\vec{A} =\int |\vec{S}|dA \\
+&= \int_0^{2\pi}\int_0^\pi |\vec{S}|r^2\sin\theta d\theta d\phi\\
+&=\int_0^\pi |\vec{S}|2\pi r^2\sin\theta d\theta\\
+&= \int_0^\pi \frac{q^2a^2\sin^2\theta}{16\pi^2\varepsilon_0r^2c^3} 2\pi r^2 \sin\theta d\theta\\
+&= \frac{q^2a^2}{8\pi\varepsilon_0c^3} \underbrace{\int_0^\pi \sin^3\theta d\theta}_{4/3}\\
+\end{aligned}\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.3\textwidth}
+\centering
+\includegraphics[width=\linewidth]{Larmor.png}
+\end{minipage}
+\[\boxed{P_{\text{rad}} = \frac{q^2a^2}{6\pi\varepsilon_0c^3} \quad \text{(Watts)}}\]
+\section*{Scattering by Free Charges}
+Scattering occurs when an incoming electromagnetic wave interacts with a free charge (Thompson scattering) or a bound charge (Rayleigh scattering). The incoming wave causes the charge to accelerate, which will then \textit{reradiate} the energy in all directions. Our goal is then to quantify the scattered radiation in terms of its power and how the initial wave is changed by the scattering process.
+\begin{center}
+\includegraphics[width=0.6\linewidth]{Scattering.png}
+\end{center}
+\newpage\noindent
+\textbf{Thompson Scattering}\\
+We will begin with Thompson scattering which describes the scattering of an electromagnetic wave by a free charge. Consider the following incoming electromagnetic wave with the electric field:
+\begin{center}
+\includegraphics[width=0.6\linewidth]{Thompson Scattering.png}
+\end{center}
+A free charge at the origin ($z=0$) will experience a force equal to:
+\[\vec{F} = q\vec{E} = qE_0\cos(\omega t) \hat{x}\]
+\[\implies a = a_x = \frac{qE_0}{m}\cos(\omega t)\]
+Plugging this into the formula for Larmor power gives the instantaneous power radiated by the accelerating charge:
+\[P(t) = \frac{q^2a^2}{6\pi\varepsilon_0c^3} = \frac{q^2}{6\pi\varepsilon_0c^3}\left(\frac{qE_0}{m}\cos(\omega t)\right)^2 = \frac{q^4E_0^2}{6\pi\varepsilon_0m^2c^3}\cos^2(\omega t)\quad\text{(Watts)}\]
+Taking the time average gives the average power radiated by the accelerating charge (which is also the power of the scattered wave):
+\[\boxed{\langle P_{\text{scatt}}(t) \rangle = \frac{q^4E_0^2}{12\pi\varepsilon_0m^2c^3}}\]
+Notice that $\langle P_{\text{scatt}}(t) \rangle$ is proportional to the square of the incident electric field amplitude $E_0^2$, thus we can rewrite the power of the scattered wave to be related to the intensity $I_{\text{inc}} = |\langle \vec{S} \rangle_{\text{inc}}|$ of the incident wave:
+\[|\langle\vec{S}\rangle_{\text{inc}}| = \frac{1}{2} \varepsilon_0 E_0^2 c \quad \implies \quad E_0^2 = \frac{2|\langle\vec{S}\rangle_{\text{inc}}|}{\varepsilon_0 c}\]
+\[
+\langle P_{\text{scatt}}(t) \rangle 
+= \frac{q^4}{12\pi\varepsilon_0 m^2 c^3}
+  \frac{2|\langle \vec{S} \rangle_{\text{inc}}|}{\varepsilon_0 c}
+= \frac{8\pi}{3}
+  \underbrace{\left(\frac{q^2}{4\pi\varepsilon_0 m c^2}\right)^2}_{\text{area, m}^2}
+  \underbrace{|\langle \vec{S} \rangle_{\text{inc}}|}_{\substack{\text{intensity} \\ \text{W/m}^2}}
+\]
+\newpage\noindent
+\textbf{Thompson Cross Section}\\
+We define the Thomson cross section $\sigma_{\text{Th}}$ as the effective area that quantifies the likelihood of scattering by a free charge when an incident electromagnetic wave interacts with it. A useful mechanical analogy is to imagine shooting a stream of BB pellets at an 8 ball. If a BB hits the 8 ball, it bounces off, and the probability of this happening depends on the size of the 8 ball (a larger 8 ball increases the chance of being hit).\\\\
+In this case, the Thomson cross section is not the \textit{physical} cross-sectional area of the charge, since a charge doesn't exactly have a physical size. Instead, it is an \textit{effective} area that captures the probability of scattering in the same intuitive way. Therefore,
+\[\boxed{\langle P_{\text{scatt}}(t) \rangle = \sigma_{\text{Th}} |\langle \vec{S} \rangle_{\text{inc}}|}\]
+Where
+\[\boxed{\sigma_{\text{Th}} = \frac{8\pi}{3} \left(\frac{q^2}{4\pi\varepsilon_0 m c^2}\right)^2 \quad \text{(general cross-section)}}\]
+\[\boxed{\sigma_{\text{Th}} = \frac{8\pi}{3} r_e^2 \quad \text{(electron cross-section)}}\]
+\textbf{Passing Through a Material}\\
+So far we have quantified the power of the scattered wave from \textit{a single free charge}. To find the \textit{total} power scattered by a volume that contains many free charges, we can simply multiply the power scattered per charge by the number of charges in the volume.\\\\
+Consider a slice of matter with thickness $dz$, cross-sectional area $A$, and number density of free charges $N$ (the number of free charges per unit volume), where each free charge has a Thomson cross section $\sigma_{\text{Th}}$. We aim to derive an expression for the change in intensity $d\!\left(|\langle \vec{S} \rangle_{\text{inc}}|\right)$ due to scattering by the free charges within this volume. This scattering removes energy from the forward direction, causing a decrease in the intensity of the transmitted wave.
+\begin{center}
+\includegraphics[width=0.6\linewidth]{Scattered power.jpg}
+\end{center}
+The power entering the volume is given by: $|\langle \vec{S} \rangle(z)|\,A$\\\\
+similarly, the exiting power from the volume is given by: $|\langle \vec{S} \rangle(z)|\,A - Ad(|\langle \vec{S} \rangle(z)|)$\\\\
+Then we can define the total power lost by scattering in the volume as:
+\[
+- A\, d(|\langle \vec{S} \rangle(z)|)
+= \underbrace{(N A\, dz)}_{\substack{\text{total number} \\ \text{of scatterers}}}
+\cdot
+\underbrace{\sigma_{\text{Th}} (\langle \vec{S} \rangle(z))}_{\substack{\text{power radiated} \\ \text{per scatterer}}}
+\]
+We can solve this differential equation by separating variables and integrating:
+\[\frac{d(|\langle \vec{S} \rangle(z)|)}{|\langle \vec{S} \rangle(z)|} = - N \sigma_{\text{Th}} dz\quad\implies\quad |\langle \vec{S} \rangle(z)| = |\langle \vec{S} \rangle(0)| e^{- N \sigma_{\text{Th}} z}\]
+Since $|\langle \vec{S} \rangle(0)|$ is equal to the intensity of the incident wave $\langle \vec{S} \rangle_{\text{inc}}$, we can rewrite this as:
+\[\boxed{|\langle \vec{S} \rangle(z)| = |\langle \vec{S} \rangle_{\text{inc}}| e^{- N \sigma_{\text{Th}} z} \quad \text{(decay of intensity due to scattering)}}\]
+\underline{Note:} This makes intuitive sense because an increase in the number of free charges, the thickness of the material, or the scattering cross section would all increase the likelihood of scattering, thus leading to a greater decrease in the intensity of the transmitted wave.
+\section*{Scattering by Bound Charges}
+Similar to Thomson scattering, Rayleigh scattering describes the scattering of an electromagnetic wave by a \textit{bound} charge. Instead of a free charge that moves freely in response to the incident wave, a bound charge experiences a restoring force due to its attraction with the nucleus. For our model, we will use Bohr's model of the atom, in which electrons occupy fixed circular orbitals around the nucleus, with radii determined by their energy levels.\\\\
+Consider an incoming electromagnetic wave with the electric field:
+\[\vec{E}=E_0 \cos(\omega t - k z) \hat{x} \implies \vec{E} = E_0 \cos(\omega t) \hat{x}\quad\text{(at origin, z=0)}\]
+\begin{center}
+\includegraphics[width=0.5\linewidth]{Bound Electron.png}
+\end{center}
+\newpage\noindent
+Recall that in the Bohr model, if a valence electron receives enough energy from the incoming wave, it can be excited to a higher energy level or even ionized (escapes the atom completely).
+\begin{center}
+\includegraphics[width=0.5\linewidth]{Jump.jpg}
+\end{center}
+However, if the incoming wave does not have enough energy to excite the electron to a higher energy level, the electron will simply oscillate in its current orbital in response to the electric field of the wave. For Rayleigh scattering, we are interested in this case, where the valence electron behaves like a driven harmonic oscillator with a natural frequency $\omega_0$ based on the \textit{characteristic frequency} of the atom. 
+\begin{center}
+\includegraphics[width=0.5\linewidth]{Driven Osc.jpg}
+\end{center}
+\underline{Note:} To simplify the model, we are only considering the acceleration of \textit{one} electron in the atom, which follows the valence electron idea.\\\\
+For a classical simple harmonic oscillator, the characteristic frequency is given as
+\[\omega_0 = \sqrt{\frac{k}{m}}\]
+We will use this characteristic frequency in our model instead of introducing a stiffness $k$, since it is more intuitive in the context of atomic behavior. Specifically, the \textbf{characteristic} or \textbf{transition} frequency $\omega_0$ of an atom is the frequency of the electromagnetic wave that the atom emits or absorbs when it transitions between energy levels. It is often specified in terms of wavelength, but because it corresponds to an electromagnetic wave, we can express it as a frequency using the relation $c = \omega/k$. \\\\
+\noindent\underline{Note:} If the frequency of the incoming wave $\omega$ is close to the characteristic frequency $\omega_0$, the electron undergoes resonance and may transition to a higher energy level, which is not the behavior we are modeling. As such in the derivation, the condition $\omega = \omega_0$ produces a singularity in the solution.
+\newpage\noindent
+\textbf{Solving for the Acceleration}\\
+The equation of motion for the driven harmonic oscillator is given by:
+\[\sum F_x = m \frac{d^2 x}{dt^2} = \underbrace{q E_0 \cos(\omega t)}_{\text{$\vec{E}$ field}} - \underbrace{\omega_0^2mx}_{\substack{{\text{restoring}}\\\text{force}}}\]
+\[\frac{d^2x}{dt^2}+\omega_0^2x = \frac{q E_0}{m}\cos(\omega t)\]
+Solving the differential equation for the steady-state particular solution gives the position of the electron as a function of time (guessing a solution of the form $x(t) = A\cos(\omega t)$, or using laplace transform with zero initial conditions):
+\[x(t) = \frac{q E_0}{m(\omega_0^2 - \omega^2)}\cos(\omega t)\]
+\[\implies a(t) = \frac{d^2x}{dt^2} = \frac{qE_0}{m}\left(\frac{\omega^2}{\omega^2-\omega_0^2}\right)\cos(\omega t)\]
+\textbf{Larmor Power}\\
+Plugging this acceleration into the formula for Larmor power gives the instantaneous power radiated by the accelerating charge:
+\[P(t) = \frac{q^2a^2}{6\pi\varepsilon_0c^3} = 
+\frac{q^4E_0^2}{6\pi\varepsilon_0m^2c^3}\left(\frac{\omega^2}{\omega^2-\omega_0^2}\right)^2\cos^2(\omega t) \quad\text{(Watts)}\]
+\[\implies
+\langle P_{\text{scatt}}(t) \rangle
+=
+\underbrace{
+\frac{8\pi}{3}
+\left(
+\frac{q^2}{4\pi \varepsilon_0 m c^2}
+\right)^2}_{\sigma_{\text{Th}}}
+\left[
+\frac{\omega^2}{\omega^2 - \omega_0^2}
+\right]^2
+|\langle \vec{S} \rangle_{\text{inc}}|
+\]
+Where the \textit{Rayleigh cross-section area} is simply a rescaling of the Thomson cross-section area by a factor
+\[
+\sigma_{\text{Ray}}
+=
+\sigma_{\text{Th}}
+\left[
+\frac{\omega^2}{\omega^2 - \omega_0^2}
+\right]^2
+\]
+\[\boxed{\langle P_{\text{scatt}}(t) \rangle = \sigma_{\text{Ray}} |\langle \vec{S} \rangle_{\text{inc}}|}\]
+
+%add limits where wo<<w and wo>>w. Also add examples from hw + why is the sky blue?
 
 
 \end{document}
