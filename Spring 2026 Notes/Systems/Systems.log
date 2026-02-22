@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  1 FEB 2026 13:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  22 FEB 2026 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/main.tex"
-(c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/main.tex
+**"c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/Systems.tex"
+(c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/Systems.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
 (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
@@ -226,8 +226,8 @@ Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count287
 \l__pdf_internal_box=\box101
-) (main.aux)
-\openout1 = `main.aux'.
+) (Systems.aux)
+\openout1 = `Systems.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
@@ -297,42 +297,239 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
- (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+<Systems.png, id=1, 549.252pt x 317.988pt>
+File: Systems.png Graphic file (type png)
+<use Systems.png>
+Package pdftex.def Info: Systems.png  used on input line 21.
+(pdftex.def)             Requested size: 234.8775pt x 135.98009pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--28
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 34.
+(C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 34.
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 34.
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [1
+)
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
 
-{C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-Overfull \hbox (5.0952pt too wide) detected at line 84
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--35
+
+ []
+
+[1
+
+{C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Systems.png>]
+<Complex Vector.png, id=14, 347.49825pt x 299.9205pt>
+File: Complex Vector.png Graphic file (type png)
+<use Complex Vector.png>
+Package pdftex.def Info: Complex Vector.png  used on input line 55.
+(pdftex.def)             Requested size: 234.8775pt x 202.7259pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--59
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 40--59
+[]$  $[]$ 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--64
+
+ []
+
+[2 <./Complex Vector.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--108
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 114--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--122
+
+ []
+
+[4] [5]
+Overfull \hbox (5.0952pt too wide) detected at line 200
 \OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ) = [] = [] + [] []\OML/cmm/m/it/12 G\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )[]
  []
 
-[2] (main.aux)
+[6]
+<Stability.png, id=41, 493.845pt x 315.579pt>
+File: Stability.png Graphic file (type png)
+<use Stability.png>
+Package pdftex.def Info: Stability.png  used on input line 247.
+(pdftex.def)             Requested size: 328.82707pt x 210.12704pt.
+ [7 <./Stability.png>]
+<Transfer Function.png, id=47, 187.902pt x 71.0655pt>
+File: Transfer Function.png Graphic file (type png)
+<use Transfer Function.png>
+Package pdftex.def Info: Transfer Function.png  used on input line 254.
+(pdftex.def)             Requested size: 140.92793pt x 53.30223pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--258
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--261
+
+ []
+
+[8 <./Transfer Function.png>]
+<Lumped.png, id=52, 728.7225pt x 233.673pt>
+File: Lumped.png Graphic file (type png)
+<use Lumped.png>
+Package pdftex.def Info: Lumped.png  used on input line 268.
+(pdftex.def)             Requested size: 328.82707pt x 105.44067pt.
+ [9 <./Lumped.png>]
+<Spring Mass.png, id=57, 425.79076pt x 224.037pt>
+File: Spring Mass.png Graphic file (type png)
+<use Spring Mass.png>
+Package pdftex.def Info: Spring Mass.png  used on input line 309.
+(pdftex.def)             Requested size: 328.82707pt x 173.01837pt.
+ [10]
+<Damping.png, id=61, 235.88126pt x 175.65625pt>
+File: Damping.png Graphic file (type png)
+<use Damping.png>
+Package pdftex.def Info: Damping.png  used on input line 319.
+(pdftex.def)             Requested size: 117.43875pt x 87.45534pt.
+<Response IC.png, id=62, 272.81924pt x 230.0595pt>
+File: Response IC.png Graphic file (type png)
+<use Response IC.png>
+Package pdftex.def Info: Response IC.png  used on input line 326.
+(pdftex.def)             Requested size: 234.8775pt x 198.06845pt.
+<Step.png, id=63, 211.992pt x 99.37125pt>
+File: Step.png Graphic file (type png)
+<use Step.png>
+Package pdftex.def Info: Step.png  used on input line 331.
+(pdftex.def)             Requested size: 117.43875pt x 55.0501pt.
+<Response Step.png, id=64, 349.305pt x 320.397pt>
+File: Response Step.png Graphic file (type png)
+<use Response Step.png>
+Package pdftex.def Info: Response Step.png  used on input line 338.
+(pdftex.def)             Requested size: 234.8775pt x 215.4422pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 314--341
+
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 314--341
+[]$  $[]$
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 314--341
+[]$  $[]$
+ []
+
+[11 <./Spring Mass.png> <./Damping.png> <./Response IC.png>] [12 <./Step.png> <./Response Step.png>]
+<2 DOF.png, id=76, 308.352pt x 120.45pt>
+File: 2 DOF.png Graphic file (type png)
+<use 2 DOF.png>
+Package pdftex.def Info: 2 DOF.png  used on input line 367.
+(pdftex.def)             Requested size: 281.85587pt x 110.10222pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--372
+
+ []
+
+<FBD 2 DOF.jpg, id=77, 2988.16376pt x 1032.85875pt>
+File: FBD 2 DOF.jpg Graphic file (type jpg)
+<use FBD 2 DOF.jpg>
+Package pdftex.def Info: FBD 2 DOF.jpg  used on input line 373.
+(pdftex.def)             Requested size: 328.82707pt x 113.64633pt.
+[13 <./2 DOF.png> <./FBD 2 DOF.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 386--389
+
+ []
+
+<Parallel.png, id=83, 381.8265pt x 219.219pt>
+File: Parallel.png Graphic file (type png)
+<use Parallel.png>
+Package pdftex.def Info: Parallel.png  used on input line 406.
+(pdftex.def)             Requested size: 211.38832pt x 121.36691pt.
+<Series.png, id=84, 215.6055pt x 229.45724pt>
+File: Series.png Graphic file (type png)
+<use Series.png>
+Package pdftex.def Info: Series.png  used on input line 417.
+(pdftex.def)             Requested size: 164.41711pt x 174.988pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--422
+
+ []
+
+[14 <./Parallel.png>] [15 <./Series.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 479--483
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--487
+
+ []
+
+[16] (Systems.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3439 strings out of 474486
- 51607 string characters out of 5743755
+ 3548 strings out of 474486
+ 53875 string characters out of 5743755
  1942542 words of memory out of 5000000
- 25684 multiletter control sequences out of 15000+600000
- 566920 words of font info for 69 fonts, out of 8000000 for 9000
+ 25792 multiletter control sequences out of 15000+600000
+ 567566 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,12n,65p,304b,253s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on main.pdf (2 pages, 123669 bytes).
+ 57i,12n,65p,559b,245s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on Systems.pdf (16 pages, 1126560 bytes).
 PDF statistics:
- 69 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 71 words of extra memory for PDF output out of 10000 (max. 10000000)
 

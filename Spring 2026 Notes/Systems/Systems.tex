@@ -1,0 +1,503 @@
+\documentclass[12pt]{article}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage{amsmath, amsfonts, bm, graphicx}
+\usepackage{float,mathrsfs}
+\usepackage{multicol}
+
+\geometry{margin=1in}
+\title{}
+\date{}
+\author{}
+
+\begin{document}
+
+\begin{center}
+{\LARGE ESC-251 Systems Engineering\par}
+\end{center}
+\section*{Systems}
+A system is a combination of interacting components that produces an output in response to an input. Systems can be mechanical, electrical, chemical, etc. The behavior of a system can be described using mathematical models, such as differential equations or transfer functions.
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Systems.png}
+\end{center}
+\textbf{Static Systems}\\
+Output depends only on the current input and does not change with time, once the input stops, the output stops (ie. static displacement of a spring).\\\\
+\textbf{Dynamic Systems}\\
+Output depends on past and current inputs, and changes over time (ie. driven oscillators).\\\\
+\textbf{Parameter Variation}
+\begin{itemize}
+    \item \textbf{Time-varying}: coefficients of the system change with time (ie. changing mass or spring stiffness).
+    \item \textbf{Time-invariant}: coefficients of the system do not change with time (ie. constant mass and spring stiffness).
+\end{itemize}
+For this course, we will focus on linear, time-invariant (LTI) systems. This means that the system's \textit{equations of motion} are linear, and the coefficients do not change with time. A property of time-invariant systems is that a time delay in the input only delays the output by the same amount, with no dependence on the absolute time.\\\\
+Linear systems also obey \textbf{superposition}, which means that its response to multiple inputs is the sum of its responses to each input \textit{individually}.\\\\
+Generally, our approach to systems analysis will be to model elements mathematically to derive the equations of motion. Then, we use the Laplace transform to the differential equations to either find the \textbf{transfer function} (the ratio of the output to the input in the Laplace domain $s$) or the response of the system in the time domain (solution of the differential equation).
+\newpage
+\begin{center}
+{\LARGE Math Review\par}
+\end{center}
+\section*{Complex Numbers}
+In systems we use $j=\sqrt{-1}$ instead of $i$ to avoid confusion with current.\\\\
+\textbf{Complex Vector Representation}\\
+\begin{minipage}{0.5\textwidth}
+Rectangular form:
+\[\vec{X} = a + jb\]
+Polar form:
+\[\vec{X} = M\angle \phi\]
+Complex Exponential form:
+\[\vec{X} = Me^{j\phi}\]
+Where:
+\[\boxed{M = \sqrt{a^2 + b^2}, \quad \phi = \arctan\left(\frac{b}{a}\right)}\]
+\[\implies a = M\cos(\phi), \quad b = M\sin(\phi)\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\textwidth]{Complex Vector.png}
+\end{minipage}\\\\
+\underline{Note:} $arctan$ has a range of $(-\pi/2, \pi/2)$, so we have to add or subtract $\pi$ to get the correct angle based on the quadrant of the complex number.\\\\
+\textbf{Euler's Identity}
+\[\boxed{e^{j\phi} = \cos(\phi) + j\sin(\phi)}\]
+\textbf{Complex Conjugate}\\
+The complex conjugate of $\vec{X} = a + jb$ is $\vec{X}^* = a - jb$. In polar form, the complex conjugate is $M\angle -\phi$.\\\\
+\textbf{Operations}\\
+Addition/Subtraction:
+\[(a+jb) + (c+jd) = (a+c) + j(b+d)\]
+Multiplication/Division:
+\[(a+jb)(c+jd) = (ac - bd) + j(ad + bc)\]
+\[\frac{a+jb}{c+jd} = \frac{(a+jb)(c-jd)}{(c+jd)(c-jd)} = \frac{(ac + bd) + j(bc - ad)}{c^2 + d^2}\]
+\underline{Using Complex Exponential Form:}\\
+Multiplication:
+\[\left(M_1 e^{j\phi_1}\right) \left(M_2 e^{j\phi_2}\right) = M_1 M_2 e^{j(\phi_1 + \phi_2)}\]
+Division:
+\[\frac{M_1 e^{j\phi_1}}{M_2 e^{j\phi_2}} = \frac{M_1}{M_2} e^{j(\phi_1 - \phi_2)}\]
+\underline{Note:} Multiplying by $j$ is equal to \textit{adding} a phase shift of $90^\circ$ (or $\pi/2$ radians) in the complex plane.
+\[j = e^{j\frac{\pi}{2}}\]
+Also, if $z$ and $w$ are complex numbers, then:
+\[|zw| = |z||w|\]
+But
+\[|z + w| \neq |z| + |w|\]
+\section*{Differential Equations}
+\textbf{Linear First Order Differential Equation}\\
+For a first-order linear differential equation of the form:
+\[\frac{dy}{dx} + p(t)y = g(t)\]
+Method:\\
+Find the integrating factor:
+\[\boxed{\mu(t) = e^{\int p(t) dt}}\]
+The solution is given by:
+\[\boxed{y(t) = \frac{1}{\mu(t)}\int \mu(t)g(t) dt}\]
+\textbf{Linear Second Order Differential Equation}\\
+For higher order homogeneous linear differential equations with constant coefficients of the form, we can use the characteristic equation to find the \textit{homogeneous solution} (right hand side equals zero).\\\\
+Method:\\
+Given a homogeneous linear differential equation with constant coefficients:
+\[ay'' + by' + cy = 0\]
+We assume the solution of the form:
+\vspace{-1em}
+\begin{eqnarray*}
+y(t) &=& e^{rt}\\
+y'(t) &=& re^{rt}\\
+y''(t) &=& r^{2}e^{rt}\\
+\end{eqnarray*}
+Then,  
+\vspace{-1em}
+\[ar^{2}+br+c=0\]
+We can solve for the roots $r$ using the quadratic formula:
+\[r=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\]
+\underline{Note:} For higher order differential equations, we would get a polynomial of degree $n$, and we would solve for the roots by factoring.\\\\
+\underline{Case 1: Real and Unique Roots}\\
+For roots $r_1$ and $r_2$, the general solution is:
+\[\boxed{y(t) = c_1 e^{r_1 t} + c_2 e^{r_2 t}}\]
+\underline{Case 2: Complex Roots}\\
+For roots $\alpha \pm \beta j$, the general solution is:
+\[\boxed{y(t) =   c_1 e^{\alpha t}\cos \beta t + c_2 e^{\alpha t} \sin \beta t}\]
+\underline{Case 3: Repeated Roots}\\
+For repeated root $r$, the general solution is:
+\[\boxed{y(t) = c_1 e^{r t} + c_2 t e^{r t}}\]
+Finally, we solve for the \textbf{particular solution} (non-zero input/forcing function) using the method of undetermined coefficients. We guess the form of the particular solution and solve for the coefficients by plugging it into the differential equation.\\\\
+The \textbf{general solution} is the sum of the homogeneous and particular solutions:
+\[\boxed{y(t) = y_h(t) + y_p(t)}\]
+\section*{Laplace Transform}
+Laplace transform is the method we will mainly use to solve the differential equations of systems. It requires us to know the initial conditions of the system, but transfer functions (discussed later) assume \textit{zero initial conditions}.\\\\
+Method:\\
+To solve a differential equation with given initial conditions using Laplace transforms:
+\begin{enumerate}  
+    \item Apply the Laplace transform $\mathscr{L}$ to both sides of the differential equation. This transforms the differential equation to an algebraic equation in the $s$-domain in terms of $Y(s)=\mathscr{L}\{y(t)\}$.
+    
+    \item Solve the algebraic equation for $Y(s)$.
+    
+    \item Apply the inverse Laplace transform $\mathscr{L}^{-1}$ to find $y(t)$, converting from the $s$-domain back to the time domain.
+\end{enumerate}
+Typically, partial fraction decomposition is needed to find the inverse Laplace transform.
+\newpage\noindent
+\textbf{Laplace Transform Formulas (From Diff Eq. Notes)}
+\begin{center}
+\renewcommand{\arraystretch}{2}
+\[
+\begin{tabular}{|p{5cm}||p{5cm}|}
+\hline
+$f(t)$ & $F(s)$ \\
+\hline\hline
+$1$ & $\dfrac{1}{s}$ \\
+\hline
+$t^{n}$ & $\dfrac{n!}{s^{n+1}}$ \\
+\hline
+$e^{at}$ & $\dfrac{1}{s-a}$ \\
+\hline
+$\sin(at)$ & $\dfrac{a}{s^{2}+a^{2}}$ \\
+\hline
+$\cos(at)$ & $\dfrac{s}{s^{2}+a^{2}}$ \\
+\hline
+$\sinh(at)$ & $\dfrac{a}{s^{2}-a^{2}}$ \\
+\hline
+$\cosh(at)$ & $\dfrac{s}{s^{2}-a^{2}}$ \\
+\hline
+$\mathscr{U}(t-a)$ & $\dfrac{e^{-as}}{s}$ \\
+\hline
+$\mathscr{U}(t-a)f(t-a)$ & $e^{-as}F(s)$ \\
+\hline
+$e^{at}f(t)$ & $F(s-a)$ \\
+\hline
+$t^n f(t)$ & $(-1)^n\dfrac{d^n}{ds^n}F(s)$ \\
+\hline
+$\sin(at)-at\cos(at)$ & $\dfrac{2a^3}{(s^2+a^2)^2}$ \\
+\hline
+$t\sin(at)$ & $\dfrac{2as}{(s^2+a^2)^2}$ \\
+\hline
+$f * g$ & $F(s)G(s)$ \\
+\hline
+$\delta(t-a)$ & $e^{-sa}$ \\
+\hline
+$f'(t)$ & $sF(s)-f(0)$ \\
+\hline
+$f''(t)$ & $s^2F(s)-sf(0)-f'(0)$ \\
+\hline
+\end{tabular}
+\]
+\end{center}
+
+\section*{Cover-Up/Limit Method}
+For solving partial fraction decomposition to find the inverse Laplace transform, we can use the cover-up/limit method to find the coefficients of the factors in the denominator. 
+\begin{itemize}
+    \item \underline{\textbf{Distinct Linear Factors:}}
+    \[ \frac{P(x)}{(x-a)(x-b)(x-c)} = \frac{A}{x-a} + \frac{B}{x-b} + \frac{C}{x-c} \]
+    
+    To find the coefficients, we use:
+    \[A = \lim_{x \to a} \left[ (x-a) \frac{P(x)}{(x-a)(x-b)(x-c)} \right]\]
+    \begin{itemize}
+        \item ``Cover up'' factor in denominator
+        \item Evaluate at the ``root''
+    \end{itemize}
+
+    \item \textbf{Ex:}
+    \[ \frac{5x+3}{(x-1)(x-2)} = \frac{A}{x-1} + \frac{B}{x-2} \]
+    \begin{itemize}
+        \item[] $A = \frac{5x+3}{x-2} \Big|_{x=1} = -8$
+        \item[] $B = \frac{5x+3}{x-1} \Big|_{x=2} = 13$
+    \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+    \item \underline{\textbf{Repeated Linear Factors (Derivative Limit Method):}}
+    \[ F(x) = \frac{P(x)}{G(x)(x-a)^n} = \underbrace{\frac{A_1}{x-a} + \frac{A_2}{(x-a)^2} + \dots + \frac{A_n}{(x-a)^n}}_{\text{factors of } (x-a)^n} + \dots \text{(for the } G(x) \text{ term(s))} \]
+
+    For the $k^{th}$ coefficient:
+    \[ A_k = \frac{1}{(n-k)!} \lim_{x \to a} \left\{ \frac{d^{n-k}}{dx^{n-k}} \left[ (x-a)^n F(x) \right]\right\} \]
+    \begin{itemize}
+        \item When $k=n$ (the highest order factor), we have the same formula as for distinct linear factors.
+        \item We use the derivative to ``recover'' the lower order roots.
+    \end{itemize}
+
+    \item \textbf{Ex:}
+    \[ F(x) = \frac{2x+3}{(x-1)^3(x+2)} = \frac{A_1}{(x-1)} + \frac{A_2}{(x-1)^2} + \frac{A_3}{(x-1)^3} + \frac{B}{x+2} \]
+    \begin{multicols}{2}
+        \begin{itemize}
+        \item[] $A_3 = \frac{2x+3}{x+2} \Big|_{x=1} = \frac{5}{3}$
+        \item[] $A_2 = \frac{d}{dx} \left( \frac{2x+3}{x+2} \right) \Big|_{x=1} = \frac{1}{9}$
+        \item[] $A_1 = \frac{1}{2!} \frac{d^2}{dx^2} \left( \frac{2x+3}{x+2} \right) \Big|_{x=1} = -\frac{1}{27}$
+        \item[] $B = \frac{2x+3}{(x-1)^3} \Big|_{x=-2} = -\frac{1}{27}$
+        \end{itemize}
+    \end{multicols}
+\end{itemize}
+\noindent\underline{Note:} 
+\begin{itemize}
+    \item For irreducible quadratic factors, this doesn't apply (use $Cx+D$ and solve).
+    \item Always check that $(\deg \text{ of num}) < (\deg \text{ of denom})$.
+\end{itemize}
+\section*{Stability}
+In terms of natural response,
+\begin{itemize}
+    \item System is \textbf{stable} if $x(t) \to 0$ as $t \to \infty$
+    \item System is \textbf{unstable} if $x(t) \to \infty$ as $t \to \infty$
+    \item System is \textbf{marginally stable} if natural response neither decays nor grows but remains constant or oscillates
+\end{itemize}
+In terms of total response,
+\begin{itemize}
+    \item System is \textbf{stable} if \textit{every} bounded input yields a bounded output \textbf{(BIBO)}
+    \item System is \textbf{unstable} if \textit{any} bounded input yields an unbounded output
+\end{itemize}
+Mathematically, we can determine stability by looking at the roots of the characteristic equation (the denominator of the transfer function):
+\[x_h(t)=A_1e^{s_1t}+A_2e^{s_2t}+\dots+A_ne^{s_nt}\quad\text{Homogeneous solution}\]
+\begin{itemize}
+    \item Negative Real Part ($\text{Re}[s] < 0$) $\to$ \textbf{Stable}
+    \item Positive Real Part ($\text{Re}[s] > 0$) $\to$ \textbf{Unstable}, grows exponentially
+    \item One zero at $s = 0$ and one negative root $\to$ \textbf{Neutrally or marginally stable} (neither decays to zero nor grows without bound)
+    \item Zero real part, non-zero imaginary $\to$ \textbf{Oscillatory response} (neutrally or marginally stable)
+    \item \textbf{All roots must be stable for system to be considered stable!}
+\end{itemize}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Stability.png}
+\end{center}
+\underline{Note:} The poles of the transfer function are the values that make the denominator zero, which are the roots of the characteristic equation. The location of the poles in the complex plane determines the stability of the system.
+\section*{Transfer Function}
+Transfer function relates input to output in the Laplace domain, assuming zero initial conditions. It is defined as:
+\[G(s) = \frac{Y(s)}{R(s)}\]
+\begin{center}
+\includegraphics[width=0.3\textwidth]{Transfer Function.png}
+\end{center}
+Transfer functions don't capture the time domain response of the system, because the input function ca be left undefined. Once we define an input function (step function, impulse, etc.), we can find the time domain response by taking the inverse Laplace transform of $Y(s) = G(s)R(s)$.\\\\
+Since the transfer function assumes zero initial conditions, it only captures the \textbf{steady state response} of the system, which is the response due to the input function.
+\section*{Transient vs Steady State Response}
+\textbf{Transient Response} is the part of the system's response that dies out over time, while \textbf{Steady State Response} is the part of the response that remains after the transient response has decayed.\\\\
+Typically, the steady state response is due to the input function, while the transient response is due to the initial conditions of the system. Thus, the homogeneous solution corresponds to the transient response, while the particular solution corresponds to the steady state response.
+\newpage
+\begin{center}
+{\LARGE Mechanical Systems\par}
+\end{center}
+\section*{Distributed vs Lumped Systems}
+Lumped systems are systems where the properties (mass, stiffness, damping) are concentrated at discrete points, these systems are easier to work with since we can define a finite number of degrees of freedom. Distributed systems are have properties that are distributed continuously along the system, these systems are more complex and require partial differential equations to model.
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Lumped.png}
+\end{center}
+\vspace{-2em}
+\section*{Mechanical Elements}
+\textbf{Inertia/Mass Elements}\\
+The inertia elements of a mechanical system are the mass and moment of inertia that appear in a Newton's second law equation.
+\[\sum F = ma, \quad \sum \tau = J\alpha\]
+Inertia elements also store energy in the system as kinetic or potential energy. The kinetic energy of a mass is given by
+\[T_{\text{trans}} = \frac{1}{2}m\dot{x}^2 \quad \text{or} \quad T_{\text{rot}} = \frac{1}{2}J\dot{\theta}^2\]
+\textbf{Spring/Stiffness Elements}\\
+Spring elements provide a restoring force that is proportional to the displacement of the system. The force exerted by a spring is given by Hooke's law:
+\[F = kx \quad \text{or} \quad \tau = k_\text{t}\theta \quad \text{for a torsional spring}\]
+and store potential energy in the system:
+\[U = \frac{1}{2}kx^2 \quad \text{or} \quad U = \frac{1}{2}k_\text{t}\theta^2\]
+It obeys the following assumptions:
+\begin{itemize}
+    \item Lumped parameter (spring is massless and has no damping)
+    \item Perfectly elastic (no energy loss)
+\end{itemize}
+\textbf{Damping/Dissipative Elements}\\
+Damping elements provide a resistive force that is proportional to the velocity of the system. The force exerted by a damper is given by:
+\[F = b\dot{x}\]
+It obeys the following assumptions:
+\begin{itemize}
+    \item No mass
+    \item No energy storage (no stiffness)
+    \item Is linear (force is proportional to velocity)
+\end{itemize}
+\section*{Power}
+Power = effort $\times$ flow. In mechanical systems, effort is force and flow is velocity, so power is given by:
+\[P = F \cdot v\]
+In terms of rotation:
+\[P = \tau \cdot \omega\]
+\section*{Time Constant}
+The time constant $\tau$ of a system is a measure of how quickly the system responds to changes in input. It is defined for solutions of first order systems such as:
+\[v(t) = v_0 e^{-Ct}\]
+Where the time constant $\tau$ is the value for $t$ such that $-Ct$ becomes $-1$:
+\[\tau = \frac{1}{C}\]
+At $1\,\tau$ the system is 63.3\% of the way to its final steady state value, at $2\,\tau$ it is 86.5\%, at $3\,\tau$ it is 95\%, and at $4\,\tau$ it is 98.2\%. Thus, we can say that the system has effectively reached its steady state value after $4\,\tau$.
+\section*{Spring-Mass System (1 DOF)}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Spring Mass.png}
+\end{center}
+An important concept for a spring–mass system is the \textit{static deflection} $\delta$, defined as the displacement of the spring under the weight of the mass. If we choose the coordinate $x$ to measure displacement from the static equilibrium position, gravity does not need to appear in the equation of motion because the weight is exactly balanced by the spring force at equilibrium, where $mg = k\delta$. The equation of motion for the system therefore becomes:
+\[m\ddot{x} + kx = 0\]
+\underline{Note:} We can also ignore gravitational potential energy if we choose the $x$ coordinate to measure displacement from the static equilibrium position, because the potential energy terms simplify to
+\[U = \frac{1}{2}kx^2 + \text{constant}\]
+However, for more complex systems, we will need to first draw the static equilibrium FBD to determine whether we can ignore gravity in the equations of motion.\\\\
+\textbf{Response Due to Initial Conditions Example}\\
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+       \includegraphics[width=0.5\textwidth]{Damping.png} 
+    \end{center}
+\[m\ddot{x}+b\dot{x}+kx = 0\]
+Notice that the response reaches steady state at $x=0$ and $v=0$ because there is no forcing function, so the system is stable. The initial displacement was what generated the transient response.    
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\textwidth]{Response IC.png}
+\end{minipage}
+\textbf{Step Response Example}\\
+\begin{minipage}{0.5\textwidth}
+    \begin{center}
+       \includegraphics[width=0.5\textwidth]{Step.png} 
+    \end{center}
+\[m\ddot{x}+b\dot{x}+kx = f(t)\]
+Notice that the response is also delayed by 1 second since the input is a step function that starts at $t=1$. Now, the steady state response is non-zero because there is a forcing function, but the transient response still decays to zero over time.
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+\includegraphics[width=\textwidth]{Response Step.png}
+\end{minipage}
+The solution via Laplace transforms is (where $1(t-1)$ is the \textbf{unit step function}):
+\[
+x(t)=\frac{1}{2}\cdot1(t-1)
+-\frac{1}{2}e^{-(t-1)}
+\left[\cos(t-1)+\sin(t-1)\right]\cdot1(t-1)
+\]
+\underline{Recall:} The unit step function or Heaviside function is defined as
+$$ 1(t-a)=   \left\{
+\begin{array}{ll}
+      0 & 0\le t<a \\
+      1 & t\ge a \\
+\end{array}
+\right.  $$
+Using this function, we can represent piecewise functions as a single function. For example,
+$$ f(t)=  \left\{
+\begin{array}{ll}
+      g(t) & 0\le t<a \\
+      h(t) & t\ge a \\
+\end{array}
+\right.  $$
+We can define this in the following way
+$$f(t) = g(t)(1-1(t-a))+h(t)1(t-a)$$
+We can do this using the fact that $1(t-a)$ is 0 before $t=a$ and 1 after $t=a$. Thus, $1-1(t-a)$ is 1 before $t=a$ and 0 after $t=a$.
+\newpage
+\section*{Two DOF Systems}
+A degree of freedom (DOF) is an independent coordinate that can be used to describe the configuration of a system. What makes a 2 DOF system different from a 1 DOF system is that the equations of motion are coupled, meaning that the motion of one mass affects the motion of the other mass.
+\begin{center}
+\includegraphics[width=0.6\textwidth]{2 DOF.png}
+\end{center}
+To solve for the equations of motion, we start with an assumption of the relative positions $x_1$ and $x_2$ of the two masses. This way we can know what direction the spring forces are acting in. Note that we are measuring $x_1$ and $x_2$ relative to their static deflections.\\\\
+\underline{Assumptions:} $x_2>x_1$, $\dot{x}_2>\dot{x}_1$\\\\
+Now we can draw the FBDs, keeping in mind that Newton's third law applies to the spring forces in between the two masses.
+\begin{center}
+\includegraphics[width=0.7\textwidth]{FBD 2 DOF.jpg}
+\end{center}
+Equations of motion:
+\[\sum F_1 = m_1\ddot{x}_1=-k_1x_1-b_1\dot{x}_1+k_2(x_2-x_1)+b_2(\dot{x}_2-\dot{x}_1)\]
+\[\sum F_2 = m_2\ddot{x}_2=F(t)-k_2(x_2-x_1)-b_2(\dot{x}_2-\dot{x}_1)\]
+Now we can apply the Laplace transform to both equations, but since they are coupled, we will have to solve the system of equations to find the transfer function for each mass (substitute one equation into the other to eliminate one of the variables).
+\section*{Energy Methods}
+Instead of using Newton's second law to derive the equations of motion, we can also use energy methods, which are often easier for more complex systems. The method is as follows:
+\begin{itemize}
+    \item Define the total kinetic energy $T$ and potential energy $U$ of the system.
+    \item Because energy is conserved, we can differentiate the total energy to find the equations of motion.
+    \[\boxed{\frac{d(T+U)}{dt}=0}\]
+\end{itemize}
+Note that this only works for conservative systems, where there is no energy loss due to damping or friction. For non-conservative systems, it is easier to use Newton's second law to derive the equations of motion.\\\\
+\textbf{Rolling Without Slipping}\\
+Recall that when an object rolls without slipping, it obeys these conditions:
+\begin{itemize}
+    \item $v_\text{CM} = R\omega$ 
+    \item $a_\text{CM} = R\alpha$
+    \item $v_\text{contact} = 0$
+\end{itemize}
+\underline{Note:} Don't forget to include both translational and rotational kinetic energy, as well as gravitational potential energy if the system is not at static equilibrium.
+\[T=\frac{1}{2}m\dot{x}^2+\frac{1}{2}J\dot{\theta}^2\]
+Sometimes when using small angle approx, we will need to use higher order approximations to not have a zero after differentiating.
+\section*{Combining Stiffness}
+\begin{minipage}{0.5\textwidth}
+    \textbf{Springs in Parallel}\\
+    When two springs are in parallel, they see the \textit{same deflection} but feel different forces (if $k_1 \neq k_2$). The equivalent stiffness is the sum of the two stiffnesses:
+    \[\boxed{k_\text{eq} = k_1 + k_2}\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{Parallel.png}
+\end{center}
+\end{minipage}\\\\
+\begin{minipage}{0.5\textwidth}
+    \textbf{Springs in Series}\\
+    When two springs are in series, they see the \textit{same force} but feel different deflections (if $k_1 \neq k_2$). The equivalent stiffness is the reciprocal of the sum of the reciprocals of the two stiffnesses:
+    \[\boxed{\frac{1}{k_\text{eq}} = \frac{1}{k_1} + \frac{1}{k_2}}\]
+\end{minipage}
+\hfill
+\begin{minipage}{0.35\textwidth}
+\begin{center}
+\includegraphics[width=\textwidth]{Series.png}
+\end{center}
+\end{minipage}\\
+\textbf{Stiffness Equivalent: Buoyancy}\\
+Since the buoyant force is given as:
+\[\boxed{F_\text{b}=\rho g A x}\]
+Where $x$ is the depth of the object in the fluid, $A$ is the cross-sectional area of the object, and $\rho$ is the density of the fluid, we can treat the buoyant force as a spring force with an equivalent stiffness of:
+\[\boxed{k_\text{eq} = \rho g A}\]
+
+\section*{Common Moments of Inertia}
+\begin{itemize}
+
+\item \textbf{Thin rod} (length $L$, mass $m$)
+\[
+I = \frac{1}{12} mL^2 
+\quad \text{(about center, axis perpendicular to rod)}
+\]
+\[
+I = \frac{1}{3} mL^2 
+\quad \text{(about one end, axis perpendicular to rod)}
+\]
+
+\item \textbf{Solid disk} (radius $R$, mass $m$)
+\[
+I = \frac{1}{2} mR^2 
+\quad \text{(about center, axis perpendicular to plane)}
+\]
+
+\item \textbf{Thin hoop / ring} (radius $R$, mass $m$)
+\[
+I = mR^2 
+\quad \text{(about center, axis perpendicular to plane)}
+\]
+
+\item \textbf{Solid cylinder} (radius $R$, mass $m$)
+\[
+I = \frac{1}{2} mR^2 
+\quad \text{(about central symmetry axis)}
+\]
+
+\item \textbf{Solid sphere} (radius $R$, mass $m$)
+\[
+I = \frac{2}{5} mR^2 
+\quad \text{(about any diameter through center)}
+\]
+
+\item \textbf{Thin spherical shell} (radius $R$, mass $m$)
+\[
+I = \frac{2}{3} mR^2 
+\quad \text{(about any diameter through center)}
+\]
+
+\item \textbf{Rectangular plate} ($a \times b$, mass $m$)
+\[
+I = \frac{1}{12} m(a^2 + b^2)
+\quad \text{(about center, axis perpendicular to plate)}
+\]
+
+\end{itemize}
+\section*{Identifying Frequency and Time Constants}
+\textbf{Time Constant}\\
+For a transfer function of a first order system:
+\[\boxed{G(s) = \frac{k}{\tau s + 1}}\]
+Where $\tau$ is the time constant and $k$ is the steady state gain.\\\\
+\textbf{Natural Frequency}\\
+For a second order system with no damping, its equation of motion is in the form:
+\[\ddot{x} + \omega_n^2 x = 0\]
+Where $\omega_n$ is the natural frequency of the system.\\\\
+\textbf{Damping Ratio}\\
+In the Laplace table, we have the term $\zeta$ show up, which represents the damping ratio of the system. For a second order system with damping, its equation of motion is in the form:
+\[\ddot{x} + 2\zeta \omega_n \dot{x} + \omega_n^2 x = 0\quad \text{or if there is a forcing term } =\frac{f(t)}{m}\]
+It is equal to 
+\[\zeta = \frac{b}{2\sqrt{mk}}\]
+Where $b$ is the damping coefficient, $m$ is the mass, and $k$ is the stiffness of the system. The damping ratio determines the nature of the system's response:
+\begin{itemize}
+    \item $\zeta < 0$: Unstable system (response grows exponentially).
+    
+    \item $\zeta = 0$: Marginally stable (undamped oscillations at $\omega_n$).
+    
+    \item $0 < \zeta < 1$: Underdamped (stable, oscillatory response with decaying amplitude).
+    
+    \item $\zeta = 1$: Critically damped (stable, fastest non-oscillatory return to equilibrium).
+    
+    \item $\zeta > 1$: Overdamped (stable, non-oscillatory response with slower return to equilibrium).
+\end{itemize}
+
+\end{document}
