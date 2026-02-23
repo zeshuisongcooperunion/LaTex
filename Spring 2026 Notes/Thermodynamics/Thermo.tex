@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 \usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
-\usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools}
+\usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools,caption}
 \geometry{margin=1in}
 
 \title{}
@@ -385,9 +385,175 @@ Work $W$ & $-$ & $+$ \\ \hline
 \vspace{1em}
 \noindent\hrule
 \vspace{1em}
+\newpage
 \begin{center}
 {\LARGE Chapter 3: Properties of Pure Substances\par}
 \end{center}
+In Chapter 2, we treated properties as known quantities and used them to analyze energy transfer through the First Law. In this chapter, we step back and learn how those properties are actually determined by relating phase behavior, property tables, and equations of state, allowing us to fully define the thermodynamic state of a pure substance before applying energy analysis.
+\section*{Phase Behavior of Pure Substances}
+A \textbf{pure substance} is a material that has a fixed chemical composition. Mixtures of chemical compounds or elements are also considered pure substances as long as the mixture is \textit{homogeneous}. A substance consisting of multiple phases can still be considered a pure substance as long as the chemical composition is the same in each phase (ie. liquid water and frozen water).\\\\
+\textbf{Phase-Change Processes of Pure Substances}\\
+Instead of being only in a single phase (solid, liquid, or gas), a pure substance can exist within two phases at equilibrium. The following examples will be shown for water but they apply to any pure substance:\\
+\begin{minipage}[t]{0.7\textwidth}
+\vspace{0pt}
+In state 1, water exists in the liquid phase and is called a
+\begin{itemize}
+    \item \textbf{Compressed Liquid} or \textbf{Subcooled Liquid}:\\
+    A substance that is not about to vaporize.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth}
+\vspace{0pt}
+\includegraphics[width=\textwidth]{State 1.png}
+\end{minipage}\\
+\begin{minipage}[t]{0.7\textwidth}
+\vspace{0pt}
+In state 2, enough heat has been added to the water until it reaches the boiling point (100$^\circ$C at 1 atm). At this point, the water is still liquid, but any additional heat will cause it to start vaporizing, and we call this state a
+\begin{itemize}
+    \item \textbf{Saturated Liquid}:\\
+    A liquid that is about to vaporize.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth}
+\vspace{0pt}
+\includegraphics[width=\textwidth]{State 2.png}
+\end{minipage}\\
+\begin{minipage}[t]{0.7\textwidth}
+\vspace{0pt}
+Once boiling starts, the temperature stops rising until the liquid is completely vaporized (under constant pressure). Halfway through the boiling process, the cylinder will contain equal amounts of liquid and vapor (state 3), and we can call this state a
+\begin{itemize}
+    \item \textbf{Saturated Liquid–Vapor Mixture}:\\
+    The phase at which liquid and vapor coexist in equilibrium. This occurs in between the start of boiling and the end of boiling.
+\end{itemize}
+\end{minipage}
+\hspace{1.5cm}
+\begin{minipage}[t]{0.35\textwidth}
+\vspace{0pt}
+\includegraphics[width=\textwidth]{State 3.png}
+\end{minipage}\\
+\begin{minipage}[t]{0.7\textwidth}
+\vspace{0pt}
+Once vaporization is complete, the cylinder is now filled with only vapor (state 4), any heat loss will cause the vapor to start condensing back into liquid, and we call this state a
+\begin{itemize}
+    \item \textbf{Saturated Vapor}:\\
+    A vapor that is about to condense.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth}
+\vspace{0pt}
+\includegraphics[width=\textwidth]{State 4.png}
+\end{minipage}\\
+\begin{minipage}[t]{0.7\textwidth}
+\vspace{0pt}
+Suppose we continue heating the vapor well beyond the boiling point (100$^\circ$C at 1 atm), even if we remove some heat, the vapor will not condense back into liquid until it reaches the boiling point again. This state is called a
+\begin{itemize}
+    \item \textbf{Superheated Vapor}:\\
+    A vapor that is not about to condense.
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.2\textwidth}
+\vspace{0pt}
+\includegraphics[width=\textwidth]{State 5.png}
+\end{minipage}\\\\
+These states can be visualized on the following $T-\svol$ plot. Note that if we cooled down the cylinder from state 5, keeping pressure constant, it would follow the same path back to state 1.
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{Phase.png}
+\end{center}
+Where the plotted line represents an \textbf{isobar} (constant pressure), and the points are equilibrium states.\\\\
+\textbf{Saturation Temperature and Saturation Pressure}\\
+At a fixed pressure, the temperature at which a pure substance changes phase is called the \textbf{saturation temperature} $T_{sat}$, and at a fixed temperature, the pressure at which a pure substance changes phase is called the \textbf{saturation pressure} $P_{sat}$. We will be referring to the appendix tables for these values.\\\\
+\textbf{Latent Heat}
+\begin{itemize}
+    \item \textbf{Latent Heat}: the amount of energy absorbed or released during a phase change process
+    \item \textbf{Latent Heat of Vaporization} ($h_{fg}$): the amount of energy absorbed during melting or released during freezing
+    \item \textbf{Latent Heat of Fusion}: the amount of energy absorbed during vaporization or released during condensation
+\end{itemize}
+\section*{Property Diagrams for Phase-Change Processes}
+As we saw before, when a pure substance undergoes a phase change, its properties change in a specific way. We can visualize these changes using plots such as $P-\svol$, $T-\svol$, and $P-T$ diagrams.
+\newpage\noindent
+\underline{\textbf{$T-\svol$ Diagram}\\}
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{TV.png}
+\end{center}
+The dome is called the \textbf{vapor dome} and the area under the dome represents the \textit{saturated liquid–vapor mixture} region or the \textit{wet} region. Notice that as pressure increases, the \textbf{saturation line} (horizontal line between saturated liquid and saturated vapor) becomes shorter and shorter until it eventually disappears at the \textbf{critical point}. Thus, at the critical point, the properties of the saturated liquid and saturated vapor are the same, and we cannot tell the difference between the two.\\\\
+Note that the dashed lines represent \textbf{isobars} (constant pressure lines).\\\\
+\begin{center}
+    \includegraphics[width=0.25\textwidth]{Chicken.jpg}
+    \captionof*{figure}{A chicken}
+\end{center}
+\newpage\noindent
+\underline{\textbf{$P-\svol$ Diagram}\\}
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{PV.png}
+\end{center}
+Similar to a $T-\svol$ diagram, but now the dashed lines represent \textbf{isotherms} (constant temperature lines), isobars will just be horizontal lines.\\\\
+\underline{\textbf{$P-T$ Diagram}\\}
+\begin{center}
+    \includegraphics[width=0.7\textwidth]{PT.png}
+\end{center}
+The $P-T$ diagram is a more commonly known as a \textbf{phase diagram}, it shows the different phases of a substance and the conditions under which they exist.\\\\
+As previously mentioned in chapter 1, all three of these diagrams are just projections of the same $P-\svol-T$ surface onto their respective planes:
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{PVT.png}
+\end{center}
+\section*{Property Tables}
+Along with the visualizations of phase behavior, we have tables and values that quantify these properties. These tables will list various properties of pure substances and categorized based on each region of interest (superheated vapor, compressed liquid, and saturated mixture regions).\\\\
+\textbf{Enthalpy - Revisited}\\
+Like mentioned before in chapter 2, enthalpy is defined for the sake of convenience (it is a combination of internal energy and flow energy), but it saves a lot of unit conversions and math to just have it as a property in the tables.
+\[h=u+P\svol\quad\text{(kJ/kg)} \quad \text{and}\quad H=U+P\vol\quad\text{(kJ)}\]
+\underline{Note:} The latent heat of vaporization can be expressed in terms of enthalpy as $h_{fg} = h_g - h_f$.\\\\
+\textbf{Quality in the Saturated Mixture Region}\\
+In the saturated mixture region, we define the \textbf{quality} $x$ as the fraction of mixture that is vapor (by mass):
+\[\boxed{x = \frac{m_\text{g}}{m_\text{g} + m_\text{f}}}\]
+Where $m_g$ is the mass of the vapor and $m_f$ is the mass of the liquid.\\\\
+A saturated mixture consists of saturated liquid and saturated vapor existing in equilibrium, where each phase has its own specific volume, internal energy, and enthalpy. Thus, the overall properties of the mixture can be determined as weighted averages of the corresponding saturated liquid and saturated vapor values, weighted by the quality $x$ (if there is more vapor, the properties will be closer to the saturated vapor values, and if there is more liquid, the properties will be closer to the saturated liquid values):
+\begin{center}
+\fbox{%
+\(
+\begin{aligned}
+\svol_{\text{avg}} &= \svol_f + x(\svol_g - \svol_f) \quad \text{(m$^3$/kg)}\\
+u_{\text{avg}}     &= u_f + x(u_g - u_f) \quad \text{(kJ/kg)}\\
+h_{\text{avg}}     &= h_f + x(h_g - h_f) \quad \text{(kJ/kg)}
+\end{aligned}
+\)
+}
+\end{center}
+Where the subscript $f$ refers to the saturated liquid values and the subscript $g$ refers to the saturated vapor values.\\\\
+\underline{Note:} $\svol_{fg} = \svol_g - \svol_f$ is the difference in specific volume between the saturated vapor and saturated liquid, and it is also the length of the horizontal saturation line in both the $T-\svol$ and $P-\svol$ diagrams.
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Quality.png}
+\end{center}
+This is very similar to the concept of tie-lines in phase diagrams from materials science.\\\\
+We can also find the quality of a saturated mixture if we are given the specific volume, internal energy, or enthalpy of the mixture by rearranging the above equations. For example:
+\[\boxed{x = \frac{\svol_\text{avg}-\svol_\text{f}}{\svol_\text{fg}}}\]
+\newpage\noindent
+\textbf{How to Identify a Superheated Vapor}\\
+In a saturated mixture, temperature and pressure are not independent. During phase change, any added energy is used to convert liquid into vapor rather than to increase temperature, so temperature remains fixed at the saturation value corresponding to that pressure (see before on saturation pressure/temperature). As long as both phases are present, specifying either temperature or pressure automatically determines the other.\\\\
+In the superheated vapor region, the substance exists entirely as vapor, and no phase change occurs. So temperature and pressure can vary independently, and both properties must be specified to fully determine the state.\\\\
+We can tell if a state is in the superheated vapor region if it satisfies any of the following conditions:
+\begin{itemize}
+    \item Lower pressures ($P < P_{\text{sat}}$ at a given $T$)
+    \item Higher temperatures ($T > T_{\text{sat}}$ at a given $P$)
+    \item Higher specific volumes ($\svol > \svol_g$ at a given $P$ or $T$)
+    \item Higher internal energies ($u > u_g$ at a given $P$ or $T$)
+    \item Higher enthalpies ($h > h_g$ at a given $P$ or $T$)
+\end{itemize}
+Generally, these conditions compare the state properties to the corresponding saturation properties at the same temperature or pressure. If the state has properties that exceed those of the saturated vapor, it is in the superheated region.\\\\
+\underline{Note:} The opposite conditions (compared to saturated liquid conditions) would indicate a compressed liquid state, and if the state properties match the saturated liquid or saturated vapor properties, then it is in the saturated liquid or saturated vapor state, respectively.\\\\
+\textbf{Compressed Liquid Approximation}\\
+There aren't as many data points for compressed liquids in the tables. However, in the compressed liquid region, the specific volume, internal energy, and enthalpy of the substance are very close to those of the saturated liquid at the same temperature. Therefore, we \textit{approximate the properties of a compressed liquid by using the saturated liquid properties at the same temperature.}\\\\
+\textbf{Reference State + Values}\\
+The values of internal energy, enthalpy, and entropy are not measured directly and are given relative to a reference state. The reference state for water is taken at the saturated liquid state at 0.01$^\circ$C where $u=0$, $h=0$, and $s=0$.\\\\
+Sometimes different tables use different references states, but the math will work out as long as we are consistent with the table we are using. 
+
+
+
+
+
 
 
 
