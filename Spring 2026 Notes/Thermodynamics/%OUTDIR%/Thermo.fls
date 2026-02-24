@@ -1,7 +1,7 @@
 PWD c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
 INPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\Thermo.tex
-OUTPUT Thermo.log
+OUTPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.log
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\base\size12.clo
@@ -71,10 +71,10 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.st
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\caption\caption3.sty
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
-INPUT .\Thermo.aux
-INPUT .\Thermo.aux
-INPUT Thermo.aux
-OUTPUT Thermo.aux
+INPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.aux
+INPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.aux
+INPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.aux
+OUTPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.aux
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
@@ -119,7 +119,7 @@ INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cme
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\cm\cmbsy10.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy8.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmbsy6.tfm
-OUTPUT Thermo.pdf
+OUTPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.pdf
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
@@ -298,7 +298,7 @@ INPUT .\Quality.png
 INPUT .\Quality.png
 INPUT .\Quality.png
 INPUT .\Quality.png
-INPUT Thermo.aux
+INPUT c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.aux
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\zsong\AppData\Local\MiKTeX\fonts\pk\ljfour\jknappen\ec\dpi600\tcrm1200.pk
 INPUT C:\Users\zsong\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx12.pfb

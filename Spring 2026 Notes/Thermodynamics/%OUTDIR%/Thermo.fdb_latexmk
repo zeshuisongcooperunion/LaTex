@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771810906.39742 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" "Thermo.pdf" "Thermo" 1771810907.55293 0
+["pdflatex"] 1771967746.56871 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" "Thermo.pdf" "Thermo" 1771967747.91004 0
+  "%OUTDIR%/Thermo.aux" 1771967747 33 f82e2feb8534c76899f0e85d8d706a16 "pdflatex"
   "1-110.png" 1771187017 113472 2c7f01c4bd268712f5dd3d69ee7543a4 ""
   "Barometer.png" 1771166968 23778 a436484bbf9db7d9b1ac0045ca610a77 ""
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771414564 80937 91001db6d4ae332437b4b739862cda02 ""
@@ -111,11 +112,10 @@
   "State 5.png" 1771798393 27964 3a2ac6a5d4f86fb81d640f303de800ff ""
   "State.png" 1771163111 88041 d259a2e5cf39174e3d45fe949e983484 ""
   "TV.png" 1771799876 58453 55cbf3711866b5b12d311a980493dfdd ""
-  "Thermo.aux" 1771810907 33 0adf2b5024aa913a2319bb6c7b47be9c "pdflatex"
-  "Thermo.tex" 1771810905 42188 a981decd651024a81dc4f49ddc00592a ""
-  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" 1771810905 42188 a981decd651024a81dc4f49ddc00592a ""
+  "Thermo.tex" 1771967596 42962 4f7994e7f880ae693817c5bea82a974a ""
+  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Thermo.tex" 1771967596 42962 4f7994e7f880ae693817c5bea82a974a ""
   (generated)
-  "Thermo.aux"
-  "Thermo.log"
+  "%OUTDIR%/Thermo.aux"
+  "%OUTDIR%/Thermo.log"
   "Thermo.pdf"
   (rewritten before read)

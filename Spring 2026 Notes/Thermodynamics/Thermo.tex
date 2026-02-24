@@ -84,19 +84,28 @@ Now that we have defined properties, we can define the \textbf{state} of a syste
     \includegraphics[width=0.5\textwidth]{State.png}
 \end{center}\vspace{-1em}
 \underline{Note:} A simple compressible system is one where electrical, magnetic, gravitational, motion, and surface tension effects are negligible. If any of these effects are significant, an extra property must be specified for each.\\\\
-\textbf{Ideal Gas Law}\\
-A direct application of the state postulate is the ideal gas law, which defines the relationship between these three properties for an ideal gas, so that specifying any two properties automatically determines the third:
+\textbf{Ideal Gas Equation of State}\\
+A direct application of the state postulate is the ideal gas law, which defines the relationship between these three properties for an ideal gas, so that specifying any two properties automatically determines the third. The \textit{most general form} of the ideal gas law is:
 \[\boxed{P \, \svol = R \, T, \quad
-R = \frac{\bar{R}}{M} \quad \text{(specific gas constant, J/kg·K)}} \]
+R = \frac{\bar{R}}{M} \quad \text{(specific gas constant, kJ/kg·K)}} \]
 Where:
 \begin{itemize}[label=\textbullet]
     \item $P$ = \textit{absolute} pressure (Pa)
-    \item $\svol$ = specific volume (m$^3$/kg), where $\svol = V/m$
+    \item $\svol$ = specific volume (m$^3$/kg), where $\svol = \vol/m$
     \item $T$ = \textit{absolute} temperature (K)
-    \item $\bar{R}$ = universal gas constant, $8.314$ J/(mol·K)
     \item $M$ = molar mass of the gas (kg/mol)
-    \item $R$ = specific gas constant, $R = \bar{R}/M$ (J/kg·K)
 \end{itemize}
+and $\bar{R}$ is the universal gas constant:
+\[\bar{R} = \begin{cases} 
+8.31447 \text{ kJ/kmol} \cdot \text{K} \\
+8.31447 \text{ kPa} \cdot \text{m}^3/\text{kmol} \cdot \text{K} \\
+0.0831447 \text{ bar} \cdot \text{m}^3/\text{kmol} \cdot \text{K} \\
+1.98588 \text{ Btu/lbmol} \cdot \text{R} \\
+10.7316 \text{ psia} \cdot \text{ft}^3/\text{lbmol} \cdot \text{R} \\
+1545.37 \text{ ft} \cdot \text{lbf/lbmol} \cdot \text{R}
+\end{cases} \quad \text{(universal gas constant)}\]
+In table A-2 the specific gas constant $R$ is given for various gases, so we do not need to calculate it using the molar mass $M$ and the universal gas constant $\bar{R}$. Additionally, if we multiply both sides of the ideal gas law by mass $m$, we can express it in terms of volume $\vol$ instead of specific volume $\svol$:
+\[P \, \vol = m R T\]
 Additionally, classical thermodynamics assumes that states are always in \textbf{equilibrium} and that processes occur in \textbf{quasi-equilibrium}, meaning the system remains balanced and changes happen slowly enough for it to adjust and maintain equilibrium throughout, and properties are well-defined. Below are some types of equilibrium that can exist in a system:
 \begin{itemize}
 \item \textbf{Thermal equilibrium} occurs when the temperature is uniform throughout the system.
