@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  24 FEB 2026 16:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  24 FEB 2026 16:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -469,10 +469,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--73
 <State.png, id=26, 317.988pt x 346.29375pt>
 File: State.png Graphic file (type png)
 <use State.png>
-Package pdftex.def Info: State.png  used on input line 84.
-(pdftex.def)             Requested size: 234.8775pt x 255.78308pt.
+Package pdftex.def Info: State.png  used on input line 85.
+(pdftex.def)             Requested size: 187.89914pt x 204.62329pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 86--89
+Underfull \hbox (badness 10000) in paragraph at lines 87--90
 
  []
 
@@ -480,51 +480,51 @@ Underfull \hbox (badness 10000) in paragraph at lines 86--89
 <Gauge pressure.png, id=35, 540.21825pt x 293.29575pt>
 File: Gauge pressure.png Graphic file (type png)
 <use Gauge pressure.png>
-Package pdftex.def Info: Gauge pressure.png  used on input line 125.
+Package pdftex.def Info: Gauge pressure.png  used on input line 127.
 (pdftex.def)             Requested size: 328.82707pt x 178.5342pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 132--136
+ [6 <./Gauge pressure.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 135--139
 
  []
 
-<Hydrostatic.png, id=36, 155.3805pt x 202.356pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--139
+
+ []
+
+<Hydrostatic.png, id=40, 155.3805pt x 202.356pt>
 File: Hydrostatic.png Graphic file (type png)
 <use Hydrostatic.png>
-Package pdftex.def Info: Hydrostatic.png  used on input line 141.
+Package pdftex.def Info: Hydrostatic.png  used on input line 144.
 (pdftex.def)             Requested size: 187.89914pt x 244.71255pt.
-<Pascal.png, id=37, 302.3295pt x 268.6035pt>
+<Pascal.png, id=41, 302.3295pt x 268.6035pt>
 File: Pascal.png Graphic file (type png)
 <use Pascal.png>
-Package pdftex.def Info: Pascal.png  used on input line 142.
+Package pdftex.def Info: Pascal.png  used on input line 145.
 (pdftex.def)             Requested size: 187.89914pt x 166.9382pt.
 
-Overfull \hbox (31.98576pt too wide) in paragraph at lines 129--144
+Overfull \hbox (31.98576pt too wide) in paragraph at lines 132--147
 []  [] 
  []
 
-[6 <./Gauge pressure.png>] [7 <./Hydrostatic.png> <./Pascal.png>]
+[7 <./Hydrostatic.png> <./Pascal.png>]
 <Barometer.png, id=48, 293.29575pt x 298.11375pt>
 File: Barometer.png Graphic file (type png)
 <use Barometer.png>
-Package pdftex.def Info: Barometer.png  used on input line 154.
+Package pdftex.def Info: Barometer.png  used on input line 157.
 (pdftex.def)             Requested size: 187.89914pt x 190.9923pt.
 
-Overfull \hbox (31.98576pt too wide) in paragraph at lines 145--156
+Overfull \hbox (31.98576pt too wide) in paragraph at lines 148--159
 []  [] 
  []
 
 <Manometer.png, id=49, 418.56375pt x 354.123pt>
 File: Manometer.png Graphic file (type png)
 <use Manometer.png>
-Package pdftex.def Info: Manometer.png  used on input line 169.
+Package pdftex.def Info: Manometer.png  used on input line 172.
 (pdftex.def)             Requested size: 187.89914pt x 158.97021pt.
 
-Overfull \hbox (57.83545pt too wide) in paragraph at lines 159--171
+Overfull \hbox (57.83545pt too wide) in paragraph at lines 162--174
 []  [] 
  []
 
@@ -532,15 +532,15 @@ Overfull \hbox (57.83545pt too wide) in paragraph at lines 159--171
 <Stacked Fluid.png, id=55, 257.16075pt x 322.20375pt>
 File: Stacked Fluid.png Graphic file (type png)
 <use Stacked Fluid.png>
-Package pdftex.def Info: Stacked Fluid.png  used on input line 185.
+Package pdftex.def Info: Stacked Fluid.png  used on input line 188.
 (pdftex.def)             Requested size: 187.89914pt x 235.4231pt.
 
-Overfull \hbox (57.83545pt too wide) in paragraph at lines 172--187
+Overfull \hbox (57.83545pt too wide) in paragraph at lines 175--190
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
+Underfull \hbox (badness 10000) in paragraph at lines 190--192
 
  []
 
@@ -548,80 +548,80 @@ Underfull \hbox (badness 10000) in paragraph at lines 187--189
 <1-110.png, id=60, 356.532pt x 269.20575pt>
 File: 1-110.png Graphic file (type png)
 <use 1-110.png>
-Package pdftex.def Info: 1-110.png  used on input line 200.
+Package pdftex.def Info: 1-110.png  used on input line 203.
 (pdftex.def)             Requested size: 281.85587pt x 212.83861pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 196--227
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 199--230
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--227
+Underfull \hbox (badness 10000) in paragraph at lines 199--230
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 196--227
+Underfull \hbox (badness 10000) in paragraph at lines 199--230
 
  []
 
 
-Overfull \hbox (23.06133pt too wide) detected at line 230
+Overfull \hbox (23.06133pt too wide) detected at line 233
 \OML/cmm/m/it/12 P[] \OT1/cmr/m/n/12 = [370 []] + [1000 [][]][9\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 81 [][]][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 45 []] + [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 79][0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 5 []] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 [13\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 6][0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 1 []] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 [0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 70][0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 22 []][]
  []
 
 [10 <./1-110.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 259--262
+Underfull \hbox (badness 10000) in paragraph at lines 262--265
 
  []
 
 <Process.png, id=65, 251.13824pt x 296.307pt>
 File: Process.png Graphic file (type png)
 <use Process.png>
-Package pdftex.def Info: Process.png  used on input line 271.
+Package pdftex.def Info: Process.png  used on input line 274.
 (pdftex.def)             Requested size: 187.89914pt x 221.70071pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 258--274
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 261--277
 []  []
  []
 
 [11 <./Process.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 285--289
+Underfull \hbox (badness 10000) in paragraph at lines 288--292
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 299--303
+Underfull \hbox (badness 10000) in paragraph at lines 302--306
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 303--306
+Underfull \hbox (badness 10000) in paragraph at lines 306--309
 
  []
 
 <Shaft.png, id=74, 218.0145pt x 147.55125pt>
 File: Shaft.png Graphic file (type png)
 <use Shaft.png>
-Package pdftex.def Info: Shaft.png  used on input line 329.
+Package pdftex.def Info: Shaft.png  used on input line 332.
 (pdftex.def)             Requested size: 187.89914pt x 127.17526pt.
 
-Overfull \hbox (31.98576pt too wide) in paragraph at lines 319--331
+Overfull \hbox (31.98576pt too wide) in paragraph at lines 322--334
 []  [] 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 336--338
+Underfull \hbox (badness 10000) in paragraph at lines 339--341
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--341
+Underfull \hbox (badness 10000) in paragraph at lines 341--344
 
  []
 
 [14 <./Shaft.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 361--364
+Underfull \hbox (badness 10000) in paragraph at lines 364--367
 
  []
 
@@ -629,40 +629,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 361--364
 <State 1.png, id=90, 135.50626pt x 247.52475pt>
 File: State 1.png Graphic file (type png)
 <use State 1.png>
-Package pdftex.def Info: State 1.png  used on input line 417.
+Package pdftex.def Info: State 1.png  used on input line 420.
 (pdftex.def)             Requested size: 93.94957pt x 171.6194pt.
 <State 2.png, id=91, 115.632pt x 222.8325pt>
 File: State 2.png Graphic file (type png)
 <use State 2.png>
-Package pdftex.def Info: State 2.png  used on input line 430.
+Package pdftex.def Info: State 2.png  used on input line 433.
 (pdftex.def)             Requested size: 93.94957pt x 181.05775pt.
 <State 3.png, id=92, 193.9245pt x 220.4235pt>
 File: State 3.png Graphic file (type png)
 <use State 3.png>
-Package pdftex.def Info: State 3.png  used on input line 443.
+Package pdftex.def Info: State 3.png  used on input line 446.
 (pdftex.def)             Requested size: 164.41711pt x 186.88324pt.
 <State 4.png, id=93, 118.64325pt x 224.037pt>
 File: State 4.png Graphic file (type png)
 <use State 4.png>
-Package pdftex.def Info: State 4.png  used on input line 456.
+Package pdftex.def Info: State 4.png  used on input line 459.
 (pdftex.def)             Requested size: 93.94957pt x 177.40775pt.
 <State 5.png, id=94, 118.64325pt x 221.02576pt>
 File: State 5.png Graphic file (type png)
 <use State 5.png>
-Package pdftex.def Info: State 5.png  used on input line 469.
+Package pdftex.def Info: State 5.png  used on input line 472.
 (pdftex.def)             Requested size: 93.94957pt x 175.02325pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--472
+Underfull \hbox (badness 10000) in paragraph at lines 406--475
 
  []
 
 
-Overfull \hbox (71.39046pt too wide) in paragraph at lines 403--472
+Overfull \hbox (71.39046pt too wide) in paragraph at lines 406--475
 []   [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 403--472
+Underfull \hbox (badness 10000) in paragraph at lines 406--475
 
  []
 
@@ -670,15 +670,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 403--472
 <Phase.png, id=100, 428.802pt x 361.95226pt>
 File: Phase.png Graphic file (type png)
 <use Phase.png>
-Package pdftex.def Info: Phase.png  used on input line 473.
+Package pdftex.def Info: Phase.png  used on input line 476.
 (pdftex.def)             Requested size: 328.82707pt x 277.57188pt.
  [18 <./State 3.png> <./State 4.png> <./State 5.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 475--480
+Underfull \hbox (badness 10000) in paragraph at lines 478--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 475--480
+Underfull \hbox (badness 10000) in paragraph at lines 478--483
 
  []
 
@@ -686,46 +686,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 475--480
 <TV.png, id=112, 402.303pt x 338.4645pt>
 File: TV.png Graphic file (type png)
 <use TV.png>
-Package pdftex.def Info: TV.png  used on input line 489.
+Package pdftex.def Info: TV.png  used on input line 492.
 (pdftex.def)             Requested size: 328.82707pt x 276.65955pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--493
+Underfull \hbox (badness 10000) in paragraph at lines 494--496
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--493
+Underfull \hbox (badness 10000) in paragraph at lines 494--496
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--493
+Underfull \hbox (badness 10000) in paragraph at lines 494--496
 
  []
 
 <Chicken.jpg, id=113, 301.125pt x 301.125pt>
 File: Chicken.jpg Graphic file (type jpg)
 <use Chicken.jpg>
-Package pdftex.def Info: Chicken.jpg  used on input line 494.
+Package pdftex.def Info: Chicken.jpg  used on input line 497.
 (pdftex.def)             Requested size: 117.43875pt x 117.43826pt.
 [20 <./TV.png> <./Chicken.jpg>]
 <PV.png, id=118, 456.5055pt x 386.04225pt>
 File: PV.png Graphic file (type png)
 <use PV.png>
-Package pdftex.def Info: PV.png  used on input line 500.
+Package pdftex.def Info: PV.png  used on input line 503.
 (pdftex.def)             Requested size: 328.82707pt x 278.0739pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
+Underfull \hbox (badness 10000) in paragraph at lines 505--507
 
  []
 
 <PT.png, id=119, 507.0945pt x 413.1435pt>
 File: PT.png Graphic file (type png)
 <use PT.png>
-Package pdftex.def Info: PT.png  used on input line 505.
+Package pdftex.def Info: PT.png  used on input line 508.
 (pdftex.def)             Requested size: 328.82707pt x 267.91597pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--509
+Underfull \hbox (badness 10000) in paragraph at lines 510--512
 
  []
 
@@ -733,65 +733,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 507--509
 <PVT.png, id=125, 604.659pt x 353.52075pt>
 File: PVT.png Graphic file (type png)
 <use PVT.png>
-Package pdftex.def Info: PVT.png  used on input line 510.
+Package pdftex.def Info: PVT.png  used on input line 513.
 (pdftex.def)             Requested size: 375.80544pt x 219.71463pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--516
+Underfull \hbox (badness 10000) in paragraph at lines 516--519
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--520
+Underfull \hbox (badness 10000) in paragraph at lines 519--523
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 520--523
+Underfull \hbox (badness 10000) in paragraph at lines 523--526
 
  []
 
 [22 <./PVT.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 534--536
+Underfull \hbox (badness 10000) in paragraph at lines 537--539
 
  []
 
 <Quality.png, id=130, 336.0555pt x 301.72725pt>
 File: Quality.png Graphic file (type png)
 <use Quality.png>
-Package pdftex.def Info: Quality.png  used on input line 537.
+Package pdftex.def Info: Quality.png  used on input line 540.
 (pdftex.def)             Requested size: 281.85587pt x 253.08083pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 539--541
+Underfull \hbox (badness 10000) in paragraph at lines 542--544
 
  []
 
 [23 <./Quality.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 542--548
+Underfull \hbox (badness 10000) in paragraph at lines 545--551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 542--548
+Underfull \hbox (badness 10000) in paragraph at lines 545--551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--561
+Underfull \hbox (badness 10000) in paragraph at lines 557--564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--561
+Underfull \hbox (badness 10000) in paragraph at lines 557--564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--561
+Underfull \hbox (badness 10000) in paragraph at lines 557--564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--561
+Underfull \hbox (badness 10000) in paragraph at lines 557--564
 
  []
 
@@ -808,9 +808,9 @@ Here is how much of TeX's memory you used:
  28323 multiletter control sequences out of 15000+600000
  569310 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,19n,65p,753b,424s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,19n,65p,753b,422s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on "c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.pdf" (24 pages, 1024839 bytes).
+Output written on "c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\%OUTDIR%\Thermo.pdf" (24 pages, 1024884 bytes).
 PDF statistics:
  194 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
