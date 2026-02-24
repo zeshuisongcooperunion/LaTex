@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771790748.12901 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/Systems.tex" "Systems.pdf" "Systems" 1771790749.05328 0
+["pdflatex"] 1771865905.25419 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/Systems.tex" "Systems.pdf" "Systems" 1771865906.93655 0
   "2 DOF.png" 1771788625 31312 3e69e872bc6e2591032d731cec3c7b6f ""
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771414564 80937 91001db6d4ae332437b4b739862cda02 ""
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1758289669 14064 f1b79be56b30e5d452b3bce564671b21 ""
@@ -90,11 +90,11 @@
   "Spring Mass.png" 1771783488 31864 f965b2096298f22befe2ddcf746eaacc ""
   "Stability.png" 1771779277 61350 545367381a5cca9a06f4760098aa15e1 ""
   "Step.png" 1771784385 8048 2c54733743913cb5a3749d7670a1cec9 ""
-  "Systems.aux" 1771790748 33 f7d8a52c1d960073e083a764194e265e "pdflatex"
+  "Systems.aux" 1771865906 33 f7d8a52c1d960073e083a764194e265e "pdflatex"
   "Systems.png" 1771774026 31003 06fae34a4b74ae5b7f4f59193078971c ""
-  "Systems.tex" 1771790747 25534 9b6e910006d50418ba8ade05b5fbfb1a ""
+  "Systems.tex" 1771865904 25536 a9b39f88a68b69b006edccb94acf7424 ""
   "Transfer Function.png" 1771779564 3855 e74174679aadf1987e9feb165cc8d92f ""
-  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/Systems.tex" 1771790747 25534 9b6e910006d50418ba8ade05b5fbfb1a ""
+  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Systems/Systems.tex" 1771865904 25536 a9b39f88a68b69b006edccb94acf7424 ""
   (generated)
   "Systems.aux"
   "Systems.log"
