@@ -96,14 +96,15 @@
         \item $\Delta ^\circ R = \frac{9}{5}\Delta K$
     \end{itemize}
 \end{itemize}
-\section*{Density and Specific Gravity}
-\[\rho = \frac{m}{\vol}\quad \text{(density)}\]
-\[\svol = \frac{\vol}{m} = \frac{1}{\rho} \quad \text{(specific volume)}\]
+\textbf{Density and Specific Gravity}
+\[\rho = \frac{m}{\vol}\quad \text{(density)}, \quad \svol = \frac{1}{\rho} = \frac{\vol}{m}  \quad \text{(specific volume)}\]
 \textbf{Specific gravity} is defined as a relative density compared to water (at 4$^\circ$C) where $\rho_{water} = 1000\,\text{kg/m}^3$:
-\[\boxed{SG = \frac{\rho_{fluid}}{\rho_{water}} \implies \rho_{fluid} = SG \cdot \rho_{water}}\]
+\[\text{SG} = \frac{\rho_{fluid}}{\rho_{water}} \implies \rho_{fluid} = SG \cdot \rho_{water}\]
 \textbf{Specific Weight}
 \[\gamma_s = \rho g \quad \text{(specific weight)}\]
 Where hydrostatic pressure can be written as $P = \gamma_s h$\\\\
+\textbf{Volume}
+\[1\,\text{m}^3 = \underline{1000\,\text{L}} = 61024\,\text{in}^3 = 35.315\,\text{ft}^3=\underline{264.17\,\text{gal}}\]
 \textbf{Slugs and lbm}
 \[\left[\frac{1\,\text{lbf}}{32.174\,\frac{\text{lbm}\cdot\text{ft}}{\text{s}^2}}\right],\quad
 \left[\frac{1\,\text{slug}}{32.174\,\text{lb,}}\right], \quad
@@ -116,10 +117,21 @@ Where hydrostatic pressure can be written as $P = \gamma_s h$\\\\
 1 mile = 5280 ft\\\\
 \textbf{Ideal Gas Equation of State}\\
 Refer to table A-4 for gas constants of common gases.
-\[ P \, \svol = R \, T, \quad
-R = \frac{\bar{R}}{M} \quad \text{(specific gas constant, J/kg·K)}\]
+\[
+P v = R T, \quad
+R = \frac{\bar{R}}{M}\quad
+\left(
+\mathrm{kJ/kg\cdot K} \quad \text{or}\quad
+\substack{
+\mathrm{Btu/lbm\cdot R} \\
+\mathrm{psia\cdot ft^3/lbm\cdot R}
+}
+\right)
+\]
 \[P\vol = mRT \quad \text{(in terms of TOTAL volume and mass)}\]
-\textbf{Universal gas constant:}  $\bar{R} = 8.314$ J/(mol·K)
+\textbf{Universal gas constant:}  $\bar{R} = 8.314$ J/(mol·K)\\\\
+\underline{Note:} Convert units for $P$, $\vol$, $\svol$, and $T$ to match the units of $R$ when using the ideal gas law. Also,
+\[\left[\frac{\text{kJ}}{\text{kpa}}\right]=[\text{m}^3]\]
 \begin{center}
 \includegraphics[width=0.5\textwidth]{../../PT.png}
 \end{center}
@@ -172,8 +184,14 @@ For steady state process with no heat transfer:
 \textbf{Phase Change \& Saturation}
 \[h_{fg} = h_g - h_f \quad \text{(latent heat of vaporization)}\]
 \[x = \frac{m_g}{m_f + m_g} \quad \text{(quality definition)}\]
-\[y_\text{avg} = y_f + x(y_g - y_f) \quad \text{(relation for }\svol, h, u)\]
-\[x = \frac{y_\text{avg} - y_f}{y_g - y_f} \quad \text{(solve for quality)}\]
+\[
+\left.
+\begin{aligned}
+&y_{\text{avg}} = y_f + x(y_g - y_f) \quad \text{(relation for } \svol, h, u) \\
+&x = \frac{y_{\text{avg}} - y_f}{y_g - y_f} \quad \text{(solve for quality)}
+\end{aligned}
+\right\} y_{fg} = y_g - y_f
+\]
 \textbf{Compressed Liquid Approximation}
 \[y(T,P) \approx y_f(T) \quad \text{(use saturated liquid at same T)}\]
 \end{multicols}

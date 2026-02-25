@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  24 FEB 2026 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  25 FEB 2026 11:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -348,32 +348,37 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 47.
  (C:\Users\zsong\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 105--108
+Underfull \hbox (badness 10000) in paragraph at lines 104--107
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--119
+Underfull \hbox (badness 10000) in paragraph at lines 111--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--119
+Underfull \hbox (badness 10000) in paragraph at lines 111--120
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--119
+Underfull \hbox (badness 10000) in paragraph at lines 111--120
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 131--134
 
  []
 
 <../../PT.png, id=1, 507.0945pt x 413.1435pt>
 File: ../../PT.png Graphic file (type png)
 <use ../../PT.png>
-Package pdftex.def Info: ../../PT.png  used on input line 124.
+Package pdftex.def Info: ../../PT.png  used on input line 136.
 (pdftex.def)             Requested size: 262.61894pt x 213.97218pt.
 
-Overfull \hbox (5.0pt too wide) in paragraph at lines 124--125
+Overfull \hbox (5.0pt too wide) in paragraph at lines 136--137
  [] 
  []
 
@@ -383,36 +388,41 @@ Overfull \hbox (5.0pt too wide) in paragraph at lines 124--125
 <PVT - Copy.png, id=20, 486.81876pt x 590.205pt>
 File: PVT - Copy.png Graphic file (type png)
 <use PVT - Copy.png>
-Package pdftex.def Info: PVT - Copy.png  used on input line 129.
+Package pdftex.def Info: PVT - Copy.png  used on input line 141.
 (pdftex.def)             Requested size: 183.83646pt x 222.87532pt.
 <../../PV.png, id=21, 456.5055pt x 386.04225pt>
 File: ../../PV.png Graphic file (type png)
 <use ../../PV.png>
-Package pdftex.def Info: ../../PV.png  used on input line 132.
+Package pdftex.def Info: ../../PV.png  used on input line 144.
 (pdftex.def)             Requested size: 183.83646pt x 155.45679pt.
 <../../TV.png, id=22, 402.303pt x 338.4645pt>
 File: ../../TV.png Graphic file (type png)
 <use ../../TV.png>
-Package pdftex.def Info: ../../TV.png  used on input line 135.
+Package pdftex.def Info: ../../TV.png  used on input line 147.
 (pdftex.def)             Requested size: 183.83646pt x 154.66264pt.
 <../../Quality.png, id=23, 336.0555pt x 301.72725pt>
 File: ../../Quality.png Graphic file (type png)
 <use ../../Quality.png>
-Package pdftex.def Info: ../../Quality.png  used on input line 138.
+Package pdftex.def Info: ../../Quality.png  used on input line 150.
 (pdftex.def)             Requested size: 183.83646pt x 165.05731pt.
 
-Overfull \hbox (19.8833pt too wide) detected at line 146
+Overfull \hbox (19.8833pt too wide) detected at line 158
 $\OML/cmm/m/it/10 e \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 u \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 v[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 gh []$ 
  []
 
 
-Overfull \hbox (33.63315pt too wide) detected at line 154
+Overfull \hbox (33.63315pt too wide) detected at line 166
 $[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 + [] \OMS/cmsy/m/n/10 ^^@ []$ 
  []
 
 
-Overfull \hbox (26.09612pt too wide) detected at line 157
+Overfull \hbox (26.09612pt too wide) detected at line 169
 $[] \OT1/cmr/m/n/10 = [][] = []^^A\OML/cmm/m/it/10 P []$ 
+ []
+
+
+Overfull \hbox (8.77618pt too wide) detected at line 194
+$[] \OML/cmm/m/it/10 y[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 y[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 y[]$ 
  []
 
 
@@ -425,15 +435,15 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5408 strings out of 474486
- 87988 string characters out of 5743755
- 1961542 words of memory out of 5000000
- 27649 multiletter control sequences out of 15000+600000
- 564748 words of font info for 60 fonts, out of 8000000 for 9000
+ 5404 strings out of 474486
+ 87946 string characters out of 5743755
+ 1964542 words of memory out of 5000000
+ 27647 multiletter control sequences out of 15000+600000
+ 564070 words of font info for 58 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,65p,319b,349s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,20n,65p,319b,349s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1000.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on "c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\Reference Sheet\Exam 1\%OUTDIR%\Reference Sheet.pdf" (2 pages, 395295 bytes).
+Output written on "c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\Reference Sheet\Exam 1\%OUTDIR%\Reference Sheet.pdf" (2 pages, 397120 bytes).
 PDF statistics:
  82 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

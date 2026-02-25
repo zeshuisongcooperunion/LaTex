@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771967885.33927 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Reference Sheet/Exam 1/Reference Sheet.tex" "Reference Sheet.pdf" "Reference Sheet" 1771967886.10191 0
-  "%OUTDIR%/Reference Sheet.aux" 1771967885 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
+["pdflatex"] 1772035614.54306 "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Reference Sheet/Exam 1/Reference Sheet.tex" "Reference Sheet.pdf" "Reference Sheet" 1772035615.24681 0
+  "%OUTDIR%/Reference Sheet.aux" 1772035615 32 044b7f8fc9779af7531264e0c5c84b6d "pdflatex"
   "../../PT.png" 1771801195 57983 23c53dcc9edc6c659c4916003708c8e9 ""
   "../../PV.png" 1771800632 69436 29ae490986fb67a3432b13edbe0dd04d ""
   "../../Quality.png" 1771808401 28227 95b2d6d8f605615f7c847ad369114643 ""
@@ -8,8 +8,6 @@
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1771414564 80937 91001db6d4ae332437b4b739862cda02 ""
   "C:/Users/zsong/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1000.pk" 1759836066 11548 baaa13199b628aa9d9a6f4d7312163cb ""
   "C:/Users/zsong/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758289211 24225046 93fab31cee048cd2ef0f58bac36106e4 ""
-  "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0500.tfm" 993062506 1452 d4e3b17acac08070a568f62f3c020c49 ""
-  "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm0700.tfm" 993062506 1452 97bdc98984cb373fbcd868e2fa55f5f2 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/tfm/jknappen/ec/tcrm1000.tfm" 993062508 1436 c7f957a372ef2fbe93c0982f96625e12 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1233951848 1120 1e8878807317373affa7f7bba4cf2f6a ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmbsy7.tfm" 1233951848 1120 7f9f170e8aa57527ad6c49feafd45d54 ""
@@ -74,8 +72,8 @@
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/tex/latex/tools/bm.sty" 1700599895 13231 2c742011581e2bf297e33520567d9464 ""
   "C:/Users/zsong/AppData/Local/Programs/MiKTeX/tex/latex/tools/multicol.sty" 1700599895 32515 51caec75eda9c8890135f12f1a4eddc3 ""
   "PVT - Copy.png" 1771813499 140742 243ae0143f819a01f15b4e367ca05a53 ""
-  "Reference Sheet.tex" 1771967884 7871 8466cbb5a4766f63a16b32b389386754 ""
-  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Reference Sheet/Exam 1/Reference Sheet.tex" 1771967884 7871 8466cbb5a4766f63a16b32b389386754 ""
+  "Reference Sheet.tex" 1772035614 8374 e652b302ffcab8970d6b08c5aff57a95 ""
+  "c:/Users/zsong/Desktop/LaTex/Spring 2026 Notes/Thermodynamics/Reference Sheet/Exam 1/Reference Sheet.tex" 1772035614 8374 e652b302ffcab8970d6b08c5aff57a95 ""
   (generated)
   "%OUTDIR%/Reference Sheet.aux"
   "%OUTDIR%/Reference Sheet.log"
