@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  23 FEB 2026 12:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.9.19)  25 FEB 2026 07:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -199,7 +199,7 @@ Package: enumitem 2025/02/06 v3.11 Customized lists
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count284
 \l__pdf_internal_box=\box58
-) (HW3.aux)
+) (c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\HW\HW3\%OUTDIR%\HW3.aux)
 \openout1 = `HW3.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -315,122 +315,114 @@ File: 3-43.png Graphic file (type png)
 Package pdftex.def Info: 3-43.png  used on input line 74.
 (pdftex.def)             Requested size: 281.85587pt x 80.41629pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 72--87
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 72--89
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--87
+Underfull \hbox (badness 10000) in paragraph at lines 72--89
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 72--87
+Underfull \hbox (badness 10000) in paragraph at lines 89--92
 
  []
 
-<3-60.png, id=21, 411.33675pt x 94.55325pt>
+[2 <./3-43.png>]
+<3-60.png, id=26, 411.33675pt x 94.55325pt>
 File: 3-60.png Graphic file (type png)
 <use 3-60.png>
-Package pdftex.def Info: 3-60.png  used on input line 91.
+Package pdftex.def Info: 3-60.png  used on input line 105.
 (pdftex.def)             Requested size: 281.85587pt x 64.7931pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 89--104
+Underfull \hbox (badness 2865) in paragraph at lines 111--112
+[]\OT1/cmr/m/n/12 Water is heated un-der the
+ []
+
+
+Underfull \hbox (badness 5787) in paragraph at lines 116--117
+[]\OT1/cmr/m/n/12 Temperature at which wa-
+ []
+
+
+Underfull \hbox (badness 1577) in paragraph at lines 116--117
+\OT1/cmr/m/n/12 ter boils at the fixed pres-
+ []
+
+
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 103--120
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--104
+Underfull \hbox (badness 10000) in paragraph at lines 103--120
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 89--104
-
- []
-
-<3-69.png, id=22, 419.166pt x 42.1575pt>
+<3-69.png, id=27, 419.166pt x 42.1575pt>
 File: 3-69.png Graphic file (type png)
 <use 3-69.png>
-Package pdftex.def Info: 3-69.png  used on input line 108.
+Package pdftex.def Info: 3-69.png  used on input line 130.
 (pdftex.def)             Requested size: 281.85587pt x 28.34764pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 106--121
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 128--144
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 106--121
+Underfull \hbox (badness 10000) in paragraph at lines 128--144
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 106--121
-
- []
-
-<3-75.png, id=23, 422.17725pt x 136.71075pt>
+[3 <./3-60.png> <./3-69.png>]
+<3-75.png, id=35, 422.17725pt x 136.71075pt>
 File: 3-75.png Graphic file (type png)
 <use 3-75.png>
-Package pdftex.def Info: 3-75.png  used on input line 125.
+Package pdftex.def Info: 3-75.png  used on input line 151.
 (pdftex.def)             Requested size: 281.85587pt x 91.27446pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 123--138
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 149--170
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 123--138
+Underfull \hbox (badness 10000) in paragraph at lines 149--170
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 123--138
-
- []
-
-[2 <./3-43.png> <./3-60.png> <./3-69.png>]
-<3-95E.png, id=31, 415.5525pt x 79.497pt>
+<3-95E.png, id=36, 415.5525pt x 79.497pt>
 File: 3-95E.png Graphic file (type png)
 <use 3-95E.png>
-Package pdftex.def Info: 3-95E.png  used on input line 142.
+Package pdftex.def Info: 3-95E.png  used on input line 183.
 (pdftex.def)             Requested size: 281.85587pt x 53.92259pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 140--155
-[]  [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--155
+Underfull \hbox (badness 10000) in paragraph at lines 181--186
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--155
-
- []
-
-<3-136.png, id=32, 413.74574pt x 80.09924pt>
+[4 <./3-75.png>]
+<3-136.png, id=41, 413.74574pt x 80.09924pt>
 File: 3-136.png Graphic file (type png)
 <use 3-136.png>
-Package pdftex.def Info: 3-136.png  used on input line 159.
+Package pdftex.def Info: 3-136.png  used on input line 192.
 (pdftex.def)             Requested size: 281.85587pt x 54.56819pt.
 
-Overfull \hbox (2.61107pt too wide) in paragraph at lines 157--172
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 190--205
 []  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--172
+Underfull \hbox (badness 10000) in paragraph at lines 190--205
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 157--172
+Underfull \hbox (badness 10000) in paragraph at lines 190--205
 
  []
 
-[3 <./3-75.png> <./3-95E.png> <./3-136.png>] (HW3.aux)
+[5 <./3-95E.png> <./3-136.png>] (c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\HW\HW3\%OUTDIR%\HW3.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -438,16 +430,16 @@ L3 programming layer <2024-01-04>
  ) 
 Here is how much of TeX's memory you used:
  3856 strings out of 474486
- 58226 string characters out of 5743755
- 1936542 words of memory out of 5000000
+ 58565 string characters out of 5743755
+ 1940542 words of memory out of 5000000
  26096 multiletter control sequences out of 15000+600000
  567987 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,14n,65p,331b,279s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on HW3.pdf (3 pages, 316241 bytes).
+ 57i,14n,65p,333b,351s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\zsong\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/zsong/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on "c:\Users\zsong\Desktop\LaTex\Spring 2026 Notes\Thermodynamics\HW\HW3\%OUTDIR%\HW3.pdf" (5 pages, 347654 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

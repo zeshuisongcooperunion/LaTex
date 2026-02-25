@@ -64,8 +64,8 @@ Find:
 \[\svol_1 = \frac{\vol}{m} = \frac{1.1989}{1} = 1.1989~\text{m}^3/\text{kg}\]
 \textbf{State 2:}
 \[\svol_2 = \frac{3\vol}{m} = \frac{3(1.1989)}{1} = 3.5967~\text{m}^3/\text{kg}\]
-Using the specific volume at state 2, it is a saturated mixture, so we can use table A-4 to find the saturation pressure (via linear interpolation):
-\[P_2-P_1=m(T_2-T_1) \quad \implies P_2 - [0.8725\,\text{kPa}] = (0.0522)\left([3^\circ C] - [5^\circ C]\right)\]
+Comparing the specific volume at state 2 to $\svol_f$ and $\svol_g$, we see that it is a saturated mixture, so we can use table A-4 to find the saturation pressure (via linear interpolation):
+\[P-P_0=m(T-T_0) \quad \implies P - [0.8725\,\text{kPa}] = (0.0522)\left([3^\circ C] - [5^\circ C]\right)\]
 \[\boxed{P_2 = P_{\text{sat @ 3}^\circ C}=0.7679\,\text{kPa}}\]
 \section*{3-43}
 \vspace{-1em}
@@ -77,13 +77,27 @@ Using the specific volume at state 2, it is a saturated mixture, so we can use t
 \begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
 Given:
 \begin{itemize}
-    \item 
+    \item State 1: $m=100$ kg, $P=200$ kPa, $\vol_1=12.322$ m$^3$, R-134a
+    \item State 2: $m=100$ kg, $P=200$ kPa, $\vol_2=0.5(12.322)$ m$^3$, R-134a
 \end{itemize}
 Find: 
 \begin{itemize}
-    \item 
+    \item Temperature at state 2 and change in internal energy from state 1 to state 2
 \end{itemize}
 \end{minipage}\\\\
+At state 1, 
+\[\svol_1 = \frac{[12.322\,\text{m}^3]}{[100\,\text{kg}]} = 0.12322~\text{m}^3/\text{kg}\]
+Comparing to the saturated liquid and vapor specific volumes, we see that state 1 is a superheated vapor. Using table A-13, the point $\svol=0.12322$ m$^3$/kg at P=200 kPa = 0.2 MPa is given as $u_1 = 263.09 \,\text{kJ/kg}$.\\\\
+At state 2,
+\[\svol_2 = \frac{[0.5(12.322)\,\text{m}^3]}{[100\,\text{kg}]} = 0.06161~\text{m}^3/\text{kg}\]
+Comparing to the saturated liquid and vapor specific volumes, we see that state 2 is a saturated mixture. Thus, its temperature is the saturation temperature at 200 kPa.
+\[\boxed{T_2 = T_{\text{sat @}200\,\text{kPa}} = -10.09^\circ\mathrm{C}}\]
+To find internal energy at state 2, we can use the quality:
+\[x = \frac{\svol_\text{avg} - \svol_f}{\svol_g-\svol_f} = \frac{[0.06161\,\text{m}^3\text{/kg}] - [0.0007532 \,\text{m}^3\text{/kg}]}{[0.099951\,\text{m}^3\text{/kg}] - [0.0007532 \,\text{m}^3\text{/kg}]} = 0.6134\]
+Thus, the internal energy at state 2 is
+\[u_2 = u_f + x(u_g-u_f) = 38.26 + 0.6134(186.25) = 152.505\,\text{kJ/kg}\]
+Finally, the change in internal energy from state 1 to state 2 is:
+\[\Delta u = u_2-u_1 = 152.505 - 263.09 = \boxed{-110.585\,\text{kJ/kg}}\]
 \section*{3-60}
 \vspace{-1em}
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
@@ -94,13 +108,21 @@ Find:
 \begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
 Given:
 \begin{itemize}
-    \item 
+    \item Water is heated under the weight of a 40 kg mass with area 150 cm$^2$ on top of it.
+    \item $P_\text{atm} = 100$ kPa
 \end{itemize}
 Find: 
 \begin{itemize}
-    \item 
+    \item Temperature at which water boils at the fixed pressure(saturation temperature)
 \end{itemize}
 \end{minipage}\\\\
+The pressure exerted by the mass is given by
+\[P_\text{mass} = \frac{mg}{A} = \frac{[40\,\text{kg}][9.81\,\text{m/s}^2]}{[150\,\text{cm}^2]\left[\frac{(10^-2\,\text{m})^2}{1\,\text{cm}^2}\right]} = 26160\,\text{Pa} = 26.16\,\text{kPa}\]
+Thus, the total pressure on the water is
+\[P = P_\text{atm} + P_\text{mass} = 100 + 26.16 = 126.16\,\text{kPa}\]
+At this pressure, the saturation temperature is found on table A-5 via linear interpolation (points: 125 kPa, 105.97$^\circ$C, 150 kPa, 111.35$^\circ$C):
+\[T-T_0 = m(P-P_0)\quad\implies\quad T - [105.97^\circ\mathrm{C}] = (0.2152)([126.16\,\text{kPa}] - [125\,\text{kPa}])\]
+\[\boxed{T_\text{sat @ 126.16 kPa} = 106.219^\circ\mathrm{C}}\]
 \section*{3-69}
 \vspace{-1em}
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
@@ -111,13 +133,17 @@ Find:
 \begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
 Given:
 \begin{itemize}
-    \item 
+    \item $\vol=100$ L, $m=1$ kg, $T=27^\circ$C, air
 \end{itemize}
 Find: 
 \begin{itemize}
-    \item 
+    \item Pressure
 \end{itemize}
 \end{minipage}\\\\
+Assuming that air acts as an ideal gas, we can find pressure using the ideal gas law:
+\[\vol = [100\,\text{L}]\left[\frac{1\,\text{m}^3}{1000\,\text{L}}\right] = 0.1\,\text{m}^3\]
+\[T = [27^\circ\mathrm{C}] + 273.15 = 300.15\,\text{K}\]
+\[P\vol = mRT \quad\implies\quad P = \frac{mRT}{\vol} = \frac{[1\,\text{kg}][0.2870\,\text{kJ/kg}\cdot\text{K}][300.15\,\text{K}]}{[0.1\,\text{m}^3]} = \boxed{861.0\,\text{kPa}}\]
 \section*{3-75}
 \vspace{-1em}
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
@@ -128,30 +154,37 @@ Find:
 \begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
 Given:
 \begin{itemize}
-    \item 
+    \item State 1: 
+    \begin{itemize}
+        \item A: $\vol_{1A} = 1$ m$^3$, $T_{1A} = 10^\circ$C, $P_{1A}=350$ kPa
+        \item B: $m_{1B} = 3$ kg, $T_{1B} = 35^\circ$C, $P_{1B}=150$ kPa
+    \end{itemize}
+    \item State 2: A and B mix and reach thermal equilibrium at $T_2 = 20^\circ$C
 \end{itemize}
 Find: 
 \begin{itemize}
-    \item 
+    \item Volume of B at state 1, $\vol_{1B}$, and final pressure $P_2$ at state 2
 \end{itemize}
 \end{minipage}\\\\
+At state 1, we can find the volume of B using the ideal gas law:
+\[T_{1B} = [35^\circ\mathrm{C}] + 273.15 = 308.15\,\text{K}\]
+\[P\vol = mRT \quad\implies\quad \vol_{1B} = \frac{m_{1B}RT_{1B}}{P_{1B}} = \frac{[3\,\text{kg}][0.2870\,\text{kJ/kg}\cdot\text{K}][308.15\,\text{K}]}{[150\,\text{kPa}]} = \boxed{1.768\,\text{m}^3}\]
+Finding mass of A using ideal gas law:
+\[T_{1A} = [10^\circ\mathrm{C}] + 273.15 = 283.15\,\text{K}\]
+\[P\vol = mRT \quad\implies\quad m_{1A} = \frac{P_{1A}\vol_{1A}}{RT_{1A}} = \frac{[350\,\text{kPa}][1\,\text{m}^3]}{[0.2870\,\text{kJ/kg}\cdot\text{K}][283.15\,\text{K}]} = 4.306\,\text{kg}\]
+At state 2, the masses and volumes of A and B combine (it stays constant), using the given temperature, we can use the ideal gas law to find the final pressure:
+\[T_2 = [20^\circ\mathrm{C}] + 273.15 = 293.15\,\text{K}\]
+\[\vol_2 = \vol_{1A} + \vol_{1B} = 1 + 1.768 = 2.768\,\text{m}^3\]
+\[P_2 = \frac{m_2RT_2}{\vol_2} = \frac{[4.306+ 3\,\text{kg}][0.2870\,\text{kJ/kg}\cdot\text{K}][293.15\,\text{K}]}{[2.768\,\text{m}^3]} = \boxed{222.096\,\text{kPa}}\]
 \section*{3-95E}
 \vspace{-1em}
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
 \centering
 \includegraphics[width=\textwidth]{3-95E.png}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}
-Given:
-\begin{itemize}
-    \item 
-\end{itemize}
-Find: 
-\begin{itemize}
-    \item 
-\end{itemize}
 \end{minipage}\\\\
+\textbf{(a)}
+\[R = 0.08149\,\left[\frac{\text{kJ}}{\text{kg}\cdot\text{K}}\right]\left[\frac{778.169\,\text{ft}\cdot\text{lbf}}{1055.06\,\text{J}}\right]\left[\frac{1\,\text{J}}{1\,\text{kJ}}\right]\left[\right]
+\]
 \section*{3-136}
 \vspace{-1em}
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
