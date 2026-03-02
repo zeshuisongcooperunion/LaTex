@@ -6,3 +6,5 @@ Spring 2026 Notes/Systems/HW/Take home midterm 1/
 *.fls
 *.log
 *.synctex.gz
+
+.vscode/
