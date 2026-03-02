@@ -1,2 +1,8 @@
 # Ignore the entire midterm folder
 Spring 2026 Notes/Systems/HW/Take home midterm 1/
+# LaTeX auxiliary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.synctex.gz
