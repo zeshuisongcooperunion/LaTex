@@ -129,6 +129,70 @@ Double shear means shear is carried on both sides of incoming member (clevis joi
 \begin{center}
     \includegraphics[width=0.8\textwidth]{Double Shear.png}
 \end{center}
+\section*{3D State of Stress}
+Consider an infinitesimal cube of material that is internal to a member under load with side lengths $a$ much smaller than the member. All the normal and shear stresses on the faces are \textit{internal} stresses exerted by the surrounding material and not the applied load. 
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{3d state of stress.png}
+\end{center}
+The cube is in equilibrium, so the forces on each face must balance out. Thus, we only need to define the stresses on the positive faces, and the stresses on the negative faces will be of equal magnitude but opposite direction.\\\\
+There are 3 normal stresses $\sigma_i$
+\begin{itemize}
+    \item $i$ is the direction of the outward normal vector of the face (face direction)
+    \item $i$ is also the direction of the force (by definition of normal stress)
+\end{itemize}
+There are 6 shear stresses $\tau_{ij}$
+\begin{itemize}
+    \item $i$ is the direction of the outward normal vector of the face (face direction)
+    \item $j$ is the direction of the force (perpendicular to the face direction by definition of shear stress)
+\end{itemize}
+\newpage\noindent
+\underline{Note:} Define a coordinate system and be consistent with the directions of the normal and shear stresses (point along the positive direction of the coordinate system).\\\\
+\textbf{Stress on the Negative Faces}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+    The cube of material is in equilibrium, so the forces on each face must balance out. Since each face has the same area, the corresponding stresses must also balance.
+\[\sum F_x =0 \quad\implies\quad \sigma_x - \sigma_x + \tau_{xy} - \tau_{xy} = 0\]
+\[\sum F_y =0\quad\implies\quad \sigma_y - \sigma_y + \tau_{xy} - \tau_{xy} = 0\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+\includegraphics[width=\textwidth]{negative faces.png}
+\end{minipage}
+\textbf{Shear Stress Symmetry}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+    Building on the equilibrium of the cube, the moments must also balance out. Thus, we can define a shear stress symmetry:
+\[\begin{aligned}
+\sum M_z = 0 \quad&\implies\quad 2\tau_{xy}\left(\frac{a}{2}\right)a^2 - 2\tau_{yx}\left(\frac{a}{2}\right)a^2 = 0\\
+&\implies\quad \tau_{xy} = \tau_{yx}
+\end{aligned}\]
+Therefore,
+\[
+\boxed{
+\begin{aligned}
+\tau_{yx} &= \tau_{xy}\\
+\tau_{zx} &= \tau_{xz}\\
+\tau_{zy} &= \tau_{yz}
+\end{aligned}
+}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+\includegraphics[width=\textwidth]{shear stress symmetry.png}
+\end{minipage}
+\underline{Note:} Shear stress symmetry holds even with acceleration and angular acceleration (non-equilibrium) since the moments from the inertial forces still balance out (as length $a\rightarrow 0$).
+\begin{align*}
+\sum M_z &= I_{zz} \alpha \\
+\sum M_z &= 2\tau_{xy} \left( \frac{a}{2} \right) a^2 - 2\tau_{yx} \left( \frac{a}{2} \right) a^2 \\
+I_{zz} &= \frac{1}{6} m a^2 = \frac{1}{6} \rho a^5 \\
+&\Rightarrow a^3 (\tau_{xy} - \tau_{yx}) = \rho a^5 \alpha
+\end{align*}
+Limit as $a \to 0$
+\vspace{-1em}
+\begin{gather*}
+\tau_{yx} - \tau_{xy} = \rho a^2 \alpha \to 0 \\
+\tau_{yx} = \tau_{xy}
+\end{gather*}
+
 \begin{center}
     {\LARGE Axial Loading and Deformation\par}
 \end{center}
@@ -137,9 +201,9 @@ This is going to be a long section, we finally introduce strain and deformation,
 \vspace{-1em}
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
 If deflection $\delta$ is defined as the change in length of a member (usually by some load), then we can define the axial strain as the amount of deflection per unit length. It is a dimensionless quantity.
-\[\epsilon = \frac{\delta}{L}\quad\text{(uniform strain)}\]
+\[\boxed{\varepsilon = \frac{\delta}{L}\quad\text{(uniform strain)}}\]
 For a general member, we can define the limit
-\[\epsilon = \lim_{\delta\to 0} \frac{\Delta\delta}{\Delta L}=\frac{d\delta}{dL}\quad\text{(local strain)}\]
+\[\varepsilon = \lim_{\delta\to 0} \frac{\Delta\delta}{\Delta L}=\frac{d\delta}{dL}\quad\text{(local strain)}\]
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
@@ -147,8 +211,8 @@ For a general member, we can define the limit
 \end{minipage}
 \vspace{-4em}
 \section*{Axial Deflection}
-In the elastic region below the yield stress, we can use Hooke's Law to relate the axial stress to the axial strain using Young's Modulus $E$.
-\[\sigma = E\epsilon\] 
+In the elastic region below the yield stress, we can use Hooke's Law to relate the axial stress to the axial strain using the \textbf{Young's Modulus} or \textbf{modulus of elasticity} $E$.
+\[\boxed{\sigma = E\varepsilon}\] 
 Thus, we can define the \textbf{axial deflection} as
 \[\boxed{\delta = \frac{PL}{EA}}\]
 and \textbf{stiffness} of the member as
@@ -161,6 +225,352 @@ Thus, we can generalize for non-uniform members by integrating over the length o
 \[\delta = \sum\frac{P_i L_i}{E_i A_i} =\int_0^L \frac{P}{EA} dx\]
 \section*{Statically Indeterminate Problems}
 The nice thing about having a deflection formula is that we can now apply constraints on the deflection to solve for unknown forces. A useful analogy here is to think of the members as springs. In some cases, the members are in series where the total length is constant ($\delta_1 + \delta_2 = 0$), and in some cases, the members are in parallel where the deflection is constant ($\delta_1 = \delta_2$). We can use these constraints to solve for unknown forces and then find the stresses and strains as usual.
-%Next up: prestressed concrete, thermal stress, poisson's ratio, and stress concentration factors.
+\section*{Prestressed Concrete}
+Since concrete is stronger in compression than in tension, it is common to \textit{preload} the concrete with a compressive force (from embedded steel wires). It works by the following process:
+\begin{center}
+\includegraphics[width=0.5\textwidth]{prestressed concrete.jpg}
+\end{center}
+Initially (state 0), there is no concrete and the steel wires are at length $L_0$. 
+\begin{enumerate}
+    \item \underline{Pre-tensioning}: The steel wires are stretched to a length $L_1$ by a load $Q$ and then fixed in place. This creates a strain 
+    \[\varepsilon_{1s} = \frac{Q}{A_s E_s}\]
+    \item \underline{Casting}: While the wires are held under tension, the concrete is poured around them and allowed to set (harden). At this moment, the concrete has zero stress and zero strain, but it is now bonded to the stretched wires.
+    \item \underline{Release}: The external load $Q$ is removed. The steel wires want to shrink back to their original length, but the hardened concrete is in the way. Thus, as the steel contracts slightly, it pushes against the concrete, putting the concrete into compression.
+\end{enumerate}
+Thus, the strain of the steel and concrete in state 3 must satisfy this constraint equation, with the concrete strain negative due to compression and the steel strain positive due to tension.
+\[\boxed{\varepsilon_{3s}=\varepsilon_{2s} + \varepsilon_{3c}}\]
+To determine the strains, we use static equilibrium and express the loads in terms of Hooke’s law.
+\[P_s + P_c = 0\]
+\[P_s = E_s A_s \varepsilon_{3s} = E_s A_s (\varepsilon_{2s} + \varepsilon_{3c}), \quad P_c = E_c A_c \varepsilon_{3c}\]
+\section*{Thermal Stress}
+\textbf{Thermal Expansion}\\
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+    When an unconstrained member is heated, it expands by a length $\delta_T$ that is given by the coefficient of thermal expansion $\alpha$ and the change in temperature $\Delta T$.
+    \[\boxed{\delta_T = \alpha (\Delta T) L}\]
+    The thermal strain is then
+    \[\boxed{\varepsilon_T = \frac{\delta_T}{L} = \alpha \Delta T}\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+\includegraphics[width=\textwidth]{thermal expansion.png}
+\end{minipage}
+\textbf{Thermal Stress}\\
+To determine the thermal stress in a \textit{constrained member}, we use a superposition approach similar to the mechanics of prestressed concrete. The process is modeled in two stages:\\
+\begin{minipage}[t]{0.55\textwidth} \vspace{0pt}
+    \begin{enumerate}
+    \item \underline{Free Expansion:} The member is imagined to undergo unconstrained thermal expansion 
+    $$\delta_T = \alpha(\Delta T)L$$
+    \item \underline{Constraint Application:} A compressive load $P$ is then applied to provide a mechanical displacement $\delta_P$ that restores the member to its original length.
+    \[\delta_P = -\frac{PL}{EA}\]
+\end{enumerate}
+Since the net displacement in a fixed, constrained structure is zero, we have the constraint
+$$\boxed{\delta = \delta_T + \delta_P = 0}$$
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+\includegraphics[width=\textwidth]{thermal stress.png}
+\end{minipage}
+Applying the constraint to solve for the induced force:
+$$\alpha(\Delta T)L = \frac{PL}{EA} \implies P = \alpha(\Delta T)EA$$
+The resulting stress from this restorative load corresponds to the thermal stress in the member:
+$$\boxed{\sigma_T = \frac{-P}{A} = -\alpha(\Delta T)E}$$
+\underline{Sign convention:} For a positive change in temperature (heating), the thermal stress is compressive (negative) while for a negative change in temperature (cooling), the thermal stress is tensile (positive).
+\newpage
+\section*{Poisson's Ratio}
+When a member is stretched in one direction, it causes transverse shrinkage in most materials. This is quantified by Poisson's ratio $\nu$. In the case of \textit{uniaxial} stress:\\
+\begin{minipage}[t]{0.3\textwidth} \vspace{0pt}
+    \[\sigma_x = \frac{P}{A}, \quad \sigma_y = \sigma_z = 0\]
+\[\varepsilon_x = \frac{P}{EA}\]
+\[\boxed{\varepsilon_y = \varepsilon_z = -\nu \varepsilon_x}\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{poissons ratio.png}
+\end{minipage}
+\section*{Saint-Venant's Principle}
+So far, we have considered only \textit{uniform} stress and strain or calculated the \textit{average} values. In reality, point loads and geometric discontinuities (holes, notches, etc.) produce non-uniform stress and strain distributions.\\\\
+Saint-Venant’s principle identifies the regions where the average stress and strain assumptions hold and states that the influence of these \textit{stress concentrators} can be expressed as the average stress or strain multiplied by a certain factor.\\\\
+Specifically, in the region beyond \underline{1 member width} away from the point of load application or geometric discontinuity, the average stress and strain assumptions hold (within 3\%). Only if the member is in static equilibrium.
+\section*{Stress Concentrations}
+We can quantify the effect of stress concentrators using a \textit{stress concentration factor} $K$. The stress concentration factor is strictly a function of geometry and load configuration where $\sigma_\text{ave}$ is the local average normal stress at the critical area.
+\[\boxed{K = \frac{\sigma_\text{max}}{\sigma_\text{ave}}}\]
+\newpage\noindent
+For example, near holes and fillets we have the following stress distributions
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Stress concentrations.png}
+\end{center}
+We determine the stress concentration factor $K$ from tables and then use it to find the maximum stress at the critical area.
+\begin{center}
+    \includegraphics[width=\textwidth]{stress concentration table.png}
+\end{center}
+Note that the values of $K$ are valid only for the elastic region where $\sigma_\text{max}<\sigma_\text{yield}$, and they are not valid for plastic deformation where the stress distribution is more uniform.
+\section*{Plastic Deformation}
+When $\sigma_{\text{max}} > \sigma_{\text{yield}}$, we use the \textbf{bilinear elastoplastic material model}. This means that once the material reaches the yield stress, it begins to deform plastically. In the ideal elastoplastic model, the stress remains \textit{constant} at the yield value while the strain continues to increase until failure.\\\\
+If the load is removed while the material is in the plastic region, the unloading path follows a linear slope equal to the elastic modulus. The stress returns to zero along this line, but a permanent plastic strain remains.
+\newpage\noindent
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+\begin{itemize}
+    \item $\sigma < \sigma_{\text{yield}}$ (elastic region): \[\sigma = E\varepsilon\]
+    \item $\sigma \geq \sigma_{\text{yield}}$ (plastic region): \[\sigma = \sigma_{\text{yield}}\quad \text{(increasing $\varepsilon$)}\] 
+    \item Unloading from plastic region: \[\sigma = \sigma_\text{yield} - E(\varepsilon_\text{max}-\varepsilon) \quad \text{(decreasing $\varepsilon$)}\] 
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{plastic .png}
+\end{minipage}\\\\
+\begin{minipage}[t]{0.55\textwidth} \vspace{0pt}
+The stress distribution doesn't actually change in the plastic region, but it is offset more and more as the load increases (to maintain static equilibrium, the area under the curve must equal the applied load).\\\\
+Under the bilinear elastoplastic material model, the stress cannot exceed the yield stress. So, as more of the cross-section yields, the stress distribution becomes increasingly uniform, approaching a fully plastic state. The maximum load therefore corresponds to the case in which the entire cross-section has reached the yield stress.
+\[P_{\text{max}} = \sigma_{\text{yield}} A_\text{min}\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{ductile material.png}
+\end{minipage}
+\section*{Multiaxis \textit{axial} Loading}
+In the generalized case where there are multiple axial loads in the $x$, $y$, and $z$ directions, we can define the strain in each direction as:
+\[\begin{aligned}
+    \varepsilon_x &= \frac{\sigma_x}{E} - \left(\frac{\nu\sigma_y}{E} + \frac{\nu\sigma_z}{E}\right)\\
+    \varepsilon_y &= \frac{\sigma_y}{E} - \left(\frac{\nu\sigma_x}{E} + \frac{\nu\sigma_z}{E}\right)\\
+    \varepsilon_z &= \frac{\sigma_z}{E} - \left(\frac{\nu\sigma_x}{E} + \frac{\nu\sigma_y}{E}\right)
+\end{aligned}\]
+The strain in each direction the sum of the direct strain from the normal stress in that direction and Poisson's effect in the other two transverse directions.\\\\
+\section*{Shear Stress and Strain}
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+    If a loading isn't purely axial, then we also have shear stress parallel to the surface. These shear stresses cause a deformation, called shear strain $\gamma$, which is an angular deformation in radians that describes how a cube of material shears into a parallelogram. The shear strain is related to the shear stress by the \textbf{shear modulus} or \textbf{modulus of rigidity} $G$.
+\[\boxed{\tau_{ij} = G \gamma_{ij}}\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{shear strain.png}
+\end{minipage}
+\section*{General Stress Strain Relations}
+Putting together the normal and shear stress-strain relations, we can express the general stress-strain relations in matrix form as normal stress strain describes the material changing size while shear stress strain describes the material changing shape (tilting of the cube).
+\begin{minipage}[c]{0.45\textwidth} \vspace{0pt}
+\begin{align*}
+\varepsilon_x &= +\frac{\sigma_x}{E} - \frac{\nu\sigma_y}{E} - \frac{\nu\sigma_z}{E} \\
+\varepsilon_y &= -\frac{\nu\sigma_x}{E} + \frac{\sigma_y}{E} - \frac{\nu\sigma_z}{E} \\
+\varepsilon_z &= -\frac{\nu\sigma_x}{E} - \frac{\nu\sigma_y}{E} + \frac{\sigma_z}{E} \\
+\gamma_{xy} &= \frac{\tau_{xy}}{G} \\
+\gamma_{xz} &= \frac{\tau_{xz}}{G} \\
+\gamma_{yz} &= \frac{\tau_{yz}}{G}
+\end{align*}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.45\textwidth} \vspace{0pt}
+    \includegraphics[width=\textwidth]{3d state of stress.png}
+\end{minipage}
+\[
+\begin{bmatrix} 
+\varepsilon_x \\ \varepsilon_y \\ \varepsilon_z \\ \gamma_{xy} \\ \gamma_{xz} \\ \gamma_{yz} 
+\end{bmatrix} 
+= \frac{1}{E}
+\begin{bmatrix} 
+1 & -\nu & -\nu & 0 & 0 & 0 \\ 
+-\nu & 1 & -\nu & 0 & 0 & 0 \\ 
+-\nu & -\nu & 1 & 0 & 0 & 0 \\ 
+0 & 0 & 0 & \frac{E}{G} & 0 & 0 \\ 
+0 & 0 & 0 & 0 & \frac{E}{G} & 0 \\ 
+0 & 0 & 0 & 0 & 0 & \frac{E}{G} 
+\end{bmatrix} 
+\begin{bmatrix} 
+\sigma_x \\ \sigma_y \\ \sigma_z \\ \tau_{xy} \\ \tau_{xz} \\ \tau_{yz} 
+\end{bmatrix}
+\]
+\underline{Note:} These relationships are only valid for homogeneous, isotropic, linear elastic materials. Which means that the material properties are the same in all directions and the stress-strain relationship is linear (Hooke's law holds).
+\section*{Normal and Shear Strains}
+\begin{minipage}[t]{0.48\textwidth}\vspace{0pt}
+Since the normal and shear stress change with the orientation of the cross-section, we can relate $E$, $G$, and $\nu$ using the following relation:
+\[
+\boxed{\nu = \frac{E}{2G} - 1}
+\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}\vspace{0pt}
+\centering
+\includegraphics[width=\textwidth]{normal and shear strains.png}
+\end{minipage}
+\section*{Pressure Vessels}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{pressure vessel.png}
+\end{center}
+The pressure $P$ inside the vessel will push outwards on the sides and ends, creating the forces $F_x$ and $F_y$. We can relate these forces to the \textbf{hoop stress} $\sigma_x$ and \textbf{axial stress} $\sigma_y$ using force balances:
+\[\sum F_x = 0 = -P(L2R)+\sigma_x (2tL) \quad \implies \sigma_x =\frac{PR}{t}\] 
+\[\sum F_y = 0 = -P(\pi R^2)+\sigma_y (\pi Rt) \quad \implies \sigma_y = \frac{PR}{2t}\] 
+\[\implies \sigma_x = 2 \sigma_y\]
+These normal stresses are redrawn onto the rectangle of material (if we unrolled the side of the vessel). If given Poisson's ratio and the modulus of elasticity, we can find the strains in the $x$ and $y$ directions using the general stress-strain relations. 
+\[\varepsilon_x = \frac{\sigma_x}{E} - \frac{\nu\sigma_y}{E}\]
+\[\varepsilon_y = -\frac{\nu\sigma_x}{E} + \frac{\sigma_y}{E}\]
+Thus, the change in the diagonal will just be geometry:
+\[L_{x'} = L+L\varepsilon_x \quad \text{(changed length)}\]
+\[L_{y'} = L+L\varepsilon_y \quad \text{(changed length)}\]
+\begin{itemize}
+    \item \textbf{Original Diagonal ($L_0$):} Calculated using the Pythagorean theorem: $\sqrt{20^2 + 20^2}$.
+    \item \textbf{Deformed Diagonal ($L_f$):} Calculated using the new side lengths: $\sqrt{(L_{x'})^2 + (L_{y'})^2}$.
+    \item \textbf{\% Length Change:} Calculated as $\frac{L_f - L_0}{L_0} \times 100$.
+\end{itemize}
+\newpage
+\begin{center}
+    {\LARGE Torsion\par}
+\end{center}
+Torque is the result of shear stress. Consider the cross-section of a shaft under torsion, where $T'$ is the internal torque at the cross-section:
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Torsion.png}
+\end{center}
+Thus, torque can only be transmitted from shear stress in the tangential direction.\\\\
+\textbf{Deformation of Axisymmetric Shaft in Torsion}\\
+Similar to the intuition of shear strain from before, the cross-section doesn't change size but rather changes shape. Under torsion, the cross-section of the shaft remain the same and the diameter doesn't change but the cross-section twists, and the rectangles become parallelograms. 
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{torsional deformation.png}
+\end{center}\newpage
+\section*{Twist Angle and Shear Strain}
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}
+The relationship between the twist angle $\phi$ and the shear strain $\gamma$ can be generalized for any radial position $\rho$ in the cross-section (where $c$ is the radius of the cross-section):
+\[\boxed{\gamma = \frac{\rho \phi}{L}}\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{twist angle.png}
+\end{minipage}
+\section*{Torque and Twist Angle}
+Assuming a linear elastic material: $\tau = G\gamma$, we can relate the torque to the twist angle by integrating over the cross-section:\\
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}
+\begin{align*}
+T 
+&= \int \rho \, dF_{\theta} 
+= \int \rho \tau \, dA 
+= \int \rho G \gamma \, dA \\
+&= \int \rho G \frac{\rho \phi}{L} \, dA 
+= \frac{G \phi}{L} 
+  \underbrace{\int \rho^2 \, dA}_{\substack{\text{Polar moment} \\ \text{of inertia ($J$)}}} 
+= \frac{GJ\phi}{L}.
+\end{align*}
+\[\boxed{T=\frac{GJ\phi}{L}}\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{Torsion - Copy.png}
+\end{minipage}
+\newpage\noindent
+\textbf{Polar Moment of Inertia}\\
+The polar moment of inertia $J$ has units of length$^4$ (eg. $m^4$) and is based on the geometry of the cross-section. For a circular cross-section:
+\[J = \int \rho^2 \, dA= \int_{0}^{c} \rho^2 2\pi \rho d\rho = \frac{\pi}{2} c^4\]
+\[\boxed{J = \frac{\pi}{2} c^4 \quad \text{(round shaft)}}\]
+Using superposition, we can find the polar moment of inertia for a hollow circular cross-section by subtracting the inner area from the outer area:
+\[\boxed{J = \frac{\pi}{2} (c_o^4 - c_i^4) \quad \text{(hollow round shaft)}}\]
+\section*{Shear Stress Distribution}
+Rewriting the relationship between shear stress and shear strain, we find that $\tau$ is linearly proportional to the radial position $\rho$. Thus, it is max at the outer radius and zero at the center of the shaft.
+\[\boxed{\tau = G \gamma = \frac{G\rho \phi}{L}}\]
+\[\boxed{\tau_\text{max} = \frac{Gc\phi}{L}}\]
+\textbf{Relating Torque to Shear Stress}\\
+We can rewrite the shear stress formula in terms of torque by:
+\[\boxed{\tau = \frac{T\rho}{J}\implies \tau_\text{max} = \frac{Tc}{J}}\]
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Shear stress distribution.png}
+\end{center}
+\section*{Shaft Stiffness}
+Like axial loading, we can define the stiffness of the shaft as the ratio of the load (torque) to the deformation (twist angle):
+\[\boxed{k_T = \frac{T}{\phi} = \frac{GJ}{L}}\]
+\section*{Multiple Torsional Loads}
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Ex P3.10.png}
+\end{center}\vspace{-2em}
+Similar to axial deflection before, the torque $T$ is the internal reaction torque at the cross-section, not the applied torque. Thus, we need to first solve for the internal torques using static equilibrium (FBD) and then apply the torsion formulas to find the shear stress and twist angle. (Keep track of direction of the twist angle!)
+\begin{center}
+    \includegraphics[width=0.55\textwidth]{Internal torque.jpg}
+\end{center}
+\textbf{Total Shaft Twist}\\
+We can just sum up the total shaft twist using superposition:
+\[\phi = \sum \frac{T_iL_i}{G_iJ_i}\]
+For a continuous shaft, we can integrate over the length of the shaft:
+\[\phi = \int_0^L \frac{T}{GJ} dx\]
+\section*{Stress Concentrations in Circular Shafts}
+Similar to axial loading, when we have a change in geometry (eg. hole, notch, fillet) or a point load, we have a stress concentration. We use the same stress concentration factor $K$ to relate the max shear stress to the average shear stress at the critical area. Usually, we look at changes in shaft diameter, so the average shear stress is just the shear stress for a uniform shaft with the smaller diameter.
+\[\boxed{\begin{aligned}
+\tau_{\max} &= K \tau_{\max, \text{uniform shaft}} \\
+&= K \frac{Td}{2J}, \quad c=\frac{d}{2}
+\end{aligned}}\]
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}
+    \includegraphics[width=\textwidth]{Shaft stress concentrations.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{Stress concentration table shaft.png}
+\end{minipage}
+\section*{Shaft Power}
+Recall that the power transmitted by a rotating shaft is the product of the torque by its rotation rate.
+\[\boxed{\dot{W} = T\omega}\]
+We will be assuming steady state where the angular velocity $\omega$ is constant, so we can still apply principles of static equilibrium to solve for the internal torques and then find the power transmitted by the shaft.\\\\
+Now we are able to relate rotation to shear stress using power. Note that for a \textit{fixed power}, a smaller angular velocity will require a larger torque, which will lead to a larger shear stress.
+\section*{Torsion in Non-Circular Members}
+Lack of symmetry in the cross-section complicates torsion. The cross-sections of non-circular members don't just twist, but also warps. The corners have no shear stress since there's nothing to pull onto it, so it's a less efficient shape than a circular cross-section. 
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{torsion in noncircular members.png}
+\end{center}
+\section*{Torsion in Rectangular Bars}
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}
+  The max shear stress occurs on the centerline of the \textit{wide faces} of the bar. 
+\[\boxed{\tau_\text{max}=\frac{T}{c_1 ab^2}}\]
+\[\boxed{\phi = \frac{TL}{c_2 ab^3G}}\]
+Where $c_1$ and $c_2$, like the stress concentration factor, are functions of the aspect ratio $a/b$ and can be found in tables. Notice that the thickness $b$ does more to resist torque than the width $a$.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{rectangular bar.png}
+\end{minipage}
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{table 3.1.png}
+\end{center}
+\section*{Thin-Walled Hollow Shafts}
+Consider the following hollow shaft. Looking along the strip of width $\Delta x<<$ (thickness), we can see that because the forces $F_A$ and $F_B$ are balanced (due to equilibrium), we can define the shear flow $q$.
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{shear flow.png}
+\end{center}
+\[F_A = F_B\]
+\[\tau_A t_A \Delta x = \tau_B t_B \Delta x \quad\implies\quad \tau_A t_A = \tau_B t_B = \text{constant}\]
+Thus, we define this constant as the shear flow $q$.
+\[\boxed{q = \tau t}\]
+\newpage\noindent
+\textbf{Finding the Shear Stress in a Hollow Shaft}\\
+We will use the fact that the shear flow is constant across the cross-section to find the shear stress and twist angle. Like before, we can relate the torque to shear stress by integrating over the cross-section:\\
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}
+\[\begin{aligned}
+T &= \oint p \, dF \\
+  &= \oint p (\tau t \, ds) \\
+  &= q \oint 2 \, da
+\end{aligned}\]
+Notice we expressed the product $p\,ds$ as twice the area of the shaded triangle $da$, since the area of any triangle is just $\frac{1}{2} \times \text{base} \times \text{height}$, where the base is $ds$ and the height is $p$. Thus, we can relate shear stress to torque by:
+\[\boxed{\tau = \frac{T}{2 ta}}\]
+Where $a$ is the area enclosed by the \textit{shaft midline} of the cross-section (the line running in the center of the thickness).\\\\
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}\centering
+    \includegraphics[width=\textwidth]{hollow shaft.png}
+    \includegraphics[width=0.5\textwidth]{hollow shaft1.png}
+\end{minipage}
+\textbf{Finding the Twist Angle in a Hollow Shaft}
+\begin{itemize}
+    \item Find $\phi$, given $\tau = \dfrac{T}{2ta}$
+    \item Approach:
+    \begin{itemize}
+        \item Assume linear elastic
+        \item Work = strain energy (assuming statics)
+    \end{itemize}
+\end{itemize}
+Strain Energy Density:
+\[ u \equiv \int_{0}^{\gamma} \tau d\gamma = \int_{0}^{\gamma} G\gamma d\gamma = \frac{1}{2} G\gamma^2 = \frac{1}{2G} \tau^2 \]
+Linear Elastic $\implies T = k_T \phi$ \\\\
+Work of Torsion:
+\[ W = \int_{0}^{\phi} T d\phi = \int_{0}^{\phi} k_T \phi d\phi = \frac{1}{2} k_T \phi^2 = \boxed{\frac{1}{2} T\phi} \]
+Strain Energy:
+\[ U = \int u dV = \oint \frac{\tau^2}{2G} Ltds = \oint \frac{T^2}{2G4a^2t^2} Ltds = \boxed{\frac{T^2 L}{2G4a^2} \oint \frac{ds}{t}} \]
+Work = Elastic Energy in linear elastic shaft:
+\[ \implies \frac{1}{2} T\phi = \frac{T^2 L}{2G4a^2} \oint \frac{ds}{t} \]
+\[ \boxed{\phi = T \frac{L}{4Ga^2} \oint \frac{ds}{t}} \]
+\[ T = k_T \phi, \text{ where } k_T \equiv \frac{4Ga^2}{L \oint \dfrac{ds}{t}} \]
+Here, $ds$ refers to the path along the same midline of the shaft as before, and $t$ is the thickness at that point along the path. Keep this in mind when evaluating the integral $\oint \frac{ds}{t}$.\\\\
+\underline{Note:} The criteria for thin-walled is that the thickness $t$ is less than $\frac{1}{10}$ of the radius of curvature of the midline. For a circular shaft, this means $t < \frac{1}{10} c$.
+
 
 \end{document}
