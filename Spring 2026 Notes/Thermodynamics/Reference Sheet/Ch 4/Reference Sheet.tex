@@ -35,7 +35,7 @@
 
 \begin{center}
     \Large \textbf{Thermodynamics Formula Sheet} \\
-    \normalsize Exam 1
+    \normalsize Ch 4: Energy Analysis of Closed Systems
 \end{center}
     \section*{Units and Conversions}
     \vspace{-1em}
@@ -118,7 +118,7 @@ Where hydrostatic pressure can be written as $P = \gamma_s h$\\\\
 \textbf{Ideal Gas Equation of State}\\
 Refer to table A-4 for gas constants of common gases.
 \[
-P v = R T, \quad
+P \svol = R T, \quad
 R = \frac{\bar{R}}{M}\quad
 \left(
 \mathrm{kJ/kg\cdot K} \quad \text{or}\quad
@@ -131,39 +131,60 @@ R = \frac{\bar{R}}{M}\quad
 \[P\vol = mRT \quad \text{(in terms of TOTAL volume and mass)}\]
 \textbf{Universal gas constant:}  $\bar{R} = 8.314$ J/(mol·K)\\\\
 \underline{Note:} Convert units for $P$, $\vol$, $\svol$, and $T$ to match the units of $R$ when using the ideal gas law. Also,
-\[\left[\frac{\text{kJ}}{\text{kpa}}\right]=[\text{m}^3]\]
+$[\text{kJ}/ \text{kpa}]=[\text{m}^3]$
 \begin{center}
-\includegraphics[width=0.5\textwidth]{../../PT.png}
+\includegraphics[width=0.4\textwidth]{../../PV.png}
 \end{center}
 \end{multicols}\newpage
 \begin{multicols}{2}
 \begin{center}
-\includegraphics[width=0.35\textwidth]{PVT - Copy.png}
-\end{center}
-\begin{center}
-\includegraphics[width=0.35\textwidth]{../../PV.png}
-\end{center}
-\begin{center}
-\includegraphics[width=0.35\textwidth]{../../TV.png}
-\end{center}
-\begin{center}
 \includegraphics[width=0.35\textwidth]{../../Quality.png}
 \end{center}
+\textbf{Phase Change \& Saturation}
+\[h_{fg} = h_g - h_f \quad \text{(latent heat of vaporization)}\]
+\[x = \frac{m_g}{m_f + m_g} \quad \text{(quality definition)}\]
+\[
+\left.
+\begin{aligned}
+&y_{\text{avg}} = y_f + x(y_g - y_f) \quad \text{(for } \svol, h, u) \\
+&x = \frac{y_{\text{avg}} - y_f}{y_g - y_f} \quad \text{(solve for quality)}
+\end{aligned}
+\right\} y_{fg} = y_g - y_f
+\]
+\textbf{Compressed Liquid Approximation}
+\[y(T,P) \approx y_f(T) \quad \text{(use saturated liquid at same T)}\]
+\textbf{Polytropic Processes}
+\begin{center}
+\includegraphics[width=0.4\textwidth]{Polytropic.jpg}
+\end{center}
+\[P\vol^n = \text{constant}\]
+\begin{itemize}
+    \item $n=0$: isobaric process (constant pressure)
+    \item $n=1$: isothermal process (constant temperature, ideal gas)
+    \item $n=k$: isentropic process (constant entropy)
+    \item $n=\infty$: isochoric process (constant volume)
+\end{itemize}
 \textbf{Pressure Relations}
 \[P = \frac{F}{A} = \rho g h \quad \text{(hydrostatic pressure)}\]
 \[P_1 = P_2 \quad \Rightarrow \quad \frac{F_1}{A_1} = \frac{F_2}{A_2} \quad \text{(Pascal's Law)}\]
 \[\Delta P = \rho g h \quad \text{(multi-fluid manometer)}\]
 (add downward, subtract upward)\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcolumn\\
 \textbf{Energy Definitions}
-\[e = u + \frac{1}{2}v^2 + gh \quad \text{(specific total energy = internal + KE + PE)}\]
+\[e = u + \frac{1}{2}v^2 + gh \quad \text{(specific total energy)}\]
 \[e_\text{mech} = \frac{P}{\rho} + \frac{1}{2}v^2 + gh \quad \text{(specific mechanical energy)}\]
 \textbf{First Law (Closed System)}
 \[\Delta U = Q - W \quad \text{(energy balance for closed system)}\]
 \[\dot E_{in} - \dot E_{out} = \frac{dE_{system}}{dt} \quad \text{(rate form)}\]
 \textbf{First Law (Open System)}
-\[\frac{dE}{dt} = \dot{Q}-\dot{W}+
+\[\begin{aligned}
+\frac{dE}{dt} = \,&\dot{Q}-\dot{W}\\
+&+
 \underbrace{\sum \dot{m_i}\left[h_i+\frac{1}{2}V_i^2+g z_i\right]}_{\text{Inlet}}
--\underbrace{\sum \dot{m_e}\left[h_e+\frac{1}{2}V_e^2+g z_e\right]}_{\text{Outlet}}\]
+-\underbrace{\sum \dot{m_e}\left[h_e+\frac{1}{2}V_e^2+g z_e\right]}_{\text{Outlet}}
+\end{aligned}\]
 For steady state process with no heat transfer:
 \[\dot{W}=\dot{m}e_\text{mech}\quad \]
 \[\dot W = \dot m \frac{\Delta P}{\rho} = \dot \vol \Delta P \quad \text{(pump power w/ no change in KE or PE)}\]
@@ -174,26 +195,31 @@ For steady state process with no heat transfer:
 \[h = u + P\svol,\quad \svol = \frac{1}{\rho} \quad \text{(specific enthalpy)}\]
 \textbf{Work}
 \[W = \int F \cdot dx, \quad \dot{W}=F\cdot v\quad\text{(general)}\]
-\[W = VI\Delta t, \quad \dot W = VI = RI^2 = \frac{V^2}{R}\quad\text{(electrical)}\]
-\[W = 2\pi n T, \quad \dot W = 2\pi \dot n T \quad \text{(shaft)}\]
+\[\begin{aligned}
+W = \int P \,d\vol &\implies W = \frac{P_2\vol_2-P_1\vol_1}{-n+1} \quad \text{(polytropic, $n\neq1$)}\\
+&\implies W = C \ln\left(\frac{\vol_2}{\vol_1}\right) \quad \text{(isothermal, $n=1$)}\\
+&\implies W = P\Delta \vol \quad \text{(isobaric)}\\
+\end{aligned}\]
+Where $C$ is $P_1\vol_1^n = P_2\vol_2^n = C$ for a polytropic process.
 \[W = \frac{1}{2}k(x_2^2 - x_1^2) \quad \text{(spring work)}\]
 \textbf{Heat Transfer}
 \[Q = \int \dot Q\,dt = \dot Q \Delta t \quad \text{(total heat transferred)}\]
-\[\dot Q = kA \frac{\Delta T}{\Delta x} \quad \text{(conduction)}\]
-\[\dot Q = hA(T_s - T_f) \quad \text{(convection)}\]
-\textbf{Phase Change \& Saturation}
-\[h_{fg} = h_g - h_f \quad \text{(latent heat of vaporization)}\]
-\[x = \frac{m_g}{m_f + m_g} \quad \text{(quality definition)}\]
+\[\dot Q = kA \frac{\Delta T}{\Delta x} \quad \text{(conduction)}, \quad \dot Q = hA(T_s - T_{\infty}) \quad \text{(convection)}\]
+\[\dot Q = \epsilon \sigma A (T_s^4 - T_{\infty}^4) \quad \text{(radiation)}\]
+\textbf{Specific Heat Capacity}
 \[
-\left.
-\begin{aligned}
-&y_{\text{avg}} = y_f + x(y_g - y_f) \quad \text{(relation for } \svol, h, u) \\
-&x = \frac{y_{\text{avg}} - y_f}{y_g - y_f} \quad \text{(solve for quality)}
-\end{aligned}
-\right\} y_{fg} = y_g - y_f
+c_{\svol} = \left(\frac{\partial u}{\partial T}\right)_{\svol} \, (\text{fixed volume}), \quad c_p = \left(\frac{\partial h}{\partial T}\right)_p \, (\text{fixed pressure})
 \]
-\textbf{Compressed Liquid Approximation}
-\[y(T,P) \approx y_f(T) \quad \text{(use saturated liquid at same T)}\]
+\[
+\implies u_2-u_1 = c_{\svol}[T_2-T_1] \quad (\text{constant $ c_{\svol} $ or $ c_p $})
+\]
+\[
+c_p = c_{\svol} + R \; (\text{ideal gas}), \quad
+c_p = c_{\svol} = c \; (\text{incompressible substances})
+\]
+\[Q = mc\Delta T \quad c_\text{water} = 4.18 \, \frac{\text{kJ}}{\text{kg}\cdot\text{K}}\]
+\[k=c_p/c_{\svol} \quad \text{(specific heat ratio)}\]
+
 \end{multicols}
 
 

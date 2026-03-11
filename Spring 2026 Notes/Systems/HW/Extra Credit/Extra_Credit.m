@@ -1,4 +1,15 @@
-% Vehicle System Efficiency Calculation for 2026 Honda Accord (ID: EPNA1C)
+% Vehicle System Efficiency Calculation
+% Vehicle: 2026 Honda Accord (EPA ID: EPNA1C)
+%
+% Fuel Economy: 36.95 MPG (Calculated from UDDS drive cycle and CO2 emissions factor)
+%
+% Road Load Coefficients (EPA coastdown targets):
+% A = 51.820 lbf
+% B = -0.53320 lbf/mph
+% C = 0.025350 lbf/mph^2
+%
+% Drive Cycle: UDDS (Urban Dynamometer Driving Schedule)
+% CO2 emissions factor used: 240.81 g/mile
 clear; clc; close all;
 
 %% Import Drive Cycle Data
@@ -64,6 +75,18 @@ plot(t, PropulsionPower / 1000, 'Color', [0.6350 0.0780 0.1840], 'LineWidth', 1)
 xlabel('Time (seconds)');
 ylabel('Power Required (kW)');
 title(['Tractive Power Required (VSE = ', num2str(VSE, '%.2f'), '%)']);
+% Vehicle information box on plot
+info_text = sprintf(['Vehicle: 2026 Honda Accord (EPNA1C)\n',...
+                     'Fuel Economy: 36.95 MPG\n',...
+                     'A = 51.820 lbf\n',...
+                     'B = -0.53320 lbf/mph\n',...
+                     'C = 0.025350 lbf/mph^2']);
+
+text(0.98,0.95,info_text,'Units','normalized',...
+    'HorizontalAlignment','right',...
+    'VerticalAlignment','top',...
+    'BackgroundColor','white',...
+    'EdgeColor','black','FontSize',9);
 grid on;
 set(gca, 'FontSize', 10);
 

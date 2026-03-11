@@ -12,10 +12,10 @@
 
 % Lowercase Volume with built-in shifts
 \newcommand{\svol}{%
-  \mathord{\text{\ooalign{%
-    \hspace{0.1em}$v$\cr         % built-in horizontal shift of 'v'
-    \hspace{-0.02em}\rule[0.6ex]{0.8em}{0.5pt} % built-in horizontal shift of the bar, vertical raise, length, thickness
-  }}}%
+  \mathord{\ooalign{%
+    \hfil$v$\hfil\cr
+    \hfil\rule[0.6ex]{0.8em}{0.5pt}\hfil
+  }}%
 }
 \begin{document}
 
@@ -107,6 +107,10 @@ and $\bar{R}$ is the universal gas constant:
 \end{cases} \quad \text{(universal gas constant)}\]
 In table A-2 the specific gas constant $R$ is given for various gases, so we do not need to calculate it using the molar mass $M$ and the universal gas constant $\bar{R}$. Additionally, if we multiply both sides of the ideal gas law by mass $m$, we can express it in terms of volume $\vol$ instead of specific volume $\svol$:
 \[\boxed{P \, \vol = m R T}\]
+While the ideal gas law is a useful approximation, it doesn't apply for steam and other gases near the vapor dome where the gas behaves non-ideally
+\begin{center}
+    \includegraphics[width=0.35\textwidth]{Ideal Gas Validity.png}
+\end{center}
 Additionally, classical thermodynamics assumes that states are always in \textbf{equilibrium} and that processes occur in \textbf{quasi-equilibrium}, meaning the system remains balanced and changes happen slowly enough for it to adjust and maintain equilibrium throughout, and properties are well-defined. Below are some types of equilibrium that can exist in a system:
 \begin{itemize}
 \item \textbf{Thermal equilibrium} occurs when the temperature is uniform throughout the system.
