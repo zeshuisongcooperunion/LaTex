@@ -869,8 +869,546 @@ Where the \textit{Rayleigh cross-section area} is simply a rescaling of the Thom
 \right]^2
 \]
 \[\boxed{\langle P_{\text{scatt}}(t) \rangle = \sigma_{\text{Ray}} |\langle \vec{S} \rangle_{\text{inc}}|}\]
+\textbf{Limits}\\
+In the limit where the incoming has such a high frequency that $\omega \gg \omega_0$, the restoring force becomes negligible, and thus the bound charge behaves like a free charge:
+\[\omega \gg \omega_0 \implies \sigma_\text{Ray} = \sigma_\text{Th}\]
+In the limit where the incoming wave has such a low frequency that $\omega \ll \omega_0$, the restoring force dominates, and is thus in the Rayleigh scattering regime:
+\[\omega \ll \omega_0 \implies \sigma_\text{Ray} = \sigma_\text{Th} \left(\frac{\omega}{\omega_0}\right)^4\]
+\textbf{Why is the Sky Blue?}\\
+Using Rayleigh scattering, we can explain why the sky is blue. We can do this by comparing the scattered power of blue versus red incident light. 
+\[\lambda_{\text{blue}} \approx 400 \, \text{nm} \qquad \lambda_{\text{red}} \approx 700 \, \text{nm} \]
+Since these are light waves, we can find the corresponding frequencies using 
+\[\omega=ck=\frac{2\pi c}{\lambda}\]
+Notice that frequency is inversely proportional to wavelength, so blue light has a higher frequency than red light. Assuming the same intensity for both blue and red incident light, we can find the ratio of the power scattered by blue light to that of red light:
+\[\frac{\langle P \rangle_{\text{scatt, blue}}}{\langle P \rangle_{\text{scatt, red}}} = \frac{\sigma_{\text{Ray, blue}}\,\cancel{|\langle \vec{S} \rangle_{\text{inc}}|}}{\sigma_{\text{Ray, red}}\,\cancel{|\langle \vec{S} \rangle_{\text{inc}}|}} = \frac{\cancel{\sigma_{\text{Th}}} \left( \frac{\omega_{\text{blue}}}{\omega_0} \right)^4}{\cancel{\sigma_{\text{Th}}} \left( \frac{\omega_{\text{red}}}{\omega_0} \right)^4} = \left( \frac{\omega_{\text{blue}}}{\omega_{\text{red}}} \right)^4 = \left( \frac{\lambda_{\text{red}}}{\lambda_{\text{blue}}} \right)^4 = \left( \frac{700\,\text{nm}}{400\,\text{nm}} \right)^4 \]
+\[\implies \langle P \rangle_{\text{scatt, blue}}\approx 10 \langle P \rangle_{\text{scatt, red}} \]
+Thus, shorter wavelengths of light are scattered more strongly than longer wavelengths. However, since purple light has an even shorter wavelength than blue light, why isn't the sky purple? In reality, the Sun emits significantly less purple light than blue light, and the human eye is also less sensitive to purple wavelengths. As a result, the sky appears blue rather than purple.
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+   {\LARGE Unit 3A: Static Fields in Matter\par} 
+\end{center}
+Previously, we have only studied the behavior of electromagnetic waves in free space, where there are no charges or currents. Now, we will look at light-matter interactions such as reflection and transmission (how light interacts with \textit{bulk} materials and not free particles). We will start by looking at just \textit{static fields} in \textbf{linear dielectric materials}.\\\\
+In a linear dielectric material:
+\begin{itemize}
+    \item There is still no free charge or current inside the material, so $\rho = 0$ and $\vec{J} = 0$.
+    \item There will only be effects from bound charges within the material.
+\end{itemize}
+Note that because we are looking at static electric and magnetic fields separately, their behavior in matter does NOT represent optical phenomena. In optics, we must consider light as an electromagnetic wave. For now, we are only deriving the fundamental interface conditions for static fields. In Unit 3B, we will introduce the wave nature of light and see how these interface conditions lead to optical phenomena such as reflection and transmission.
+\section*{Electric Polarization in Materials}
+Our goal is to be able to develop a linear model for how a dielectric material responds to an applied electric field. Similar to friction, where the force of friction is proportional to the applied normal force ($F_f = \mu F_n$), we will find that the electric polarization of a material is proportional to the applied electric field.\\\\
+In a material whose atoms or molecules are bound, there are no mobile free charges (and thus it is not conducting), so under an applied electric field, whether static or oscillating, the atoms or molecules will typically become polarized. This means the positive and negative charges within them are displaced in opposite directions, creating an induced electric dipole moment. This typically occurs through the following mechanisms:
+\begin{center}
+\includegraphics[width=0.55\linewidth]{Polarization.png}
+\end{center}
+\textbf{Properties of Electric Dipoles}\\
+Recall from Ph-213 that an electric dipole moment $\vec{P}$ is defined as:\\
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=0.4\linewidth]{Electric Dipole.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{0pt}
+\[\vec{p} = q d \hat{p}\quad \text{(directed from - to +)}\]
+Where charges of magnitude $q$ is separated with a displacement $d$.
+\end{minipage}\\
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{Dipole Torque.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{0pt}
+Under an external electric field $\vec{E}$, the dipole experiences a torque $\vec{\tau}$ that tends to align it with the field:
+\[\vec{\tau} = \vec{p} \times \vec{E}\]
+It is most stable, and thus experiences no torque, when $\vec{p} \parallel \vec{E}$ (angle $\theta = 0$).
+\end{minipage}
+\textbf{Properties of Dielectrics}\\
+Dielectric materials contain atoms or molecules that behave like electric dipoles under an applied electric field. This follows the same intuition as dielectrics in capacitors: the material becomes polarized and induces an \textit{opposing} secondary electric field $\vec{E}'$, which reduces the net electric field strength within the capacitor (and thus increases the capacitance).
+\vspace{-1em}
+\begin{center}
+\includegraphics[width=0.5\linewidth]{Dielectric.png}
+\end{center}
+This effect is due to the dipoles aligning with the applied electric field, creating surface charges on the dielectric that produce the opposing field $\vec{E}'$. The more \textit{polarizable} the material, the stronger this effect, and therefore the stronger the induced field $\vec{E}'$.\\\\
+We won't go into the details of the mechanism of polarization. Instead, we want to develop a general simplified model for how the effect of polarization \textit{augments} the applied electric field. Let's begin by quantifying the net effect of an applied electric field on a dielectric material:
+\begin{center}
+\includegraphics[width=0.5\linewidth]{Net Dipole Effect.png}
+\end{center}
+Each atom/molecule within the dielectric material has an induced dipole moment $\vec{p}_i$. Thus, we can define a \textbf{polarization field} ($\vec{P}$) that describes the \textit{net electric dipole moment per unit volume}:
+\[\vec{P} = n\langle\vec{p}_i\rangle\]
+Where $n$ is the number density of dipoles (\# dipole per m$^3$) and $\langle\vec{p}_i\rangle$ is the average dipole moment of each atom/molecule.\\\\
+\underline{Note:} The average dipole moment $\langle \vec{p}_i \rangle$ depends on the applied electric field. When the dipole moments are more random, the average dipole moment is smaller, whereas when the dipole moments are more aligned, the average dipole moment is larger.\\\\
+\textbf{Relating Polarization to Electric Field}\\
+Using unit analysis, we can model $\vec{P}$ as proportional to $\vec{E}_{applied}$:
+\[ \vec{P} = [?]\, \vec{E} \]
+Unit analysis:
+\[\begin{aligned}
+\vec{P} &= \left[ \frac{1}{m^3} \cdot C \cdot m \right] = \left[ \frac{C}{m^2} \right] \\
+\vec{E} &= \left[ \frac{N}{C} \right] \\
+\implies [?] &= \frac{C^2}{N \cdot m^2} \sim \varepsilon_0 \text{ (permittivity)}
+\end{aligned}\]
+Therefore, we can model the polarization field as being proportional to the applied electric field with a proportionality constant of $\varepsilon_0$: 
+\[\boxed{\vec{P} = \varepsilon_0 \chi_e \vec{E}}\]
+Where $\chi_e$ is the \textbf{dielectric susceptibility} (unitless, pronounced "chi"). It quantifies how much a material can become polarized in an applied $\vec{E}$ field (polarizability of the material).\\\\
+For a \textit{linear dielectric matieral}, $\chi_e$ is a constant, and thus the polarization field $\vec{P}$ is linearly proportional to the applied electric field $\vec{E}$.\\\\
+\textbf{Maxwell's Equations in Dielectric Materials}\\
+Applying Gauss's law to a dielectric material, we find that we have to consider both the free charge and the bound charge:
+\[\vec{\nabla}\cdot\vec{E} = \frac{\rho_\text{total}}{\varepsilon_0} \implies \vec{{\nabla}}\cdot\underbrace{(\varepsilon_0\vec{E})}_{\substack{\text{same units} \\ \text{as }\vec{P}}} = \rho_\text{free} + \rho_\text{bound}\]
+This is saying that the behavior (divergence) of the electric field is determined by both the free charge and the bound charge. However, we have developed the polarization field $\vec{P}$ precisely to describe the effect of the bound charge on the electric field. Therefore, we can rewrite the equation as:
+\[\vec{\nabla}\cdot(\varepsilon_0\vec{E} + \vec{P}) = \rho_\text{free}\]
+\underline{Note:} The reason we can do this is because $\vec{\nabla}\cdot\vec{P} = -\rho_\text{bound}$, which basically says that whenever the polarization field is non-uniform, it implies that dipoles are not perfectly canceling, leading to an effective charge density. Regions where $\vec{P}$ diverges act like sources of negative bound charge, while regions where it converges correspond to positive bound charge.\\\\
+To make life easier, we define the \textbf{electric displacement field} $\vec{D}$ as:
+\[\begin{aligned}
+    \vec{D} &= \varepsilon_0 \vec{E} + \vec{P} \\
+     &= \varepsilon_0 \vec{E} + \varepsilon_0 \chi_e \vec{E} = \varepsilon_0 \underbrace{(1 + \chi_e)}_{\substack{K: \text{ dielectric} \\ \text{constant}}} \vec{E} = \underbrace{\varepsilon_0 K}_{\varepsilon} \vec{E} = \varepsilon \vec{E}
+\end{aligned}\]
+\[\boxed{\vec{D} = \varepsilon \vec{E}}\]
+Where $\varepsilon$ is the \textbf{permittivity} of the material, which quantifies how strongly the material polarizes in response to an electric field (and thus how much it reduces the net electric field).
+\[\implies \vec{\nabla}\cdot\vec{D} = \rho_\text{free} \quad \text{or}\quad \vec{\nabla}\cdot(\varepsilon \vec{E}) = \rho_\text{free} \quad\text{or}\quad K\int \vec{E}\cdot d\vec{A} = \frac{q_\text{free}}{\varepsilon_0}\]
+In a dielectric, there is no free charge, so $\rho_\text{free} = 0$: 
+\[\boxed{\vec{\nabla}\cdot\vec{D} = 0 \quad \text{(Gauss's law in a linear dielectric)}}\]
+\textbf{Understanding the Displacement Field}\\
+The electric field $\vec{E}$ is the \textit{fundamental field}, it accounts for the total effect of both free and bound charges. Thus, because bound charges are present in a material, the $\vec{E}$ field changes as it passes through a material.\\\\
+The displacement field $\vec{D}$ is a \textit{derived field}, it accounts for ONLY the effect of free charges (as seen in Gauss's law in a linear dielectric). Thus, because there are no free charges in a material, the $\vec{D}$ field does not change as it passes through a material (it can still change at the boundary).
+\newpage
+\section*{Magnetization in Materials}
+Analogous to electric polarization, fundamental units of matter have an \textit{intrinsic magnetic dipole moment} called \textbf{spin}, which can align with an applied magnetic field. This magnetic dipole moment is similar to the dipole moment of a current loop and bar magnet, thus we can apply the same intuition of before to quantify the net effect of an applied magnetic field on a material.\begin{center}
+\includegraphics[width=0.3\linewidth]{Spin.png}
+\end{center}
+\textbf{Properties of Magnetic Dipoles}\\
+In Ph-213, we defined the magnetic dipole moment $\vec{m}$ for current loops. For spins, we will not derive it here and simply denote their magnetic dipole moment as $\vec{m}$.\\\\
+\begin{minipage}[t]{0.3\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{Mag Dipole Torque.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{0pt}
+Under an external magnetic field $\vec{B}$, the dipole experiences a torque $\vec{\tau}$ that tends to align it with the field:
+\[\vec{\tau} = \vec{m} \times \vec{B}\]
+It is most stable, and thus experiences no torque, when $\vec{m} \parallel \vec{B}$ (angle $\theta = 0$).
+\end{minipage}
+\textbf{Properties of Linear Magnetic Materials}\\
+In exactly the same logic as how we derived the polarization field $\vec{P}$ for electric dipoles, we can derive a \textbf{magnetization field} ($\vec{M}$) for magnetic dipoles.
+\begin{center}
+\includegraphics[width=0.5\linewidth]{Magnetization.png}
+\end{center}
+\[\vec{M} = n\langle\vec{m}_i\rangle\]
+Where $n$ is the number density of magnetic dipoles (\# dipole per m$^3$) and $\langle\vec{m}_i\rangle$ is the average magnetic dipole moment of each atom/molecule.\\\\
+Since this is a linear magnetic material, we can model the magnetization field as being proportional to the applied magnetic field with using the magnetic susceptibility $\chi_m$:
+\[\boxed{\vec{M} = \chi_m \vec{H}}\]
+Here, we introduce the magnetic field intensity $\vec{H}$, which can be thought of a more "fundamental" field than the magnetic field $\vec{B}$ purely mathematically. Historically, magnetism was studied using permanent magnets, meaning it was initially understood in terms of magnetic fields in matter.\\\\
+\textbf{Maxwell's Equations in Magnetic Materials}\\
+Applying Ampere-Maxwell's law to a magnetic material, we find that we have to consider both the free current and both bound currents (from magnetization and time-varying polarization) ($\frac{\partial \vec{P}}{\partial t}$), and the displacement current associated with the changing electric field ($\varepsilon_0\frac{\partial \vec{E}}{\partial t}$).
+\[\vec{\nabla}\times\vec{B} = \mu_0 \vec{J}_\text{total} + \mu_0 \frac{\partial}{\partial t}(\varepsilon_0\vec{E}+\vec{P}) \implies \vec{\nabla}\times\underbrace{\left(\frac{1}{\mu_0}\vec{B}\right)}_{\substack{\text{same units} \\ \text{as }\vec{M}}} = \vec{J}_\text{free} + \vec{J}_\text{bound} + \frac{\partial}{\partial t}(\varepsilon_0\vec{E}+\vec{P})\]
+Like how we used the polarization field $\vec{P}$ to account for the effect of bound charges on the electric field, we can use the magnetization field $\vec{M}$ to account for the effect of bound currents on the magnetic field. Therefore, we can rewrite the equation as:
+\[\vec{\nabla}\times\left(\frac{1}{\mu_0}\vec{B} - \vec{M}\right) = \vec{J}_\text{free} + \frac{\partial}{\partial t}(\varepsilon_0\vec{E}+\vec{P})\]
+Like before when we defined the electric displacement field $\vec{D}$, we can define the \textbf{magnetic field intensity} $\vec{H}$ to simplify the equation:
+\[\vec{H} = \frac{1}{\mu_0}\vec{B} - \vec{M}\]
+\[\begin{aligned}
+    \implies \vec{B} &= \mu_0\vec{H} + \mu_0\vec{M} = \mu_0\underbrace{(1 + \chi_m)}_{\mu_r}\vec{H}\\
+    &=\mu_0 \mu_r \vec{H}
+\end{aligned}\]
+\[\boxed{\vec{B}=\mu\vec{H}}\]
+Where $\mu$ is the \textbf{permeability} of the material, which quantifies how strongly the material magnetizes in response to a magnetic field and $\mu_r$ is the \textbf{relative permeability} of the material.
+\[\implies \vec{\nabla}\times\vec{H} = \vec{J}_\text{free} + \frac{\partial}{\partial t}(\varepsilon_0\vec{E}+\vec{P})\]
+Since there are no free currents inside a magnetic material, $\vec{J}_\text{free} = 0$, and rewriting in terms of $\vec{D}$ gives:
+\[\boxed{\vec{\nabla}\times\vec{H} = \frac{\partial \vec{D}}{\partial t} \quad \text{(Ampere-Maxwell's law in a linear magnetic material)}}\]
+\underline{Note:} This section is peak mathematical gymnastics where we are using all our simplifying fields ($\vec{P}$, $\vec{D}$, $\vec{M}$, $\vec{H}$) to clean up our equations. Honestly, I would have liked to follow the same logic as the electric polarization section and defined $\vec{M}$ in terms of $\vec{B}$ and only $\vec{H}$ after we derived the Maxwell's equations in magnetic materials, but it just makes the math messier. The key is that the \textit{physics} never changed, we just introduced these linear models and simplifying fields to make our equations more intuitive and easier to work with.\\\\
+Units:
+\[\vec{H}: \left[\frac{\text{A}}{\text{m}}\right]\]
+\[\vec{B}: \left[\text{T}\right]\quad\text{or}\quad\left[\frac{\text{Wb}}{\text{m}^2}\right]\quad\text{or}\quad\left[\frac{\text{V}\cdot\text{s}}{\text{m}^2}\right]\]
+\textbf{Understanding the Magnetic Field Intensity}\\
+Looking at Ampere-Maxwell's law in a linear magnetic material alone gets messy since we are considering the effects of free currents, bound currents, and induced currents from changing electric fields. However, we can still gain some intuition about the $\vec{B}$ and $\vec{H}$ fields. While we call $\vec{H}$ the fundamental field, $\vec{B}$ is actually the field that accounts for ALL the physical effects of the currents and changing electric fields. As such, it also accounts for the effect of magnetization of the material, and changes as it passes through a material (like $\vec{E}$).\\\\
+On the other hand, $\vec{H}$ behaves more like a derived field that only accounts for the effect of free currents, and thus does not change as it passes through a material (like $\vec{D}$).\\\\
+Just to say, we're free to think of $\vec{H}$ and $\vec{D}$ however we want, as long as we understand the reason WHY we defined them in the first place. Thus, we can think that $\vec{H}$ is \textit{mathematically} analogous to $\vec{E}$ and $\vec{B}$ is \textit{mathematically} analogous to $\vec{D}$ (while $\vec{B}$ is the physical field and $\vec{H}$ is a simplifying field like $\vec{D}$, so the analogy is not perfect). For now, I'll continue with the analogy of $\vec{H}$ and $\vec{E}$ being more fundamental purely because it makes the math cleaner.
+\newpage
+\section*{Maxwell's Equations in Matter}
+Using the equations we derived for $\vec{D}$ and $\vec{H}$, we can now write Maxwell's equations in linear dielectric and magnetic materials. While we assume there are no free charges or currents in the material, I will still include them in the equations for completeness.
+\begin{center}
+    \fbox{
+\begin{minipage}{0.8\textwidth}
+\centering
+\vspace{5pt}
+$\begin{aligned}
+  \vec{\nabla} \cdot \vec{D} &= \rho_\text{free}
+  &\qquad
+  \vec{\nabla} \cdot \vec{B} &= 0 \\
+  \vec{\nabla} \times \vec{E} &= -\frac{\partial \vec{B}}{\partial t} 
+  &\qquad
+  \vec{\nabla} \times \vec{H} &= \vec{J}_\text{free} + \frac{\partial \vec{D}}{\partial t} 
+\end{aligned}$
+\hspace{10pt} \vline \hspace{10pt}
+\begin{minipage}[c]{0.25\textwidth}
+Where:
+\begin{align*}
+  \vec{D} &= \varepsilon \vec{E} \\
+  \vec{B} &= \mu \vec{H}
+\end{align*}
+\end{minipage}
+\vspace{5pt}
+\end{minipage}}
+\end{center}
+\underline{Assumption:} $\rho_\text{free} = 0$ and $\vec{J}_\text{free} = 0$ inside the material.
+\section*{Interface Conditions}
+Having developed the $\vec{D}$ and $\vec{H}$ fields to model the bulk response of materials to electromagnetic fields, we can now derive the interface conditions for static fields without having to account for bound charges and currents by applying Maxwell's equations at the boundary.\\\\
+\underline{Note:} Although real surfaces are bumpy and irregular, at a \textit{small} scale, they can be approximated as flat planes.
+\textbf{Applying Gauss's Law for Electricity at the Interface}\\
+To describe the behavior of the electric and displacement fields at the boundary, we define a Gaussian pillbox and take the limit that the thickness of the pillbox goes to zero so that it zooms in on the interface.\\
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{Gauss E.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{-1em}
+\[\vec{\nabla} \cdot \vec{D} = 0 \rightarrow \oint_S \vec{D}\cdot d\vec{a}=0 \quad \text{(Divergence Thm)}\]
+\[\begin{aligned}
+    &\lim_{dh \to 0} \left[\oint_S \vec{D}\cdot d\vec{a}\right] = 0\\
+    &\implies \int_\text{Top} \vec{D}\cdot d\vec{a} + \int_\text{Bot} \vec{D}\cdot d\vec{a} + \underbrace{\cancel{\int_{\text{Side}} \vec{D}\cdot d\vec{a}}}_{0 \text{ as } dh \to 0} = 0\\
+    &\implies \underbrace{-D^{\perp}_{1}}_{\text{entering}} + \underbrace{D^{\perp}_{2}}_{\text{exiting}} = 0
+\end{aligned}\]
+\end{minipage}
+Where $D^{\perp}_1$ and $D^{\perp}_2$ are the components of $\vec{D}$ along $\hat{n}$ (normal to the interface) in medium 1 and medium 2, respectively.\\
+\[\boxed{\implies D^{\perp}_{1} = D^{\perp}_{2}, \quad \varepsilon_1 E^{\perp}_1 = \varepsilon_2 E^{\perp}_2}\]
+\textbf{Applying Faraday's Law at the Interface}\\
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{Faraday E.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{-1em}
+\[\begin{aligned}
+\vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{\partial t} &\rightarrow  \oint_S\left(\vec{\nabla} \times \vec{E}\right)\cdot d\vec{a} = \oint_S \left(-\frac{\partial \vec{B}}{\partial t}\right)\cdot d\vec{a} \\
+&\rightarrow \underset{\text{(Stokes thm)}}{\oint_P \vec{E}\cdot d\vec{l}} = \underset{\left(\substack{\text{constant fixed}\\\text{surface}}\right)}{-\frac{\partial}{\partial t} \int_S \vec{B}\cdot d\vec{a}}
+\end{aligned} \]
+\end{minipage}
+\[\begin{aligned}
+&\lim_{dh \to 0} \left[\oint_P \vec{E}\cdot d\vec{l}\right] = \lim_{dh \to 0} \bigg[-\frac{\partial}{\partial t} \underbrace{\cancel{\int_S \vec{B}\cdot d\vec{a}}}_{\substack{\text{flux goes to}\\\text{zero as } dh \to 0}}\bigg]\\
+& \implies \int_1 \vec{E}\cdot d\vec{l} + \underbrace{\cancel{\int_2 \vec{E}\cdot d\vec{l}}}_{0} +\int_3 \vec{E}\cdot d\vec{l} + \underbrace{\cancel{\int_4 \vec{E}\cdot d\vec{l}}}_{0} = 0  \quad \implies \underbrace{E_1^{\parallel}}_{\text{parallel}} - \underbrace{E_2^{\parallel}}_{\text{antiparallel}} = 0
+\end{aligned}\]
+Where $E_1^{\parallel}$ and $E_2^{\parallel}$ are the components of $\vec{E}$ parallel to the interface in medium 1 and medium 2, respectively.\\
+\[\boxed{\implies E_1^{\parallel} = E_2^{\parallel}, \quad \frac{D_1^{\parallel}}{\varepsilon_1} = \frac{D_2^{\parallel}}{\varepsilon_2}}\]
+Now we apply the same intuition to derive the interface conditions for the magnetic field.\\\\
+\textbf{Applying Gauss's Law for Magnetism at the Interface}\\
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{Gauss B.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{-1em}
+\[\vec{\nabla} \cdot \vec{B} = 0 \rightarrow \oint_S \vec{B}\cdot d\vec{a}=0 \quad \text{(Divergence Thm)}\]
+\[\begin{aligned}
+    &\lim_{dh \to 0} \left[\oint_S \vec{B}\cdot d\vec{a}\right] = 0\\
+    &\implies \int_\text{Top} \vec{B}\cdot d\vec{a} + \int_\text{Bot} \vec{B}\cdot d\vec{a} + \underbrace{\cancel{\int_{\text{Side}} \vec{B}\cdot d\vec{a}}}_{0 \text{ as } dh \to 0} = 0\\
+    &\implies \underbrace{-B^{\perp}_{1}}_{\text{entering}} + \underbrace{B^{\perp}_{2}}_{\text{exiting}} = 0
+\end{aligned}\]
+\end{minipage}
+\[\boxed{\implies B^{\perp}_{1} = B^{\perp}_{2}, \quad \mu_1 H^{\perp}_1 = \mu_2 H^{\perp}_2}\]
+\textbf{Applying Ampere-Maxwell Law at the Interface}\\
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{Ampere B.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{-1em}
+\[\begin{aligned}
+\vec{\nabla} \times \vec{H} = \frac{\partial \vec{D}}{\partial t} &\rightarrow  \oint_S\left(\vec{\nabla} \times \vec{H}\right)\cdot d\vec{a} = \oint_S \left(\frac{\partial \vec{D}}{\partial t}\right)\cdot d\vec{a} \\
+&\rightarrow \underset{\text{(Stokes thm)}}{\oint_P \vec{H}\cdot d\vec{l}} = \underset{\left(\substack{\text{constant fixed}\\\text{surface}}\right)}{\frac{\partial}{\partial t} \oint_S \vec{D}\cdot d\vec{a}}
+\end{aligned} \]
+\end{minipage}
+\[\begin{aligned}
+&\lim_{dh \to 0} \left[\oint_P \vec{H}\cdot d\vec{l}\right] = \lim_{dh \to 0} \bigg[\frac{\partial}{\partial t}  \underbrace{\cancel{\oint_S \vec{D}\cdot d\vec{a}}}_{\substack{\text{flux goes to}\\\text{zero as } dh \to 0}}\bigg]\\
+& \implies \int_1 \vec{H}\cdot d\vec{l} + \underbrace{\cancel{\int_2 \vec{H}\cdot d\vec{l}}}_{0} +\int_3 \vec{H}\cdot d\vec{l} + \underbrace{\cancel{\int_4 \vec{H}\cdot d\vec{l}}}_{0} = 0  \quad \implies \underbrace{H_1^{\parallel}}_{\text{parallel}} - \underbrace{H_2^{\parallel}}_{\text{antiparallel}} = 0
+\end{aligned}\]
+\[\boxed{\implies H_1^{\parallel} = H_2^{\parallel}, \quad \frac{B_1^{\parallel}}{\mu_1} = \frac{B_2^{\parallel}}{\mu_2}}\]
+\newpage\noindent
+\textbf{Summary of Interface Conditions}\\
+We can rewrite the components of the fields in terms of $\hat{n}$ by using dot products for the perpendicular components and cross products for the parallel components:\\
+\renewcommand{\arraystretch}{2}
+\fbox{
+\begin{tabular}{l l l}
+$\left. \begin{aligned} 
+    & (1)\quad\hat{n} \cdot (\vec{D}_1 - \vec{D}_2) = 0 \\ 
+    & (2)\quad\hat{n} \cdot (\vec{B}_1 - \vec{B}_2) = 0 
+\end{aligned} \right\} $ 
+& \begin{tabular}{l} Normal components of \\ $\vec{D}$ \& $\vec{B}$ are continuous \end{tabular} 
+& $\begin{aligned} 
+    D_1^\perp = D_2^\perp &\implies \varepsilon_1 E_1^\perp = \varepsilon_2 E_2^\perp \\ 
+    B_1^\perp = B_2^\perp &\implies \mu_1 H_1^\perp = \mu_2 H_2^\perp 
+\end{aligned}$ \\
 
-%add limits where wo<<w and wo>>w. Also add examples from hw + why is the sky blue?
-
-
+$\left. \begin{aligned} 
+    &(3)\quad\hat{n} \times (\vec{E}_1 - \vec{E}_2) = 0 \\ 
+    &(4)\quad\hat{n} \times (\vec{H}_1 - \vec{H}_2) = 0 
+\end{aligned} \right\} $ 
+& \begin{tabular}{l} Tangential components of \\ $\vec{E}$ \& $\vec{H}$ are continuous \end{tabular} 
+& $\begin{aligned} 
+    E_1^\parallel = E_2^\parallel &\implies \frac{D_1^\parallel}{\varepsilon_1} = \frac{D_2^\parallel}{\varepsilon_2} \\ 
+    H_1^\parallel = H_2^\parallel &\implies \frac{B_1^\parallel}{\mu_1} = \frac{B_2^\parallel}{\mu_2} 
+\end{aligned}$ 
+\end{tabular}
+}\\\\
+Visually, it looks like the bending of the electric and magnetic fields at the interface:
+\begin{center}
+\includegraphics[width=1\linewidth]{Interface Conditions.jpg}
+\end{center}
+Note that the magnitudes of the fields can also change at the interface, not just the directions. For example, looking at the magnitudes of the electric fields:
+\[|\vec{E}_1| = \sqrt{(E_1^{\parallel})^2 + (E_1^{\perp})^2}\]
+\[|\vec{E}_2| = \sqrt{(E_2^{\parallel})^2 + (E_2^{\perp})^2}\]
+Since $E_2^{\perp} \neq E_1^{\perp}$, the magnitudes of the electric fields must be different! When applied to light in unit 3B, this will lead to the conclusion that the speed of light changes in different materials.
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+   {\LARGE Unit 3B: Optics\par} 
+\end{center}
+In this unit, we will be applying the interface conditions we derived previously to electromagnetic waves, and thus derive the laws of optics such as reflection and refraction. We will start by looking at the properties of $\vec{E}$, $\vec{B}$, $\vec{D}$, and $\vec{H}$ fields as oscillating waves instead of static fields.
+\section*{Electromagnetic Waves in Matter}
+Since $\vec{D}$ and $\vec{H}$ are just rescaled versions of $\vec{E}$ and $\vec{B}$, we can model them using the same plane wave approximation as before. Recall that the general plane wave solution is in the form:
+\[\vec{E}(\vec{k},t) = \left(E_{0_x}e^{i\phi_x}\hat{x} + E_{0_y}e^{i\phi_y}\hat{y} + E_{0_z}e^{i\phi_z}\hat{z}\right)e^{i(\vec{k}\cdot\vec{r} - \omega t)} = \vec{E}_0 e^{i(\vec{k}\cdot\vec{r} - \omega t)}\]
+Note that all the fields share the same wave properties ($\vec{k}$, $\omega$, and thus $v$), since they make up the same electromagnetic wave.\\\\
+Additionally, we can show using Maxwell's equations that all the fields statisfy the 3D wave equation:
+\[\begin{aligned}
+\nabla^2 \vec{E} &= \mu \varepsilon \frac{\partial^2 \vec{E}}{\partial t^2} & \quad \nabla^2 \vec{H} &= \mu \varepsilon \frac{\partial^2 \vec{H}}{\partial t^2} \\[15pt]
+\nabla^2 \vec{D} &= \mu \varepsilon \frac{\partial^2 \vec{D}}{\partial t^2} & \quad \nabla^2 \vec{B} &= \mu \varepsilon \frac{\partial^2 \vec{B}}{\partial t^2}
+\end{aligned}\]
+Note that the speed of the wave in a material is ALWAYS less than the speed of light in vacuum, since $\mu \varepsilon > \mu_0 \varepsilon_0$ (since $K > 1$ and $\mu_r > 1$ for all materials):
+\[v = \frac{1}{\sqrt{\mu \varepsilon}} < \frac{1}{\sqrt{\mu_0 \varepsilon_0}} = c\]
+\textbf{Additional Properties}\\
+\begin{itemize}
+    \item $\vec{E}$, $\vec{B}$, $\vec{D}$, and $\vec{H}$ are all perpendicular to the direction of wave propagation $\hat{k}$ (transverse waves).
+    \item $\vec{E}$ and $\vec{D}$ are perpendicular to $\vec{B}$ and $\vec{H}$, and thus are parallel to each other.
+    \item $\frac{|\vec{E}|}{|\vec{H}|} = \sqrt{\frac{\mu}{\varepsilon}}$ (wave impedance)
+\end{itemize}
+We define \textbf{wave impedance} ($Z$) as a material property that tells us about the transmission of electromagnetic waves through a material (ex: impedance matching).
+\[\boxed{Z =\frac{|\vec{E}|}{|\vec{H}|} = \sqrt{\frac{\mu}{\varepsilon}}}\]
+\underline{Note:} This is derived from applying Faraday's law.
+\section*{Poynting Vector in Matter}
+We can rewrite Poynting vector in terms of our "fundamental" fields $\vec{E}$ and $\vec{H}$:
+\[u_E = \frac{1}{2}\varepsilon \vec{E} \cdot \vec{E}, \quad u_B = \frac{1}{2}\mu \vec{H} \cdot \vec{H}\]
+Thus the total energy density of the electromagnetic wave is:
+\[u = u_E + u_B = \frac{1}{2}(\vec{E}\cdot\vec{D}+\vec{B}\cdot\vec{H})\]
+\[\boxed{\vec{S} = \vec{E} \times \vec{H} \quad\implies|\vec{S}| = |\vec{E}||\vec{H}| = \frac{|\vec{E}|^2}{Z}}\]
+The lower the wave impedance of a material, the higher the energy flux of the electromagnetic wave through the material for a given electric field amplitude.\\\\
+Note that Poynting vector is defined for any electromagnetic field, not just for light and oscillating fields.\\\\
+\underline{Recall:} The Poynting vector is derived from applying Maxwell's equations to get the form of the continuity equation:
+\[\frac{\partial u}{\partial t} + \vec{\nabla} \cdot \vec{S} = 0\]
+However, deriving the energy densities directly is a bit more involved since we cannot just use the same energy density equations for electric and magnetic fields in vacuum.
+\section*{Optics Set-Up and Definitions}
+\textbf{Plane of Incidence:} the formed by the incident wavevector $\vec{k}_i$ and the normal vector $\hat{n}$ to the interface. $\vec{k}_i$ can be in any general direction, but typically we will take it to be within the $x-y$ or $y-z$ plane to simplify the math.
+\begin{center}
+\includegraphics[width=0.3\linewidth]{Plane of Incidence.png}
+\end{center}
+\newpage\noindent
+Once a wave is incident at an interface, there can be a \textbf{reflected wave}, a \textbf{transmitted wave}, or both. 
+\vspace{-1em}
+\begin{center}
+\includegraphics[width=0.45\linewidth]{Incident Waves_1.png}
+\end{center}
+\vspace{-2em}
+\underline{Assumptions:}
+\begin{itemize}
+    \item Both the reflected and transmitted waves exist within the same plane of incidence as the incident wave.
+    \item Upon reflection, the electric field undergoes a phase shift of $180^\circ$. This typically occurs when light reflects off a medium with a higher refractive index. If we are consistent with this assumption, we will sometimes find a negative sign for the reflected electric field, which indicates that we assumed the wrong direction (just like getting a negative force in a FBD).
+\end{itemize}
+In 3D, this looks like:
+\begin{center}
+\includegraphics[width=0.8\linewidth]{Incident Waves.png}
+\end{center}
+Each EM wave (incident, reflected, transmitted) will have an oscillating $\vec{E}$ and $\vec{B}$ field, each having a plane wave solution:
+\[\begin{aligned}
+    \text{incident:} &\quad 
+\vec{E}_i = \vec{E}_{0i} e^{i(\vec{k}_i \cdot \vec{r} - \omega_i t)}, 
+\quad 
+\vec{B}_i = \vec{B}_{0i} e^{i(\vec{k}_i \cdot \vec{r} - \omega_i t)}\\
+\text{reflected:} &\quad 
+\vec{E}_r = \vec{E}_{0r} e^{i(\vec{k}_r \cdot \vec{r} - \omega_r t)}, 
+\quad 
+\vec{B}_r = \vec{B}_{0r} e^{i(\vec{k}_r \cdot \vec{r} - \omega_r t)}\\
+\text{transmitted:} &\quad 
+\vec{E}_t = \vec{E}_{0t} e^{i(\vec{k}_t \cdot \vec{r} - \omega_t t)}, 
+\quad 
+\vec{B}_t = \vec{B}_{0t} e^{i(\vec{k}_t \cdot \vec{r} - \omega_t t)}
+\end{aligned}\]
+We still start off by generalizing the amplitudes, wavevectors, and frequencies of each wave, and then we will apply the interface conditions to find the relationships between them.\\\\
+For our setup, we take the plane of incidence to be the $y\text{-}z$ plane and the interface to lie at $z = 0$. Since the waves are plane waves and uniform in the $x$ direction, the position vector reduces to $\vec{r} = y\,\hat{y} + z\,\hat{z}$. Thus, the plane wave solutions can be rewritten in as:
+\[\vec{E}_i(\vec{r},t) = \vec{E}_{0i} e^{i(k_i \sin\theta_i \, y - k_i \cos\theta_i \, z - \omega_i t)}
+\]
+\[\vec{E}_r(\vec{r},t) = \vec{E}_{0r} e^{i(k_r \sin\theta_r \, y + k_r \cos\theta_r \, z - \omega_r t)}
+\]
+\[\vec{E}_t(\vec{r},t) = \vec{E}_{0t} e^{i(k_t \sin\theta_t \, y - k_t \cos\theta_t \, z - \omega_t t)}
+\]
+We will be ONLY considering the fields at the interface ($z = 0$):
+\[\vec{E}_i = \vec{E}_{0i} e^{i(y k_i \sin\theta_i - \omega_i t)}, \quad \vec{E}_r = \vec{E}_{0r} e^{i(y k_r \sin\theta_r - \omega_r t)}, \quad \vec{E}_t = \vec{E}_{0t} e^{i(y k_t \sin\theta_t - \omega_t t)}\]
+\underline{Note:} Instead of writing components of the wavevector as $k_y$ and $k_z$, we can write them in terms of the angle formed with the normal vector $\hat{n}$ to the interface.\\\\
+Additionally, note that speed of the wave is dependent on the medium, and thus we have the following relationships between the $\vec{E}$ and $\vec{B}$ fields in each medium:
+\[ \frac{|\vec{E}_{0_i}|}{|\vec{B}_{0_i}|} = \frac{\omega_i}{k_i} = v_1 = \frac{1}{\sqrt{\mu_1 \epsilon_1}}, \quad \frac{|\vec{E}_{0_r}|}{|\vec{B}_{0_r}|} = \frac{\omega_r}{k_r} = v_1 = \frac{1}{\sqrt{\mu_1 \epsilon_1}}\quad \text{(in medium 1)} \]
+\[ \frac{|\vec{E}_{0_t}|}{|\vec{B}_{0_t}|} = \frac{\omega_t}{k_t} = v_2 = \frac{1}{\sqrt{\mu_2 \epsilon_2}} \quad \text{(in medium 2)}\]
+\newpage
+\section*{Two Types of Polarization}
+The electric field of the wave can be polarized in different directions, and any other general polarization can be decomposed into these two types of polarization.\\\\
+\textbf{"Case A": S-Polarization (Perpendicular Polarization)}\\
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{S-Polarization.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{0pt}
+\begin{itemize}
+    \item $\vec{E}$ fields are $\perp$ to the place of incidence and thus $\parallel$ to the interface.
+    \item $\vec{B}$ fields are $\parallel$ to the plane of incidence and thus have both $\parallel$ and $\perp$ components to the interface.
+    \item $\vec{E}$, $\vec{B}$, and $\hat{k}$ are all mutually perpendicular to each other.
+\end{itemize}
+Note that the phase shift of $180^\circ$ in the electric field is already encoded in the chosen direction of the reflected field. Like a FBD, the positive directions of each field are drawn, and if we find a negative sign for the respective field then it just means we assumed the wrong direction. 
+\end{minipage}\\\\
+\textbf{"Case B": P-Polarization (Parallel Polarization)}\\
+\begin{minipage}[t]{0.4\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{P-Polarization.png}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth}
+\vspace{0pt}
+\begin{itemize}
+    \item $\vec{E}$ fields are in the plane of incidence and thus have both $\parallel$ and $\perp$ components to the interface.
+    \item $\vec{B}$ fields are $\perp$ to the plane of incidence and thus $\parallel$ to the interface.
+    \item $\vec{E}$, $\vec{B}$, and $\hat{k}$ are all mutually perpendicular to each other.
+\end{itemize}
+Note that the $\vec{E}$ fields are not shifted by $180^\circ$ upon reflection, this is due to physical intuition of the directions of the fields. As always, if we assumed the wrong direction, then the math will tell us.
+\end{minipage}\\
+Next, our goal is to predict how light will reflect and/or transmit based on our interface conditions and material properties. We will do this by deriving the reflection and transmission coefficients for both cases of polarization, which are called the \textbf{Fresnel Formulae}:
+\[\begin{aligned}
+E_{0_r}^a &= r_{\perp} E_{0_i}^a \qquad r_{\perp} : \text{reflection coefficient (S-Polarization)}\\ 
+E_{0_t}^a &= t_{\perp} E_{0_i}^a \qquad t_{\perp} : \text{transmission coefficient (S-Polarization)}\\
+E_{0_r}^b &= r_{\parallel} E_{0_i}^b \qquad r_{\parallel} : \text{reflection coefficient (P-Polarization)}\\
+E_{0_t}^b &= t_{\parallel} E_{0_i}^b \qquad t_{\parallel} : \text{transmission coefficient (P-Polarization)}
+\end{aligned}\]
+\section*{Case A: Fresnel Coefficients (S-Polarization)}
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{0pt}
+\centering
+\includegraphics[width=\linewidth]{Fresnel S.jpg}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}
+\vspace{0pt}
+Apply interface condition (3) that parallel components of $\vec{E}$ to the interface are continuous:
+\[\hat{n} \times (\vec{E}_1 - \vec{E}_2) = 0 \iff E_1^\parallel = E_2^\parallel\]
+This applies to the \textit{total} $\vec{E}$ field in each medium:
+\[\underbrace{E_i^\parallel + E_r^\parallel}_{\text{medium 1}} = \underbrace{E_t^\parallel}_{\text{medium 2}}\]
+\end{minipage}\\\\
+Writing the interface condition in terms of the plane wave solutions at the interface (taking the positive direction to be along $\hat{x}$):
+\[\implies \left(-E_{0_i} e^{i(y k_i \sin\theta_i - \omega_i t)}\right) + \left(E_{0_r} e^{i(y k_r \sin\theta_r - \omega_r t)}\right) = \left(-E_{0_t} e^{i(y k_t \sin\theta_t - \omega_t t)}\right)\]
+Physically, the coefficients $r_{\perp}$ and $t_{\perp}$ must be independent of position and time, since they depend on just material properties. In other words, the interface condition must hold true for \textit{all} $y$ and $t$. Thus, assuming that the exponentials are equal, we get the result:
+\[\boxed{-E_{0_i} + E_{0_r} = -E_{0_t} \quad \text{(IC 3)}}\]
+We can derive several useful results from our assumption:
+\begin{itemize}
+    \item The frequency of the reflected and transmitted light is the same as the frequency of the incident light:
+    \[\boxed{\omega_i = \omega_r = \omega_t}\]
+    \item We can derive \textbf{law of reflection} as well:
+    \[k_i\sin\theta_i = k_r\sin\theta_r = k_t\sin\theta_t\]
+    Since $v = \frac{\omega}{k}$, and $\omega$ is the same for all light:
+    \[v_i = \frac{\omega}{k_i},\quad v_r = \frac{\omega}{k_r},\quad v_t = \frac{\omega}{k_t}\]
+    Since the incident and reflected light are in the same medium, they have the same speed $v_1 = \frac{1}{\sqrt{\mu_1 \varepsilon_1}}$:
+    \[v_1 = v_i = v_r \implies k_i = k_r\]
+    Thereforce, we get the law of reflection:
+    \[k_i\sin\theta_i = k_r\sin\theta_r \implies \sin\theta_i = \sin\theta_r\]
+    \[\boxed{\theta_i = \theta_r}\]
+    \item Finally, we can derive \textbf{Snell's Law (law of refraction)}:
+    \[k_i\sin\theta_i = k_t\sin\theta_t\]
+    Since the speed of light is different in the two media, we have:
+    \[v_1 = \frac{\omega}{k_i} = \frac{1}{\sqrt{\mu_1 \varepsilon_1}},\quad v_2 = \frac{\omega}{k_2} = \frac{1}{\sqrt{\mu_2 \varepsilon_2}}\]
+    Defining the \textbf{index of refraction ($n$)} as:
+    \[\boxed{n = \frac{c}{v}}\]
+    Where $c$ is the speed of light in vacuum, and $v$ is the speed of light in the material.\\\\
+    Rewriting the wavevectors in terms of the index of refraction:
+    \[k_i = \frac{\omega}{v_1} = \frac{\omega}{c} n_1 \quad \text{and} \quad k_t = \frac{\omega}{v_2} = \frac{\omega}{c} n_2\]
+    Now, $k_i\sin\theta_i = k_t\sin\theta_t$ implies Snell's law:
+    \[\boxed{n_1\sin\theta_i = n_2 \sin\theta_t}\]
+\end{itemize}
+Now continuing by applying interface condition (4) that parallel components of $\vec{H}$ to the interface are continuous:
+\[\hat{n} \times (\vec{H}_1 - \vec{H}_2) = 0 \iff H_1^\parallel = H_2^\parallel\]
+Like with the electric field, this applies to the \textit{total} $\vec{H}$ field in each medium:
+\[\underbrace{H_i^\parallel + H_r^\parallel}_{\text{medium 1}} = \underbrace{H_t^\parallel}_{\text{medium 2}}\]
+In terms of the magnetic fields ($\vec{B} = \mu \vec{H}$):
+\[\frac{B_i^\parallel}{\mu_1} + \frac{B_r^\parallel}{\mu_1} = \frac{B_t^\parallel}{\mu_2}\]
+Applying the same assumptions for the exponentials, we get the following result when plugging in the plane wave solutions for the magnetic fields:
+\[
+\frac{B_{0_i}}{\mu_1} \cos\theta_i + \frac{B_{0_r}}{\mu_1} \cos\theta_i = \frac{B_{0_t}}{\mu_2} \cos\theta_t
+\]
+Now rewriting the magnetic field amplitudes in terms of electric field amplitudes:
+\[\frac{|\vec{E}|}{|\vec{B}|} = v \quad\implies \quad B_0 = \frac{E_0}{v} = E_0\frac{n}{c}\]
+\[\implies \boxed{E_{0_i} \frac{n_1}{\mu_1} \cos\theta_i + E_{0_r} \frac{n_1}{\mu_1} \cos\theta_i = E_{0_t} \frac{n_2}{\mu_2} \cos\theta_t \quad \text{(IC 4)}}\]
+\newpage\noindent
+All that's left is a load of algebraic manipulation to solve for the reflection and transmission coefficients:
+\[E_{0_t} = E_{0_i} - E_{0_r}\]
+\[E_{0_t} = \left( E_{0_i} \frac{n_1}{\mu_1} \cos\theta_i + E_{0_r} \frac{n_1}{\mu_1} \cos\theta_i \right) \frac{\mu_2}{n_2 \cos\theta_t}\]
+\[\implies E_{0_i} - E_{0_r} = E_{0_i} \frac{n_1}{n_2} \frac{\mu_2}{\mu_1} \frac{\cos\theta_i}{\cos\theta_t} + E_{0_r} \frac{n_1}{n_2} \frac{\mu_2}{\mu_1} \frac{\cos\theta_i}{\cos\theta_t}
+\]
+\[E_{0_i} \left( \frac{n_2 \mu_1 \cos\theta_t - n_1 \mu_2 \cos\theta_i}{\cancel{n_2 \mu_1 \cos\theta_t}} \right) = E_{0_r} \left( \frac{n_1 \mu_2 \cos\theta_i + n_2 \mu_1 \cos\theta_t}{\cancel{n_2 \mu_1 \cos\theta_t}} \right)\]
+\[\frac{E_{0_r}}{E_{0_i}} = \frac{n_2 \mu_1 \cos\theta_t - n_1 \mu_2 \cos\theta_i}{n_1 \mu_2 \cos\theta_i + n_2 \mu_1 \cos\theta_t} \left( \frac{1/\mu_1 \mu_2}{1/\mu_1 \mu_2} \right)
+\]
+\[\boxed{\frac{E_{0_r}}{E_{0_i}} = -\frac{(n_1/\mu_1 \cos\theta_i - n_2/\mu_2 \cos\theta_t)}{(n_1/\mu_1 \cos\theta_i + n_2/\mu_2 \cos\theta_t)} \equiv r_{\perp} \quad \text{(reflection coefficient for S-polarization)}}\]
+Similarly, we can solve for the transmission coefficient:
+\[\boxed{\frac{E_{0_t}}{E_{0_i}} = \frac{2(n_1/\mu_1) \cos\theta_i}{(n_1/\mu_1) \cos\theta_i + (n_2/\mu_2) \cos\theta_t} \equiv t_{\perp} \quad \text{(transmission coefficient for S-polarization)}}\]
+We can now predict the reflected and transmitted electric waves for any given incident electric wave (using the laws of optics and the Fresnel coefficients)!\\\\
+Additionally, in most materials, the magnetic permeability doesn't change much, so we can further simplify by assuming $\mu_1 \approx \mu_2$:
+\[
+\boxed{r_{\perp} = -\frac{\left(\cos\theta_i - \sqrt{(n_2/n_1)^2 - \sin^2\theta_i}\right)}{\left(\cos\theta_i + \sqrt{(n_2/n_1)^2 - \sin^2\theta_i}\right)}}
+\]
+\[
+\boxed{t_{\perp} = \frac{2\cos\theta_i}{\cos\theta_i + \sqrt{(n_2/n_1)^2 - \sin^2\theta_i}}}
+\]
+\section*{Case B: Fresnel Coefficients (P-Polarization)}
+\begin{center}
+\includegraphics[width=0.5\linewidth]{Fresnel P.jpg}
+\end{center}
+Apply interface condition (3): $E_1^{\parallel} = E_2^{\parallel}$:
+\[\left( E_{0_i} e^{i(y k_i \sin\theta_i - \omega_i t)} \cos\theta_i \right) + \left( -E_{0_r} e^{i(y k_r \sin\theta_r - \omega_r t)} \cos\theta_r \right) = \left( E_{0_t} e^{i(y k_t \sin\theta_t - \omega_t t)} \cos\theta_t \right)\]
+Simplify w/ laws of optics
+\[\implies \boxed{E_{0_i} \cos\theta_i - E_{0_r} \cos\theta_i = E_{0_t} \cos\theta_t \quad \text{(IC 3)}}\]
+Apply interface condition (4): $H_1^{\parallel} = H_2^{\parallel}, \quad \vec{B} = \mu \vec{H}$
+\[\frac{B_i^{\parallel}}{\mu_1} + \frac{B_r^{\parallel}}{\mu_1} = \frac{B_t^{\parallel}}{\mu_2} \xrightarrow{\substack{\text{simplify w/}\\ \text{laws of optics}}} \frac{1}{\mu_1} B_{0_i} + \frac{1}{\mu_1} B_{0_r} = \frac{1}{\mu_2} B_{0_t}\]
+Rewrite to $\vec{E}$ using: $\frac{|\vec{E}|}{|\vec{B}|} = v_{\text{medium}} = \frac{c}{n} \implies B_0 = E_0\frac{n}{c} $
+\[\frac{1}{\mu_1} \left( \frac{n_1}{c} E_{0_i} \right) + \frac{1}{\mu_1} \left( \frac{n_1}{c} E_{0_r} \right) = \frac{1}{\mu_2} \left( \frac{n_2}{c} E_{0_t} \right) \implies \boxed{\frac{n_1}{\mu_1} E_{0_i} + \frac{n_1}{\mu_1} E_{0_r} = \frac{n_2}{\mu_2} E_{0_t} \quad \text{(IC 4)}}\]
+Find coefficients by solving for $\frac{E_{0_r}}{E_{0_i}} = r_{\parallel}, \quad \frac{E_{0_t}}{E_{0_i}} = t_{\parallel}$:
+\[E_{0_i} \frac{\cos\theta_i}{\cos\theta_t} - E_{0_r} \frac{\cos\theta_i}{\cos\theta_t} = E_{0_t}\]
+\[\implies \frac{n_1}{\mu_1} E_{0_i} + \frac{n_1}{\mu_1} E_{0_r} = \frac{n_2}{\mu_2} \left( E_{0_i} \frac{\cos\theta_i}{\cos\theta_t} - E_{0_r} \frac{\cos\theta_i}{\cos\theta_t} \right)\]
+\[\implies E_{0_r} \left( \frac{n_1}{\mu_1} + \frac{n_2}{\mu_2} \frac{\cos\theta_i}{\cos\theta_t} \right) = E_{0_i} \left( \frac{n_2}{\mu_2} \frac{\cos\theta_i}{\cos\theta_t} - \frac{n_1}{\mu_1} \right)\]
+\[\implies \frac{E_{0_r}}{E_{0_i}} = \frac{\left( \frac{n_2}{\mu_2} \frac{\cos\theta_i}{\cos\theta_t} - \frac{n_1}{\mu_1} \right)}{\left( \frac{n_1}{\mu_1} + \frac{n_2}{\mu_2} \frac{\cos\theta_i}{\cos\theta_t} \right)} = \frac{\left( \frac{n_2 \cos\theta_i \mu_1\cancel{ \mu_2 \cos\theta_t}}{\cancel{\mu_2 \cos\theta_t}} - \frac{n_1 \cancel{\mu_1} \mu_2 \cos\theta_t}{\cancel{\mu_1}} \right)}{\left( \frac{n_1 \cancel{\mu_1} \mu_2 \cos\theta_t}{\cancel{\mu_1}} + \frac{n_2 \cos\theta_i \mu_1 \cancel{\mu_2 \cos\theta_t}}{\cancel{\mu_2 \cos\theta_t}} \right)}\]
+\[\implies \boxed{\frac{E_{0_r}}{E_{0_i}} = \frac{n_2 \mu_1 \cos\theta_i - n_1 \mu_2 \cos\theta_t}{n_1 \mu_2 \cos\theta_t + n_2 \mu_1 \cos\theta_i} \equiv r_{\parallel} \quad \text{(reflection coefficient for P-polarization)}}\]
+Finally, $\mu_1 \approx \mu_2$
+\[\boxed{r_{\parallel} = \frac{E_{0_r}}{E_{0_i}} = \frac{n_2 \cos\theta_i - n_1 \cos\theta_t}{n_1 \cos\theta_t + n_2 \cos\theta_i}}\]
+Now repeat for $t_{\parallel}$:
+\[E_{0_i} \cos\theta_i - E_{0_t} \cos\theta_t = E_{0_r} \cos\theta_i \implies E_{0_i} - E_{0_t} \frac{\cos\theta_t}{\cos\theta_i} = E_{0_r}\]
+\[\implies \frac{n_1}{\mu_1} E_{0_i} + \frac{n_1}{\mu_1} \left( E_{0_i} - E_{0_t} \frac{\cos\theta_t}{\cos\theta_i} \right) = \frac{n_2}{\mu_2} E_{0_t}\]
+\[\implies E_{0_i} \left( \frac{n_1}{\mu_1} + \frac{n_1}{\mu_1} \right) = E_{0_t} \left( \frac{n_2}{\mu_2} + \frac{n_1}{\mu_1} \frac{\cos\theta_t}{\cos\theta_i} \right)\]
+\[\implies E_{0_i} \left( \frac{2n_1 \cancel{\mu_1} \mu_2 \cos\theta_i}{\cancel{\mu_1}} \right) = E_{0_t} \left( \frac{n_2 \mu_1 \cancel{\mu_2} \cos\theta_i}{\cancel{\mu_2}} + \frac{n_1 \cos\theta_t \cancel{\mu_1} \mu_2 \cancel{\cos\theta_i}}{\cancel{\mu_1 \cos\theta_i}} \right)\]
+\[\implies E_{0_i} (2n_1 \mu_2 \cos\theta_i) = E_{0_t} (n_2 \mu_1 \cos\theta_i + n_1 \mu_2 \cos\theta_t)\]
+\[\implies \boxed{\frac{E_{0_t}}{E_{0_i}} = \frac{2n_1 \mu_2 \cos\theta_i}{n_2 \mu_1 \cos\theta_i + n_1 \mu_2 \cos\theta_t}\equiv t_\parallel \quad \text{(transmission coefficient for P-polarization)}}\]
+Set $\mu_1 \approx \mu_2$
+\[\boxed{t_{\parallel} = \frac{E_{0_t}}{E_{0_i}} = \frac{2n_1 \cos\theta_i}{n_2 \cos\theta_i + n_1 \cos\theta_t}}\]
+In summary, we can use the laws of optics to determine the directions of the reflected and transmitted waves, and then we can use the Fresnel coefficients to determine the amplitudes of the reflected and transmitted waves. Altogether, we can derive the plane wave solutions for the reflected and transmitted waves based on the plane wave solution for the incident wave and thus can do all the normal wave calculations for the reflected and transmitted waves (ex: energy flux, intensity, etc.).
+\section*{Reflectance and Transmittance}
+\section*{Total Internal Reflection}
+\section*{Evanescent Waves}
+\section*{Brewster's Angle}
 \end{document}
