@@ -222,8 +222,30 @@ For solving partial fraction decomposition to find the inverse Laplace transform
     \item For irreducible quadratic factors, this doesn't apply (use $Cx+D$ and solve).
     \item Always check that $(\deg \text{ of num}) < (\deg \text{ of denom})$.
 \end{itemize}
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+{\LARGE Response Analysis\par}
+\end{center}
+\section*{Transfer Function}
+Transfer functions relate input to output in the Laplace domain, \textit{assuming zero initial conditions}. It is defined as:
+\[G(s) = \frac{Y(s)}{R(s)}\]
+\begin{center}
+\includegraphics[width=0.3\textwidth]{Transfer Function.png}
+\end{center}
+Transfer functions \textit{don't capture the time domain response of the system}, because the input function is undefined. However, once we define an input function (step function, impulse, etc.), we can find the time domain response by taking the inverse Laplace transform of $Y(s) = G(s)R(s)$.\\\\
+Since the transfer function assumes zero initial conditions, it captures only the \textbf{steady state response} of the system, which is the response due to the input function.\\\\
+\underline{Note:} When writing out the equations of motion (time domain), write it in the form
+\[\text{(output)} = \text{(input)}\]
+\[\text{(dep. variables LHS)} = \text{(input RHS)}\]
+\section*{Transient vs Steady State Response}
+\textbf{Transient Response} is the part of the system's response that dies out over time, while \textbf{Steady State Response} is the part of the response that remains after the transient response has decayed.\\\\
+Typically, the steady state response is due to an input to the system, this input can either be a forcing function (unit-impulse, unit-step, etc.) or some static (constant) input. The transient response is due to the initial conditions ($x_0$, $v_0$, etc.) of the system. Recall that the homogeneous solution corresponds to the transient response, while the particular solution corresponds to the steady state response.
+\newpage
 \section*{Stability}
-In terms of natural response,
+In terms of natural (unforced/free) response,
 \begin{itemize}
     \item System is \textbf{stable} if $x(t) \to 0$ as $t \to \infty$
     \item System is \textbf{unstable} if $x(t) \to \infty$ as $t \to \infty$
@@ -234,30 +256,65 @@ In terms of total response,
     \item System is \textbf{stable} if \textit{every} bounded input yields a bounded output \textbf{(BIBO)}
     \item System is \textbf{unstable} if \textit{any} bounded input yields an unbounded output
 \end{itemize}
-Mathematically, we can determine stability by looking at the roots of the characteristic equation (the denominator of the transfer function):
-\[x_h(t)=A_1e^{s_1t}+A_2e^{s_2t}+\dots+A_ne^{s_nt}\quad\text{Homogeneous solution}\]
+Mathematically, we can determine stability by looking at the roots of the characteristic equation which are the \textit{poles} of the transfer function (a pole is a value of $s$ that makes the denominator of the transfer function zero):
 \begin{itemize}
     \item Negative Real Part ($\text{Re}[s] < 0$) $\to$ \textbf{Stable}
     \item Positive Real Part ($\text{Re}[s] > 0$) $\to$ \textbf{Unstable}, grows exponentially
-    \item One zero at $s = 0$ and one negative root $\to$ \textbf{Neutrally or marginally stable} (neither decays to zero nor grows without bound)
+    \item One zero at $s = 0$ and one negative root $\to$ \textbf{Neutrally or marginally stable} (the negative root decays to zero, but the zero root stays constant, so its steady state response is marginally stable)
     \item Zero real part, non-zero imaginary $\to$ \textbf{Oscillatory response} (neutrally or marginally stable)
-    \item \textbf{All roots must be stable for system to be considered stable!}
+\end{itemize}
+\textbf{All roots must be stable for system to be considered stable!} For example, it is possible to have stable and unstable oscillatory responses since the real part determines the amplitude of the oscillation and the imaginary part determines the frequency of the oscillation.
+\begin{itemize}
+    \item Positive real part (Re[$s$] $> 0$), non-zero imaginary part (Im[$s$] $\neq$ 0) $\to$ \textbf{Unstable}, flutter instability
+    \item Negative real part (Re[$s$] $< 0$), non-zero imaginary part (Im[$s$] $\neq$ 0) $\to$ \textbf{Stable}, damped oscillation
 \end{itemize}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{Stability.png}
 \end{center}
 \underline{Note:} The poles of the transfer function are the values that make the denominator zero, which are the roots of the characteristic equation. The location of the poles in the complex plane determines the stability of the system.
-\section*{Transfer Function}
-Transfer function relates input to output in the Laplace domain, assuming zero initial conditions. It is defined as:
-\[G(s) = \frac{Y(s)}{R(s)}\]
-\begin{center}
-\includegraphics[width=0.3\textwidth]{Transfer Function.png}
-\end{center}
-Transfer functions don't capture the time domain response of the system, because the input function ca be left undefined. Once we define an input function (step function, impulse, etc.), we can find the time domain response by taking the inverse Laplace transform of $Y(s) = G(s)R(s)$.\\\\
-Since the transfer function assumes zero initial conditions, it only captures the \textbf{steady state response} of the system, which is the response due to the input function.
-\section*{Transient vs Steady State Response}
-\textbf{Transient Response} is the part of the system's response that dies out over time, while \textbf{Steady State Response} is the part of the response that remains after the transient response has decayed.\\\\
-Typically, the steady state response is due to the input function, while the transient response is due to the initial conditions of the system. Thus, the homogeneous solution corresponds to the transient response, while the particular solution corresponds to the steady state response.
+\section*{Identifying Frequency and Time Constants}
+Aside from determining the stability of a system based on its poles, we can also analyze the system's response in the time domain by looking at the time constant, natural frequency, and damping ratio of the system. These parameters can be identified from the transfer function or the characteristic equation of the system.\\\\
+\textbf{Time Constant}\\
+For a transfer function of a \textbf{first order system}:
+\[\boxed{G(s) = \frac{K}{\tau s + 1}}\]
+Where $\tau$ is the time constant and $K$ is the steady state gain.\\\\
+The time constant $\tau$ describes how quickly a system reaches steady state (shorter $\tau$ means faster response). For a first order system in the time domain, the time constant is the value for $t$ such that $-Ct$ becomes $-1$:
+\[v(t) = v_0 e^{-Ct}, \quad \tau = \frac{1}{C}\]
+At $1\,\tau$ the system is 63.3\% of the way to its final steady state value, at $2\,\tau$ it is 86.5\%, at $3\,\tau$ it is 95\%, and at $4\,\tau$ it is 98.2\%. Thus, we can say that the system has effectively reached its steady state value after $4\,\tau$.\\\\
+The steady state gain $K$ is defined as the steady state output of the system \textit{given a unit step input}. Intuitively, it describes how much the system amplifies the input at steady state.\\\\
+\textbf{Natural Frequency}\\
+For a \textbf{second order system with no damping}, its characteristic equation in the time and laplace domains are as follows:
+\[\ddot{x} + \omega_n^2 x = 0, \quad s^2+ \omega_n^2 = 0\]
+Where $\omega_n$ is the natural frequency of the system.\\\\
+\textbf{Damping Ratio}\\
+For \textbf{second order damped systems}, we have a non-zero damping ratio $\zeta$. For a second order system with damping, its characteristic equation is in the form:
+\[\ddot{x} + 2\zeta \omega_n \dot{x} + \omega_n^2 x = 0\quad \text{or } =\frac{f(t)}{m} \quad \text{if there is a forcing function}\]
+\[s^2 + 2\zeta \omega_n s + \omega_n^2 = 0 \quad \text{(in laplace domain)}\]
+The damping ratio determines the nature of the system's response:
+\begin{itemize}
+    \item $\zeta < 0$: Unstable system (response grows exponentially).
+    
+    \item $\zeta = 0$: Marginally stable (undamped/free oscillations at $\omega_n$).
+    
+    \item $0 < \zeta < 1$: \textbf{Underdamped} (stable, oscillatory response with decaying amplitude).
+    
+    \item $\zeta = 1$: \textbf{Critically damped} (stable, fastest exponentially decaying return to equilibrium).
+    
+    \item $\zeta > 1$: \textbf{Overdamped} (stable, exponentially decaying response with slower return to equilibrium).
+\end{itemize}
+\underline{Note:} The \textbf{time constant of a damped second order system} is given in terms of the \textit{dominant pole} $\sigma$ (since the system has 2 poles). The dominant pole is the pole closest to the imaginary axis (the slower pole), and the time constant is given by
+\[\tau = \frac{1}{\sigma}\]
+The faster pole has a shorter transient response and decays to zero much faster than the slower pole and thus the dominant pole determines the overall response of the system better.
+\newpage\noindent
+\section*{Final/Initial Value Theorem}
+We can determine the initial and final values of a system's response by just looking at the transfer function without having to find the full time domain response.\\\\
+\textbf{Final Value Theorem}
+\[\boxed{\lim_{t \to \infty} f(t) = \lim_{s \to 0} sF(s)}\]
+\textbf{Initial Value Theorem}
+\[\boxed{\lim_{t \to 0} f(t) = \lim_{s \to \infty} sF(s)}\]
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
 \newpage
 \begin{center}
 {\LARGE Mechanical Systems\par}
@@ -298,12 +355,6 @@ Power = effort $\times$ flow. In mechanical systems, effort is force and flow is
 \[P = F \cdot v\]
 In terms of rotation:
 \[P = \tau \cdot \omega\]
-\section*{Time Constant}
-The time constant $\tau$ of a system is a measure of how quickly the system responds to changes in input. It is defined for solutions of first order systems such as:
-\[v(t) = v_0 e^{-Ct}\]
-Where the time constant $\tau$ is the value for $t$ such that $-Ct$ becomes $-1$:
-\[\tau = \frac{1}{C}\]
-At $1\,\tau$ the system is 63.3\% of the way to its final steady state value, at $2\,\tau$ it is 86.5\%, at $3\,\tau$ it is 95\%, and at $4\,\tau$ it is 98.2\%. Thus, we can say that the system has effectively reached its steady state value after $4\,\tau$.
 \section*{Spring-Mass System (1 DOF)}
 \begin{center}
 \includegraphics[width=0.7\textwidth]{Spring Mass.png}
@@ -360,7 +411,6 @@ $$ f(t)=  \left\{
 We can define this in the following way
 $$f(t) = g(t)(1-1(t-a))+h(t)1(t-a)$$
 We can do this using the fact that $1(t-a)$ is 0 before $t=a$ and 1 after $t=a$. Thus, $1-1(t-a)$ is 1 before $t=a$ and 0 after $t=a$.
-\newpage
 \section*{Two DOF Systems}
 A degree of freedom (DOF) is an independent coordinate that can be used to describe the configuration of a system. What makes a 2 DOF system different from a 1 DOF system is that the equations of motion are coupled, meaning that the motion of one mass affects the motion of the other mass.
 \begin{center}
@@ -383,7 +433,7 @@ Instead of using Newton's second law to derive the equations of motion, we can a
     \item Because energy is conserved, we can differentiate the total energy to find the equations of motion.
     \[\boxed{\frac{d(T+U)}{dt}=0}\]
 \end{itemize}
-Note that this only works for conservative systems, where there is no energy loss due to damping or friction. For non-conservative systems, it is easier to use Newton's second law to derive the equations of motion.\\\\
+Note that this only works for conservative systems, \textit{where there is no energy loss due to damping or friction}. For non-conservative systems, it is easier to use Newton's second law to derive the equations of motion.\\\\
 \textbf{Rolling Without Slipping}\\
 Recall that when an object rolls without slipping, it obeys these conditions:
 \begin{itemize}
@@ -422,9 +472,10 @@ Since the buoyant force is given as:
 \[\boxed{F_\text{b}=\rho g A x}\]
 Where $x$ is the depth of the object in the fluid, $A$ is the cross-sectional area of the object, and $\rho$ is the density of the fluid, we can treat the buoyant force as a spring force with an equivalent stiffness of:
 \[\boxed{k_\text{eq} = \rho g A}\]
-
 \section*{Common Moments of Inertia}
 \begin{itemize}
+\item \textbf{Point mass} (mass $m$ at distance $r$ from axis of rotation)
+\[I = mr^2\]
 
 \item \textbf{Thin rod} (length $L$, mass $m$)
 \[
@@ -471,33 +522,150 @@ I = \frac{2}{3} mR^2
 I = \frac{1}{12} m(a^2 + b^2)
 \quad \text{(about center, axis perpendicular to plate)}
 \]
-
 \end{itemize}
-\section*{Identifying Frequency and Time Constants}
-\textbf{Time Constant}\\
-For a transfer function of a first order system:
-\[\boxed{G(s) = \frac{k}{\tau s + 1}}\]
-Where $\tau$ is the time constant and $k$ is the steady state gain.\\\\
-\textbf{Natural Frequency}\\
-For a second order system with no damping, its equation of motion is in the form:
-\[\ddot{x} + \omega_n^2 x = 0\]
-Where $\omega_n$ is the natural frequency of the system.\\\\
-\textbf{Damping Ratio}\\
-In the Laplace table, we have the term $\zeta$ show up, which represents the damping ratio of the system. For a second order system with damping, its equation of motion is in the form:
-\[\ddot{x} + 2\zeta \omega_n \dot{x} + \omega_n^2 x = 0\quad \text{or if there is a forcing term } =\frac{f(t)}{m}\]
-It is equal to 
-\[\zeta = \frac{b}{2\sqrt{mk}}\]
-Where $b$ is the damping coefficient, $m$ is the mass, and $k$ is the stiffness of the system. The damping ratio determines the nature of the system's response:
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+{\LARGE Electrical and Electro-Mechanical Systems\par}
+\end{center}
+We will begin with electrical systems (circuits), and then move on to electro-mechanical systems, which contain both electrical and mechanical elements. Typically, electro-mechanical systems describe a \textit{linear} relationship between electrical inputs (voltage or current) and mechanical outputs (velocity, torque, etc.). This will result in a multiple degree of freedom system and will be solved using the same methods as mechanical systems (substitution).
+\section*{Electrical Elements}
 \begin{itemize}
-    \item $\zeta < 0$: Unstable system (response grows exponentially).
-    
-    \item $\zeta = 0$: Marginally stable (undamped oscillations at $\omega_n$).
-    
-    \item $0 < \zeta < 1$: Underdamped (stable, oscillatory response with decaying amplitude).
-    
-    \item $\zeta = 1$: Critically damped (stable, fastest non-oscillatory return to equilibrium).
-    
-    \item $\zeta > 1$: Overdamped (stable, non-oscillatory response with slower return to equilibrium).
+    \item \textbf{Resistor}\\
+\begin{minipage}[t]{0.3\textwidth}\vspace{0pt}
+    \centering
+    \includegraphics[width=\textwidth]{Resistor.png}
+\end{minipage}
+\hspace{0.05\textwidth}
+\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}
+    \[
+    \begin{aligned}
+        v_R &= iR \\
+        i(t) &= \frac{1}{R}(v_1 - v_2) \\
+        I(s) &= \frac{1}{R}(V_1 - V_2)
+    \end{aligned}
+    \]
+    \end{minipage}
+    \item \textbf{Capacitor}\\
+    \begin{minipage}[t]{0.3\textwidth}\vspace{0pt}
+    \centering
+    \includegraphics[width=\textwidth]{Capacitor.png}
+    \end{minipage}
+\hspace{0.15\textwidth}
+    \begin{minipage}[t]{0.5\textwidth}\vspace{0pt}
+    \[
+    \begin{aligned}
+        q &= Cv_c \\
+        \frac{d}{dt}(q) &= \frac{d}{dt}(Cv_c) \quad \implies  \boxed{i(t) = C \frac{dv_C}{dt}} \\
+        I(s) &= Cs(V_1 - V_2)
+    \end{aligned}
+    \]
+    $I(s)$ comes from the Laplace transform of $i(t)$:
+    \[i(t) = C\frac{d}{dt}(\underbrace{V_1-V_2}_{V_c})\]
+    \end{minipage}
+    \item \textbf{Inductor}\\
+    \begin{minipage}[t]{0.3\textwidth}\vspace{0pt}
+    \centering
+    \includegraphics[width=\textwidth]{Inductor.png}
+    \end{minipage}
+\hspace{0.1\textwidth}
+    \begin{minipage}[t]{0.5\textwidth}\vspace{0pt}
+    \[
+    \begin{aligned}
+        v_L &= L \frac{di}{dt} \\
+        i(t) &= i_o + \frac{1}{L} \int v_L(t) dt, \text{ zero IC} \\
+        I(s) &= \frac{1}{Ls} (V_1 - V_2)
+    \end{aligned}
+    \]
+    \end{minipage}
 \end{itemize}
+To write the equations of motion (characteristic equation) for an electrical system, we use Kirchhoff's current law (KCL) and Kirchhoff's voltage law (KVL) (see ESC 221 notes).
+\section*{Impedance}
+Impedance $Z$ is defined as the ratio of the voltage across an electrical element to the current through the element in the Laplace domain. Using impedance, every electrical element can be treated as a resistor, following an Ohm's law-like relationship:
+\[Z = \frac{V(s)}{I(s)} \quad \implies i=\frac{v_1-v_2}{Z}, \quad v_1-v_2=iZ\]
+The impedance of each element is as follows:
+\begin{itemize}
+    \item Resistor: $Z_R = R$
+    \item Capacitor: $Z_C = \frac{1}{Cs}$
+    \item Inductor: $Z_L = Ls$
+\end{itemize}
+\textbf{Summing Impedances}\\
+Since we can treat every element as a resistor, we can sum impedances in series and parallel just like we would for resistors:
+\begin{itemize}
+    \item \textbf{Series Impedances}
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Series Impedance.png}
+\end{center}
+    \[Z_\text{eq} = Z_1 + Z_2\]
+    \item \textbf{Parallel Impedances}
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Parallel Impedances.png}
+\end{center}
+    \[\frac{1}{Z_\text{eq}} = \frac{1}{Z_1} + \frac{1}{Z_2} \quad \implies \quad Z_\text{eq} = \frac{Z_1 Z_2}{Z_1 + Z_2}\]
+\end{itemize}
+\newpage\noindent
+\textbf{Impedance Voltage Division}\\
+Like the voltage division rule for resistors, we can also use the impedance to find the voltage across an element in a series circuit:
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{Impedance Voltage Division.png}
+\end{center}
+\[v_o = \frac{Z_2}{Z_1 + Z_2} E\]
+\underline{Note:} When writing the characteristic equation for an electrical system using impedances, we are in the Laplace domain, \textit{not the time domain}! This is often easier, though nodal and mesh analysis can also be used to write the equations of motion in the time domain.
+\section*{Electrical and Mechanical Analogous Systems}
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Mechanical-Electrical Analogy.png}
+\end{center}
+Looking at the characteristic equations for the damped mass-spring system and the RLC circuit, we can see that they have the same form:
+\[M\frac{d^2x}{dt^2} + b\frac{dx}{dt} + kx = f(t)\]
+\[L\frac{d^2q}{dt^2} + R\frac{dq}{dt} + \frac{1}{C}q = e(t)\]
+\textbf{Power}\\
+Like mechanical systems, we can also define power for electrical systems as the product of effort $\times$ flow:
+\[\begin{aligned}
+P &= v \cdot i \\
+&= \tau \cdot \omega \quad \text{(for rotational mechanical systems)} \\
+&= F \cdot v \quad \text{(for translational mechanical systems)}
+\end{aligned}\]
+\newpage
+\section*{Electromechanical Systems (DC Motor)}
+The most common type of electromechanical system is a DC motor, which converts current to torque. It is commonly modeled as follows:
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{DC Motor.png}
+\end{center}
+Where:
+\[\begin{aligned}
+R_a &= \text{armature resistance } (\Omega) \\
+L_a &= \text{armature inductance } (\text{H}) \\
+i_a &= \text{armature current } (\text{A}) \\
+e_a &= \text{applied armature voltage } (\text{V}) \\
+e_b &= \text{back emf (voltage produced by rotating armature) } (\text{V}) \\
+\theta &= \text{angular displacement of motor shaft } (\text{rad}) \\
+\omega &= \text{angular velocity of motor shaft } (\text{rad/s}) \\
+T &= \text{torque developed by motor } (\text{N-m}) \\
+J &= \text{moment of inertia of motor } (\text{kg-m}^2) \\
+B &= \text{viscous friction coefficient of motor load } (\text{N-s/m or kg/s}) \\
+K_m &= \text{motor torque constant (relates torque produced by electric part)} \\
+K_b &= \text{back emf or generator constant (relates voltage induced by motion)}
+\end{aligned}\]
+The inertia term $J$ describes the inertia of the motor itself, typically if we are modeling a motor connected to some additional load, we will need to add the inertia of the load to $J$ (if it is a \textit{rigid} connection to the motor shaft). However, the load can be connected via a gear train or a flexible shaft, in which case we will need to draw out the FBDs to determine the equations of motion.\\\\
+Like mentioned before, this is a 2 DOF system since the electrical and mechanical parts are coupled, so we will have to perform substitutions to find the transfer functions.
+\section*{Gears}
+\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}
+\centering
+    \includegraphics[width=\textwidth]{Gear Ratio.png} 
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.5\textwidth}\vspace{0pt}
+Gear ratios can be defined in terms of the number of teeth on each gear or the radius of each gear:
+\[\text{Gear ratio} = \frac{N_2}{N_1} = \frac{r_2}{r_1}\]
+Where $N$ is the number of teeth and $r$ is the radius of the gear. They mean the same thing since the number of teeth is proportional to the radius of the gear (same tooth size/module).
+\end{minipage}\\\\
+Since the gears rotate without slipping, the relative velocity at the contact point is zero, following the sign convention in the diagram above, we can say that
+\[r_1 \omega_1 = r_2 \omega_2 \quad \implies \frac{\omega_2}{\omega_1}=\frac{r_1}{r_2}=\frac{N_1}{N_2}\]
+Neglecting friction loss, the torque is also related by the gear ratio:
+\[\tau_1 \omega_1 = \tau_2 \omega_2 \quad \implies \frac{\tau_2}{\tau_1}=\frac{\omega_1}{\omega_2}=\frac{N_2}{N_1}\]
+\underline{Note:} It is best to draw the internal reaction forces between the gears to determine the direction of the torques in the FBD and resulting equations of motion for each gear.
+\section*{DC Motor Specs \& Characterization}
 
 \end{document}
