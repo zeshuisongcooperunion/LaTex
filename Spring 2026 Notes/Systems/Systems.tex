@@ -9,7 +9,7 @@
 \title{}
 \date{}
 \author{}
-
+\newcommand{\vol}{\mathord{\text{\ooalign{\hidewidth $V$\hidewidth\cr\kern-0.5pt\raisebox{0.8ex}{\rule[0pt]{1em}{0.5pt}}}}}}
 \begin{document}
 
 \begin{center}
@@ -765,4 +765,284 @@ d & -b \\
 -c & a
 \end{pmatrix},
 \quad \text{if } ad - bc \neq 0.\]
-\end{document} 
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+{\LARGE Block Diagrams\par}
+\end{center}
+\section*{Block Diagram Elements}
+\begin{itemize}
+    \item \textbf{Signals}: time varying quantities (ex: $u(t), y(t)$) that represent inputs and outputs of the system. Inputs are represented as arrows pointing into the system, while outputs are represented as arrows pointing out of the system.
+    \begin{center}
+    \includegraphics[width=0.15\textwidth]{Signal.png}
+    \end{center}
+    \item \textbf{Systems}: represent differential equations that relate inputs to outputs, often represented as blocks containing the transfer function of the system (ex: $H(s)=\frac{Y(s)}{U(s)}$).
+    \begin{center}
+    \includegraphics[width=0.45\textwidth]{Block Diagram.png}
+    \end{center}
+    \[Y(s) = H(s)U(s)\]
+    \item \textbf{Summing Junctions}: adds together signals with sign indicated by the arrowheads. Signals can be added together in both the time domain and the Laplace domain.
+    \begin{center}
+    \includegraphics[width=0.25\textwidth]{Summing Junction.png}
+    \end{center}
+    \[y(t) = u(t) +d(t)-x(t) \implies Y(s) = U(s)+D(s)-X(s)\]
+\end{itemize}
+\newpage
+\section*{Control Systems (Closed Loop Transfer Function)}
+To reduce the effect of unwanted inputs such as disturbances and noise, we can use feedback control to create a closed loop system. The block diagram for a closed loop system is as follows:
+\begin{center}
+\includegraphics[width=0.7\textwidth]{CLTF.jpg}
+\end{center}
+Where:
+\begin{itemize}
+    \item $C(s)$: controller transfer function (ex: PID controller)
+    \item $P(s)$: plant transfer function representing the system we want to control (ex: DC motor)
+    \item $H(s)$: feedback transfer function (for \textbf{unity feedback}, $H(s)=1$)
+\end{itemize}
+Here, we have multiple inputs:
+\begin{itemize}
+    \item $R(s)$: reference input (desired output value)
+    \item $D(s)$: disturbance input (unwanted input that affects the system)
+    \item $N(s)$: noise input (unwanted input that affects the measurement of the output)
+\end{itemize}
+Additionally, in between the elements we have the following signals:
+\begin{itemize}
+    \item $E(s)$: error signal (difference between reference input and feedback)
+    \item $U(s)$: controller output signal
+    \item $B(s)$: feedback signal (output fed back into the system)
+    \item $Y(s)$: output signal
+\end{itemize}
+\textbf{Transfer Functions}\\
+Note that since we have multiple inputs, we can derive the transfer function for each input by using \textbf{superposition} (isolate a single input and set all other inputs to zero).\\\\
+In addition to typical transfer functions that relate the outputs to inputs we define the following vocabulary for control system transfer functions:
+\begin{itemize}
+    \item \textbf{Open Loop Transfer Function}: product of the transfer functions around the loop
+    \[\frac{B(s)}{E(s)}=C(s)P(s)H(s)\]
+    \item \textbf{Feedforward Transfer Function}: product of the transfer functions along the forward path
+    \[\frac{Y(s)}{E(s)}=C(s)P(s)\]
+    \item \textbf{Closed Loop Transfer Function}: relates the output to the reference input
+    \[\boxed{\frac{Y(s)}{R(s)} = \frac{C(s)P(s)}{1 + C(s)P(s)H(s)} = \frac{\text{(Feedforward TF)}}{1 \pm \text{(Open Loop TF)}}}\]
+\end{itemize}
+\underline{Note:} The $\pm$ in the closed loop transfer function depends on the sign of the feedback (positive or negative feedback). For negative feedback (subtracting the feedback signal), we use the minus sign; for positive feedback, we use the plus sign.\\\\
+\underline{Recall DC Gain:} Like before, the DC gain is defined as the steady state output given a unit step input, and we can find the DC gain using the various transfer functions we have derived for the system and final value theorem.
+\textbf{Types of Control Systems}\\
+\begin{itemize}
+    \item \textbf{Closed-loop system:} transfer function from reference input to output
+    \item \textbf{Open-loop system:} transfer function without feedback
+    \begin{center}
+    \includegraphics[width=0.5\textwidth]{Feedforward.png}
+    \end{center}
+\end{itemize}
+\section*{Block Diagram Algebra and Simplification}
+When simplifying block diagrams, we can look at the nodes between groups of blocks and rewrite the groups using their equivalent transfer function.\\\\
+\textbf{Blocks in series}: multiply the transfer functions
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Blocks in series.png}
+\end{center}
+\[X(s)=H(s)U(s),\quad Y(s)=G(s)X(s)\]
+\[\implies \frac{Y(s)}{U(s)} = G(s)H(s)\]
+\newpage\noindent
+Thus simplified block diagram:
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Series blocks.jpg}
+\end{center}
+\textbf{Blocks in parallel}: add the transfer functions
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Parallel blocks.jpg}
+\end{center}
+\textbf{General feedback loops}: use the closed loop transfer function
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Feedback.jpg}
+\end{center}
+In addition to these simplifications, we can manipulate the block diagram by moving blocks according to block diagram algebra in the following ways:\\\\
+\textbf{Rule 1}
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Rule 1.jpg}
+    \end{center}
+\textbf{Rule 2}
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Rule 2.jpg}
+    \end{center}
+\textbf{Rule 3}
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Rule 3.jpg}
+    \end{center}
+    \newpage\noindent
+\textbf{Rule 4}
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{Rule 4.jpg}
+    \end{center}
+\textbf{Rule 5}
+\begin{center}
+    \includegraphics[width=1\textwidth]{Rule 5.jpg}
+    \end{center}
+\section*{Block Diagram for a linear system represented in state space}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{State Space Block Diagram.png}
+\end{center}
+\begin{itemize}
+    \item[Step 1:] Draw $n$ integrator ($s^{-1}$) blocks, and assign a state variable to the output of each block.
+    \item[Step 2:] At the input to each block (which represents the derivative of its state variable) draw a summing element.
+    \item[Step 3:] Use the state equations to connect the state variables and inputs to the summing elements through scaling operator blocks.
+    \item[Step 4:] Expand the output equations and sum the state variables and inputs through a set of scaling operators to form the components of the output.
+\end{itemize}
+\newpage
+\section*{Block Diagram for a linear system represented as an ODE}
+Simulink model:
+\begin{center}
+\includegraphics[width=0.8\textwidth]{ODE Block Diagram.png}
+\end{center}
+\vspace{-1em}
+\[m\ddot{x}+b\dot{x}+kx=f(t)\]
+\vspace{1em}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+{\LARGE Linearization\par}
+\end{center}
+So far we have only dealt with linear systems, where the governing equations of the system are linear differential equations. However, the real world is non-linear. Thus, we will need to \textit{linearize} non-linear systems to be able to apply the linear system analysis techniques we have learned so far. Generally, we do this by approximating the \textit{local} behavior of a non-linear system around an equilibrium point (operating point) using the first order Taylor expansion.\\\\
+Defining the operating point as $\bar{x}$ and the incremental variable as $\hat{x}$, we can see graphically how the linearization process works:
+\[\boxed{x=\bar{x}+\hat{x},\quad f(\hat{x}) = f(x)-f(\bar{x})}\]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{Linearization.jpg}
+\end{center}
+Mathematically, approximating the non-linear function $f(x)$ around the operating point $\bar{x}$ gives us a tangent line that approximates the behavior of the system near $\bar{x}$:
+\[k=\frac{df}{dx}\bigg|_{x=\bar{x}}\]
+\[f(x) = f(\bar{x})+k(x-\bar{x})\]
+Using the definition of $\hat{x}$, we can rewrite the linearized function in terms of the incremental variable $\hat{x}$:
+\[f(x)=f(\bar{x})+k\hat{x}\quad \implies \quad \boxed{f(\hat{x})=k\hat{x}}\]
+Now we are able to apply our techniques for linear systems to anaylze the behavior of the system under $\hat{x}$, however we must remember that the \textit{total} response of the system is given by
+\[f(x) = f(\bar{x}) + f(\hat{x}),\quad x = \bar{x} + \hat{x} \]
+Effectively, this linearization technique is like a transformation from the original $(x, f(x))$ coordinate system to a new $(\hat{x}, f(\hat{x}))$ coordinate system that is centered around the operating point $(\bar{x}, f(\bar{x}))$. So we need to remember to transform the results back to the original coordinate system when necessary.\\\\
+\underline{Note:} The operating point is defined as the equilibrium point of the system since the further away from the operating point we are, the worse the linear approximation will be.
+\section*{Linearization Procedure}
+\begin{itemize}
+    \item[I.] \textbf{Define operating point \& incremental variables:} \\
+    Let $f(x)$ be a non-linear function of $x$, let $\bar{x}$ be the nominal operating point and let $\hat{x} = x - \bar{x}$ be the deviation from the operating point. Linearize $f(x)$ using Taylor series or graphical method.
+    
+    \item[II.] \textbf{Find operating point:} \\
+    To find the operating point, find the ""equilibrium"" solution of the system when $\bar{x} = (\text{constant})$ by setting $\dot{x} = \ddot{x}=0$.
+    
+    \item[III.] \textbf{Replace with linearized terms:} \\
+    Replace the linearized $f(x)$ and $x = \hat{x} + \bar{x}$ (and $u = \hat{u} + \bar{u}$ if needed) in the non-linear differential equation.
+\end{itemize}
+The linearized equation is in terms of $\hat{x}$ (and $\hat{u}$ if it exists). This linearized equation describes the actual non-linear system close to the operating point. The further from the operating point, the less accurate the description is.
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+{\LARGE Fluid Systems\par}
+\end{center}
+In trying to model fluid systems, we try to find analogous definitions to electrical systems. For example:
+\begin{itemize}
+    \item \textbf{Fluid Resistance}: elements that generate resistance to fluid flow (ex: pipe, valve)
+    \item \textbf{Fluid Capacitance}: elements that store fluid (ex: tank)
+    \item \textbf{Fluid Inductance}: accounts for the kinetic energy of the fluid (usually negligible)
+    \item \textbf{Source/Driving Force}: pressure or flow source (ex: pump)
+\end{itemize}
+\section*{Variables}
+\begin{itemize}
+    \item Pressure difference across an element
+    \[p_{12}=p_1-p_2\quad\text{[N/m$^2$]}\]
+    \item Volumetric flow rate through an element
+    \[q \quad\text{[m$^3$/s]}\]
+    \item Fluid power across an element (effort $\times$ flow) represents the rate of energy transfer through that element. Depending on the direction of flow and the pressure difference, this power can be either positive or negative (input/output). For example, a pump provides positive power (increases pressure), while a valve dissipates power (decreases pressure).
+    \[P=qp_{12}\quad\text{[W]}\]
+\end{itemize}
+\section*{Fluid Resistance}
+Fluid resistance ($R$) defines how difficult it is to push fluid at a certain flow rate through an element. Since fluid flow can be driven by either a pressure difference or a difference in fluid levels ("head"), there are two definitions for fluid resistance. To identify which case, check the units of the resistance given in the problem.\\\\
+\textbf{Pressure difference}:\\
+\[\text{Units:}\quad  \left[\frac{\text{N/m}^2}{\text{m}^3/\text{s}}\right] = \left[\frac{\text{N}\cdot\text{s}}{\text{m}^5}\right]\]
+Although flow rate through an element has a non-linear relationship with pressure difference, we \textit{assume} a linear relationship for the purposes of modeling:
+\[\boxed{p_{12} = Rq}\]
+\underline{Note:} In reality, the relationship between pressure difference and flow rate is only linear for laminar flow, and becomes non-linear for turbulent flow.\\\\
+This is similar to Ohm's law $V=IR$ for electrical systems. Like voltage difference, fluid flows from high pressure to low pressure, so the flow rate is positive when $p_1 > p_2$ and negative when $p_1 < p_2$ (\textbf{Sign Convention}).
+\begin{center}
+\includegraphics[width=0.5\textwidth]{Fluid R_p.png}
+\end{center}
+\underline{Note:} Typically we use \textit{gauge pressures} so atmospheric pressure is considered zero, be careful if the problem gives absolute pressures however.\\\\
+\textbf{Head difference}:\\
+\[\text{Units:}\quad \left[\frac{\text{m}}{\text{m}^3/\text{s}}\right] = \left[\frac{\text{s}}{\text{m}^2}\right]\]
+Assuming a linear relationship between head difference and flow rate gives us:
+\[\boxed{h_{12} = Rq}\]
+For example:
+\begin{center}
+\includegraphics[width=0.65\textwidth]{Fluid R_h.jpg}
+\end{center}
+\[q_{12} = \frac{h_{12}}{R_1},\quad q_{\text{out}} = \frac{h_2}{R_2}\]
+\section*{Fluid Capacitance}
+Fluid capacitance ($C$) defines how much fluid we need to add to get a change in pressure. A high capacitance means that we need to add a lot of fluid to get a small change in pressure, while a low capacitance means that we only need to add a little bit of fluid to get a large change in pressure. Note that pressure changes is due to \textbf{hydrostatic pressure} ($p=\rho g h$), so the change in pressure is proportional to the change in fluid level. \\\\
+Similar to resistance, we have two definitions for fluid capacitance depending on whether we are modeling pressure difference or head difference. However, it is important to note that we can convert between pressure and head using the hydrostatic pressure relationship, so these two definitions describe the \textit{same physical phenomenon} but we use it purely for convenience depending on the problem.\\\\
+\textbf{Head}\\
+Consider the following tank with cross-sectional area $A$ and head $h$:
+\begin{center}
+\includegraphics[width=0.35\textwidth]{Fluid C.jpg}
+\end{center}
+We begin with the conservation of mass:
+\[\frac{dm}{dt} = \sum \dot{m}_{\text{in}} - \sum \dot{m}_{\text{out}}\]
+Since $m=\rho \vol \implies \dot{m} = \rho \dot{\vol}$ and $\dot{\vol} = q$ ($\vol$ is the fluid volume), we can rewrite the conservation of mass for a single inlet, single outlet system as:
+\[\frac{d(\rho \vol)}{dt}=\rho q_\text{in}-\rho q_\text{out}\]
+Assuming the fluid is incompressible (constant density), we get:
+\[\boxed{\frac{d\vol}{dt} = q_\text{in} - q_\text{out}}\]
+From geometry, we know that $\vol=Ah$, thus we have the head capacitance relationship:
+\[\boxed{A\frac{dh}{dt} = q_\text{in} - q_\text{out},\quad C_h = A\quad\text{[m$^2$]}}\]
+\textbf{Pressure}\\
+For the pressure definition of fluid capacitance, we can use the hydrostatic pressure relationship to convert from head to pressure:
+\[A\frac{dh}{dt} = q_\text{in} - q_\text{out}, \quad p = \rho g h\]
+\[\implies A \frac{d(\frac{p}{\rho g})}{dt} = q_\text{in} - q_\text{out}\]
+\[\implies \boxed{\frac{A}{\rho g}\frac{dp}{dt} = q_\text{in} - q_\text{out},\quad C_p = \frac{A}{\rho g}\quad\left[\frac{\mathrm{m}^4\,\mathrm{s}^2}{\mathrm{kg}}=\frac{\mathrm{m}^5}{\mathrm{N}}\right]}\]
+\textbf{General Definition}\\
+Generally, we define the following relationship for fluid capacitance:
+\[\boxed{\vol=Cp_{12}\implies C=\frac{d\vol}{dp}}\]
+Thus, fluid capacitance is analogous to the definition of electrical capacitance $Q=CV$ where $Q$ is the stored charge and $V$ is the voltage across the capacitor. Additionally, differentiating both sides with respect to time gives us the relationship between flow rate and pressure difference:
+\[q = C\frac{dp}{dt}\]
+This is also analogous to the relationship between current and voltage for an electrical capacitor $i=C\frac{dv}{dt}$.
+\section*{Fluid Inertance}
+Fluid inertance ($I$) defines how hard it is to change the fluid flow rate, since it requires pressure to overcome the \textit{momentum} or inertia of the fluid. While we can neglect this effect by assuming steady-state flow ($\frac{dq}{dt}=0$), we still make note of it.\\\\
+Consider the following pipe with length $L$ and cross-sectional area $A$. Starting with Newton's second law:
+\[\sum F=m\frac{dv}{dt}\]
+The net applied force on the fluid is due to the pressure difference across the pipe:
+\[\sum F = p_1A - p_2A = p_{12}A\]
+The mass of the fluid in the pipe is given by $m=\rho \vol = \rho AL$, and the velocity of the fluid is given by $q=Av$, thus we can rewrite Newton's second law as:
+\[p_{12}A = \rho AL \frac{dv}{dt}\]
+\[\implies p_{12}A = \rho AL \frac{d(\frac{q}{A})}{dt}\]
+Thus, we have the relationship for fluid inertance:
+\[\boxed{p_{12} = \frac{\rho L}{A}\frac{dq}{dt},\quad I = \frac{\rho L}{A}\quad\left[\frac{\text{N}\cdot\text{s}^2}{\text{m}^5}\right]}\]
+Or by using the hydrostatic pressure relationship, we can convert from pressure difference to head difference:
+\[\boxed{h_{12} = \frac{L}{Ag}\frac{dq}{dt},\quad I = \frac{L}{Ag}\quad\left[\frac{\text{m}}{\text{m}^2(\text{m/s}^2)}=\frac{\text{s}^2}{\text{m}^2}\right]}\]
+Note that this is analogous to the relationship between voltage and current for an electrical inductor $V=L\frac{di}{dt}$.
+\section*{Governing Equations}
+To derive the governing equations for a fluid system, we can use the conservation of mass and energy principles.\\\\
+\textbf{Conservation of Mass}\\
+At any point where pipes meet, or a tank exists, we know that by the conservation of mass:
+\[\frac{d\vol}{dt} =  q_{\text{in}} -  q_{\text{out}}\]
+Where $\vol$ is the fluid volume in the tank. In the case of a pipe junction, there is \textit{no storage of fluid}, thus $d\vol/dt=0$.\\\\
+We can then replace $q_{\text{in}} -  q_{\text{out}}$ with the relationships for capacitance and resistance (and inertance if needed) to get the governing equations for the system.
+\section*{Analogous Systems}
+\begin{center}
+\includegraphics[width=0.8\textwidth]{Fluid sys.png}
+\end{center}
+\noindent\hrule
+\vspace{1em}
+\newpage
+\begin{center}
+{\LARGE Thermal Systems\par}
+\end{center}
+Now that we have built and understanding of modeling resistance and capacitance in fluid systems, the same modeling techniques can be applied to thermal systems.
+\begin{table}[h]
+\centering
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|l|l|}
+\hline
+ & \textbf{Fluid System} & \textbf{Thermal System} \\ \hline
+\textbf{Effort (Potential)} & Pressure ($p$) or Head ($h$) & Temperature ($T$) \\ \hline
+\textbf{Flow (Rate)} & Volumetric Flow ($q$) & Heat Flow Rate ($q$) \\ \hline
+\textbf{Storage (Capacitance)} & Tank Area ($A$) & Thermal Mass ($mc_p$) \\ \hline
+\textbf{Opposition (Resistance)} & Pipe Friction ($R$) & Insulation ($R$) \\ \hline
+\end{tabular}
+\end{table}
+
+\end{document}
