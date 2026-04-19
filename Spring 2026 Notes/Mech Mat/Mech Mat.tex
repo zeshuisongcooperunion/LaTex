@@ -571,6 +571,162 @@ Work = Elastic Energy in linear elastic shaft:
 \[ T = k_T \phi, \text{ where } k_T \equiv \frac{4Ga^2}{L \oint \dfrac{ds}{t}} \]
 Here, $ds$ refers to the path along the same midline of the shaft as before, and $t$ is the thickness at that point along the path. Keep this in mind when evaluating the integral $\oint \frac{ds}{t}$.\\\\
 \underline{Note:} The criteria for thin-walled is that the thickness $t$ is less than $\frac{1}{10}$ of the radius of curvature of the midline. For a circular shaft, this means $t < \frac{1}{10} c$.
+\newpage
+\begin{center}
+    {\LARGE Pure Bending\par}
+\end{center}
+If we apply a load to a beam, it will bend. The simplest case is \textbf{pure bending} where there are no internal shear loads, and a \textit{constant} internal bending moment throughout the beam. Where $V$ is the internal shear force and $M$ is the internal bending moment:
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{pure bending.jpg}
+\end{center}
+Under pure bending, the beam will deflect into an arc of a circle. If we imagine the beam as a stack of thin fibers, we can see that as the beam deflects, the fibers at the top of the beam will shorten while the fibers at the bottom will lengthen. Thus, the top surface of the beam will be in compression while the bottom surface will be in tension. However, there exists a layer of fibers in between whose length doesn't change and thus has zero stress. This layer is called the \textbf{neutral axis} or the \textbf{neutral surface} in 3D.
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Neutral axis.png}
+\end{center}
+Note that there are only normal stresses in pure bending, and no shear stresses. The normal stress distribution is linear across the cross-section, with the max tensile and compressive stresses at the outer fibers and zero stress at the neutral axis.\\\\
+\section*{Determining the Bending Stress \& Strain}
+Consider a beam of length initial length $L$ under pure bending. Where arc $DE$ is the neutral axis, consider a fiber a distance $y$ from the neutral axis (arc $JK$). The coordinate system is centered on the neutral axis ($y=0$ at the neutral axis).
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{beam strain.png}
+\end{center}
+Since the neutral axis doesn't change length, we equate the length of arc $DE$ to the initial length of the beam:
+\[L = \rho \theta, \quad \rho \text{ is the radius of curvature}\]
+For the fiber at distance $y$ from the neutral axis, the length of arc $JK$ is:
+\[s = (\rho + y) \theta\]
+By the definition of strain, we find that the normal strain in a beam at a distance $y$ from the neutral axis is:
+\[\varepsilon_x = \frac{\Delta L}{L} = \frac{\rho \theta-(\rho + y) \theta }{\rho \theta} = -\frac{y \theta}{\rho \theta}\]
+\[\boxed{\varepsilon_x = -\frac{y}{\rho}}\]
+Assuming that stresses remain in the linear elastic region, we can relate the normal stress to the normal strain using Hooke's law:
+\[\boxed{\sigma_x = E \varepsilon_x = -\frac{Ey}{\rho}}\]
+Therefore, using the distances of the top and bottom surfaces to the neutral axis, we can find the max tensile and compressive stresses in the beam. \begin{center}
+    \includegraphics[width=0.8\textwidth]{max norm stress beam.png}
+\end{center}
+\[\boxed{\sigma_{\text{max,compressive}} = -\frac{Ec}{\rho},\quad\sigma_{\text{max,tensile}} = \frac{E(h-c)}{\rho}}\]
+\underline{Note:} The positive y-axis points towards the center of curvature!
+\section*{Location of the Neutral Axis}
+\underline{The neutral axis passes through the centroid of the beam cross-section.}\\\\
+We can show this by considering the force balance on the cross-section. The beam is in static equilibrium, so the net force must be zero.
+\[F_x = \int \sigma_x\, dA = 0\]
+Substituting the bending stress formula, we have:
+\[F_x = \int -\frac{Ey}{\rho}\, dA = 0 \implies \int y\, dA = 0\]
+This says that the \textit{first area moment} of the cross-section is equal to zero. The only way this can be true is if the x-axis (neutral axis) passes through the centroid of the cross-section, since the centroid is the point where the first area moment is zero.
+\newpage
+\section*{Determining the Bending Moment}
+We can calculate the bending moment at the cross-section by integrating the moment of the normal stresses about the neutral axis:\\
+\begin{minipage}[t]{0.35\textwidth} \vspace{0pt}
+    \begin{center}
+    \includegraphics[width=\textwidth]{bending moment.jpg}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+\[M_z = \int y\underbrace{(-\sigma_x)\,dA}_{\text{Force about z}}\]
+Substituting the bending stress formula, we have:
+\[M_z = \int y\frac{Ey}{\rho}\, dA = \frac{E}{\rho} \int y^2\, dA\]
+Thus, letting $I=\int y^2\, dA$ be the \textbf{second area moment} of the cross-section about the neutral axis (x-axis), we can express the bending moment as:
+\[\boxed{M_z = \frac{EI}{\rho}}\]
+\[\implies \frac{1}{\rho} = \frac{M}{EI}\quad\text{(curvature)}\]
+\end{minipage}\\\\
+Therefore there is no z dependence on the bending moment, only the cross-sectional geometry (through $I$) and the material properties (through $E$) matters.\\\\
+Additionally, we can now express the bending stress in terms of the bending moment by substituting the bending moment formula into the bending stress formula:
+\[\boxed{\sigma_x = -\frac{My}{I},\quad \sigma_{m,c} = -\frac{Mc}{I}, \quad \sigma_{m,t} = \frac{M(h-c)}{I}}\]
+\section*{Parallel Axis Theorem}
+\begin{minipage}[t]{0.35\textwidth} \vspace{0pt}
+    \begin{center}
+    \includegraphics[width=\textwidth]{PAT.png}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+We can relate the second area moment of a cross-section about the neutral axis to the second area moment about any other axis parallel to the neutral axis using the \textbf{parallel axis theorem}:
+\[\boxed{I_{xx} = I_{NA} + A d^2}\]
+Where $I_{NA}$ is the second area moment about the neutral axis, $A$ is the area of the cross-section, and $d$ is the distance between the two axes.
+\end{minipage}
+\section*{Composite Cross-Sections}
+For cross-sections composed of a combination of geometric shapes, we must find $I$ about the \textit{composite} neutral axis. To do so, we will apply the parallel axis theorem, but first we need to locate the neutral axis. Recall that a property of the centroid ($\bar{y}$) is that
+\[A\bar{y} = \int y\, dA\]
+Thus, for a composite cross-section, we can find the location of the neutral axis by summing the contributions of each shape:
+\[\boxed{\bar{y} = \frac{\sum A_i \bar{y}_i}{\sum A_i}}\]
+Where $A_i$ is the area of each shape and $\bar{y}_i$ is the distance from the reference axis to the centroid of each shape.
+\vspace{-2em}
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Composite cross-sec.png}
+\end{center}
+Now, we can apply the parallel axis theorem to sum up the second area moment of each shape about the composite neutral axis:
+\[I = I_{1,NA} + I_{2,NA} + \cdots + I_{n,NA}\]
+Where
+\[I_{i,NA} = I_i + A_i d_i^2\]
+\section*{Members Made of Several Materials}
+When we have multiple materials, the modulus of elasticity $E$ is different for each material. Additionally, some polymers have varying $E$ depending on if the load is applied in tension or compression where $E_\text{tension} < E_\text{compression}$. We will assume that strain remains a linear function ($\varepsilon = -y/\rho$) across the section, but the stress will be piecewise linear since $E$ is different for each material.
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{multi material.png}
+\end{center}
+\textbf{Transformed Section Method}\\
+We account for the difference in $E$ by transforming the cross-section of one material into an equivalent cross-section of the other material. Basically, we say that the effect of having a different $E$ for material 2 has the \textit{same effect as making material 1} bigger by a factor of $n$:
+\[\boxed{n = \frac{E_2}{E_1}}\]
+In this case, the material with $E_1$ is called the \textbf{reference material}. Thus, the transformed section has:
+\[\boxed{E_2^{Tr} = E_1,\quad A_2^{Tr} = nA_2}\] 
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{transformed sec.png}
+\end{center}
+\textbf{Actual (Real) Stresses}\\
+After finding the normal stresses within the transformed section normally ($\sigma_x^{Tr}$), we can find the actual stresses within each material by:
+\[\boxed{\sigma_{x,1} = \sigma_x^{Tr}, \quad \sigma_{x,2} = n\sigma_x^{Tr}}\]
+Because material 1 is the reference material, the calculated stress in the transformed section is the same as the actual stress in material 1. However, since material 2 has a different $E$, we need to multiply the calculated stress in the transformed section by $n$ to get the actual stress in material 2.\\\\
+The radius of curvature can be found in terms of only the transformed section properties:
+\[\frac{1}{\rho} = \frac{M}{E^{Tr}I^{Tr}}\]
+\section*{Reinforced Concrete Beam}
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{RC beam.png}
+\end{center}
+First we will assume that concrete \textit{only bears compressive load}. We show this by not considering the region of concrete in tension (below the neutral axis) in our calculations. Second, we will use the transformed section method with concrete as the reference materials (since $E_\text{concrete} < E_\text{steel}$, we will be making the steel bigger in the transformed section).
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{RC beam.jpg}
+\end{center}
+\textbf{Approach:}
+\begin{itemize}
+    \item Use a transformed section for the steel with concrete as the reference material
+    \[
+    n = \frac{E_s}{E_c}, \qquad A_s^{Tr} = nA_s
+    \]
 
+    \item Locate the neutral axis relative to the arbitrary datum using the equation
+    \[
+    \bar{x} = \frac{\sum A_i \bar{x}_i}{\sum A_i}
+    \]
 
+    \item Relate the max allowable stress to the critical moments in each material. Since concrete is the reference material, it doesn’t need to be rescaled by $n$.
+    \[
+    \sigma_c = -\frac{My}{I^{Tr}} \;\;\Rightarrow\;\;
+    \sigma_{\text{max},c} = \sigma_{\text{all},c} = -\frac{M_{\text{max},c}\,\bar{x}}{I^{Tr}} 
+    \quad (\text{compressive})
+    \]
+
+    \[
+    \sigma_s = n\frac{My}{I^{Tr}} \;\;\Rightarrow\;\;
+    \sigma_{\text{max},s} = \sigma_{\text{all},s} = n\frac{M_{\text{max},s}(14 - \bar{x})}{I^{Tr}} 
+    \quad (\text{tensile})
+    \]
+\end{itemize}
+\section*{Deformation of Beam Cross-Section}
+\begin{minipage}[t]{0.35\textwidth} \vspace{0pt}
+    \begin{center}
+    \includegraphics[width=\textwidth]{Anticlastic curvature.png}
+\end{center}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
+While we mostly focus on the deformation of the beam along its length (bending), it is important to note that Poisson's effect also causes the cross-section itself to deform. In the compressive region, as the material is pushed together, it will want to expand outwards. In the tensile region, as the material is pulled apart, it will want to contract inwards. This is described by the equation:
+\[\varepsilon_y = -\nu \varepsilon_x = -\nu \frac{y}{\rho} = \varepsilon_z\]
+Thus, the cross-section of the can be described as an \textbf{anticlastic curvature} where the cross-section curves in the opposite direction of the bending curvature. 
+\[\frac{1}{\rho'} = \frac{\nu}{\rho}\]
+\end{minipage}
+\section*{Stress Concentrations in Bending}
+\section*{Bending with Axial Loads}
+\newpage
+{\centering\LARGE Beam Design for Bending\par}
+\newpage
+{\centering\LARGE Shear Stress in Beams\par}
+\newpage
+{\centering\LARGE Stress Transformations and Failure Criteria\par}
 \end{document}
