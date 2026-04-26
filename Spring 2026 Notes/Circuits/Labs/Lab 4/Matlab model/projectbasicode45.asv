@@ -1,0 +1,27 @@
+r1 = 1000; 
+c1 = 1e-6;
+tau = r1 * c1;
+vC0 = r1  % Initial Condition
+
+% 2. Create the Transfer Function: H(s) = 1 / (R1*C1*s + 1)
+num = 1;
+den = [tau 1];
+sys = tf(num, den);
+
+% 3. Define the Input Signal (The Pulse)
+t = linspace(0, 0.02, 1000); % Time vector
+T = 0.005;                   % Pulse width
+vm = 10;                     % Pulse height
+vs = vm * (t <= T);          % Input signal: On then Off
+
+% 4. Simulate with Initial Condition
+% lsim(system, input_signal, time_vector, initial_state)
+[vC, t_out] = lsim(sys, vs, t, vC0);
+
+% 5. Plot
+plot(t_out, vC, 'b', 'LineWidth', 2);
+hold on;
+plot(t, vs, '--r');
+grid on;
+legend('Capacitor Voltage (vC)', 'Source Pulse (vs)');
+title('Simulation using Transfer Functions (lsim)');
