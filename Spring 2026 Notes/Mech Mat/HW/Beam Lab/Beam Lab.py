@@ -41,6 +41,7 @@ plt.show()
 F = (np.array(load) / 1000) * 9.81  # Newtons
 e = np.array(strain_load) * 1e-6  # Convert microstrain to strain
 
+# --- Strain vs. Force Analysis ---
 # Find slope
 slope, intercept = np.polyfit(F, e, 1)
 print(f"Calculated Slope (de/dF): {slope:.6e} strain/Newton")
@@ -57,3 +58,25 @@ plt.title('Strain vs. Force Plot (loading)')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+# --- Force vs. Deflection Analysis ---
+# Convert deflection to meters: (Current - Initial) * conversion factor
+# 1 inch = 0.0254 meters
+deflection_m = (np.array(micro_load) - micro_load[0]) * 0.0254
+
+# Linear regression for Force vs Deflection (Stiffness k)
+slope_k, intercept_k = np.polyfit(deflection_m, F, 1)
+print(f"Calculated Stiffness (dF/dy): {slope_k:.6e} N/m")
+
+plt.figure(figsize=(8, 5))
+plt.scatter(deflection_m, F, color='green', label='Experimental Data')
+plt.plot(deflection_m, slope_k * deflection_m + intercept_k, color='orange', linestyle='--', 
+         label=f'Best Fit Line (Slope dF/dy (stiffness): {slope_k:.2f} N/m)')
+
+plt.xlabel('Deflection (meters)')
+plt.ylabel('Force (Newtons)')
+plt.title('Force vs. Micrometer Deflection (loading)')
+plt.legend()
+plt.grid(True)
+plt.show()
+

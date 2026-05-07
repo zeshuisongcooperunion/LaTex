@@ -823,9 +823,9 @@ In addition to typical transfer functions that relate the outputs to inputs we d
     \item \textbf{Feedforward Transfer Function}: product of the transfer functions along the forward path
     \[\frac{Y(s)}{E(s)}=C(s)P(s)\]
     \item \textbf{Closed Loop Transfer Function}: relates the output to the reference input
-    \[\boxed{\frac{Y(s)}{R(s)} = \frac{C(s)P(s)}{1 + C(s)P(s)H(s)} = \frac{\text{(Feedforward TF)}}{1 \pm \text{(Open Loop TF)}}}\]
+    \[\boxed{\frac{Y(s)}{R(s)} = \frac{C(s)P(s)}{1 \pm  C(s)P(s)H(s)} = \frac{\text{(Feedforward TF)}}{1 \pm \text{(Open Loop TF)}}}\]
 \end{itemize}
-\underline{Note:} The $\pm$ in the closed loop transfer function depends on the sign of the feedback (positive or negative feedback). For negative feedback (subtracting the feedback signal), we use the minus sign; for positive feedback, we use the plus sign.\\\\
+\underline{Note:} The $\pm$ in the closed loop transfer function depends on the sign of the feedback (positive or negative feedback). For negative feedback (subtracting the feedback signal), we use the plus sign; for positive feedback, we use the minus sign.\\\\
 \underline{Recall DC Gain:} Like before, the DC gain is defined as the steady state output given a unit step input, and we can find the DC gain using the various transfer functions we have derived for the system and final value theorem.
 \textbf{Types of Control Systems}\\
 \begin{itemize}
