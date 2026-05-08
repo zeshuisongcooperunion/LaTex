@@ -296,4 +296,142 @@ Where $|E_1|=13.6$ eV is the ground state energy level of hydrogen.
 \newpage
 {\centering\LARGE Unit 5: Quantum Mechanics\par}\noindent
 After solidifying the core concepts of quantum mechanics in unit 4, we were able to develop more accurate models of physical phenomena, such as the Bohr model of the atom. In unit 5, we will move from these conceptual foundations to introduce the formal mathematical and probabilistic framework of quantum mechanics. Shifting from deterministic classical models to probabilistic models using the wavefunction $\psi$.
+\section*{The Wavefunction $\mathbf{\psi}$}
+The wave-like nature of particles brings up the question of how to describe the "information" corresponding to the state of a quantum particle such as its position, momentum, energy, etc. It would turn out that because of this conflict between wave and particle properties, quantum particles \textit{can exist in all possible states at the same time}, with a certain probability of being in each state. To better understand this, imagine a dice roll. Before the dice lands, it is in a superposition of all possible outcomes (1, 2, 3, 4, 5, 6) with some probability of landing on each outcome. It is only when the dice lands, that we \textit{measure} the outcome, collapsing the superposition into a singular state.\\\\
+The wavefunction $\psi$, is a mathematical \textit{function} that contains all the probabilistic information about the state of a quantum particle. The wavefunction can be complex-valued and its magnitude squared gives the \textbf{probability density}. The probability density describes the likelihood of the particle being in a specific state. In the example below, $P(x)$ describes the probability \textit{density} of the particle being at a specific state (position $x$).\\\\
+Where $\Psi^*(x)$ is the complex conjugate of $\Psi(x)$:
+\[\boxed{P(x) = |\psi(x)|^2=\Psi^*(x)\Psi(x)\quad\text{(Probability Density)}}\]
+Here, $P(x)$ is only the probability \textit{density}. To find the \textit{actual} probability of finding the particle at a specific position $x$ within a small slice of positions $\delta x$, we need to multiply the probability density by that slice (assuming that $|\psi(x)|^2$ is approximately constant within the interval):
+\[\boxed{\text{Prob(at x in $\delta x$)} = |\psi(x)|^2 \delta x}\]
+Note that we can apply this framework to find the probability of finding the particle with a certain momentum, energy, etc. In those cases, we would use the wavefunction in momentum space or energy space, respectively, since $\psi(x)$ is in position space and therefore does not directly provide momentum or energy information.\newpage\noindent
+\textbf{Total Wavefuntion $\mathbf{\Psi(x,t)}$}\\
+Here, I introduce the notations $\psi$ and $\Psi$. The lowercase $\psi(x)$ is used to denote the \textit{stationary} wavefunction, which is a solution to the \textit{time-independent Schrodinger equation} and is therefore does not change with time. The uppercase $\Psi(x,t)$ is used to denote the \textbf{total wavefunction} which is a solution to the \textit{time-dependent Schrodinger equation} and can change with time.\\\\
+Intuitively, this relates to our wave-particle duality understanding. De Broglie states that any particle with momentum $p$ has a wavelength $\lambda = h/p$. Therefore, any travelling particle must have a wavefuntion of the form of a travelling wave. Using our plane wave equation, we can write the total wavefunction of a travelling particle as:
+\[\Psi(x,t) = Ae^{i(kx - \omega t)}=A e^{ikx}e^{-i\omega t}\]
+Here, we see that the total wavefunction $\Psi(x,t)$ is the product of a stationary state ($\psi(x)=A_k e^{ikx}$) and a time dependent term ($e^{-i\omega t}$).\\\\
+From the De Broglie wavelength, we can relate the wavenumber $k$ to the momentum $p$ of the particle:
+\[k = \frac{2\pi}{\lambda} = \frac{2\pi p}{h} = \frac{p}{\hbar}\]
+Additionally, we can relate the angular frequency $\omega$ to the energy $E_n$ of the particle using the quantization of energy:
+\[E_n = hf=  h \frac{\omega}{2 \pi}=\hbar \omega\]
+\[ \implies \omega = \frac{E_n}{\hbar} \]
+Thus, the total wavefunction of a travelling particle can be written as:
+\[\boxed{\Psi(x,t) = A e^{ipx/\hbar}e^{-iE_n t/\hbar} = \psi(x)e^{-iE_n t/\hbar} }\]
+\newpage\noindent
+\textbf{Properties of $\mathbf{\psi}$}
+\begin{itemize}
+    \item \underline{The Normalization Condition}: The total probability of finding the particle across all space must be equal to 1 (the particle must exist somewhere):
+    \begin{itemize}
+        \item Discrete case:
+        \[\sum_i |\psi(x_i)|^2 \delta x = 1\]
+        \item Continuous case:
+        \[\int_{-\infty}^{\infty} \Psi^*(x,t)\Psi(x,t)\, dx = 1\]
+    \end{itemize}
+    \item \underline{Finding a Specific Probability}: Like discussed earlier, we must multiply the probability density ($|\psi(x_i)|^2$) by a slice of possible states ($\delta x$) to find the probability of the particle being at state $x_i$ within that slice. Therefore, to find the probability of a particle being \textit{within} a range of states, we just need to sum the probabilities of the particle being at each state within that range. Mathematically, this means that we sum (or integrate) the probability density over that range. Sticking with the position example:
+    \begin{itemize}
+        \item Discrete case:
+        \[\text{Prob(between $x_m$ and $x_n$)} = \sum_{i=m}^{n} |\psi(x_i)|^2 \delta x\]
+        \item Continuous case:
+        \[\text{Prob(between $x_m$ and $x_n$)} = \int_{x_m}^{x_n} \Psi^*(x,t)\Psi(x,t)\, dx\]
+    \end{itemize}
+    \underline{Note:} This is a direct application of Prob(in $\delta x$ at $x$).
+    \item \underline{Finding the Expectation Value}: Since we are able to find the probability of a particle being in a specific state (within a small slice of possible states), imagine the question: if we were to measure \textit{one single particle's state many many times}, what would be the average value of those measurements? This is defined as the \textbf{expectation value} of a measurement, and we can find it by multiplying each possible state by its corresponding probability and summing (or integrating) over ALL possible states. For example, to find the expectation value of position:
+    \begin{itemize}
+        \item Discrete case:
+        \[\langle x \rangle = \sum_i x_i |\psi(x_i)|^2 \delta x\]
+        \item Continuous case:
+        \[\langle x \rangle = \int_{-\infty}^{\infty} x \Psi^*(x,t)\Psi(x,t)\, dx\]
+    \end{itemize}
+    Physically, the expectation value is like the "center of mass" of the probability distribution. While the most likely state is described by the peak of the probability density, the expectation value is can tell us how \textit{skewed} the probability distribution is.\\\\
+    \underline{Note:} While this expectation value formulation is correct for position, for measurements such as momentum and energy, we need what we call \textit{quantum operators} to operate on the wavefunction to find the expectation value (note that the operator and wavefunction must be in corresponding spaces).\\\\
+    \underline{Expectation Value of Velocity}\\
+    Velocity is a derived quantity. By the Ehrenfest theorem, the expectation value of velocity can be found by
+    \[\langle v \rangle = \frac{d\langle x \rangle}{dt} \]
+\end{itemize}
+Recall that the total wavefunction $\Psi(x,t)$ has time dependence. However, the time dependent term cancels out when we multiply the complex conjugate, so the following statement is equivalent, however we write it: $\Psi^*(x,t)\Psi(x,t) = |\psi(x)|^2$.\\\\
+Why is this important? Because of wave-particle duality, we are no longer able to predict the exact state of a particle, but rather only the probability of finding a particle in a specific state. Thus, \underline{expectation values become our best predictions}! We will only know for certain the state of a particle after we measure it, which will collapse the wavefunction into a singular state.
+\section*{Quantum Operators}
+Let's quickly finish formalizing the mathematical framework of quantum mechanics by introducing quantum operators and get to the fun part of applying this framework to solve quantum problems!!!\\\\
+In the \underline{operator approach}, \textit{observable quantities} (such as position, momentum, energy, etc.) are represented by \textbf{quantum operators} that operate on the wavefunction $\psi$ to \\\\(1) \underline{extract possible/allowable states}, and (2) \underline{the probability of being in those allowable states}.\\\\
+Quantum operators are defined by the following \textit{eigenvalue problem}:
+\[\boxed{\hat{A}\psi_n(x)=a_n\psi_n(x)}\]
+Where:
+\begin{itemize}
+    \item $\hat{A}$ is that quantum operator corresponding to the observable quantity.
+    \item $a_n$ is the eigenvalue that represents the allowable states of $\hat{A}$ when observed. (ex: the energy levels of an atom)
+    \item $\psi_n(x)$ is the eigenfunction (or eigenstate) that represents the probability of being at position $x$ and corresponds to the state $a_n$ (eigenvalue).
+\end{itemize}
+Note that because the eigenfunction $\psi_n(x)$ is in position space, $|\psi_n(x)|^2$ encodes the probability density of finding the particle at position $x$ \underline{given that the particle is in state $a_n$}. For example, if an electron is in the second energy level $E_2$, then the eigenfunction $\psi_2(x)$ tells us how the electron is distributed across different positions $x$ in space \textit{while it stays at the second energy level}.\\\\
+This is fundamentally different from the general wavefunction $\psi(x)$. While $\psi(x)$ represents a superposition of possible eigenfunctions, an eigenfunction is "pure", corresponding to a single state $a_n$:
+\[\psi(x)=\sum_n c_n \psi_n(x)\]
+Where $|c_n|^2$ represents the probability of the particle being in a particular state $a_n$.\\\\
+Similarly, the total wavefunction is \textit{also} a superposition of possible eigenfunctions, but with the time dependence discussed previously:
+\[\Psi(x,t) =\sum_n c_n \Psi_n(x,t) =\sum_n c_n \psi_n(x) e^{-iE_n t/\hbar}\]
+\textbf{General Definition of Expectation Value}\\
+The expectation value of an observable quantity represented by the operator $\hat{A}$ is given by:
+\[\boxed{\langle A \rangle = \int_{-\infty}^{\infty} \Psi^*(x,t) \hat{A} \Psi(x,t)\, dx}\]
+\textbf{Position Operator}
+\[\boxed{\hat{x} = x\quad \text{(Position Space)},\quad \hat{x} = i\hbar \frac{\partial}{\partial p}\quad \text{(Momentum Space)}}\]
+\textbf{Momentum Operator}
+\[\boxed{\hat{p} = -\frac{\hbar}{i} \frac{\partial}{\partial x}\quad \text{(Position Space)},\quad\hat{p} = p\quad \text{(Momentum Space)}}\]
+This is derived directly from De Broglie's wavelength and wave-particle duality. Since a particle with momentum can be modeled as a travelling wave, we use the monochromatic plane wave (constant $\lambda$ thus \textit{constant $k$}) equation to derive the eigenfunction corresponding to a particle with the wavenumber $k$:
+\[\Psi_k(x,t) = A_k e^{i(kx - \omega t)}=A_k e^{ikx}e^{-i\omega t}\]
+Here, we see that the total wavefunction $\Psi_k(x,t)$ is the product of a stationary state ($\psi_k(x)=A_k e^{ikx}$) and a time dependent term ($e^{-i\omega t}$).\\\\
+Looking at just the stationary state, we can find the momentum eigenfunction by applying De Broglie's wavelength to rewrite the wavenumber $k$ in terms of momentum $p$:
+\[\lambda = \frac{h}{p},\quad k=\frac{2\pi}{\lambda} = \frac{2\pi p}{h}\implies p = \hbar k\]
+Thus, the momentum eigenfunction is:
+\[\psi_k(x)=A_k e^{ikx}\implies\psi_p(x) = A_p e^{ipx/\hbar}\]
+Finally, we can use the momentum eigenfunction to derive the momentum operator by applying the eigenvalue problem:
+\[\hat{p} \psi_p(x) = p \psi_p(x)\]
+We are able to intuit the form of the momentum operator by looking for an operation that pulls out a constant (our eigenvalue $p$) while keeping the eigenfunction $\psi_p(x)$ unchanged. The only operation that does this is differentiation, which pulls out a constant $ik/\hbar$.\\\\
+Note that the possible momentum values $p$ is a \textit{continuum} of values since the particle is a travelling wave and can have any wavelength.\\\\
+\textbf{Energy Operator (the Hamiltonian)}\\
+The energy operator is called the \textbf{Hamiltonian} ($\hat{H}$) and is defined as the sum of the kinetic energy operator and the potential energy operator:
+\[\hat{H} = \hat{K} + \hat{U}\]
+Where:
+\begin{itemize}
+    \item The kinetic energy operator ($\hat{K}$) is derived from the momentum operator:
+    \[\hat{K} = \frac{\hat{p}^2}{2m} = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2}\]
+    \item The potential energy operator ($\hat{U}$) is just the potential energy function $u(x)$ (typically not time dependent)
+    \[\hat{U} = u(x)\]
+\end{itemize}
+Thus, the Hamiltonian is:
+\[\boxed{\hat{H} = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + u(x)\quad \text{(Position Space)}}\]
+\newpage\noindent
+Remember that all of these operators can be applied to the eigenvalue problem to derive useful information about how a particle behaves. However, the eigenvalue problem for the Hamiltonian is particularly useful because of a few reasons:
+\begin{itemize}
+    \item The Hamiltonian's potential energy term $u(x)$ is defined by the environment of the particle, so solving the Hamiltonian's eigenvalue problem allows us to understand how a particle behaves in a specific environment (ie. an infinite well).
+    \item The eigenvalues of the Hamiltonian correspond to the allowable energy levels of the particle $E_n$. We know that these energy levels must be quantized, so solving the Hamiltonian's eigenvalue problem allows us to find the quantized energy levels of a particle in a specific environment.
+\end{itemize}
+Overall, this eigenvalue problem is so useful that it has its own name:
+\section*{Schrodinger's Equation}
+\textbf{Time-Independent Schrodinger's Equation (TISE)}\\
+\[\boxed{\hat{H}\psi_n = E_n\psi_n,\quad \hat{H} = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + u(x)}\]
+This is \textbf{THE most useful equation} for this unit. We will be applying this equation to three different cases (infinite well, finite well, and hydrogen atom) to find the quantized energy levels and corresponding wavefunctions of a particle in those environments.\\\\
+Where:
+\begin{itemize}
+    \item $E_n$ is the energy eigenvalues corresponding to the quantized energy levels of the particle in that environment.
+    \item $\psi_n$  is the energy eigenfunctions where $|\psi_n(x)|^2$ gives the probability density of finding the particle at position $x$ given that the particle is in energy state $E_n$.
+\end{itemize}
+\textbf{Time-Dependent Schrodinger's Equation (TDSE)}
+\[\boxed{i\hbar \frac{\partial \Psi}{\partial t} = \hat{H} \Psi}\]
+This is the more general form of Schrodinger's equation. We don't use it as much to solve problems but it is important to understand that the time-independent Schrodinger's equation is just a special case of the time-dependent Schrodinger's equation where we assume that the Hamiltonian is time independent ($\hat{H}(x,t) = \hat{H}(x)$).\\\\
+Additionally, if $\hat{H}(x,t) = \hat{H}(x)$, then $\Psi(x,t)$ has a \underline{unitary evolution}, meaning that the time dependence of $\Psi(x,t)$ is just a complex exponential term which matches the derivation of the total wavefunction based on the plane wave equation we did earlier:
+\[\Psi_n(x,t) = \psi_n(x)e^{-iE_n t/\hbar}\]
+\textbf{General Approach to Modeling Quantum Systems}\\
+To analyze a quantum system, we do the following:
+\begin{enumerate}
+    \item Identify the energy model and define the Hamiltonian $\hat{H}$ (by knowing the potential energy function $u(x)$ of the environment).
+    \item Solve the time-independent Schrodinger's equation $\hat{H}\psi_n = E_n \psi_n$ to find the quantized energy levels $E_n$ and corresponding energy eigenfunctions $\psi_n$.\\\\
+    The TISE yields a second order differential equation. We solve this ODE by first guessing the general form of the solution based on the physical case (for example, sinusoidal solutions for the infinite square well, or exponential solutions outside a finite well with sinusoidal behavior inside), and then applying the normalization condition and the following \textbf{boundary conditions} to determine the unknown constants in the general solution:
+    \begin{itemize}
+        \item $\psi$ must be continuous
+        \item $\psi \rightarrow 0$ as $x \rightarrow \pm \infty$ (the particle cannot exist at infinity)
+        \item $\psi = 0$ where it is physically impossible for the particle to exist (ex: inside the walls of an infinite well where $u(x) = \infty$)
+        \item $\partial \psi/\partial x$ is continuous \underline{except} where $u(x)=\infty$
+    \end{itemize}
+    \item Analyze the results! We can find the probability density, expectation values, etc.
+\end{enumerate}
+
+
+
 \end{document}
