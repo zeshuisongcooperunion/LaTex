@@ -299,12 +299,12 @@ After solidifying the core concepts of quantum mechanics in unit 4, we were able
 \section*{The Wavefunction $\mathbf{\psi}$}
 The wave-like nature of particles brings up the question of how to describe the "information" corresponding to the state of a quantum particle such as its position, momentum, energy, etc. It would turn out that because of this conflict between wave and particle properties, quantum particles \textit{can exist in all possible states at the same time}, with a certain probability of being in each state. To better understand this, imagine a dice roll. Before the dice lands, it is in a superposition of all possible outcomes (1, 2, 3, 4, 5, 6) with some probability of landing on each outcome. It is only when the dice lands, that we \textit{measure} the outcome, collapsing the superposition into a singular state.\\\\
 The wavefunction $\psi$, is a mathematical \textit{function} that contains all the probabilistic information about the state of a quantum particle. The wavefunction can be complex-valued and its magnitude squared gives the \textbf{probability density}. The probability density describes the likelihood of the particle being in a specific state. In the example below, $P(x)$ describes the probability \textit{density} of the particle being at a specific state (position $x$).\\\\
-Where $\Psi^*(x)$ is the complex conjugate of $\Psi(x)$:
-\[\boxed{P(x) = |\psi(x)|^2=\Psi^*(x)\Psi(x)\quad\text{(Probability Density)}}\]
+Where $\psi^*(x)$ is the complex conjugate of $\psi(x)$:
+\[\boxed{P(x) = |\psi(x)|^2=\psi^*(x)\psi(x)\quad\text{(Probability Density)}}\]
 Here, $P(x)$ is only the probability \textit{density}. To find the \textit{actual} probability of finding the particle at a specific position $x$ within a small slice of positions $\delta x$, we need to multiply the probability density by that slice (assuming that $|\psi(x)|^2$ is approximately constant within the interval):
 \[\boxed{\text{Prob(at x in $\delta x$)} = |\psi(x)|^2 \delta x}\]
-Note that we can apply this framework to find the probability of finding the particle with a certain momentum, energy, etc. In those cases, we would use the wavefunction in momentum space or energy space, respectively, since $\psi(x)$ is in position space and therefore does not directly provide momentum or energy information.\newpage\noindent
-\textbf{Total Wavefuntion $\mathbf{\Psi(x,t)}$}\\
+Note that we can apply this framework to find the probability of finding the particle with a certain momentum, energy, etc. In those cases, we would use the wavefunction in momentum space or energy space, respectively. Here, $\psi(x)$ is in \textit{position space} and therefore does not directly provide momentum or energy information.\newpage\noindent
+\textbf{Total Wavefunction $\mathbf{\Psi(x,t)}$}\\
 Here, I introduce the notations $\psi$ and $\Psi$. The lowercase $\psi(x)$ is used to denote the \textit{stationary} wavefunction, which is a solution to the \textit{time-independent Schrodinger equation} and is therefore does not change with time. The uppercase $\Psi(x,t)$ is used to denote the \textbf{total wavefunction} which is a solution to the \textit{time-dependent Schrodinger equation} and can change with time.\\\\
 Intuitively, this relates to our wave-particle duality understanding. De Broglie states that any particle with momentum $p$ has a wavelength $\lambda = h/p$. Therefore, any travelling particle must have a wavefuntion of the form of a travelling wave. Using our plane wave equation, we can write the total wavefunction of a travelling particle as:
 \[\Psi(x,t) = Ae^{i(kx - \omega t)}=A e^{ikx}e^{-i\omega t}\]
@@ -316,6 +316,8 @@ Additionally, we can relate the angular frequency $\omega$ to the energy $E_n$ o
 \[ \implies \omega = \frac{E_n}{\hbar} \]
 Thus, the total wavefunction of a travelling particle can be written as:
 \[\boxed{\Psi(x,t) = A e^{ipx/\hbar}e^{-iE_n t/\hbar} = \psi(x)e^{-iE_n t/\hbar} }\]
+\underline{Note:} This will be discussed when we introduce the time-dependent Schrodinger equation, but the total wavefunction $\Psi(x,t)$ is separable into $f(x)g(t)$ \textit{if and only if} the potential energy of the system is independent of time.\\\\
+Importantly, because the total wavefunction $\Psi(x,t)$ and the stationary wavefunction $\psi(x)$ are related by the scalar time-dependent factor $e^{-iE_n t/\hbar}$, they are \textit{mathematically equivalent up to a complex phase shift}. This means that the amplitude of both wavefunctions are the same, and differ only by a time-varying phase angle that can be factored out or canceled during calculation.
 \newpage\noindent
 \textbf{Properties of $\mathbf{\psi}$}
 \begin{itemize}
@@ -324,22 +326,22 @@ Thus, the total wavefunction of a travelling particle can be written as:
         \item Discrete case:
         \[\sum_i |\psi(x_i)|^2 \delta x = 1\]
         \item Continuous case:
-        \[\int_{-\infty}^{\infty} \Psi^*(x,t)\Psi(x,t)\, dx = 1\]
+        \[\int_{-\infty}^{\infty} \psi^*(x)\psi(x)\, dx = 1\]
     \end{itemize}
     \item \underline{Finding a Specific Probability}: Like discussed earlier, we must multiply the probability density ($|\psi(x_i)|^2$) by a slice of possible states ($\delta x$) to find the probability of the particle being at state $x_i$ within that slice. Therefore, to find the probability of a particle being \textit{within} a range of states, we just need to sum the probabilities of the particle being at each state within that range. Mathematically, this means that we sum (or integrate) the probability density over that range. Sticking with the position example:
     \begin{itemize}
         \item Discrete case:
         \[\text{Prob(between $x_m$ and $x_n$)} = \sum_{i=m}^{n} |\psi(x_i)|^2 \delta x\]
         \item Continuous case:
-        \[\text{Prob(between $x_m$ and $x_n$)} = \int_{x_m}^{x_n} \Psi^*(x,t)\Psi(x,t)\, dx\]
+        \[\text{Prob(between $x_m$ and $x_n$)} = \int_{x_m}^{x_n} \psi^*(x)\psi(x)\, dx\]
     \end{itemize}
     \underline{Note:} This is a direct application of Prob(in $\delta x$ at $x$).
     \item \underline{Finding the Expectation Value}: Since we are able to find the probability of a particle being in a specific state (within a small slice of possible states), imagine the question: if we were to measure \textit{one single particle's state many many times}, what would be the average value of those measurements? This is defined as the \textbf{expectation value} of a measurement, and we can find it by multiplying each possible state by its corresponding probability and summing (or integrating) over ALL possible states. For example, to find the expectation value of position:
     \begin{itemize}
         \item Discrete case:
         \[\langle x \rangle = \sum_i x_i |\psi(x_i)|^2 \delta x\]
-        \item Continuous case:
-        \[\langle x \rangle = \int_{-\infty}^{\infty} x \Psi^*(x,t)\Psi(x,t)\, dx\]
+        \item Continuous case*:
+        \[\langle x \rangle = \int_{-\infty}^{\infty} x \psi^*(x)\psi(x)\, dx\]
     \end{itemize}
     Physically, the expectation value is like the "center of mass" of the probability distribution. While the most likely state is described by the peak of the probability density, the expectation value is can tell us how \textit{skewed} the probability distribution is.\\\\
     \underline{Note:} While this expectation value formulation is correct for position, for measurements such as momentum and energy, we need what we call \textit{quantum operators} to operate on the wavefunction to find the expectation value (note that the operator and wavefunction must be in corresponding spaces).\\\\
@@ -347,7 +349,7 @@ Thus, the total wavefunction of a travelling particle can be written as:
     Velocity is a derived quantity. By the Ehrenfest theorem, the expectation value of velocity can be found by
     \[\langle v \rangle = \frac{d\langle x \rangle}{dt} \]
 \end{itemize}
-Recall that the total wavefunction $\Psi(x,t)$ has time dependence. However, the time dependent term cancels out when we multiply the complex conjugate, so the following statement is equivalent, however we write it: $\Psi^*(x,t)\Psi(x,t) = |\psi(x)|^2$.\\\\
+Recall that the total wavefunction $\Psi(x,t)$ has time dependence. However, the time dependent term (the phase shift) cancels out when we multiply the complex conjugates, so the following statement is equivalent, however we write it: $\Psi^*(x,t)\Psi(x,t) =\psi^*(x)\psi(x) =|\psi(x)|^2$.\\\\
 Why is this important? Because of wave-particle duality, we are no longer able to predict the exact state of a particle, but rather only the probability of finding a particle in a specific state. Thus, \underline{expectation values become our best predictions}! We will only know for certain the state of a particle after we measure it, which will collapse the wavefunction into a singular state.
 \section*{Quantum Operators}
 Let's quickly finish formalizing the mathematical framework of quantum mechanics by introducing quantum operators and get to the fun part of applying this framework to solve quantum problems!!!\\\\
@@ -405,12 +407,12 @@ Remember that all of these operators can be applied to the eigenvalue problem to
 Overall, this eigenvalue problem is so useful that it has its own name:
 \section*{Schrodinger's Equation}
 \textbf{Time-Independent Schrodinger's Equation (TISE)}\\
-\[\boxed{\hat{H}\psi_n = E_n\psi_n,\quad \hat{H} = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + u(x)}\]
-This is \textbf{THE most useful equation} for this unit. We will be applying this equation to three different cases (infinite well, finite well, and hydrogen atom) to find the quantized energy levels and corresponding wavefunctions of a particle in those environments.\\\\
+\[\boxed{\hat{H}\psi = E\psi,\quad \hat{H} = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2} + u(x)}\]
+This is \textbf{THE most useful equation} for this unit. We will be applying this equation to four different cases (free atom, infinite well, finite well, and hydrogen atom) to find the quantized energy levels and corresponding wavefunctions of a particle in those environments.\\\\
 Where:
 \begin{itemize}
-    \item $E_n$ is the energy eigenvalues corresponding to the quantized energy levels of the particle in that environment.
-    \item $\psi_n$  is the energy eigenfunctions where $|\psi_n(x)|^2$ gives the probability density of finding the particle at position $x$ given that the particle is in energy state $E_n$.
+    \item $E$ is the energy eigenvalues corresponding to the quantized energy levels of the particle in that environment.
+    \item $\psi$  is the energy eigenfunctions where $|\psi(x)|^2$ gives the probability density of finding the particle at position $x$ given that the particle is in energy state $E$.
 \end{itemize}
 \textbf{Time-Dependent Schrodinger's Equation (TDSE)}
 \[\boxed{i\hbar \frac{\partial \Psi}{\partial t} = \hat{H} \Psi}\]
@@ -431,7 +433,70 @@ To analyze a quantum system, we do the following:
     \end{itemize}
     \item Analyze the results! We can find the probability density, expectation values, etc.
 \end{enumerate}
-
-
-
+\newpage
+\section*{Free Particle}
+\textbf{Define the Energy Model}\\
+For a free particle, there are no external forces acting on it, so the potential energy is zero everywhere: $u(x)=0$. Thus, it only has kinetic energy, and the Hamiltonian is:
+\[\hat{H} = -\frac{\hbar^2}{2m} \frac{\partial^2}{\partial x^2}\]
+\textbf{Set up the Time-Independent Schrodinger's Equation}\\
+\[\hat{H}\psi = E \psi \implies -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} = E \psi\]
+We get the ODE:
+\[\frac{\partial^2 \psi}{\partial x^2} + \frac{2mE}{\hbar^2} \psi = 0\]
+Let $\alpha^2 = \frac{2mE}{\hbar^2}$
+\[\frac{\partial^2 \psi}{\partial x^2} + \alpha^2 \psi = 0\]
+\textbf{Solving for the Eigenvalue $E$}\\
+Relating $\alpha$ back to the energy eigenvalue $E$:
+\[E = \frac{\hbar^2 \alpha^2}{2m}\quad \text{(from rewriting $\alpha$)}\]
+Since the total energy $E$ of the free particle is purely kinetic, we can relate $\alpha$ to the wavenumber $k$ of the particle using the De Broglie relation $p = \hbar k$:
+\[E = \frac{p^2}{2m} = \frac{\hbar^2 k^2}{2m}\]
+\[\implies \frac{\hbar^2 \alpha^2}{2m} = \frac{\hbar^2 k^2}{2m}\implies \boxed{\alpha = k}\]
+Thus, the energy eigenvalues are a \textit{continuum} of values (since $k$ can be any value) instead of discrete values for trapped particles:
+\[\boxed{E_k = \frac{\hbar^2 k^2}{2m}}\]
+Physically, this makes sense since a free particle can have any momentum $p$ and thus any energy $E$.\\\\
+\textbf{Solving for the Eigenfunction $\psi(x)$}\\
+The roots of the characteristic equation are $\pm \alpha i$, so the general solution to the ODE is:
+\[\psi_k(x) = A e^{ik x} + B e^{-i kx}\]
+\underline{Note:} The eigenfunctions $\psi_k(x)$ are indexed by the continuous wavenumber $k$, instead of discrete quantum numbers $n$. This is because the energy eigenvalues of a free particle are not quantized, but rather form a continuum of values. So for an eigenfunction that corresponds to a specific energy state $E_k$, we index it with the corresponding wavenumber $k$.\\\\
+\textbf{Applying the Normalization Condition}\\
+Consider the case where the free particle has a definite momentum, moving in the positive $x$ direction. To determine the direction of travel, we must look at the total wavefunction $\Psi_k(x,t)$ by including the time-varying term $e^{-i\omega t}$.  Recalling the monochromatic plane wave equation, the total wavefunction is expressed as:
+$$\Psi_k(x,t) = Ae^{i(kx - \omega t)} + Be^{i(-kx - \omega t)}$$
+Recall that the phase $(kx - \omega t)$ represents a wave moving in the positive $x$ direction, while the phase $(-kx - \omega t)$ represents a wave moving in the negative $x$ direction. Thus, the $A$ term represents a wave moving in the positive $x$ direction, while the $B$ term represents a wave moving in the negative $x$ direction and must be equal to zero to maintain a single definite momentum in the positive direction.\\\\
+\underline{Recall:} For a travelling transverse wave, if we track a single point on the wave to see its motion, the phase must be constant. Setting $kx - \omega t = (\text{constant})$, we can see that for an increase in time $t$, there must be a corresponding increase in $x$ to keep the phase constant, which means that the wave is moving in the positive $x$ direction.\\\\
+All of this to say: for a free particle with a definite momentum (single wavenumber $k$) in the positive $x$ direction, the eigenfunction is:
+\[\psi_k(x) = A e^{ik x}\]
+Applying the normalization condition:
+\[\int_{-\infty}^{\infty} \psi_k^*(x) \psi_k(x)\, dx = \int_{-\infty}^{\infty} |A|^2\,dx = \infty \neq 1\]
+Uh oh! When we attempt to normalize a free particle with a definite momentum ($\psi_k(x) = Ae^{ikx}$), we find that the total probability density is constant over all space $|\psi_k(x)|^2 = |A|^2$.\\\\
+\underline{Define \textbf{Stationary State}:} In quantum mechanics, a stationary state is a "pure" energy eigenfunction $\psi_k(x)$ where the resulting probability density $|\psi_k(x)|^2$ remains constant over time. Although the total eigenfunction $\Psi_k(x,t)$ for this state includes a time-dependent phase factor $e^{-iE_k t/\hbar}$, this factor cancels when calculating the probability distribution, \textit{meaning all measurable physical observables (such as position and momentum) do not change with time.}
+\newpage\noindent
+This normalization failure leads to two critical physical conclusions:
+\begin{itemize}
+\item \underline{Stationary States are Physically Impossible:} As we know, \textit{all stationary states} produce a constant probability density over all space (a horizontal line). Since the particle is \textit{unbounded}, it is impossible to integrate a constant across all space and not get infinity. Therefore, the probability density ($\Psi^*\Psi$) of a free particle MUST change with time! This also makes physical sense, since we know that a free particle is moving, thus its corresponding probability density must also be moving across space.
+\item \underline{No Definite Momentum:} Even if we included the $B$ term in our normalization, we would still find that it equals infinity. Thus, there is no such thing as a free particle with a definite momentum ($p=\hbar k$) or energy. A physical particle \textit{must exist as a superposition of states with different momenta}, as a single momentum state $k$ cannot be normalized to 1.
+\end{itemize}
+Following these conclusions, we can conclude that the eigenfunction must then be a total eigenfunction that is a superposition of all possible energy states (wavenumbers $k$):
+\[\Psi(x,t) = \sum_k c_k \Psi_k(x,t) =\sum_k c_k \psi_k(x) e^{-iE_k t/\hbar}\]
+For a continuum of states, we replace the sum with an integral:
+\[\Psi(x,t) = \int_{-\infty}^{\infty} c(k) \psi_k(x) e^{-iE_k t/\hbar} dk\]
+\underline{Note:} Once we accept that a free particle is a superposition of all possible momentum states, the math forces us to use the total wavefunction $\Psi(x,t)$. This is because "pure" total eigenfunctions $\Psi_k(x,t)$ with a definite momentum/energy state ALWAYS result in a stationary state (since the $e^{-iE_k t/\hbar}$ term cancels out). However, by using a superposition of total eigenfunctions $\Psi_k(x,t)$ with \textit{different} momenta, suddenly the \underline{time dependence no longer cancels out}! Basically, one conclusion always implies the other because of the math.\\\\
+Finally let's solve!\\\\
+We define the coefficients $c(k)$ as:
+\[c(k) = \frac{\phi(k)}{\sqrt{2\pi}}\]
+Where $\phi(k)$ is the \textit{wavefunction in momentum space}, mathematically, this relates the total wavefunction in position space to the wavefunction in momentum space \underline{through a Fourier transform}:
+\[\boxed{\Psi(x,t) = \int_{-\infty}^{\infty} \frac{\phi(k)}{\sqrt{2\pi}} \psi_k(x) e^{-iE_k t/\hbar} dk = \int_{-\infty}^{\infty} \frac{\phi(k)}{\sqrt{2\pi}} e^{i(kx-E_k t/\hbar)} dk}\]
+\textbf{The Result: A "Wavepacket"}\\
+The physical result of all this math can be understood through the Fourier transform. A Fourier transform decomposes a function into its constituent frequencies, each with a different weight ($c_k$). In this case, the total wavefunction $\Psi(x,t)$ is a superposition of plane waves with different wavenumbers $k$, each with its own weight $c_k$. These individual plane waves span all space, so there exists \textit{destructive interference} as the wavenumbers vary continuously. However, there will also be a small localized region of constructive interference where the plane waves are approximately in phase, creating a "wavepacket", which corresponds to the particle!
+\begin{center}
+\includegraphics[width=0.35\textwidth]{wavepacket.png}
+\end{center}
+Mathematically, the \textit{more} individual waves (with differing $k$ and thus differing wavelengths) we add together, the more interference we get, which leads to a more localized wavepacket (and more cancellation outside the wavepacket). Therefore, \underline{a very localized position of} \underline{the particle (small $\Delta x$) means a very uncertain $k$ and $p$}!!! (and vice versa)\\\\
+\textbf{Heisenberg Uncertainty Principle}\\
+Thus, Heisenberg states that it is IMPOSSIBLE to know a particle's exact position and momentum at the same time. Importantly, this applies to not just the case of the free particle, but to ALL quantum particles!
+\[\boxed{\Delta x \Delta p \geq \frac{\hbar}{2}}\]
+Where:
+\[\Delta x = \sqrt{\langle x^2 \rangle - \langle x \rangle^2} \quad \text{(uncertainty of position)}\]
+\[\Delta p = \sqrt{\langle p^2 \rangle - \langle p \rangle^2} \quad \text{(uncertainty of momentum)}\]
+\section*{Infinite Potential Well (Particle in a Box)}
+\section*{Finite Potential Well}
+\section*{Hydrogen Atom}
 \end{document}
