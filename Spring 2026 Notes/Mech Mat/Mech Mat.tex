@@ -1,6 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
 \usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools}
+\usepackage{color, soul}
 \geometry{margin=1in}
 
 
@@ -30,11 +31,12 @@ When load is applied normal to a cross-section such as the one below, we can fin
 \vspace{-1em}
 When load is applied parallel or along a cross-section, we can find the shear stress by dividing the force by the area of the cross-section. Similar to normal stress, this represents the \textit{average} shear stress, as the actual stress distribution is usually not uniform across the cross-section.
 \[\tau_{\text{avg}} = \frac{P}{A}\]
+Here, $P'$ represents the internal reaction load due to the applied load $P$.
 \begin{center}
     \includegraphics[width=0.8\textwidth]{Shear Stress.png}
 \end{center}
 \underline{Sign convention:} It follows the sign of the applied force. (ie. If the force is in the positive direction, the shear stress is positive.)\\\\
-\underline{Note:} It is sometimes useful to think of stress as replacement for forces. For example, we can draw two different FBDs, one showing the forces and one showing the stresses.
+\underline{Note:} It is sometimes useful to think of stress as substitutions for forces. For example, we can draw two different FBDs, one showing the forces and one showing the stresses.
 \begin{center}
     \includegraphics[width=1\textwidth]{Stress FBD.png}
 \end{center}
@@ -61,7 +63,7 @@ Where $A_0$ is the area of the cross-section perpendicular to the load/axis and 
 \end{minipage}
 \section*{Pinned Joints}
 \vspace{-1em}
-When considering a pinned joint and how it fails, there are several ways. Mainly, it depends on whether the load is tensile or compressive. For both cases, the average normal stress at the midsection matters, but it's not usually where failure \textit{first} occurs, or in other words, it's not a critical region (it is usually where stress is max). The following are the critical regions unique to the type of loading:
+When considering a pinned joint and how it fails, there are several ways. Mainly, it depends on whether the load is tensile or compressive. For both cases, the average normal stress at the midsection matters, but it's not usually where failure \textit{first} occurs, or in other words, it's not a critical region (where stress is max). The following are the critical regions unique to the type of loading:
 \begin{itemize}
     \item \textbf{Member in Tension}\\
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
@@ -108,12 +110,25 @@ It is also an average stress, but it uses the projected area of the bolt onto th
 \newpage
 {\centering\LARGE Factor of Safety and Stresses\par}
 \section*{Factor of Safety}
-\vspace{-1em}
-We use the factory of safety to compensate for using uniform stress assumptions and other variability. It is defined as 
-\[\text{FS} = \frac{\text{Ultimate Load}}{\text{Allowable Load}}\]
-Where the ultimate load is the max load at failure and the allowable load is the max design load. If failure is due to stress exceeding the ultimate strength, then
-\[\text{FS} = \frac{\sigma_{\text{ult}}}{\sigma_{\text{allowable}}}\]
-Where $\sigma_{\text{ult}}$ is the ultimate strength of the material and $\sigma_{\text{allowable}}$ is the allowable stress.
+The factor of safety ($\text{FS}$) accounts for uncertainties in loading, material properties, and approximations such as uniform stress assumptions. It is defined as:
+\[
+\text{FS} = \frac{\text{Ultimate Load}}{\text{Allowable Load}}
+\]
+where the ultimate load is the load at failure and the allowable load is the maximum design load. If failure occurs when the applied stress reaches the material failure strength:
+\[
+\text{FS} = \frac{\sigma_{\text{fail}}}{\sigma_{\text{allowable}}}
+\]
+where $\sigma_{\text{fail}} = \sigma_{\text{ult}}$ when designing against ultimate failure, or $\sigma_{\text{fail}} = \sigma_{\text{yield}}$ when designing against yielding.\\\\
+\textbf{Stress Concentrations}\\
+When geometric discontinuities are present, the stress concentration factor $K$ relates the maximum localized stress to the nominal average stress:
+\[
+\sigma_{\text{max}} = K \sigma_{\text{ave}_{\text{max}}} = K \frac{F_{\text{allowable}}}{A_{\text{min}}} \quad (\text{valid for } \sigma_{\text{max}} \le \sigma_{\text{yield}})
+\]
+To prevent yielding at the stress concentration, the allowable load is constrained by setting $\sigma_{\text{max}} \le \sigma_{\text{allowable}} = \frac{\sigma_{\text{yield}}}{\text{FS}}$, which yields:
+\[
+\text{FS} = \frac{\sigma_{\text{yield}}}{\sigma_{\text{max}}} = \frac{\sigma_{\text{yield}}}{K \sigma_{\text{ave}_{\text{max}}}} = \frac{\sigma_{\text{yield}} A_{\text{min}}}{K F_{\text{allowable}}}
+\]
+\newpage
 \section*{Shear in Pin or Bolt}
 \vspace{-1em}
 We've already mentioned single shear as a mode of failure for pinned joints, but here it is again:\\\\
@@ -145,7 +160,6 @@ There are 6 shear stresses $\tau_{ij}$
     \item $i$ is the direction of the outward normal vector of the face (face direction)
     \item $j$ is the direction of the force (perpendicular to the face direction by definition of shear stress)
 \end{itemize}
-\newpage\noindent
 \underline{Note:} Define a coordinate system and be consistent with the directions of the normal and shear stresses (point along the positive direction of the coordinate system).\\\\
 \textbf{Stress on the Negative Faces}\\
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
@@ -192,7 +206,7 @@ Limit as $a \to 0$
 \tau_{yx} - \tau_{xy} = \rho a^2 \alpha \to 0 \\
 \tau_{yx} = \tau_{xy}
 \end{gather*}
-
+\newpage
 \begin{center}
     {\LARGE Axial Loading and Deformation\par}
 \end{center}
@@ -224,7 +238,7 @@ Note that $P$ is an \textit{internal} reaction force, not the applied load, so w
 Thus, we can generalize for non-uniform members by integrating over the length of the member:
 \[\delta = \sum\frac{P_i L_i}{E_i A_i} =\int_0^L \frac{P}{EA} dx\]
 \section*{Statically Indeterminate Problems}
-The nice thing about having a deflection formula is that we can now apply constraints on the deflection to solve for unknown forces. A useful analogy here is to think of the members as springs. In some cases, the members are in series where the total length is constant ($\delta_1 + \delta_2 = 0$), and in some cases, the members are in parallel where the deflection is constant ($\delta_1 = \delta_2$). We can use these constraints to solve for unknown forces and then find the stresses and strains as usual.
+The nice thing about having a deflection formula is that we can now apply constraints on the deflection to solve for unknown forces. \hl{A useful analogy here is to think of the members as springs.} In some cases, the members are in series where the total length is constant ($\delta_1 + \delta_2 = 0$), and in some cases, the members are in parallel where the deflection is constant ($\delta_1 = \delta_2$). We can use these constraints to solve for unknown forces and then find the stresses and strains as usual.
 \section*{Prestressed Concrete}
 Since concrete is stronger in compression than in tension, it is common to \textit{preload} the concrete with a compressive force (from embedded steel wires). It works by the following process:
 \begin{center}
@@ -233,13 +247,13 @@ Since concrete is stronger in compression than in tension, it is common to \text
 Initially (state 0), there is no concrete and the steel wires are at length $L_0$. 
 \begin{enumerate}
     \item \underline{Pre-tensioning}: The steel wires are stretched to a length $L_1$ by a load $Q$ and then fixed in place. This creates a strain 
-    \[\varepsilon_{1s} = \frac{Q}{A_s E_s}\]
-    \item \underline{Casting}: While the wires are held under tension, the concrete is poured around them and allowed to set (harden). At this moment, the concrete has zero stress and zero strain, but it is now bonded to the stretched wires.
+    \[\varepsilon_{1s} = \frac{\sigma_{1s}}{E_s}=\frac{Q}{A_s E_s}\]
+    \item \underline{Casting}: While the wires are held under tension, concrete is poured around them and allowed to set (harden). At this moment, the concrete has zero stress and zero strain, but it is now bonded to the stretched wires.
     \item \underline{Release}: The external load $Q$ is removed. The steel wires want to shrink back to their original length, but the hardened concrete is in the way. Thus, as the steel contracts slightly, it pushes against the concrete, putting the concrete into compression.
 \end{enumerate}
-Thus, the strain of the steel and concrete in state 3 must satisfy this constraint equation, with the concrete strain negative due to compression and the steel strain positive due to tension.
+Thus, the strain of the steel and concrete in state 3 must satisfy this constraint equation, with the \hl{concrete strain negative} due to compression and the \hl{steel strain positive} due to tension.
 \[\boxed{\varepsilon_{3s}=\varepsilon_{2s} + \varepsilon_{3c}}\]
-To determine the strains, we use static equilibrium and express the loads in terms of Hooke’s law.
+To determine the loads applied to each material, we use static equilibrium and express the loads in terms of Hooke’s law.
 \[P_s + P_c = 0\]
 \[P_s = E_s A_s \varepsilon_{3s} = E_s A_s (\varepsilon_{2s} + \varepsilon_{3c}), \quad P_c = E_c A_c \varepsilon_{3c}\]
 \section*{Thermal Stress}
@@ -254,8 +268,9 @@ To determine the strains, we use static equilibrium and express the loads in ter
 \begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
 \includegraphics[width=\textwidth]{thermal expansion.png}
 \end{minipage}
+\newpage\noindent
 \textbf{Thermal Stress}\\
-To determine the thermal stress in a \textit{constrained member}, we use a superposition approach similar to the mechanics of prestressed concrete. The process is modeled in two stages:\\
+To determine the thermal stress in a \hl{\textit{constrained member}}, we use a superposition approach similar to the mechanics of prestressed concrete. The process is modeled in two stages:\\
 \begin{minipage}[t]{0.55\textwidth} \vspace{0pt}
     \begin{enumerate}
     \item \underline{Free Expansion:} The member is imagined to undergo unconstrained thermal expansion 
@@ -277,7 +292,7 @@ $$\boxed{\sigma_T = \frac{-P}{A} = -\alpha(\Delta T)E}$$
 \underline{Sign convention:} For a positive change in temperature (heating), the thermal stress is compressive (negative) while for a negative change in temperature (cooling), the thermal stress is tensile (positive).
 \newpage
 \section*{Poisson's Ratio}
-When a member is stretched in one direction, it causes transverse shrinkage in most materials. This is quantified by Poisson's ratio $\nu$. In the case of \textit{uniaxial} stress:\\
+When a member is stretched in one direction, it causes \hl{transverse shrinkage} in most materials. This is quantified by Poisson's ratio $\nu$. In the case of \textit{uniaxial} stress:\\
 \begin{minipage}[t]{0.3\textwidth} \vspace{0pt}
     \[\sigma_x = \frac{P}{A}, \quad \sigma_y = \sigma_z = 0\]
 \[\varepsilon_x = \frac{P}{EA}\]
@@ -306,7 +321,7 @@ We determine the stress concentration factor $K$ from tables and then use it to 
 Note that the values of $K$ are valid only for the elastic region where $\sigma_\text{max}<\sigma_\text{yield}$, and they are not valid for plastic deformation where the stress distribution is more uniform.
 \section*{Plastic Deformation}
 When $\sigma_{\text{max}} > \sigma_{\text{yield}}$, we use the \textbf{bilinear elastoplastic material model}. This means that once the material reaches the yield stress, it begins to deform plastically. In the ideal elastoplastic model, the stress remains \textit{constant} at the yield value while the strain continues to increase until failure.\\\\
-If the load is removed while the material is in the plastic region, the unloading path follows a linear slope equal to the elastic modulus. The stress returns to zero along this line, but a permanent plastic strain remains.
+If the load is removed while the material is in the plastic region, the unloading path follows a linear slope equal to the elastic modulus ($E$). The stress returns to zero along this line, but a permanent plastic strain remains.
 \newpage\noindent
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
 \begin{itemize}
@@ -335,7 +350,7 @@ In the generalized case where there are multiple axial loads in the $x$, $y$, an
     \varepsilon_y &= \frac{\sigma_y}{E} - \left(\frac{\nu\sigma_x}{E} + \frac{\nu\sigma_z}{E}\right)\\
     \varepsilon_z &= \frac{\sigma_z}{E} - \left(\frac{\nu\sigma_x}{E} + \frac{\nu\sigma_y}{E}\right)
 \end{aligned}\]
-The strain in each direction the sum of the direct strain from the normal stress in that direction and Poisson's effect in the other two transverse directions.\\\\
+The strain in each direction is the sum of the direct strain from the normal stress in that direction and Poisson's effect in the other two transverse directions.
 \section*{Shear Stress and Strain}
 \begin{minipage}[t]{0.6\textwidth} \vspace{0pt}
     If a loading isn't purely axial, then we also have shear stress parallel to the surface. These shear stresses cause a deformation, called shear strain $\gamma$, which is an angular deformation in radians that describes how a cube of material shears into a parallelogram. The shear strain is related to the shear stress by the \textbf{shear modulus} or \textbf{modulus of rigidity} $G$.
@@ -345,6 +360,7 @@ The strain in each direction the sum of the direct strain from the normal stress
 \begin{minipage}[t]{0.4\textwidth} \vspace{0pt}\centering
     \includegraphics[width=\textwidth]{shear strain.png}
 \end{minipage}
+\vspace{-2em}
 \section*{General Stress Strain Relations}
 Putting together the normal and shear stress-strain relations, we can express the general stress-strain relations in matrix form as normal stress strain describes the material changing size while shear stress strain describes the material changing shape (tilting of the cube).
 \begin{minipage}[c]{0.45\textwidth} \vspace{0pt}
@@ -385,6 +401,11 @@ Since the normal and shear stress change with the orientation of the cross-secti
 \[
 \boxed{\nu = \frac{E}{2G} - 1}
 \]
+\begin{itemize}
+    \item Young's Modulus ($E$): [Pa] or [N/m$^2$]
+    \item Shear Modulus ($G$): [Pa] or [N/m$^2$]
+    \item Poisson's Ratio ($\nu$): dimensionless 
+\end{itemize}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.48\textwidth}\vspace{0pt}
@@ -476,7 +497,7 @@ Like axial loading, we can define the stiffness of the shaft as the ratio of the
 \begin{center}
     \includegraphics[width=0.8\textwidth]{Ex P3.10.png}
 \end{center}\vspace{-2em}
-Similar to axial deflection before, the torque $T$ is the internal reaction torque at the cross-section, not the applied torque. Thus, we need to first solve for the internal torques using static equilibrium (FBD) and then apply the torsion formulas to find the shear stress and twist angle. (Keep track of direction of the twist angle!)
+Similar to axial deflection before, the torque $T$ is the internal reaction torque at the cross-section, not the applied torque. Thus, we need to first solve for the internal torques using static equilibrium (FBD) and then apply the torsion formulas to find the shear stress and twist angle. \hl{(Keep track of direction of the twist angle!)}
 \begin{center}
     \includegraphics[width=0.55\textwidth]{Internal torque.jpg}
 \end{center}
@@ -510,7 +531,7 @@ Lack of symmetry in the cross-section complicates torsion. The cross-sections of
 \end{center}
 \section*{Torsion in Rectangular Bars}
 \begin{minipage}[t]{0.5\textwidth} \vspace{0pt}
-  The max shear stress occurs on the centerline of the \textit{wide faces} of the bar. 
+  \hl{The max shear stress occurs on the centerline of the \textit{wide faces} of the bar.}
 \[\boxed{\tau_\text{max}=\frac{T}{c_1 ab^2}}\]
 \[\boxed{\phi = \frac{TL}{c_2 ab^3G}}\]
 Where $c_1$ and $c_2$, like the stress concentration factor, are functions of the aspect ratio $a/b$ and can be found in tables. Notice that the thickness $b$ does more to resist torque than the width $a$.
@@ -542,7 +563,7 @@ T &= \oint p \, dF \\
 \end{aligned}\]
 Notice we expressed the product $p\,ds$ as twice the area of the shaded triangle $da$, since the area of any triangle is just $\frac{1}{2} \times \text{base} \times \text{height}$, where the base is $ds$ and the height is $p$. Thus, we can relate shear stress to torque by:
 \[\boxed{\tau = \frac{T}{2 ta}}\]
-Where $a$ is the area enclosed by the \textit{shaft midline} of the cross-section (the line running in the center of the thickness).\\\\
+\hl{Where $a$ is the area enclosed by the \textit{shaft midline} of the cross-section (the line running in the center of the thickness).}\\\\
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.5\textwidth} \vspace{0pt}\centering
@@ -579,11 +600,15 @@ If we apply a load to a beam, it will bend. The simplest case is \textbf{pure be
 \begin{center}
     \includegraphics[width=0.8\textwidth]{pure bending.jpg}
 \end{center}
+Note the sign convention for the positive directions of the internal shear force and bending moment. Generally, a positive internal shear $V$ and bending moment $M$ will tend to bend the beam into an upwards facing U. The $+x$ face is face seen by taking a cut and keeping the left side of the beam, and vice versa for the $-x$ face.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Beam Sign Convention.png}
+\end{center}
 Under pure bending, the beam will deflect into an arc of a circle. If we imagine the beam as a stack of thin fibers, we can see that as the beam deflects, the fibers at the top of the beam will shorten while the fibers at the bottom will lengthen. Thus, the top surface of the beam will be in compression while the bottom surface will be in tension. However, there exists a layer of fibers in between whose length doesn't change and thus has zero stress. This layer is called the \textbf{neutral axis} or the \textbf{neutral surface} in 3D.
 \begin{center}
     \includegraphics[width=0.8\textwidth]{Neutral axis.png}
 \end{center}
-Note that there are only normal stresses in pure bending, and no shear stresses. The normal stress distribution is linear across the cross-section, with the max tensile and compressive stresses at the outer fibers and zero stress at the neutral axis.\\\\
+Note that there are only normal stresses in pure bending, and no shear stresses. The normal stress distribution is linear across the cross-section, with the max tensile and compressive stresses at the outer fibers and zero stress at the neutral axis.
 \section*{Determining the Bending Stress \& Strain}
 Consider a beam of length initial length $L$ under pure bending. Where arc $DE$ is the neutral axis, consider a fiber a distance $y$ from the neutral axis (arc $JK$). The coordinate system is centered on the neutral axis ($y=0$ at the neutral axis).
 \begin{center}
@@ -604,13 +629,12 @@ Therefore, using the distances of the top and bottom surfaces to the neutral axi
 \[\boxed{\sigma_{\text{max,compressive}} = -\frac{Ec}{\rho},\quad\sigma_{\text{max,tensile}} = \frac{E(h-c)}{\rho}}\]
 \underline{Note:} The positive y-axis points towards the center of curvature!
 \section*{Location of the Neutral Axis}
-\underline{The neutral axis passes through the centroid of the beam cross-section.}\\\\
+\underline{\hl{The neutral axis passes through the centroid of the beam cross-section.}}\\\\
 We can show this by considering the force balance on the cross-section. The beam is in static equilibrium, so the net force must be zero.
 \[F_x = \int \sigma_x\, dA = 0\]
 Substituting the bending stress formula, we have:
 \[F_x = \int -\frac{Ey}{\rho}\, dA = 0 \implies \int y\, dA = 0\]
 This says that the \textit{first area moment} of the cross-section is equal to zero. The only way this can be true is if the x-axis (neutral axis) passes through the centroid of the cross-section, since the centroid is the point where the first area moment is zero.
-\newpage
 \section*{Determining the Bending Moment}
 We can calculate the bending moment at the cross-section by integrating the moment of the normal stresses about the neutral axis:\\
 \begin{minipage}[t]{0.35\textwidth} \vspace{0pt}
@@ -625,7 +649,7 @@ Substituting the bending stress formula, we have:
 \[M_z = \int y\frac{Ey}{\rho}\, dA = \frac{E}{\rho} \int y^2\, dA\]
 Thus, letting $I=\int y^2\, dA$ be the \textbf{second area moment} of the cross-section about the neutral axis (x-axis), we can express the bending moment as:
 \[\boxed{M_z = \frac{EI}{\rho}}\]
-\[\implies \frac{1}{\rho} = \frac{M}{EI}\quad\text{(curvature)}\]
+\[\implies \boxed{\frac{1}{\rho} = \frac{M}{EI}\quad\text{(curvature)}}\]
 \end{minipage}\\\\
 Therefore there is no z dependence on the bending moment, only the cross-sectional geometry (through $I$) and the material properties (through $E$) matters.\\\\
 Additionally, we can now express the bending stress in terms of the bending moment by substituting the bending moment formula into the bending stress formula:
@@ -722,11 +746,52 @@ Thus, the cross-section of the can be described as an \textbf{anticlastic curvat
 \[\frac{1}{\rho'} = \frac{\nu}{\rho}\]
 \end{minipage}
 \section*{Stress Concentrations in Bending}
+Stress concentrations can also occur in bending, which are caused by changes in the beam cross-section. In a uniform beam, the bending stress is uniform and linear across the cross-section.
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{Uniform beam bending.png}
+\end{center}
+For a non-uniform beam, we can assume that the normal stress is increased by a factor of $K$ at the critical area (shown by the blue linear stress distribution). In reality, the stress distribution is non-linear.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{Nonuniform beam bending.png}
+\end{center}
+Using the dimensions ($c$) and properties ($I$) of the critical region, we define the local max bending stress as:
+\[\boxed{\sigma_\text{max} = K \frac{Mc}{I}}\]
+\begin{center}
+    \includegraphics[width=1\textwidth]{bending stress conc.png}
+\end{center}
 \section*{Bending with Axial Loads}
+Suppose in addition to the bending moment, we also have an axial load $P$ applied to the beam. Since we are assuming linear elastic behavior, we can use superposition to find the total stress at any point in the beam.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{bending w axial.png}\\
+    \includegraphics[width=1\textwidth]{superposition.png}
+\end{center}
+The axial load will create a uniform normal stress across the cross-section, while the bending moment will create a linear normal stress distribution. Thus, the total normal stress at any point along the cross-section is:
+\begin{align*}
+    \sigma_x = \sigma_{x,\text{axial}} + \sigma_{x,\text{bending}} = \frac{P}{A} - \frac{My}{I}
+\end{align*}
 \newpage
-{\centering\LARGE Beam Design for Bending\par}
+{\centering\LARGE Beam Design for Bending\par}\noindent
+So far we have only analyzed pure bending without shear forces. When we have a beam with shear forces, the bending moment will no longer be constant along the length of the beam.\\\\
+Sign convention and use static equilibrium to find the internal shear forces and bending moments at any cross-section.\\\\
+Distributed loading and how they can we replaced by equivalent loads at the centroid of the distribution.\\\\
+Differential equation method for deriving the bending moment and shear force along the length of the beam.\\\\
+Beam design for strength: we want it so that max stress doesn't exceed allowable stress.\\
+Define section modulus $S$, tabulated values in txtbook.\\\\
 \newpage
-{\centering\LARGE Shear Stress in Beams\par}
+{\centering\LARGE Shear Stress in Beams\par}\noindent
+Shear stress distribution in beam cross-section from shear forces\\\\
+Shear flow: ALOT\\\\
 \newpage
-{\centering\LARGE Stress Transformations and Failure Criteria\par}
+{\centering\LARGE Design of Beams for Deflection\par}\noindent
+Diff eqn method\\\\
+Superposition for multiple loading conditions\\\\
+\newpage
+{\centering\LARGE Stress Transformations and Failure Criteria\par}\noindent
+Stress trandformation due to changes in the material orientation.\\\\
+Eqns for normal and shear stresses along different orientations.\\\\
+Mohr's circle for stress transformation: find principal stresses and max shear stress.\\\\
+Mohr's circle for 3d stress state\\\\
+Failure criteria: ductile isotropic materials: Tresca and von Mises. Brittle materials: Mohr's criterion.\\\\
+\newpage
+{\centering\LARGE Buckling of Columns\par}\noindent
 \end{document}
