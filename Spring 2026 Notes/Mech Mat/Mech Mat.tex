@@ -1,7 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
 \usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools}
-\usepackage{color, soul}
+\usepackage{color, soul,siunitx}
+\sisetup{per-mode=symbol}
 \geometry{margin=1in}
 
 
@@ -600,7 +601,7 @@ If we apply a load to a beam, it will bend. The simplest case is \textbf{pure be
 \begin{center}
     \includegraphics[width=0.8\textwidth]{pure bending.jpg}
 \end{center}
-Note the sign convention for the positive directions of the internal shear force and bending moment. Generally, a positive internal shear $V$ and bending moment $M$ will tend to bend the beam into an upwards facing U. The $+x$ face is face seen by taking a cut and keeping the left side of the beam, and vice versa for the $-x$ face.
+Note the sign convention for the positive directions of the internal shear force and bending moment. Generally, a positive internal shear $V$ and bending moment $M$ will tend to bend the beam into an upwards facing U, and result in the lower surface of the beam being in tension. The $+x$ face is face seen by taking a cut and keeping the left side of the beam, and vice versa for the $-x$ face.
 \begin{center}
     \includegraphics[width=0.4\textwidth]{Beam Sign Convention.png}
 \end{center}
@@ -771,16 +772,185 @@ The axial load will create a uniform normal stress across the cross-section, whi
 \end{align*}
 \newpage
 {\centering\LARGE Beam Design for Bending\par}\noindent
-So far we have only analyzed pure bending without shear forces. When we have a beam with shear forces, the bending moment will no longer be constant along the length of the beam.\\\\
-Sign convention and use static equilibrium to find the internal shear forces and bending moments at any cross-section.\\\\
-Distributed loading and how they can we replaced by equivalent loads at the centroid of the distribution.\\\\
-Differential equation method for deriving the bending moment and shear force along the length of the beam.\\\\
-Beam design for strength: we want it so that max stress doesn't exceed allowable stress.\\
-Define section modulus $S$, tabulated values in txtbook.\\\\
+So far, we have only analyzed pure bending, where no shear forces are present. When a beam is subjected to shear forces, the bending moment is no longer constant along the length of the beam. As a result, the beam experiences both normal stresses due to bending and shear stresses due to shear. The resultants of these internal stresses correspond to the internal shear force ($V$), and bending moment ($M$).
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{Internal V M.jpg}
+\end{center}
+\underline{Sign convention:} As mentioned before, the positive sign convention for $V$ and $M$ depends both on the direction of the internal forces and which side of the beam is being considered.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{Beam Sign Convention.png}
+\end{center}
+\section*{Types of Supports}
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Beam support.jpg}
+    \end{center}
+\newpage
+\section*{Shear and Moment Distribution}
+\textbf{Point Loads}\\
+To determine the shear and moment distribution along the length of the beam we can use the following approach:
+\begin{enumerate}
+    \item Draw a free body diagram of the entire beam, showing all external loads and reactions. Use static equilibrium to solve for the unknown reactions at the supports.
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{Beam FBD.jpg}
+    \end{center}
+    \item Solve for external reactions if statically determinate (3 static equilibrium equations for 3 unknowns). If statically indeterminate, use superposition.
+    \begin{align*}
+        \sum F_x &= R_B = 0 \\
+        \sum F_z &= R_A + F = 0 \quad \implies R_A = -F \\
+        \sum M_y &= M_A - FL= 0 \quad \implies M_A = FL
+    \end{align*}
+    \item Make cuts along the length of the beam in between external applied loads. Use static equilibrium on these sections to solve for the internal shear force and bending moment at each cut.
+    \begin{center}
+    \includegraphics[width=0.4\textwidth]{Beam section.jpg}
+    \end{center}
+    \item Solve for the internal shear force and bending moment at each cut using static equilibrium.
+    \begin{align*}
+        \sum F_z &= R_A + V = 0 \quad \implies -F + V = 0 \quad \implies V = F \\
+        \sum M_y &= M _A + M - Vx = 0 \quad \implies FL + M - Fx = 0 \quad \implies M = -FL + Fx
+    \end{align*}
+    \item Draw the shear force and bending moment distributions.
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{Beam V M dis.jpg}
+    \end{center}
+\end{enumerate}
+\textbf{Distributed Loading}\\
+For distributed loading, we can use the same approach for point loads, however, the load is now a \hl{force per unit length ($w$)}. Thus, the internal shear force will vary along the length of the beam.\\\\
+If we think of the load distribution ($w$) as a geometric shape, then its line of action is through the \hl{centroid} of the shape. Thus, we can replace the distributed load with a single equivalent point load acting at the centroid of the shape.\\\\
+For example:
+\begin{enumerate}
+    \item Beam FBD and solve for reactions:
+    \begin{center}
+    \includegraphics[width=0.8\textwidth]{Beam FBD2.jpg}
+    \end{center}
+    \begin{align*} 
+        \sum F_x &= R_B = 0 \\
+        \sum F_z &= R_A + wL + R_L = 0\\
+        \sum M_{y,A} &= -wL\left(\frac{L}{2}\right) - R_L L=0 \quad \implies R_L = -\frac{1}{2} wL \quad \implies R_A = -\frac{1}{2} wL
+    \end{align*}
+    \item Beam section FBD:
+    \begin{center}
+    \includegraphics[width=0.4\textwidth]{Beam section2.jpg}
+    \end{center}
+    \begin{align*}
+        \sum F_x &= 0 \\
+        \sum F_z &= R_A + wx + V = 0 \quad \implies -\frac{1}{2} wL + wx + V = 0 \quad \implies V = \frac{1}{2} wL - wx\\
+        \sum M_{y,A} &= -wx\left(\frac{x}{2}\right) - Vx + M = 0 \quad \implies -\frac{1}{2} wx^2 - Vx + M = 0\\
+        &\implies M = \frac{1}{2} wx^2 + Vx\\
+        &\implies M = \frac{wx}{2}\left(L-x\right)
+    \end{align*}
+    \item $V$ and $M$ distributions:
+    \begin{center}
+    \includegraphics[width=1\textwidth]{Beam V M dis2.jpg}
+    \end{center}
+\end{enumerate}
+\section*{Differential Equation Method for Deriving Shear and Moment Distributions}
+Instead of using multiple static equilibrium analyses to find the shear and moment distributions, we can use a differential equation approach. We derive the differential equations by considering a small section of a beam under distributed loading.
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{Differential Equation.png}
+\end{center}
+\[\boxed {\text{Shear-Load Relation:} \quad \frac{dV}{dx} = -w}\]
+\[\boxed {\text{Shear-Moment Relation:} \quad \frac{dM}{dx} = V}\]
+We can solve these differential equations by integrating from the left end of the beam ($x=0$) to a point $x$ along the beam. The constants of integration can be found by applying the boundary conditions at the left end of the beam (reaction forces and moments).\\\\
+\underline{Note:} Stay consistent with the $+x$ face sign convention for $V$ and $M$ when applying the boundary conditions.
+\section*{Beam Design for Strength}
+Designing a beam for strength means determining the dimensions of the beam cross-section such that the max bending stress does not exceed the allowable stress of the material.
+\[\sigma_\text{max}\leq\sigma_\text{all}\]
+From the elastic flexure formula, the max tensile and compressive stresses occur at the outer fibers of the beam cross-section. 
+\[\sigma_\text{max} = \frac{|M|_\text{max} c}{I}\]
+For convenience, we can define the \textbf{section modulus} $S$ to describe all geometry properties of the cross-section:
+\[\boxed{S = \frac{I}{c}}\]
+Where $c$ is the max distance from the neutral axis to the outer fiber of the cross-section. Thus, to meet the allowable stress requirement, we can design the beam cross-section such that:
+\[\sigma_\text{all} \geq \sigma_\text{max} = \frac{Mc}{I} = \frac{M}{S}\]
+\[\implies S \geq \frac{M_\text{max}}{\sigma_\text{all}}\]
+\textbf{Prismic Beams}\\
+A prismic beam is a beam with a constant cross-section along its length. Thus, it has a uniform section modulus $S$ along its length. To design a prismic beam, we then only need to find where the bending moment is max (usually where shear is zero) and use that to determine the required section modulus.\\\\
+\textbf{Non-Prismic Beams}\\
+To optimize for material and weight, we can design a non-prismic beam with a varying cross-section along its length. Thus, the most efficient design would meet the following condition for every section:
+\[\sigma_\text{max} = \sigma_{\text{all}}\]
+\[\implies S(x) = \frac{|M(x)|}{\sigma_{\text{all}}}\]
+\\
+\underline{Note:} While the internal shear force $V$ introduces a shear stress $\tau$ in the beam cross-section, it is usually negligible compared to the bending stress $\sigma$ and thus is not considered in the beam design for strength (the elastic flexure formula is still valid with shear forces). However, the presence of shear forces does introduce other modes of failure which we will discuss in the next section.
 \newpage
 {\centering\LARGE Shear Stress in Beams\par}\noindent
-Shear stress distribution in beam cross-section from shear forces\\\\
-Shear flow: ALOT\\\\
+For shear beam analysis we will use a slightly different coordinate system to maintain consistency with the directions of the internal shear force and shear stress.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{shear coord.png}
+\end{center}
+A vertical internal shear force $V$ is the resultant of a distribution of vertical shear stresses $\tau$ across the cross-section of the beam. However, to maintain equilibrium, the vertical shear stresses must have a complementary horizontal shear stress parallel to the top and bottom surfaces of the beam. This follows the 3D state of stress discussed previously.
+\begin{center}
+    \includegraphics[width=0.5\textwidth]{shear stress beam.png}
+\end{center}
+\newpage\noindent
+To visualize the horizontal shear stresses, consider the following set of sheets. When an external shear force is applied, the sheets will tend to slide past each other (left figure). Thus, if these sheets were glued together and unable to slide, internal shear stresses would develop in between each layer. These shear stresses don't exist in when an external moment is applied, since the sheets will be in pure bending and thus only experience normal stresses (right figure).
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{shear lam.png}
+\end{center}
+\section*{Shear Stress Distribution}
+The average shear stress across the cross-section is given as $\tau_\text{avg} = \frac{V}{A}$. However, since the shear stress MUST be zero at the free surfaces of the beam (the top and bottom surfaces), the shear stress distribution is not uniform across the cross-section. Instead, we use the formula below to define the shear stress distribution across the cross-section:
+\[\boxed{\tau(x,y) = \frac{V(x)Q(y)}{Ib}}\]
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{tau dist.jpg}
+\end{center}
+Where:
+\begin{itemize}
+    \item $V(x)$ is the internal shear force at the cross-section at $x$ along the beam
+    \item $I$ is the second area moment of the cross-section about the neutral axis
+    \item $b$ is the width of the cross section
+    \item $Q(y)$ is the first area moment of the area above (or below) the point $y$ about the neutral axis. It is defined as:
+    \[\boxed{Q(y) = \int y\,dA = A'\bar{y}}\]
+\end{itemize}
+\begin{minipage}[t]{0.5\textwidth} \vspace{0pt}
+The first area moment $Q(y)$ is the area of the cross-section above the axis of interest ($A'$) multiplied by the distance from the neutral axis to the centroid of that area ($\bar{y}$).\\\\
+For the rectangular cross-section shown, the shear stress distribution is:
+\[Q(y) = b(c-y)\cdot\left[c-\frac{1}{2}(c-y)\right]=\frac{b}{2}(c^2-y^2)\]
+\[I = \frac{1}{12}b h^3 = \frac{2}{3}bc^3 \]
+\[\tau = \frac{VQ}{Ib}=\frac{V\frac{b}{2}(c^2-y^2)}{\frac{2}{3}b^2c^3}=\frac{3V}{4bc^3}(c^2-y^2)\]
+\[\implies \tau = \frac{3V}{2A} \left(1-\frac{y^2}{c^2}\right)\]
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\textwidth} \vspace{0pt}\centering
+\includegraphics[width=\textwidth]{first area moment.png}
+\end{minipage}
+Plotting the shear stress distribution across the cross-section, we see that the max shear stress occurs at the neutral axis
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{shear stress plot.png}
+\end{center}
+\textbf{Average Shear Stress}\\
+The previous equation for shear stress distribution ($\tau = VQ/Ib$) is only valid for rectangular cross-sections, since we can make the assumption that the width $b$ is constant across the cross-section. For non-rectangular cross-sections, we can use the average shear stress instead:
+\[\boxed{\tau_\text{avg} (y_1) = \frac{V(x)Q(y_1)}{I t(y_1)}}\]
+Where $t(y_1)$ is the width of the cross-section at the point $y_1$ where we want to find the shear stress, its basically $b$ from before, but now it can vary across the cross-section.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{avg shear.png}
+\end{center}
+\section*{Shear Flow}
+Using our more generalized average shear stress equation, we defined the shear flow $q$ as the \hl{horizontal shear load per unit length}.
+\[q = \frac{\Delta H}{\Delta x} = \frac{\tau_\text{avg}t\Delta x}{\Delta x} = \tau_\text{avg}t\]
+\[\boxed{q=\frac{VQ}{I}}\]
+\section*{\textit{Vertical} Shear Distributions in I-Beams}
+Using the average shear stress equation, we can find that the vertical shear in the flanges are very small (large $b$ and small $Q$), while the vertical shear in the web is very large (small $b$ and large $Q$). Thus, we can assume that the vertical shear is almost entirely carried by the web of the I-beam, while the flanges carry mostly bending stresses.
+\begin{center}
+    \includegraphics[width=0.8\textwidth]{I-beam shear.png}
+\end{center}
+\section*{\textit{Longitudinal} Shear Stress $\tau_{xz}(z)$}
+We used to only look at cross-sections parallel to the y-z plane and considered horizontal cuts to look at the vertical shear stresses. However, we can also look at cross-sections parallel to the x-y plane and consider vertical cuts to look at the longitudinal shear stresses. Consider the section of the I-beam shown below:
+\begin{center}
+    \includegraphics[width=0.6\textwidth]{long shear.png}
+\end{center}
+The shear flow we defined earlier describes the \textit{same} horizontal shear load as $\Delta H$ in the figure above. However, the first area moment $Q$ is now calculated using the section $a$ with thickness $t$ and width $\Delta x$. 
+\[q = \frac{\Delta H}{\Delta x} = \frac{VQ}{I},\quad Q=a\bar{y}\]
+Thus, the longitudinal shear stress is:
+\[\tau_{zx} = \frac{\Delta H}{\Delta x t}=\frac{q}{t}\]
+By shear stress symmetry, we can also say that $\tau_{xz} = \tau_{zx}$.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{shear stress sym.png}
+\end{center}
+\section*{Shear Flow in Thin Walled Sections}
+Shown above, the shear stress and thus shear flow can flow through the section of a thin-walled section parallel to the free surfaces. 
+\begin{center}
+    \includegraphics[width=\textwidth]{shear stress thin beam.png}
+\end{center}
+Note that this section needs work, I'm not fully sure about my understanding of shear flow in thin-walled sections yet.
+
 \newpage
 {\centering\LARGE Design of Beams for Deflection\par}\noindent
 Diff eqn method\\\\
