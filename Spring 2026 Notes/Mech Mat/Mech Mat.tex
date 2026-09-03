@@ -2,6 +2,7 @@
 \usepackage{amssymb, amsmath, amsfonts, bm, graphicx, geometry}
 \usepackage{tabularx, booktabs, float, enumitem, multicol, mathtools}
 \usepackage{color, soul,siunitx}
+\usepackage{pdfpages}
 \sisetup{per-mode=symbol}
 \geometry{margin=1in}
 
@@ -931,16 +932,20 @@ Using the average shear stress equation, we can find that the vertical shear in 
 \begin{center}
     \includegraphics[width=0.8\textwidth]{I-beam shear.png}
 \end{center}
-\section*{\textit{Longitudinal} Shear Stress $\tau_{xz}(z)$}
-We used to only look at cross-sections parallel to the y-z plane and considered horizontal cuts to look at the vertical shear stresses. However, we can also look at cross-sections parallel to the x-y plane and consider vertical cuts to look at the longitudinal shear stresses. Consider the section of the I-beam shown below:
+\section*{\textit{Longitudinal} Shear Stress $\tau_{zx}$}
+Instead of looking at the vertical shear stress in the cross-sections parallel to the y-z plane, we can also look at the longitudinal shear stress in the cross-sections parallel to the x-y plane. Note that \hl{this longitudinal shear stress is NOT the same as the horizontal shear stress $\tau_{yx}$ discussed earlier}, instead this longitudinal shear stress acts on a different face of the beam element.
 \begin{center}
     \includegraphics[width=0.6\textwidth]{long shear.png}
 \end{center}
-The shear flow we defined earlier describes the \textit{same} horizontal shear load as $\Delta H$ in the figure above. However, the first area moment $Q$ is now calculated using the section $a$ with thickness $t$ and width $\Delta x$. 
+Without getting too deep into the derivations, this longitudinal shear stress is the result of the bending moment $M$ varying along the length of the beam. Thus, in order to maintain static equilibrium on an infinitesimal section of the beam, there must be a horizontal shear load $\Delta H$ acting on the cross-section. This horizontal shear load is the resultant of the longitudinal shear stress $\tau_{zx}$ across the cross-section.
+\begin{center}
+    \includegraphics[width=0.4\textwidth]{statics.png}
+\end{center}
+Using the shear flow equation, we can now define the longitudinal shear stress as:
 \[q = \frac{\Delta H}{\Delta x} = \frac{VQ}{I},\quad Q=a\bar{y}\]
-Thus, the longitudinal shear stress is:
 \[\tau_{zx} = \frac{\Delta H}{\Delta x t}=\frac{q}{t}\]
-By shear stress symmetry, we can also say that $\tau_{xz} = \tau_{zx}$.
+\newpage\noindent
+By shear stress symmetry, we can also say that $\tau_{zx} = \tau_{xz}$. Thus explaining where the sideways shear stress comes from in the flange of the I-beam shown later.
 \begin{center}
     \includegraphics[width=0.4\textwidth]{shear stress sym.png}
 \end{center}
@@ -949,12 +954,27 @@ Shown above, the shear stress and thus shear flow can flow through the section o
 \begin{center}
     \includegraphics[width=\textwidth]{shear stress thin beam.png}
 \end{center}
-Note that this section needs work, I'm not fully sure about my understanding of shear flow in thin-walled sections yet.
-
+Note that this section needs work, I'm not fully sure about my understanding of shear flow in thin-walled sections yet.\\\\
+"While the longitudinal force imbalance from $dM/dx$ exists in all sections under shear, sideways shear stress ($\tau_{xz}$) is primarily significant in the thin, projecting flanges of thin-walled profiles. In solid sections (like solid rectangles), the free vertical edges force $\tau_{xz} = 0$ at the surfaces, and symmetry forces $\tau_{xz} = 0$ along the centerline, leaving vertical shear ($\tau_{xy}$) to carry almost the entire shear resultant." (-Gemini)
 \newpage
 {\centering\LARGE Design of Beams for Deflection\par}\noindent
-Diff eqn method\\\\
-Superposition for multiple loading conditions\\\\
+\section*{Differential Equation Method}
+Assuming small static deflections of a slender beam, we can say that
+\[y<<L, \quad \frac{dy}{dx} << 1\]
+Using the elastic flexure formula, we can relate the curvature of the beam to the bending moment at any point along the beam:
+\[\frac{1}{\rho} = \frac{M(x)}{EI}\]
+From calculus, the curvature of any continuous function is given as:
+\[\frac{1}{\rho} = \frac{\frac{d^2 y}{dx^2}}{\left[1 + \left(\frac{dy}{dx}\right)^2\right]^{3/2}}\]
+Since we are assuming small deflections, we can say that $\left(\frac{dy}{dx}\right)^2 << 1$, and thus the curvature simplifies to:
+\[\frac{1}{\rho} \approx \frac{d^2 y}{dx^2}\]
+Bringing back in the elastic flexure formula, we can relate the bending moment to the deflection of the beam:
+\[\boxed{\frac{d^2 y}{dx^2} = \frac{M(x)}{EI}}\]
+By doing double integration and using the boundary conditions of the beam, we can find the deflection $y(x)$ along the length of the beam and the slope $y'(x) = \theta(x)$ at any point along the beam.
+\[y(x) = \int \int \frac{M(x)}{EI}\,dx\,dx+c_1x+c_2\]
+\underline{Note:} For an external shear force, deflections $\propto L^3$, while for an external bending moment, deflections $\propto L^2$.
+\section*{Superposition Method}
+Since integration is also a linear operation, we can use superposition to find the deflection of a beam under multiple loads. We can isolate each external load/moment and find the deflection due to each load/moment separately. Then, we can sum the deflections to find the total deflection of the beam. Note that max deflection must be found after summing the deflections from each load/moment, since the max deflection may not occur at the same location for each loading.
+\includepdf[pages=1]{Appendix D.pdf}
 \newpage
 {\centering\LARGE Stress Transformations and Failure Criteria\par}\noindent
 Stress trandformation due to changes in the material orientation.\\\\
